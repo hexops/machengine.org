@@ -1,0 +1,3 @@
+{{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+<link rel="stylesheet" href="https://devlog.hexops.com/assets/font/stylesheet.css">
+<link rel="stylesheet" href="{{ $style.Permalink }}">

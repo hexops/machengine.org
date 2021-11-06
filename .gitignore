@@ -13,3 +13,17 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+
+.DS_Store
+node_modules
+dist
+tmp
+/public/
+/resources/_gen/
+
+hugo.exe
+hugo.linux
+hugo.darwin
+.hugo_build.lock
+

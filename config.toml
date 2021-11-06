@@ -1,0 +1,7 @@
+baseURL = 'https://hexops.com'
+languageCode = 'en-us'
+title = 'Hexops'
+theme = "minimal"
+
+[markup.goldmark.renderer]
+unsafe = true
