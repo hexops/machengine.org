@@ -1,4 +1,4 @@
-html, body, .content, main {
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -12,23 +12,61 @@ html, body, .content, main {
 a {
     color: white;
 }
+blockquote {
+    color: grey;
+}
 
-.home {
+/* layout */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#content {
+    height: calc(100% - 3rem);
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.footer {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* homepage */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
     height: 100%;
-    &-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 60%;
-        height: 100%;
-        &-logo {
-            display: inline-block;
-        }
-        >p {
-            text-align: center;
-        }
+    &-logo {
+        display: inline-block;
+    }
+    >p {
+        text-align: center;
+    }
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    font-size: 12px;
+    &-privacy {
+        display: inline-block;
+        width: 40rem;
+    }
+    &-privacy[open] {
+        margin-top: 11rem;
     }
 }
