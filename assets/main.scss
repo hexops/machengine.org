@@ -38,45 +38,49 @@ p {
 }
 
 .navbar {
-    height: 3.25rem;
     background: #202020;
     border-bottom: 1px solid grey;
     .content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 100%;
+        min-height: 3rem;
         max-width: 70rem;
         margin: auto;
         >div {
             display: flex;
-            height: 100%;
-            padding-top: .5em;
-            padding-bottom: .5em;
         }
         .logo {
+            display: inline-block;
             padding-left: 1em;
-            padding-top: .5em;
-            padding-bottom: .5em;
         }
-        a {
+        .logo>img {
+            height: 2.25rem;
+            margin-top: .5rem;
+        }
+        &>div>a {
             display: inline-block;
             text-decoration: none;
-            height: 100%;
-            line-height: 3.25rem;
+            line-height: 3rem;
             padding-right: 1rem;
             padding-left: 1rem;
             &:hover, &:active {
                 background: #515151;
             }
         }
-        .logo {
-            display: inline-block;
-            height: calc(100% - 1em);
-        }
-        .logo>img {
-            height: 100%;
-        }
+    }
+}
+
+@media (max-width:480px) {
+    .navbar > .content {
+        flex-direction: column;
+    }
+    .navbar > .content > div {
+        z-index: 1;
+    }
+    .navbar > .content > div > a {
+        border-top: 1px solid grey;
+        background: #202020;
     }
 }
 
@@ -116,14 +120,6 @@ main {
         text-align: left;
         margin-left: auto;
         margin-right: auto;
-    }
-    .mach1 {
-        margin: auto;
-        width: 80%;
-        &>object {
-            margin-top: 2rem;
-            width: 100%;
-        }
     }
 }
 .main-home, .main-single {
