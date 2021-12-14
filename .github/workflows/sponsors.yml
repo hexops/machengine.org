@@ -1,0 +1,35 @@
+name: Generate Sponsors
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Generate Sponsors Tier 1
+        uses: slimsag/github-sponsors-readme-action@dev
+        with:
+          token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
+          file: 'content/mach.md'
+          maximum: 600 # cents
+          marker: 'tier1'
+
+      - name: Generate Sponsors Tier 2
+        uses: slimsag/github-sponsors-readme-action@dev
+        with:
+          token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
+          file: 'content/mach.md'
+          minimum: 2500 # cents
+          maximum: 2600 # cents
+          marker: 'tier2'
+
+      - name: Push changes to GitHub
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: main
+          folder: '.'
+          commit-message: 'Regenerate sponsors section'
