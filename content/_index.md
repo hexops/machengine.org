@@ -3,6 +3,7 @@ title: "Hexops"
 description: "The next generation of games. Experiment everywhere."
 draft: false
 rss_ignore: true
+images: ["/img/hexops-opengraph.png"]
 ---
 
 <img class="home-logo" src="https://raw.githubusercontent.com/hexops/website/master/media/png/black_logo.png">
