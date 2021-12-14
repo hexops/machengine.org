@@ -30,8 +30,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2898499"
-     inkscape:cx="346.93959"
-     inkscape:cy="419.04101"
+     inkscape:cx="318.25409"
+     inkscape:cy="173.27598"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -71,13 +71,13 @@
        cy="100.00001"
        rx="98.954002"
        ry="98.95401" />
-    <circle
+    <ellipse
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path1402-67"
-       cx="100.3995"
-       cy="20.399498"
-       rx="19.8995"
-       ry="19.899498" />
+       id="path1402-66"
+       cx="100.39945"
+       cy="20.399452"
+       rx="19.89945"
+       ry="19.899452" />
     <circle
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path1402-5"

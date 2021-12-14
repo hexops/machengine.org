@@ -40,7 +40,7 @@ images: ["/img/mach-opengraph.png"]
 
 ## Reaching Mach 1
 
-<div class="mach1"><object class="color-inverted" type="image/svg+xml" data="/img/mach1.svg"></object></div>
+<div class="mach1"><object class="color-inverted" type="image/svg+xml" data="/img/mach1.svg?v2"></object></div>
 
 Timeline for completion is not yet well-defined. Plans will change over time.
 
