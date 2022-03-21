@@ -4,20 +4,26 @@ draft: false
 rss_ignore: true
 ---
 
-Hexops was created by [Stephen Gutekanst](https://twitter.com/slimsag), who has thus far led [an arduous journey](https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month) into game development, spending 4 years learning about game engines full-time, 7 years [building developer tools](http://slimsag.com) and a thriving startup, [Sourcegraph](https://sourcegraph.com). Over the past few years he has been working double-time [writing code 100 hours/week](https://devlog.hexops.com/2021/I-write-code-100-hours-a-week) working towards executing on a self-funded 10 year game development vision.
+<small>Author: [Stephen Gutekanst](https://twitter.com/slimsag)</small>
 
-## Where are we today?
+Hexops is a little place, and eventual company, for creating games.
 
-Currently [Mach engine](/mach) is where almost all of my time goes, we're laying the groundwork for some future games at present. Development of Mach engine is full-time for me, around ~55h/week, with ad-hoc part-time contributions from others. I additionally hold a full-time position ~48h/week at [Sourcegraph](https://sourcegraph.com).
+I've led [an arduous journey into game development](https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month), spending 4 years learning about game engines full-time, then 7 years [building developer tools](http://slimsag.com) and a thriving startup ([Sourcegraph](https://sourcegraph.com)). Over the past few years, I've been working double-time [writing code 100 hours/week](https://devlog.hexops.com/2021/I-write-code-100-hours-a-week) working towards eventually executing on a self-funded 10 year game development do-or-die plan.
 
-In the coming years, I anticipate shifting 100% of my time to Hexops and embarking on a self-funded 10-year journey to make some games. We're not there yet.
+## Motivation
 
-## Where are we going?
+Despite spending ~4 years writing my own game engine full-time back in 2015, when I finished university it was clear to me that gamedev was just not a viable or good career. Instead, I chose to go into developer tools joining [Sourcegraph](https://sourcegraph.com) over 7 years ago.
 
-One of the reasons I chose to join a dev tools startup out of school instead of going into the gamedev industry is because that industry is so fundamentally broken. From companies like EA games\* edging towards quite literally getting children addicted to gambling, to companies like Telltale Games\* violating federal labor laws, to companies like Blizzard\* having rampant and systemic sexual harrasment in their DNA.
+Since then, I've learned so much, seen so much, and solidified my view that the gamedev industry is fundamentally broken: companies like EA games* edge towards literally getting children addicted to gambling, those like Telltale Games* violate federal labor laws, those like Blizzard* have rampant and systemic sexual harrassment in their DNA, and the entire industry creeps more and more towards a house-always-wins casino gambling ring of profit-driven motives than actual care for players. 
 
-Feedback from players goes entirely neglected, or leads to empty promises from PR teams. There are pushes for DLC, pre-orders, and early-access games to drive profits. Quality suffers. Even Valve, my favorite game company, [neglects their games](https://www.reddit.com/r/gamedev/comments/ox3fv1/nobody_wants_to_play_an_arena_shooter_from_some/h7kqer6/) as their Steam marketplace dominance is more valuable than producing games.
+I'm regularly dumbfounded by how slow and bearacratic these companies are. By how players _want_ them to listen to them and bring the game in a better direction, all while being ignored or getting an empty promise from a PR team. Quality of games are sufferring.
 
-Game companies are in a race to the bottom-we'd like to make this a race to the top by releasing games you _want_ to pay for.
+Game companies are in a race to the bottom-I'd like to flip this on it's head, and release games you _want_ to pay for.
 
-_\* Allegedly_
+<small>_\* Allegedly, these are opinions not facts_</small>
+
+## State of Hexops today
+
+Most of my time goes to [Mach engine](/mach), laying the groundwork for future games I want to publish. Development of Mach engine is pretty much full-time for me, with ad-hoc part-time contributions from others. I still hold a full-time position at [Sourcegraph](https://sourcegraph.com) so I'm working double-time, 24/7.
+
+In the coming years, I anticipate shifting 100% of my time to Hexops and embarking on that self-funded 10-year journey to make some decent games. We're not there yet, though.

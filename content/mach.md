@@ -11,10 +11,8 @@ images: ["/img/mach-opengraph.png"]
 .p-warning {
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
     align-items: center;
     justify-content: center;
-    background: red;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -37,36 +35,33 @@ images: ["/img/mach-opengraph.png"]
     height: 10rem;
     margin-right: 4.5rem;
 }
-.p-logo { margin: auto; }
+.p-logo { margin-right: 3rem; margin-top: 2rem; }
 .p-logo>img {
-    height: 15rem;
-    width: 100%;
-    margin-top: 2rem;
-}
-.p-roadmap {
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
-.p-roadmap>object {
-    margin-top: 1rem;
+    height: 10rem;
     width: 100%;
 }
-.p-roadmap>p, .p-roadmap>h2 {
-    text-align: center;
-}
-.p-contributors>img {
-    margin-top: 1rem;
-    display: inline-block;
-    max-width: 130%;
-    margin-left: -26.5%;
-}
-
 
 h2 {
     text-align: left;
     margin-top: 0;
+}
+
+.code {
+    text-align: left;
+    background: #c2c2c2;
+    color: black;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.code::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+.code::selection {
+  color: white;
+  background: black;
 }
 
 @media (max-width:480px) {
@@ -82,54 +77,128 @@ h2 {
 }
 </style>
 
+<div style="text-align: center; padding: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; background: red; margin-left: -1rem; margin-right: -1rem;">
+    Mach is still early stages - see <a href="#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
+</div>
+
 <div class="p-logo"><img class="color-inverted" src="https://raw.githubusercontent.com/hexops/media/main/mach/logo_tagline.svg"></img></div>
 
-<div class="p-warning">
-    <div>
-        <h2>We've only just begun</h2>
-        <p>Mach engine is only 6 months old, it is still in <em>very early stages of development.</em></p>
-        <p>While it is improving rapidly, we encourage being skeptical until we deliver on our promise. <a href="https://twitter.com/machengine">Stay tuned.</a></p>
+<div class="p-section" style="margin-top: 4rem; margin-bottom: 2rem;">
+    <a href="https://user-images.githubusercontent.com/3173176/159139694-a8cba628-9c1e-4a4f-be7c-40084d4318e8.png"><img style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/159139851-013fc1ad-98d2-4fed-ae58-1d5eaa658a15.png"></img></a>
+    <div style="margin-left: 1rem;">
+        <h2>Cross-platform graphics in ~60s</h2>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach
+cd mach/gpu
+zig build run-example
+</pre></code>
+            <small>Cross-platform graphics, a unified shader language & compute shaders.</small>
+            <br/><small>Requires <a href="https://ziglang.org">zig 0.10.x</a></small>
+        </div>
     </div>
 </div>
 
 <div class="p-section">
-    <div>
-        <h2>Low level, but like never before</h2>
-        <p>Mach engine is written in the <a href="https://ziglang.org">Zig programming language</a>, a successor to C with blazing fast performance, safety, compile-time code execution and more.</p>
-        <p>Fast iteration & compile times, effortless cross-compilation, and zero reliance on system dependencies come out of the box with Mach. Just push button to start.</p>
+    <a href="https://user-images.githubusercontent.com/3173176/159140683-0714eb12-806a-43e5-980f-63aa0d998fc2.png"><img class="p-img-right" style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/159140683-0714eb12-806a-43e5-980f-63aa0d998fc2.png"></img></a>
+    <div style="text-align: left;">
+        <h2>All you need is zig, git, and curl.</h2>
+        <small style="margin-left: 1rem;">No more installing tools & dependencies to get started</small>
+        <p>Mach builds <em>everything</em> using the Zig C/C++ compiler: GLFW, Google Chrome's WebGPU implementation, even the DirectX Shader Compiler.</p>
+        <p>Prebuilt binaries are used for WebGPU so you don't even have to wait for compilation - just add `-Ddawn-from-source=true` for a 100% from-source build.</p>
+    </div>
+</div>
+
+<div class="p-section">
+    <div style="text-align: left;">
+        <h2>Built with love, hard work, and Zig</h2>
+        <small style="margin-left: 1rem;">Effortless cross-compilation at your fingertips</small>
+        <p>Mach is written in <a href="https://ziglang.org">Zig</a>, a successor to C with blazing fast performance, compile-time code execution, safety, and in the future <a href="http://www.jakubkonka.com/2022/03/16/hcs-zig.html">hot code swapping</a>.</p>
+<code><pre class="code">
+<strong>$</strong> zig build -Dtarget=<strong>x86_64-windows</strong>
+<strong>$</strong> zig build -Dtarget=<strong>x86_64-linux</strong>
+<strong>$</strong> zig build -Dtarget=<strong>x86_64-macos</strong>.12
+<strong>$</strong> zig build -Dtarget=<strong>aarch64-macos</strong>.12
+</pre></code>
     </div>
     <img class="p-img-left color-inverted" src="/img/cpu.svg"></img>
 </div>
 
-<div class="p-section">
-    <img class="p-img-right color-inverted" src="/img/people.svg"></img>
-    <div>
-        <h2>Code and tools for everyone</h2>
-        <p>We're not just building a new engine, we're building a suite of tools and libraries for all to use-with Mach, other engines, and even not for game developers at all-we want the tools and libraries we build to <em>benefit you</em>.</p>
-        <p>One example of this is how <a href="https://github.com/hexops/mach/issues/109">we're making</a> Dawn (Google Chrome's WebGPU implementation) easier to build and cross compile with nothing more than <code>zig</code> and <code>git</code>, which other projects outside the Zig ecosystem can benefit from in the future.</p>
+
+<div class="p-section" id="early-stages">
+    <div style="text-align: right; padding-right: 2rem; border-right: 1px solid gray; height: 12rem; justify-content: center; display: flex; flex-direction: column;">
+        <h2>⚠ Mach is early stages</h2>
+        <p style="display: inline-block; text-align: right; margin-right: 0;">
+            What we do have is nice ⮕
+            <br/>and things are improving rapidly,
+            <br/>but we're not at Mach 1.0 yet,
+            <br/>we're missing lots - <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
+        </p>
+    </div>
+    <div style="text-align: left;">
+        <ul>
+            <li>Windows, Linux, and macOS support</li>
+            <li>Graphics API</li>
+            <ul>
+                <li>Metal, Vulkan, DirectX 12 & OpenGL fallback (WebGPU)</li>
+                <li>Unified shader language (WGSL)</li>
+                <li>Compute shaders</li>
+                <li>(lacking) Documentation & examples</li>
+            </ul>
+            <li>Input (GLFW)</li>
+            <li>(experimental) Entity Component System</li>
+        </ul>
     </div>
 </div>
 
-<div class="p-roadmap">
-    <h2>Reaching Mach 1</h2>
-    <object class="color-inverted" type="image/svg+xml" data="/img/mach1.svg?v2"></object>
-    <p><a href="/img/mach1.svg?v2">(view as SVG)</a></p>
-    <p>Timeline for completion is not yet well-defined. Plans will change over time.</p>
-    <p>We encourage being skeptical of any promise we make until we actually deliver on it!</p>
+<!--
+<div class="p-section" style="flex-direction: column;">
+    <h2>What's next? (Lightning talk)</h2>
+    <small style="display: inline-block; padding-top: 1rem">
+        Broadcast at the first ever European Zig meetup in Milan, Italy.
+    </small>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m3gOX26LOeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+-->
 
 <div class="p-section">
     <img class="p-img-right color-inverted" src="/img/opensource.svg"></img>
+    <div style="text-align: left;">
+        <h2>Building tools & libraries to benefit <em>all</em></h2>
+        <small style="margin-left: 1rem;">Prefer Unity/Unreal? Not using Zig? We plan for our work to be useful for you too.</small>
+        <p>Our <a href="https://github.com/hexops/mach-glfw">glfw</a> bindings <a href="https://devlog.hexops.com/2021/perfecting-glfw-for-zig-and-finding-undefined-behavior">found lurking undefined behavior</a> that went unnoticed for years. Use <a href="https://github.com/hexops/mach-gpu-dawn">mach/gpu-dawn</a> from your language of choice to build Google Chrome's WebGPU implementation via Zig (no cmake/ninja/gn/etc) into a single static library, with cross-compilation & prebuilt binaries.</p>
+        <p>These are all small potatoes. In the future, tooling is where we'll really contribute.</p>
+    </div>
+</div>
+
+<div class="p-section">
+    <div style="text-align: left;">
+        <h2>Open source, always & forever</h2>
+        <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
+        <p>FOSS is our roots, we've been playing with and developing FOSS games & engines <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">for 13+ years.</a></p>
+    </div>
+    <img class="p-img-left color-inverted" src="/img/people.svg"></img>
+</div>
+
+<div class="p-section">
+    <img class="p-img-right color-inverted" src="/img/coder.svg"></img>
     <div>
-        <h2>Open source, sustainable</h2>
-        <p><a href="https://github.com/hexops/mach">100% open source</a>, licensed under Apache or MIT at your choosing. We are firm believers in open source, have played open source games and worked with open source game engines <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">for over 13 years.</a> We operate on a mix of <a href="https://github.com/sponsors/slimsag">donations</a> and self-funding. Hexops in the future will also sell games to sustain development-not engines or tools.</p>
+        <h2>Contributors</h2>
+        <p>Mach is created primarily by BDFL <a href="https://twitter.com/slimsag">@slimsag</a>, but we're very open to contributors! And since our projects are useful outside of Mach itself, there are already a few:</p>
+        <div style="max-width: 40rem; text-align: left; margin-top: 1rem;">
+            <a href="https://github.com/InKryption"><img src="https://images.weserv.nl/?url=github.com/InKryption.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+            <a href="https://github.com/alichraghi"><img src="https://images.weserv.nl/?url=github.com/alichraghi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+            <a href="https://github.com/leecannon"><img src="https://images.weserv.nl/?url=github.com/leecannon.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+            <a href="https://github.com/iddev5"><img src="https://images.weserv.nl/?url=github.com/iddev5.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+            <a href="https://github.com/Avokadoen"><img src="https://images.weserv.nl/?url=github.com/Avokadoen.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+        </div>
     </div>
 </div>
 
 <div class="p-section sponsors">
     <div>
         <h2>Sponsors</h2>
-        <p>The following people <a href="github.com/sponsors/slimsag">sponsor @slimsag</a> on GitHub for his work on Mach engine, <a href="https://zigmonthly.org">zigmonthly.org</a>, and/or other projects:</p>
+        <p><a href="github.com/sponsors/slimsag">Sponsor us on GitHub</a> to help Mach engine, <a href="https://zigmonthly.org">zigmonthly.org</a>, and our other work. All of these fine people contribute financially:</p>
         <div style="max-width: 40rem; text-align: left; margin-top: 1rem;">
             <!-- tier2 --><a href="https://github.com/wilsonk"><img src="https://images.weserv.nl/?url=github.com/wilsonk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ziglang"><img src="https://images.weserv.nl/?url=github.com/ziglang.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier2 --><!-- tier1 --><a href="https://github.com/mattnite"><img src="https://images.weserv.nl/?url=github.com/mattnite.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/andrewrk"><img src="https://images.weserv.nl/?url=github.com/andrewrk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Luukdegram"><img src="https://images.weserv.nl/?url=github.com/Luukdegram.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Jack-Ji"><img src="https://images.weserv.nl/?url=github.com/Jack-Ji.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ZacxDev"><img src="https://images.weserv.nl/?url=github.com/ZacxDev.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kristoff-it"><img src="https://images.weserv.nl/?url=github.com/kristoff-it.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/tauoverpi"><img src="https://images.weserv.nl/?url=github.com/tauoverpi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/TommiSinivuo"><img src="https://images.weserv.nl/?url=github.com/TommiSinivuo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/bradms"><img src="https://images.weserv.nl/?url=github.com/bradms.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jayschwa"><img src="https://images.weserv.nl/?url=github.com/jayschwa.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jamii"><img src="https://images.weserv.nl/?url=github.com/jamii.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dawnarc"><img src="https://images.weserv.nl/?url=github.com/dawnarc.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jacobsandlund"><img src="https://images.weserv.nl/?url=github.com/jacobsandlund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jorangreef"><img src="https://images.weserv.nl/?url=github.com/jorangreef.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier1 -->
         </div>
@@ -138,35 +207,12 @@ h2 {
 </div>
 
 <div class="p-section">
-    <img class="p-img-right color-inverted" src="/img/coder.svg"></img>
-    <div>
-        <h2>Contributors</h2>
-        <p>Mach engine is primarily being developed by <a href="https://twitter.com/slimsag">@slimsag</a>, however the following people have made contributions on GitHub both small and large to Mach itself as well as the libraries we maintain for use in Mach and other projects alike:</p>
-        <a class="p-contributors" href="https://github.com/hexops/mach/graphs/contributors">
-            <img src="https://contrib.rocks/image?repo=hexops/mach" />
-        </a>
-    </div>
-</div>
-
-<!--
-<div class="p-section">
-    <div style="padding-right: 3rem; text-align: right">
-        <h2>What's next for Mach in 2022?</h2>
-        <small style="display: inline-block; width: 20rem; padding-top: 1rem">
-            (Lightning talk presented at the first ever European Zig meetup in Milan, Italy.)
-        </small>
-    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/m3gOX26LOeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
--->
-
-<div class="p-section">
-    <div style="width: 30rem;">
+    <div style="width: 25rem;">
         <h2>Follow along</h2>
-        <p>Find all of the latest news & updates about Mach engine on <a href="https://devlog.hexops.com/categories/mach/">devlog.hexops.com</a> and <a href="https://twitter.com/machengine">follow on Twitter</a>.
+        <p>Major developments can be followed on our <a href="https://devlog.hexops.com/categories/mach/">devlog</a> and the <a href="https://twitter.com/machengine">@machengine</a> Twitter.
     </div>
-    <div style="width: 30rem;">
+    <div style="margin-left: 3rem">
         <h2>Get involved</h2>
-        <p>If this all sounds appealing to you, you can get involved <a href="https://github.com/hexops/mach">over on GitHub</a> and <a href="https://matrix.to/#/#hexops:matrix.org">join us on Matrix chat</a>!</p>
+        <p>Checkout <a href="https://github.com/hexops/mach">our GitHub</a> and <a href="https://matrix.to/#/#hexops:matrix.org">join us on Matrix chat</a>!</p>
     </div>
 </div>
