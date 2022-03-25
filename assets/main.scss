@@ -14,8 +14,10 @@ body {
     justify-content: space-between;
 }
 
-main p, main li {
+main p, main li, small {
     font-family: arial,sans-serif;
+}
+main p, main li {
     font-size: 16px;
 }
 a {

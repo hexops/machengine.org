@@ -9,14 +9,11 @@ images: ["/img/mach-opengraph.png"]
 
 <style>
 .p-warning {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    text-align: center;
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background: red;
     margin-left: -1rem;
     margin-right: -1rem;
 }
@@ -26,6 +23,13 @@ images: ["/img/mach-opengraph.png"]
     margin-top: 3rem;
     align-items: center;
     justify-content: center;
+}
+.p-section-highlight {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.p-section-right {
+    margin-left: 1rem;
 }
 .p-img-left {
     height: 10rem;
@@ -39,6 +43,18 @@ images: ["/img/mach-opengraph.png"]
 .p-logo>img {
     height: 10rem;
     width: 100%;
+}
+.p-early-stages-left {
+    text-align: right;
+    padding-right: 2rem;
+    border-right: 1px solid gray;
+    height: 12rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.p-early-stages-right {
+    text-align: left;
 }
 
 h2 {
@@ -64,28 +80,58 @@ h2 {
   background: black;
 }
 
-@media (max-width:480px) {
+@media (max-width:700px) {
     .p-warning { margin-top: 0; }
     .p-logo { margin: auto; margin-top: 0; margin-bottom: -2rem; }
     .p-logo img { margin-top: -1rem; }
-    .p-section { margin-top: 2rem; align-items: flex-start; }
-    .p-img-left { margin-left: 1rem; height: 3rem; }
-    .p-img-right { margin-right: 1rem; height: 3rem; }
-    .p-section.sponsors img {
-        width: 42px;
+    .p-section { margin-top: 4rem; flex-direction: column; }
+    .p-section h2 { text-align: center; }
+    .p-section-right { margin-left: 0; }
+    .p-section small { margin: 0; display: block; text-align: center; }
+    .p-img-left { margin: auto; margin-top: 2rem; margin-bottom: -1rem; height: 6rem; }
+    .p-img-right { margin: auto; margin-bottom: 2rem; margin-top: -1rem; height: 6rem; }
+    .p-section.sponsors>div>div {
+        text-align: center !important;
+    }
+    .p-section.sponsors>img {
+        position: relative;
+        left: -1rem;
+        top: 3rem;
+    }
+    .p-early-stages-left {
+        border: 0;
+        padding: 0;
+        height: auto;
+    }
+    .p-early-stages-left>p {
+        font-size: 83%; /* <small> */
+    }
+    .p-section.get-involved > div {
+        width: auto !important;
+    }
+    .p-section.get-involved > div > p {
+        text-align: center;
+    }
+    .p-section.get-involved > div:nth-child(2) {
+        margin: auto !important;
+        margin-top: 2rem !important;
+    }
+    .p-section iframe {
+        width: 100%;
+        height: 15rem;
     }
 }
 </style>
 
-<div style="text-align: center; padding: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; background: red; margin-left: -1rem; margin-right: -1rem;">
+<div class="p-warning">
     Mach is still early stages - see <a href="#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
 </div>
 
 <div class="p-logo"><img class="color-inverted" src="https://raw.githubusercontent.com/hexops/media/main/mach/logo_tagline.svg"></img></div>
 
-<div class="p-section" style="margin-top: 4rem; margin-bottom: 2rem;">
+<div class="p-section p-section-highlight">
     <a href="https://user-images.githubusercontent.com/3173176/159139694-a8cba628-9c1e-4a4f-be7c-40084d4318e8.png"><img style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/159139851-013fc1ad-98d2-4fed-ae58-1d5eaa658a15.png"></img></a>
-    <div style="margin-left: 1rem;">
+    <div class="p-section-right">
         <h2>Cross-platform graphics in ~60s</h2>
         <div>
 <code><pre class="code">
@@ -125,17 +171,17 @@ zig build run-example
 </div>
 
 
-<div class="p-section" id="early-stages">
-    <div style="text-align: right; padding-right: 2rem; border-right: 1px solid gray; height: 12rem; justify-content: center; display: flex; flex-direction: column;">
+<div class="p-section p-section-early-stages" id="early-stages">
+    <div class="p-early-stages-left">
         <h2>⚠ Mach is early stages</h2>
         <p style="display: inline-block; text-align: right; margin-right: 0;">
-            What we do have is nice ⮕
+            What we do have is nice
             <br/>and things are improving rapidly,
             <br/>but we're not at Mach 1.0 yet,
             <br/>we're missing lots - <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
         </p>
     </div>
-    <div style="text-align: left;">
+    <div class="p-early-stages-right">
         <ul>
             <li>Windows, Linux, and macOS support</li>
             <li>Graphics API</li>
@@ -151,15 +197,15 @@ zig build run-example
     </div>
 </div>
 
-<!--
-<div class="p-section" style="flex-direction: column;">
+
+<!-- <div class="p-section" style="flex-direction: column;">
     <h2>What's next? (Lightning talk)</h2>
     <small style="display: inline-block; padding-top: 1rem">
         Broadcast at the first ever European Zig meetup in Milan, Italy.
     </small>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/m3gOX26LOeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
--->
+</div> -->
+
 
 <div class="p-section">
     <img class="p-img-right color-inverted" src="/img/opensource.svg"></img>
@@ -206,7 +252,7 @@ zig build run-example
     <img class="p-img-right color-inverted" src="/img/sponsor.svg"></img>
 </div>
 
-<div class="p-section">
+<div class="p-section get-involved">
     <div style="width: 25rem;">
         <h2>Follow along</h2>
         <p>Major developments can be followed on our <a href="https://devlog.hexops.com/categories/mach/">devlog</a> and the <a href="https://twitter.com/machengine">@machengine</a> Twitter.
