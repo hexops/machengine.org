@@ -132,7 +132,7 @@ h2 {
 <div class="p-section p-section-highlight">
     <a href="https://user-images.githubusercontent.com/3173176/159139694-a8cba628-9c1e-4a4f-be7c-40084d4318e8.png"><img style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/159139851-013fc1ad-98d2-4fed-ae58-1d5eaa658a15.png"></img></a>
     <div class="p-section-right">
-        <h2>Cross-platform graphics in ~60s</h2>
+        <h2>Cross-platform graphics in ~60 seconds</h2>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach
