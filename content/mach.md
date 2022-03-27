@@ -140,7 +140,9 @@ cd mach/gpu
 zig build run-example
 </pre></code>
             <small>Cross-platform graphics, a unified shader language & compute shaders.</small>
-            <br/><small>Requires <a href="https://ziglang.org">zig 0.10.x</a></small>
+            <br/><small>Requires <a href="https://ziglang.org">zig 0.10.x</a> | 
+<a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md#known-issues">known issues</a>
+</small>
         </div>
     </div>
 </div>
