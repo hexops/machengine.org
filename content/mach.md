@@ -200,13 +200,13 @@ zig build run-example
 </div>
 
 
-<!-- <div class="p-section" style="flex-direction: column;">
+<div class="p-section" style="flex-direction: column;">
     <h2>What's next? (Lightning talk)</h2>
     <small style="display: inline-block; padding-top: 1rem">
         Broadcast at the first ever European Zig meetup in Milan, Italy.
     </small>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/m3gOX26LOeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+</div>
 
 
 <div class="p-section">
