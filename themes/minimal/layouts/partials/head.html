@@ -2,7 +2,7 @@
     {{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
     <link rel="stylesheet" href="https://devlog.hexops.com/assets/font/stylesheet.css">
     <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <script async defer data-domain="hexops.com" src="https://machengine.com/opendata.js"></script>
+    <script async defer data-domain="hexops.com" src="https://machengine.org/opendata.js"></script>
     <meta charset="utf-8">
     <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <link rel = 'canonical' href = '{{ .Permalink }}'>
