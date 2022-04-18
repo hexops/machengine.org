@@ -1,6 +1,6 @@
 baseURL = 'https://hexops.com'
 languageCode = 'en-us'
-title = 'Hexops - the next generation of games'
+title = 'Mach engine - game engine & graphics toolkit for the future'
 theme = "minimal"
 
 [markup.goldmark.renderer]
