@@ -14,7 +14,7 @@ jobs:
         uses: slimsag/github-sponsors-readme-action@dev
         with:
           token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
-          file: 'content/mach.md'
+          file: 'content/_index.md'
           maximum: 600 # cents
           marker: 'tier1'
 
@@ -22,7 +22,7 @@ jobs:
         uses: slimsag/github-sponsors-readme-action@dev
         with:
           token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
-          file: 'content/mach.md'
+          file: 'content/_index.md'
           minimum: 2500 # cents
           maximum: 2600 # cents
           marker: 'tier2'
