@@ -1,4 +1,4 @@
-baseURL = 'https://hexops.com'
+baseURL = 'https://machengine.org'
 languageCode = 'en-us'
 title = 'Mach engine - game engine & graphics toolkit for the future'
 theme = "minimal"
