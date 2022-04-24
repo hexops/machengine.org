@@ -268,7 +268,7 @@ zig build run-example-advanced-gen-texture-light
     <div class="p-section-right">
         <h2>Help contribute!</h2>
         <p>Eager to get started learning WebGPU in Zig? We'd love contributions for more examples!</p>
-        <p>There's lots of great learning material online, we're <a href="https://matrix.to/#/#hexops:matrix.org">happy to help if you get stuck</a>, and there is a <a href="https://github.com/austinEng/webgpu-samples/tree/main/src/sample">list of samples that are just waiting</a> to be ported to the Zig API.</p>
+        <p>There's lots of great learning material online, we're <a href="https://matrix.to/#/#hexops:matrix.org">happy to help if you get stuck</a>, and there is a <a href="https://github.com/hexops/mach/issues/230">list of samples that are just waiting</a> to be ported to the Zig API.</p>
         <p>Special thanks to these people who've contributed to these examples:</p>
         <div style="max-width: 40rem; text-align: left; margin-top: 1rem;">
             <a href="https://github.com/Andoryuuta"><img src="https://images.weserv.nl/?url=github.com/Andoryuuta.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
