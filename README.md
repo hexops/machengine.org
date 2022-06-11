@@ -2,3 +2,6 @@
 
 The [machengine.org](https://machengine.org) website.
 
+## Issues
+
+Issues are tracked in the [main Mach repository](https://github.com/hexops/mach/labels/website).
