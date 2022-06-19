@@ -106,18 +106,16 @@ h2 {
     Mach is still early stages - see <a href="/#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
 </div>
 
-
 <h1 align="center">mach/gpu: the GPU interface for Zig</h1>
 <div class="p-section">
-    <img style="height: 15rem;" class="color-inverted" src="https://user-images.githubusercontent.com/3173176/163735828-eb10335d-c984-4f7b-90cc-1e0a0edec1d0.png"></img>
+    <img style="height: 15rem;" class="auto-color" src="https://user-images.githubusercontent.com/3173176/163735828-eb10335d-c984-4f7b-90cc-1e0a0edec1d0.png"></img>
     <div class="p-section-right">
-        <img class="color-inverted" style="width: 30rem;" src="https://user-images.githubusercontent.com/3173176/160261203-505aa417-e990-45bb-8a3d-17e224f1506c.png" />
+        <img class="auto-color" style="width: 30rem;" src="https://user-images.githubusercontent.com/3173176/160261203-505aa417-e990-45bb-8a3d-17e224f1506c.png" />
         <p>Mach provides an ecosystem of WebGPU libraries and tools (leveraging Google Chrome's WebGPU implementation behind the scenes.) <a href="https://devlog.hexops.com/2022/mach-v0.1-zig-graphics-in-60s#behind-the-scenes">We do some heavy lifting</a> to give you effortless cross-compilation and make it all 'just work' with no hassle in under 60 seconds.</p>
         <p>WebGPU is low-level-in the future, we'll provide model rendering, text rendering, etc. as optional libraries on top: you get to pick choose what you use! You can use it merely to open a WebGPU window on every platform (with mobile and web in the future!)</p>
         <p>Every example below shows how to use WebGPU from Zig: they're not specific to Mach engine, but do use it for setup code.</p>
     </div>
 </div>
-
 
 <div class="p-section">
     <a class="animated-demo" href="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4">
@@ -157,7 +155,6 @@ zig build run-example-triangle
     </a>
 </div>
 
-
 <div class="p-section">
     <a class="animated-demo" href="https://user-images.githubusercontent.com/3173176/163732380-77f0485d-35e2-4ae9-bc90-46962a33e369.mp4">
         <video autoplay loop>
@@ -177,7 +174,6 @@ zig build run-example-rotating-cube
         <small>~290 lines of code</small>
     </div>
 </div>
-
 
 <div class="p-section">
     <div class="p-section-left">
@@ -199,7 +195,6 @@ zig build run-example-two-cubes
     </a>
 </div>
 
-
 <div class="p-section">
     <a class="animated-demo" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
         <video autoplay loop>
@@ -219,7 +214,6 @@ zig build run-example-textured-cube
         <small>~300 lines of code</small>
     </div>
 </div>
-
 
 <div class="p-section">
     <div class="p-section-left">
@@ -241,7 +235,6 @@ zig build run-example-instanced-cube
     </a>
 </div>
 
-
 <div class="p-section">
     <a class="animated-demo" href="https://user-images.githubusercontent.com/3173176/164985604-8f86fac1-68aa-4f64-a33f-1f7f45219d31.mp4">
         <video autoplay loop>
@@ -262,9 +255,8 @@ zig build run-example-advanced-gen-texture-light
     </div>
 </div>
 
-
 <div class="p-section">
-    <img class="p-img-left color-inverted" src="/img/people.svg"></img>
+    <img class="p-img-left auto-color" src="/img/people.svg"></img>
     <div class="p-section-right">
         <h2>Help contribute!</h2>
         <p>Eager to get started learning WebGPU in Zig? We'd love contributions for more examples!</p>
