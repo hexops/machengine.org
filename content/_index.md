@@ -17,6 +17,11 @@ images: ["/img/mach-opengraph.png"]
     margin-left: -1rem;
     margin-right: -1rem;
 }
+@media (prefers-color-scheme: light) {
+    .p-warning, .p-warning a {
+        color: white;
+    }
+}
 .p-section {
     display: flex;
     flex-direction: row;
