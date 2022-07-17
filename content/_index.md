@@ -132,7 +132,7 @@ h2 {
     Mach is still early stages - see <a href="#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
 </div>
 
-<div class="p-logo"><img class="auto-color" src="https://raw.githubusercontent.com/hexops/media/main/mach/logo_tagline.svg"></img></div>
+<div class="p-logo"><img class="auto-color" src="https://raw.githubusercontent.com/hexops/media/234e15f265b19743c580a078b2d68660c92675d4/mach/logo_tagline.svg"></img></div>
 
 <div class="p-section p-section-highlight">
     <a href="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4">
