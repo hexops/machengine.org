@@ -24,19 +24,25 @@ jobs:
           hugo-version: '0.85.0'
           extended: true
 
-      - name: Build
+      - name: Build (main)
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: hugo --minify
 
-      - name: Deploy (main)
+      - name: Build (next)
+        if: ${{ github.ref == 'refs/heads/next' }}
+        run: |
+          git checkout main
+          hugo --minify
+          mv public public-main
+
+          git checkout next
+          hugo --minify
+          mv public public-main/next
+          mv public-main public
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
-      - name: Deploy (next)
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/next' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public/next
