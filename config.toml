@@ -1,4 +1,4 @@
-baseURL = 'https://machengine.org'
+baseURL = 'https://machengine.org/next'
 languageCode = 'en-us'
 title = 'Mach engine - game engine & graphics toolkit for the future'
 theme = "minimal"
