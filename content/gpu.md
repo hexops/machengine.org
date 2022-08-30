@@ -19,7 +19,7 @@ images: ["/img/mach-opengraph.png"]
 }
 @media (prefers-color-scheme: light) {
     .p-warning, .p-warning a {
-        color: white;
+        color: #F8F9FB;
     }
 }
 .p-section {
