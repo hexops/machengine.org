@@ -5,3 +5,11 @@ theme = "minimal"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[mediaTypes]
+  [mediaTypes.'video/mp4']
+    suffixes = ['mp4']
+  [mediaTypes.'video/ogg']
+    suffixes = ['ogv']
+  [mediaTypes.'video/webm']
+    suffixes = ['webm']

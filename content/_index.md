@@ -135,9 +135,9 @@ h2 {
 <div class="p-logo"><img class="auto-color" src="https://raw.githubusercontent.com/hexops/media/234e15f265b19743c580a078b2d68660c92675d4/mach/logo_tagline.svg"></img></div>
 
 <div class="p-section p-section-highlight">
-    <a href="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4">
+    <a href="/core-example/boids.mp4">
         <video autoplay loop style="width: 25rem;">
-        <source src="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4" type="video/mp4">
+        <source src="/core-example/boids.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
