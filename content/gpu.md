@@ -113,22 +113,26 @@ h2 {
 
 <picture>
     <source srcset="https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_dark.svg" media="(prefers-color-scheme: dark)">
-    <img style="width: 45rem; margin: 1rem;" src="https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_light.svg">
+    <img style="max-height: 9rem; width:80%; margin: 1rem;" src="https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_light.svg">
 </picture>
 
-<h1 style="margin-top: 0;" align="center">The WebGPU interface for Zig</h1>
-<div class="p-section" style="align-items: baseline;">
+<h1 style="margin-top: 0; margin-bottom: 0;" align="center">The WebGPU interface for Zig</h1>
+<div class="p-section" style="align-items: baseline; margin-top: 0;">
     <div class="p-section-right">
-        <h2>Mach core vs. engine</h2>
+        <h2 style="margin-top: 3rem;">Mach core vs. engine</h2>
         <p>All examples below are <em><strong>Mach core</strong></em> examples: Mach provides truly-cross-platform window+input+WebGPU API, nothing else! These examples show how to leverage WebGPU in Zig for graphics.</p>
         <p>These are not <em><strong>Mach engine</strong></em> examples (which would be higher-level): they're low-level, Mach just handles the cross-platform bits (providing you with browser, mobile, and more support in the future.)</p>
     </div>
     <div>
-        <h2>mach/gpu</h2>
+        <h2 style="margin-top: 3rem;">mach/gpu</h2>
         <p>mach/gpu leverages Google Chrome's WebGPU implementation behind the scenes: <a href="https://devlog.hexops.com/2022/mach-v0.1-zig-graphics-in-60s#behind-the-scenes">we do some heavy lifting</a> to give you effortless cross-compilation and make it all 'just work' with no hassle in under 60 seconds on Windows/Linux/macOS.</p>
         <p>WebGPU is an up-and-coming low-level graphics API like Vulkan, Metal, and DirectX 12. In the future, Mach will provide higher-level _Mach engine_ examples with model rendering, text rendering, etc. as optional libraries on built on top. You get to pick & choose what you use!</p>
     </div>
 </div>
+
+<small style="margin-top: 3rem;">
+    All examples require Zig nightly v0.10+, see <a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md">known issues</a>.
+</small>
 
 <div class="p-section">
     <a class="animated-demo" href="/core-example/advanced-gen-texture-light.mp4">
@@ -366,9 +370,9 @@ zig build run-example-map-async
 <div class="p-section">
     <img class="p-img-left" src="/img/wrench.svg"></img>
     <div class="p-section-right">
-        <h2>Call for contributors!</h2>
-        <p>We're looking for more contributors to [help us build and port](https://github.com/hexops/mach/issues/230) WebGPU examples for Zig.</p>
-        <p>Join the <a href="https://discord.gg/XNG3NZgCqp">Discord server</a> - we'd love to have you there and are always happy to help/chat! Also, there's plenty of great learning material online if you prefer reading about WebGPU <a href="https://twitter.com/Tojiro/status/1549852280270102528">[0]</a> <a href="https://alain.xyz/blog/raw-webgpu">[1]</a></p>
+        <h2>Join the community!</h2>
+        <p>Join the <a href="https://discord.gg/XNG3NZgCqp">Discord server</a> - we'd love to have you there and are always happy to help!</p>
+        <p>We're also looking for more contributors to <a href="https://github.com/hexops/mach/issues/230">help us build and port WebGPU examples</a> for Zig. If you prefer reading about WebGPU, there's plenty of great learning material online about <a href="https://surma.dev/things/webgpu/">compute</a> and rendering[<a href="https://twitter.com/Tojiro/status/1549852280270102528">0</a>][<a href="https://alain.xyz/blog/raw-webgpu">1</a>].</p>
         <p>Special thanks to these people who've contributed to these examples:</p>
         <div style="max-width: 40rem; text-align: left; margin-top: 1rem;">
             <a href="https://github.com/alichraghi"><img src="https://images.weserv.nl/?url=github.com/alichraghi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
