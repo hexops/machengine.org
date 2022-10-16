@@ -144,9 +144,9 @@ h2 {
         <h2>Cross-platform graphics in ~60 seconds</h2>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-boids
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-boids
 </pre></code>
             <small>Cross-platform graphics, a unified shader language & compute shaders.</small>
             <br/><small>Requires <a href="https://ziglang.org">zig 0.10.x</a> | 

@@ -145,9 +145,9 @@ h2 {
         <p>Generates a brick texture at comptime, uses Blinn-Phong lighting, and several pipelines. Move camera with arrow keys / WASD.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-advanced-gen-texture-light
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-advanced-gen-texture-light
 </pre></code>
         </div>
         <small>~770 lines of code</small>
@@ -160,9 +160,9 @@ zig build run-example-advanced-gen-texture-light
         <p>Loads a PNG image and uploads the texture to the GPU. Renders it on a 3D cube.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-textured-cube
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-textured-cube
 </pre></code>
         </div>
         <small>~310 lines of code</small>
@@ -185,9 +185,9 @@ zig build run-example-textured-cube
         <p>Renders a cubemap / skybox. Nothing fancy, but these are instrumental as backgrounds in games.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-cubemap
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-cubemap
 </pre></code>
         </div>
         <small>~370 lines of code</small>
@@ -200,9 +200,9 @@ zig build run-example-cubemap
         <p>Uses a GPU compute shader to run calculations / simulate flocking behaviour of birds.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-boids
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-boids
 </pre></code>
         </div>
         <small>~280 lines of code</small>
@@ -223,9 +223,9 @@ zig build run-example-boids
         <p>Leverages a compute shader to blur an image, then renders it. Don't worry if the details are a bit fuzzy!</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-image-blur
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-image-blur
 </pre></code>
         </div>
         <small>~320 lines of code</small>
@@ -238,9 +238,9 @@ zig build run-example-image-blur
         <p>This is where you should start learning. It tells the GPU to render 3 vertices (but doesn't transfer them using a vertex buffer or anything! The vertex positions are hard-coded in the shader.)</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-triangle
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-triangle
 </pre></code>
         </div>
         <small>~70 lines of code</small>
@@ -261,9 +261,9 @@ zig build run-example-triangle
         <p>Uploads a basic 3D cube to the GPU and renders it. Demonstrates how to use vertex buffers to transfer a model from the CPU to GPU, how to use vertex attributes & more.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-rotating-cube
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-rotating-cube
 </pre></code>
         </div>
         <small>~220 lines of code</small>
@@ -276,9 +276,9 @@ zig build run-example-rotating-cube
         <p>Once you've learned how to render one cube, two is just 30 lines of code more!</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-two-cubes
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-two-cubes
 </pre></code>
         </div>
         <small>~250 lines of code</small>
@@ -301,9 +301,9 @@ zig build run-example-two-cubes
         <p>EVEN MORE CUBES! Instancing lets you duplicate an object & render it in multiple places with different parameters.</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-instanced-cube
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-instanced-cube
 </pre></code>
         </div>
         <small>~230 lines of code</small>
@@ -316,9 +316,9 @@ zig build run-example-instanced-cube
         <p>Cube-inception! Renders the scene to a texture, which is then rendered on the rotating cube itself as a texture!</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-fractal-cube
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-fractal-cube
 </pre></code>
         </div>
         <small>~390 lines of code</small>
@@ -339,9 +339,9 @@ zig build run-example-fractal-cube
         <p>Remember that triangle from before? If we turn on MSAA (Multi-Sample Anti Aliasing) the edges will become <em>smooooth.</em></p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-triangle-msaa
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-triangle-msaa
 </pre></code>
         </div>
         <small>~110 lines of code</small>
@@ -354,9 +354,9 @@ zig build run-example-triangle-msaa
         <p>Some of the best examples have <em>no graphics</em>. This one shows how to transfer data to the GPU, perform computations on that data using the GPU's parallel processing capbilities, and get results back on the CPU. If you're interested in GPU compute, this is the place to start!</p>
         <div>
 <code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-map-async
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-map-async
 </pre></code>
         </div>
         <small>~80 lines of code</small>
