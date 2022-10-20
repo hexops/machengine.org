@@ -8,7 +8,7 @@ rss_ignore: true
 
 Hexops is a little place, and eventual company, for creating games.
 
-I've led [an arduous journey into game development](https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month), spending 4 years learning about game engines full-time, then 7 years [building developer tools](http://slimsag.com) and a thriving startup ([Sourcegraph](https://sourcegraph.com)). Over the past few years, I've been working double-time [writing code 100 hours/week](https://devlog.hexops.com/2021/I-write-code-100-hours-a-week) working towards eventually executing on a self-funded 10 year game development do-or-die plan.
+I've led [an arduous journey into game development](https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month), spending 4 years learning about game engines full-time, then 7 years [building developer tools](http://slimsag.com) and a thriving startup ([Sourcegraph](https://sourcegraph.com)). Over the past few years, I've been working double-time [writing code 100 hours/week](https://devlog.hexops.com/2021/i-write-code-100-hours-a-week) working towards eventually executing on a self-funded 10 year game development do-or-die plan.
 
 ## Motivation
 
