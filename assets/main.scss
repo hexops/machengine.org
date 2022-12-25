@@ -6,8 +6,8 @@ body {
     padding: 0;
     line-height: 1.25;
     font-family: Orbitron;
-    background: #06071B;
-    color: #E0D9F6;
+    background: #06071b;
+    color: #e0d9f6;
 }
 
 body {
@@ -29,7 +29,7 @@ main li {
 }
 
 a {
-    color: #F8F9FB;
+    color: #f8f9fb;
 }
 
 blockquote {
@@ -56,7 +56,8 @@ p {
 
 .svg-icon {
     /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg)
+        brightness(105%) contrast(104%);
     height: 1.25rem;
     display: flex;
     padding-top: 0;
@@ -73,7 +74,7 @@ p {
         max-width: 70rem;
         margin: auto;
 
-        >div {
+        > div {
             display: flex;
             align-items: center;
             height: 100%;
@@ -90,7 +91,7 @@ p {
             display: flex;
         }
 
-        &>div>a:not(.logo) {
+        & > div > a:not(.logo) {
             display: inline-flex;
             align-items: center;
             text-decoration: none;
@@ -98,7 +99,7 @@ p {
             height: 100%;
             padding-right: 1rem;
             padding-left: 1rem;
-            color: #F8F9FB;
+            color: #f8f9fb;
 
             &:hover,
             &:active {
@@ -106,24 +107,24 @@ p {
             }
         }
 
-        &>div>a:not(.logo):not(.svg-item) {
+        & > div > a:not(.logo):not(.svg-item) {
             padding-top: 0.25rem;
         }
     }
 }
 
-@media (max-width:480px) {
-    .navbar>.content {
+@media (max-width: 480px) {
+    .navbar > .content {
         flex-direction: column;
     }
 
-    .navbar>.content>div {
+    .navbar > .content > div {
         z-index: 1;
     }
 
-    .navbar>.content>div>a {
+    .navbar > .content > div > a {
         border-top: 1px solid grey;
-        background: #06071B;
+        background: #06071b;
     }
 }
 
@@ -157,7 +158,7 @@ main {
 .home,
 .unlimited,
 .single {
-    color: #F8F9FB;
+    color: #f8f9fb;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
