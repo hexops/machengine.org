@@ -277,7 +277,7 @@ images: ["/img/mach-opengraph.png"]
 
     a.p-community-icon:hover,
     a.p-community-icon:active {
-        background: #515151;
+        background: rgba(255, 255, 255, 0.11);
     }
 
     .zero-height {
@@ -420,6 +420,7 @@ zig build run-example-textured-cube</pre>
         <div style="text-align: left; width: 30rem;">
             <h1>Community</h1>
             <small>Small but growing, you'll find most of us on Discord.</small>
+            <br />
             <br />
             <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon">
                 <img alt="Discord" class="p-community-icon" src="/img/discord.svg" />
