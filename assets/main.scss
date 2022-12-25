@@ -6,13 +6,8 @@ body {
     padding: 0;
     line-height: 1.25;
     font-family: Orbitron;
-    background: white;
-    color: #0f0f0f;
-
-    @media (prefers-color-scheme: dark) {
-        background: #06071B;
-        color: #E0D9F6;
-    }
+    background: #06071B;
+    color: #E0D9F6;
 }
 
 body {
@@ -34,11 +29,7 @@ main li {
 }
 
 a {
-    color: #0f0f0f;
-
-    @media (prefers-color-scheme: dark) {
-        color: #F8F9FB;
-    }
+    color: #F8F9FB;
 }
 
 blockquote {
@@ -57,12 +48,6 @@ h6 {
 
 p {
     margin-bottom: 0;
-}
-
-.auto-color {
-    @media (prefers-color-scheme: dark) {
-        filter: invert(100%);
-    }
 }
 
 .invert-color {
@@ -172,6 +157,7 @@ main {
 .home,
 .unlimited,
 .single {
+    color: #F8F9FB;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;

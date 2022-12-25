@@ -15,11 +15,6 @@ images: ["/img/mach-opengraph.png"]
     padding-bottom: 0.5rem;
     background: red;
 }
-@media (prefers-color-scheme: light) {
-    .p-warning, .p-warning a {
-        color: #F8F9FB;
-    }
-}
 .p-section {
     display: flex;
     flex-direction: row;
@@ -393,7 +388,6 @@ zig build run-example-textured-cube
 <strong>$</strong> zig build -Dtarget=<strong>aarch64-macos</strong>.12
 </pre></code>
     </div>
-    <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
 </div>
 
 <div class="community">
