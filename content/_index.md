@@ -4,7 +4,6 @@ description: "Game engine & graphics toolkit for the future"
 draft: false
 layout: "unlimited"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
@@ -19,6 +18,7 @@ images: ["/img/mach-opengraph.png"]
     .p-section {
         display: flex;
         flex-direction: row;
+        padding: 1rem;
         margin-top: 3rem;
         align-items: center;
         justify-content: center;
@@ -82,6 +82,165 @@ images: ["/img/mach-opengraph.png"]
         margin: 0.25rem;
     }
 
+    .choose-your-journey {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .navbar {
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.5rem);
+    }
+
+    #content {
+        margin-top: -3.3rem;
+    }
+
+    .choose-your-journey > .options {
+        display: flex;
+    }
+
+    .choose-your-journey .engine,
+    .choose-your-journey .core {
+        flex-grow: 0; /* do not grow   - initial value: 0 */
+        flex-shrink: 0; /* do not shrink - initial value: 1 */
+        flex-basis: 60%; /* width/height  - initial value: auto */
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+    }
+
+    .choose-your-journey .content > h1 {
+        margin-top: 3rem;
+    }
+
+    .choose-your-journey .content > h2 {
+        margin-bottom: 1rem;
+    }
+
+    .choose-your-journey .content > video {
+        width: 30rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .choose-your-journey .engine > .content,
+    .choose-your-journey .core > .content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 2rem;
+    }
+
+    .choose-your-journey .core > .content {
+        align-items: flex-end;
+        position: relative;
+        left: 25%;
+        margin-right: 2rem;
+        align-self: start;
+    }
+
+    .choose-your-journey .engine > .content {
+        margin-left: 2rem;
+        align-self: end;
+        position: relative;
+        right: 20%;
+    }
+
+    .choose-your-journey .engine {
+        background: linear-gradient(180deg, #56113d 0%, #06071b 100%);
+        clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    }
+
+    .choose-your-journey .core {
+        background: linear-gradient(180deg, #263fb2 0%, #06071b 100%);
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        position: relative;
+        left: -17%;
+    }
+
+    .community {
+        background: linear-gradient(180deg, #06071b 0%, #56113d 10%, #06071b 100%);
+    }
+
+    .community > .p-section > div {
+        width: 30rem;
+    }
+
+    img.p-community-icon {
+        height: 100%;
+        /* https://codepen.io/sosuke/pen/Pjoqqp */
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
+    }
+
+    a.p-community-icon {
+        padding: 1rem;
+        display: inline-block;
+        height: 3rem;
+        text-decoration: none;
+        box-sizing: content-box;
+    }
+
+    a.p-community-icon:hover,
+    a.p-community-icon:active {
+        background: rgba(255, 255, 255, 0.11);
+    }
+
+    .zero-height {
+        height: 0;
+        position: relative;
+        z-index: 1;
+        top: -10rem;
+    }
+
+    .zero-height img {
+        height: 5rem;
+        position: relative;
+        top: -0.25rem;
+        margin-right: 1rem;
+    }
+
+    .zero-height .big-button {
+        height: 3rem;
+    }
+
+    .big-button {
+        box-sizing: content-box;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 3rem;
+        padding: 2rem;
+        filter: brightness(100%);
+        font-size: 1.75rem;
+        backdrop-filter: blur(0);
+    }
+
+    .big-button:before {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.5rem);
+
+        clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 1rem 100%, 0 calc(100% - 1rem));
+        content: "";
+    }
+
+    .big-button:hover,
+    .big-button:active {
+        filter: drop-shadow(0 0 1rem #f784f2);
+    }
+
+    .cross-platform > a > video {
+        width: 24rem; 
+    }
+
     @media (max-width: 700px) {
         .p-warning {
             margin-top: 0;
@@ -96,7 +255,7 @@ images: ["/img/mach-opengraph.png"]
         }
         .p-section {
             margin-top: 4rem;
-            flex-direction: column;
+            display: block;
         }
         .p-section h2 {
             text-align: center;
@@ -159,156 +318,57 @@ images: ["/img/mach-opengraph.png"]
             width: 100%;
             height: 15rem;
         }
+
+        .choose-your-journey .content > video {
+            width: 100% !important;
+        }
+
+        .community > .p-section > div {
+            width: auto;
+        }
     }
 
-    .choose-your-journey {
-        width: 100%;
-        overflow: hidden;
-    }
 
-    .navbar {
-        z-index: 1;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(0.5rem);
-    }
+    @media (max-width: 1280px) {
+        .choose-your-journey .options {
+            flex-direction: column;
+        }
 
-    #content {
-        margin-top: -3.3rem;
-    }
+        .choose-your-journey .engine,
+        .choose-your-journey .core {
+            clip-path: none !important;
+        }
 
-    .choose-your-journey > .options {
-        display: flex;
-    }
+        .choose-your-journey .engine {
+            background: linear-gradient(180deg, #06071b 0%, #56113d 50%, #06071b 100%) !important;
+        }
 
-    .choose-your-journey .engine,
-    .choose-your-journey .core {
-        flex-grow: 0; /* do not grow   - initial value: 0 */
-        flex-shrink: 0; /* do not shrink - initial value: 1 */
-        flex-basis: 60%; /* width/height  - initial value: auto */
-        display: flex;
-        flex-direction: column;
-        height: 50rem;
-    }
+        .choose-your-journey .core {
+            background: linear-gradient(180deg, #06071b 0%, #263fb2 50%, #06071b 100%) !important;
+            left: auto !important;
+        }
 
-    .choose-your-journey .content > h1 {
-        margin-top: 3rem;
-    }
+        .choose-your-journey .content {
+            width: 100%;
+            text-align: center !important;
+            padding: 1rem !important;
+            align-items: center !important;
+            align-self: center !important;
+            left: auto !important;
+            right: auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
 
-    .choose-your-journey .content > h2 {
-        margin-bottom: 1rem;
-    }
+        .zero-height {
+            height: auto !important;
+            top: 0 !important;
+            margin: 0.5rem 0 2rem 0;
+        }
 
-    .choose-your-journey .content > video {
-        width: 30rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .choose-your-journey .engine > .content,
-    .choose-your-journey .core > .content {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        margin-top: 2rem;
-    }
-
-    .choose-your-journey .core > .content {
-        align-items: flex-end;
-        position: relative;
-        left: 25%;
-        margin-right: 2rem;
-        align-self: start;
-    }
-
-    .choose-your-journey .engine > .content {
-        margin-left: 2rem;
-        align-self: end;
-        position: relative;
-        right: 20%;
-    }
-
-    .choose-your-journey .engine {
-        background: linear-gradient(180deg, #56113d 0%, #06071b 100%);
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-    }
-
-    .choose-your-journey .core {
-        background: linear-gradient(180deg, #263fb2 0%, #06071b 100%);
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-        position: relative;
-        left: -17%;
-    }
-
-    .community {
-        background: linear-gradient(180deg, #06071b 0%, #56113d 10%, #06071b 100%);
-    }
-
-    img.p-community-icon {
-        height: 100%;
-        /* https://codepen.io/sosuke/pen/Pjoqqp */
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
-    }
-
-    a.p-community-icon {
-        padding: 1rem;
-        display: inline-block;
-        height: 3rem;
-        text-decoration: none;
-    }
-
-    a.p-community-icon:hover,
-    a.p-community-icon:active {
-        background: rgba(255, 255, 255, 0.11);
-    }
-
-    .zero-height {
-        height: 0;
-        position: relative;
-        z-index: 1;
-        top: -10rem;
-    }
-
-    .zero-height img {
-        height: 5rem;
-        position: relative;
-        top: -0.25rem;
-        margin-right: 1rem;
-    }
-
-    .zero-height .big-button {
-        height: 3rem;
-    }
-
-    .big-button {
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-        line-height: 3rem;
-        padding: 2rem;
-        padding-right: 3rem;
-        padding-left: 3rem;
-        filter: brightness(100%);
-        font-size: 200%;
-        backdrop-filter: blur(0);
-    }
-
-    .big-button:before {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(0.5rem);
-
-        clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 1rem 100%, 0 calc(100% - 1rem));
-        content: "";
-    }
-
-    .big-button:hover,
-    .big-button:active {
-        filter: drop-shadow(0 0 1rem #f784f2);
+        .cross-platform > a > video {
+            width: 100%; 
+        }
     }
 </style>
 
@@ -345,7 +405,7 @@ images: ["/img/mach-opengraph.png"]
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section built-with">
     <div style="text-align: left;">
         <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
         <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg" />
@@ -353,9 +413,9 @@ images: ["/img/mach-opengraph.png"]
     </div>
 </div>
 
-<div class="p-section p-section-highlight">
+<div class="p-section p-section-highlight cross-platform">
     <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
-        <video autoplay loop style="width: 24rem;">
+        <video autoplay loop>
             <source src="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4" type="video/mp4" />
         </video>
     </a>
@@ -398,7 +458,7 @@ zig build run-example-textured-cube</pre>
         <a href="https://twitter.com/slimsag">
             <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg" />
         </a>
-        <div style="text-align: left; width: 30rem;">
+        <div style="text-align: left">
             <h1>Community</h1>
             <small>Small but growing, you'll find most of us on Discord.</small>
             <br />

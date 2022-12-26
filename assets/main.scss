@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;
@@ -70,14 +74,12 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 3rem;
         max-width: 70rem;
         margin: auto;
 
         > div {
             display: flex;
-            align-items: center;
-            height: 100%;
+            align-self: stretch;
         }
 
         .logo {
@@ -88,27 +90,22 @@ p {
 
         .logo img {
             height: 2.25rem;
+            padding: 0.25rem;
             display: flex;
         }
 
         & > div > a:not(.logo) {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            align-self: stretch;
             text-decoration: none;
-            line-height: 3rem;
-            height: 100%;
-            padding-right: 1rem;
-            padding-left: 1rem;
+            padding: 1rem;
             color: #f8f9fb;
 
             &:hover,
             &:active {
                 background: rgba(255, 255, 255, 0.11);
             }
-        }
-
-        & > div > a:not(.logo):not(.svg-item) {
-            padding-top: 0.25rem;
         }
     }
 }
@@ -122,9 +119,13 @@ p {
         z-index: 1;
     }
 
-    .navbar > .content > div > a {
+    .navbar > .content > div {
+        justify-content: center;
         border-top: 1px solid grey;
-        background: #06071b;
+
+        & > a {
+            padding: 0.5rem !important;
+        }
     }
 }
 
