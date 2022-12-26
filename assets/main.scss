@@ -143,6 +143,7 @@ p {
 
 main {
     width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -205,4 +206,50 @@ main {
     font-size: 12px;
     justify-content: space-between;
     width: 80%;
+}
+
+.docs {
+    box-sizing: content-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid grey;
+
+    @media (max-width: 320px) {
+        flex-direction: column;
+    }
+
+    & > .sidebar {
+        background: #040413;
+        overflow: auto;
+        width: 300px;
+        height: 100%;
+        border-right: 1px solid grey;
+
+        ul {
+            margin: 0;
+            padding: 10px;
+
+            li {
+                list-style: none;
+                width: 100%;
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                    padding: 5px 10px;
+                    
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 320px) {
+            width: 100%;
+            border: none;
+        }
+    }
 }

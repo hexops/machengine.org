@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main aria-role="main" class="main-docs">
+  <div class="docs">
+        <div class="sidebar">
+          {{ $doc_type := .Params.doc_type }}
+          {{ $menu := (index .Site.Data.docs $doc_type) }}
+          <ul>
+            {{ range $menu }} 
+                <li><a href="/docs/{{ $doc_type }}/{{ .link }}">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        <div class="docs-content">{{ .Content }}</div>
+  </div>
+</main>
+{{ end }}
