@@ -1,27 +1,17 @@
 ---
-title: "mach/gpu: the gpu.Interface for Zig"
-description: "mach/gpu provides native, low-level graphics for Zig via WebGPU (DirectX 12, Metal, and Vulkan.) Get started in under 60s with these examples."
+title: "Mach GPU: the gpu.Interface for Zig"
+description: "Mach GPU provides native, low-level graphics for Zig via WebGPU (DirectX 12, Metal, and Vulkan.) Get started in under 60s with these examples."
 draft: false
 layout: "unlimited"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
-    .p-warning {
-        text-align: center;
-        padding: 0;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        background: red;
-        margin-left: -1rem;
-        margin-right: -1rem;
-    }
-
     .p-section {
         display: flex;
         flex-direction: row;
         margin-top: 3rem;
+        padding: 1rem;
         align-items: center;
         justify-content: center;
     }
@@ -49,33 +39,12 @@ images: ["/img/mach-opengraph.png"]
         margin-right: 4.5rem;
     }
 
-    .p-logo {
-        margin-right: 3rem;
-        margin-top: 2rem;
-    }
-
-    .p-logo > img {
-        height: 10rem;
-        width: 100%;
-    }
-
-    h2 {
-        text-align: left;
-        margin-top: 0;
+    .animated-demo > video,
+    .static-demo > img, .logo {
+        width: 30rem;
     }
 
     @media (max-width: 700px) {
-        .p-warning {
-            margin-top: 0;
-        }
-        .p-logo {
-            margin: auto;
-            margin-top: 0;
-            margin-bottom: -2rem;
-        }
-        .p-logo img {
-            margin-top: -1rem;
-        }
         .p-section {
             margin-top: 4rem;
             flex-direction: column;
@@ -110,33 +79,26 @@ images: ["/img/mach-opengraph.png"]
             width: 100%;
             height: 15rem;
         }
-    }
 
-    .animated-demo > video,
-    .static-demo > img {
-        width: 30rem;
+        .animated-demo > video,
+        .static-demo > img, .logo {
+            width: 100% !important;
+        }
     }
 </style>
 
-<div class="p-warning">
-    Mach is still early stages - see <a href="/#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
-</div>
-
-<h1 align="center">mach/gpu: the GPU interface for Zig</h1>
-<div class="p-section">
-    <img style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/163735828-eb10335d-c984-4f7b-90cc-1e0a0edec1d0.png" />
-    <div class="p-section-right">
-        <img style="width: 30rem;" src="https://user-images.githubusercontent.com/3173176/160261203-505aa417-e990-45bb-8a3d-17e224f1506c.png" />
-        <p>
-            Mach provides an ecosystem of WebGPU libraries and tools (leveraging Google Chrome's WebGPU implementation behind the scenes.)
-            <a href="https://devlog.hexops.com/2022/mach-v0.1-zig-graphics-in-60s#behind-the-scenes">We do some heavy lifting</a> to give you effortless cross-compilation and make it all 'just work' with no hassle in under 60 seconds.
-        </p>
-        <p>
-            WebGPU is low-level-in the future, we'll provide model rendering, text rendering, etc. as optional libraries on top: you get to pick choose what you use! You can use it merely to open a WebGPU window on every platform (with
-            mobile and web in the future!)
-        </p>
-        <p>Every example below shows how to use WebGPU from Zig: they're not specific to Mach engine, but do use it for setup code.</p>
-    </div>
+<div style="padding: 1rem">
+    <img class="logo" src="/img/gpu.svg" />
+    <h2>the GPU interface for Zig</h2>
+    <p>
+        Mach provides an ecosystem of WebGPU libraries and tools (leveraging Google Chrome's WebGPU implementation behind the scenes.)
+        <a href="https://devlog.hexops.com/2022/mach-v0.1-zig-graphics-in-60s#behind-the-scenes">We do some heavy lifting</a> to give you effortless cross-compilation and make it all 'just work' with no hassle in under 60 seconds.
+    </p>
+    <p>
+        WebGPU is low-level-in the future, we'll provide model rendering, text rendering, etc. as optional libraries on top: you get to pick choose what you use! You can use it merely to open a WebGPU window on every platform (with
+        mobile and web in the future!)
+    </p>
+    <p>Every example below shows how to use WebGPU from Zig: they're not specific to Mach engine, but do use it for setup code.</p>
 </div>
 
 <div class="p-section">
