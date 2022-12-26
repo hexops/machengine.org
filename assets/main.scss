@@ -182,6 +182,27 @@ main {
     margin: auto;
 }
 
+.code-inline {
+    color: black;
+    display: inline-block;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.code {
+    text-align: left;
+    background: #212234;
+    color: #f8f9fb;
+    border: solid 1px #525361;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.code::selection, .code *::selection {
+    color: #161616;
+    background: #3CC1F5;
+}
+
 /* footer */
 .footer {
     border-top: 1px solid grey;

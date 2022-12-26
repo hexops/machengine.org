@@ -76,25 +76,6 @@ images: ["/img/mach-opengraph.png"]
         margin-top: 0;
     }
 
-    .code {
-        text-align: left;
-        background: #c2c2c2;
-        color: black;
-        padding: 0.5rem;
-        font-weight: bold;
-    }
-
-    .code::-moz-selection {
-        /* Code for Firefox */
-        color: white;
-        background: black;
-    }
-
-    .code::selection {
-        color: white;
-        background: black;
-    }
-
     .p-section.sponsors img {
         width: 3rem;
         height: 3rem;
