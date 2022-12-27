@@ -426,10 +426,10 @@ rss_ignore: true
         </div>
         <div>
             <code>
-                <pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-textured-cube</pre>
+                <pre>
+git clone https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-textured-cube</pre>
             </code>
             <small>
                 Requires <a href="https://ziglang.org">zig 0.10.x</a> |
@@ -444,7 +444,7 @@ zig build run-example-textured-cube</pre>
         <h2>Effortless cross-compilation</h2>
         <p>Windows, macOS, Linux & Steam Deck builds at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
         <code>
-            <pre class="code">
+            <pre>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-windows</strong>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-linux</strong>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-macos</strong>.12
