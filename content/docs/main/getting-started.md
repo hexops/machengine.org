@@ -40,7 +40,7 @@ zig build run-boids
 3.  Link Mach in your `build.zig`
 
     ```diff
-    const std = @import("std");
+       const std = @import("std");
     ++ const mach = @import("libs/mach/build.zig");
 
     ++ pub fn build(b: *std.build.Builder) !void {
@@ -85,7 +85,7 @@ zig build run-boids
 
     --     const test_step = b.step("test", "Run unit tests");
     --     test_step.dependOn(&exe_tests.step);
-    }
+       }
     ```
 
 4.  Edit `src/main.zig` to this

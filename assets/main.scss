@@ -205,23 +205,28 @@ pre > code {
     width: 80%;
 }
 
+.main-docs {
+    justify-content: center;
+}
+
 .docs {
     box-sizing: content-box;
     display: flex;
+    max-width: 1200px;
     width: 100%;
     height: 100%;
     border-bottom: 1px solid grey;
 
-    @media (max-width: 320px) {
+    @media (max-width: 1200px) {
         flex-direction: column;
     }
 
     & > .sidebar {
-        background: #040413;
         overflow: auto;
         width: 300px;
         height: 100%;
         border-right: 1px solid grey;
+        border-left: 1px solid grey;
 
         ul {
             margin: 0;
@@ -244,7 +249,7 @@ pre > code {
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 1200px) {
             width: 100%;
             border: none;
         }
