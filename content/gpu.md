@@ -131,7 +131,7 @@ h2 {
 </div>
 
 <small style="margin-top: 3rem;">
-    All examples require Zig nightly v0.10+, see <a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md">known issues</a>.
+    All examples require Zig nightly v0.11+, see <a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md">known issues</a>.
 </small>
 
 <div class="p-section">
