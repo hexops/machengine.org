@@ -172,14 +172,6 @@ h2 {
     );
     content: ''
 } */
-.navbar {
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.5rem);
-}
-#content {
-    margin-top: -3.3rem;
-}
 
 .choose-your-journey>.options {
     display: flex;
