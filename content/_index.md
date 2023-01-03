@@ -1,5 +1,5 @@
 ---
-title: "Mach engine"
+title: "Mach"
 description: "Game engine & graphics toolkit for the future"
 draft: false
 layout: "unlimited"
@@ -173,7 +173,7 @@ h2 {
 .choose-your-journey .core>.content {
     align-items: flex-end;
     position: relative;
-    left: 25%;
+    left: 15%;
     margin-right: 2rem;
     align-self: start;
 }
@@ -181,7 +181,7 @@ h2 {
     margin-left: 2rem;
     align-self: end;
     position: relative;
-    right: 20%;
+    right: 10%;
 }
 .choose-your-journey .engine {
 }
@@ -332,10 +332,10 @@ window.addEventListener('resize', updateBackground);
     <div class="options">
         <div class="engine">
             <div class="content">
-                <h1>Mach <em>engine</em> <span style="font-size: 12px;">(coming soon)</span></h1>
-                <h2>Composable, tooling-oriented, data-driven</h2>
-                <span>Competitive in spirit with Godot/Unity/Unreal.</span>
-                <span>Build games, GUI apps & more in the <a href="https://ziglang.org/">Zig programming language.</a></span>
+                <h1>Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
+                <h2>Competitive in spirit with Godot/Unity/Unreal.</h2>
+                <span><em>Composable</em>, tooling-oriented, data-driven</span>
+                <span>For building games & desktop/mobile apps in <a href="https://ziglang.org/">Zig</a>.</span>
                 <video autoplay loop>
                     <source src="https://user-images.githubusercontent.com/3173176/164985604-8f86fac1-68aa-4f64-a33f-1f7f45219d31.mp4" type="video/mp4">
                 </video>
@@ -343,9 +343,9 @@ window.addEventListener('resize', updateBackground);
         </div>
         <div class="core">
             <div class="content">
-                <h1 align="center">Mach <em>core</em></h1>
-                <h2>Window/Input/GPU, nothing else</h2>
-                <span>Comparable to SDL/GLFW; but <em>truly</em> cross-platform.</span>
+                <h1 align="center">Mach core</h1>
+                <h2>Modern alternative to SDL/GLFW.</h2>
+                <span><em>Truly</em> cross-platform, window, input, GPU & nothing else</span>
                 <span>Desktop, Web (soon), and Mobile (future). Zig & C API.</span>
                 <video autoplay loop>
                     <source src="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4" type="video/mp4">
@@ -377,8 +377,8 @@ window.addEventListener('resize', updateBackground);
         </a>
         <div class="p-section-right">
             <div style="text-align: left;">
-                <h2>Cross-platform graphics in ~60 seconds</h2>
-                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Just zig, git, and curl - no build tools, no system dependencies. (<a href="">how?</a>)</small>
+                <h2>Try it out in just ~60 seconds</h2>
+                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="">how?</a>)</small>
             </div>
             <div>
 <code><pre class="code">
@@ -395,7 +395,7 @@ zig build run-textured-cube
     <div class="p-section">
         <div style="text-align: left;">
             <h2>Effortless cross-compilation</h2>
-            <p>Windows, macOS, Linux & Steam Deck builds at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
+            <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
 <code><pre class="code">
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-windows</strong>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-linux</strong>
