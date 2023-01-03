@@ -149,6 +149,7 @@ h2 {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 3rem);
+    min-height: 47.5rem;
     max-width: 100%;
     overflow: hidden;
 }
@@ -172,7 +173,16 @@ h2 {
     width: 30rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 0 2rem #0a1619;
+    box-shadow: 0 0 0rem #0a1619;
+    animation: 2s ease-out 0s 1 boxShadowFadeIn;
+}
+@keyframes boxShadowFadeIn {
+    0% {
+        box-shadow: 0 0 0rem #0a1619;
+    }
+    100% {
+        box-shadow: 0 0 3rem #0a1619;
+    }
 }
 .choose-your-journey .engine>.content,
 .choose-your-journey .core>.content {
@@ -303,20 +313,25 @@ a.p-community-icon:active {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.always-open-source>div {
+.transparent-card {
+    text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
     background: rgba(26, 54, 59, 0.6);
-    backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(1rem);
     border-radius: 0.5rem;
     padding: 1rem;
-    padding-left: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-.always-open-source,
-.always-open-source a,
-.always-open-source a:active {
+.transparent-card,
+.transparent-card a,
+.transparent-card a:active {
     color: white;
+}
+.always-open-source>div {
+    padding-left: 0;
 }
 .always-open-source img {
     border-radius: 100%;
@@ -436,10 +451,13 @@ zig build run-textured-cube
         </div>
         <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
     </div>
+</div>
+
+<div class="community">
     <div class="p-section" style="margin-top: 1rem;">
         <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg">
-        <div style="text-align: left; width: 30rem;">
-            <h1>Community</h1>
+        <div class="transparent-card" style="width: 30rem; display: block;">
+            <h1 style="margin-top: 0;">Community</h1>
             <small>Small but growing, you'll find most of us on Discord and GitHub.</small>
             <br>
             <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon">
@@ -452,25 +470,7 @@ zig build run-textured-cube
                 <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
             </a>
             <br>
-            <br>
-            <small><em>“One of the keys to a successful life in any field is learning to take responsibility for ourselves, rather than waiting for someone else to do something for us.” - Buzz</em></small>
-        </div>
-    </div>
-</div>
-
-<div class="community">
-    <div class="p-section always-open-source">
-        <div>
-            <a href="https://github.com/slimsag">
-                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
-            </a>
-            <div style="text-align: left;">
-                <h2>Open source, always & forever</h2>
-                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than having a modern, truly open source, modular game engine in a simple, powerful language like Zig.</p>
-                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a> and I dream of being beholden to users of Mach and players of my games, not investors.</p>
-                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach Mach 1, I will be eternally grateful. Special thanks to all these people for thier immense support:</p>
-            </div>
+            <small>There's plenty to do, so if you're eager to get involved please join the community, say hi, check out the code and see if you can contribute!</small>
         </div>
     </div>
     <div class="p-section contributors">
@@ -497,6 +497,21 @@ zig build run-textured-cube
             <h2>Supporters</h2>
             <div style="max-width: 50rem; text-align: left; margin-top: 1rem;">
                 <!-- tier2 --><a href="https://github.com/tauoverpi"><img src="https://images.weserv.nl/?url=github.com/tauoverpi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jamii"><img src="https://images.weserv.nl/?url=github.com/jamii.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ziglang"><img src="https://images.weserv.nl/?url=github.com/ziglang.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shintales"><img src="https://images.weserv.nl/?url=github.com/shintales.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/m3talsmith"><img src="https://images.weserv.nl/?url=github.com/m3talsmith.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/mitchellh"><img src="https://images.weserv.nl/?url=github.com/mitchellh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dzrw"><img src="https://images.weserv.nl/?url=github.com/dzrw.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/davidroman0O"><img src="https://images.weserv.nl/?url=github.com/davidroman0O.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/batiati"><img src="https://images.weserv.nl/?url=github.com/batiati.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/arsdragonfly"><img src="https://images.weserv.nl/?url=github.com/arsdragonfly.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier2 --><!-- tier1 --><a href="https://github.com/mattnite"><img src="https://images.weserv.nl/?url=github.com/mattnite.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/andrewrk"><img src="https://images.weserv.nl/?url=github.com/andrewrk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kristoff-it"><img src="https://images.weserv.nl/?url=github.com/kristoff-it.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/TommiSinivuo"><img src="https://images.weserv.nl/?url=github.com/TommiSinivuo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jayschwa"><img src="https://images.weserv.nl/?url=github.com/jayschwa.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jacobsandlund"><img src="https://images.weserv.nl/?url=github.com/jacobsandlund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jorangreef"><img src="https://images.weserv.nl/?url=github.com/jorangreef.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/karelp"><img src="https://images.weserv.nl/?url=github.com/karelp.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ifreund"><img src="https://images.weserv.nl/?url=github.com/ifreund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shritesh"><img src="https://images.weserv.nl/?url=github.com/shritesh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/nickcernis"><img src="https://images.weserv.nl/?url=github.com/nickcernis.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/user01"><img src="https://images.weserv.nl/?url=github.com/user01.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/silversquirl"><img src="https://images.weserv.nl/?url=github.com/silversquirl.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/sdnts"><img src="https://images.weserv.nl/?url=github.com/sdnts.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/teknico"><img src="https://images.weserv.nl/?url=github.com/teknico.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/LostKobrakai"><img src="https://images.weserv.nl/?url=github.com/LostKobrakai.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jagt"><img src="https://images.weserv.nl/?url=github.com/jagt.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ChrisGute"><img src="https://images.weserv.nl/?url=github.com/ChrisGute.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dylanmcdiarmid"><img src="https://images.weserv.nl/?url=github.com/dylanmcdiarmid.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/MEATANDMEAT"><img src="https://images.weserv.nl/?url=github.com/MEATANDMEAT.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/johnburton"><img src="https://images.weserv.nl/?url=github.com/johnburton.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ryupold"><img src="https://images.weserv.nl/?url=github.com/ryupold.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/hryx"><img src="https://images.weserv.nl/?url=github.com/hryx.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/r4gus"><img src="https://images.weserv.nl/?url=github.com/r4gus.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kooparse"><img src="https://images.weserv.nl/?url=github.com/kooparse.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Manuzor"><img src="https://images.weserv.nl/?url=github.com/Manuzor.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/peartreegames"><img src="https://images.weserv.nl/?url=github.com/peartreegames.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/C-BJ"><img src="https://images.weserv.nl/?url=github.com/C-BJ.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/gegogi"><img src="https://images.weserv.nl/?url=github.com/gegogi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier1 -->
+            </div>
+        </div>
+    </div>
+    <div class="p-section always-open-source">
+        <div class="transparent-card">
+            <a href="https://github.com/slimsag">
+                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
+            </a>
+            <div style="text-align: left;">
+                <h2>Open source, always & forever</h2>
+                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
+                <p>Stephen here! There are few things in life I am more passionate about than Mach - a project I've been dreaming of for over a decade. A modern, modular game engine in a simple & powerful language like Zig-exploring how simple and intuitive gamedev tooling could be.</p>
+                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a>, and I believe we should own our tools. Mach is <em>truly</em> open source, not "open source" and secretly beholden to a cabal of investors who expect multi-million dollar returns in the future.</p>
+                <p>I effectively work <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">two jobs</a>, building towards a simple, modest, future where I can earn a living making Mach for you, and creating high-quality games for everyone.</p>
+                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my dreams, I will be eternally grateful and do everything in my power to make you proud.</p>
             </div>
         </div>
     </div>
