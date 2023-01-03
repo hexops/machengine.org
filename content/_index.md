@@ -133,54 +133,23 @@ h2 {
     }
 }
 
+#hero-background {
+    display: block;
+    background-image: url(img/castle.webp);
+    filter: blur(0.3rem);
+}
+
 .choose-your-journey {
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-/* .choose-your-journey>.zero-height>h1 {
-    display: inline-block;
-    margin: 0;
-    padding: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    filter: invert;
-    backdrop-filter: blur(0);
-    margin-top: 4.3rem;
-}
-.zero-height>h1 {
-    display: inline-block;
-    padding: 1rem;
-    filter: invert;
-    backdrop-filter: blur(0);
-}
-.zero-height>h1:before {
-    position: absolute;
-    z-index: -1;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.5rem);
-
-    clip-path: polygon(
-        0 .5rem,
-        .5rem 0,
-        calc(100% - .5rem) 0,
-        100% .5rem,
-        100% calc(100% - .5rem),
-        calc(100% - .5rem) 100%,
-        .5rem 100%,
-        0 calc(100% - .5rem)
-    );
-    content: ''
-} */
-
 .choose-your-journey>.options {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .choose-your-journey .engine,
 .choose-your-journey .core {
-    flex-grow: 0;    /* do not grow   - initial value: 0 */
-    flex-shrink: 0;  /* do not shrink - initial value: 1 */
-    flex-basis: 60%; /* width/height  - initial value: auto */
     display: flex;
     flex-direction: column;
     height: 50rem;
@@ -217,30 +186,20 @@ h2 {
     right: 20%;
 }
 .choose-your-journey .engine {
-    background: linear-gradient(
-        180deg,
-        #56113D 0%,
-        #06071B 100%
-    );
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 }
 .choose-your-journey .core {
-    background: linear-gradient(
-        180deg,
-        #263FB2 0%,
-        #06071B 100%
-    );
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    position: relative;
-    left: -17%;
+}
+.pitch {
+    background: #333a48;
+    padding-bottom: 2.5rem;
 }
 .community {
-    background: linear-gradient(
+    /* background: linear-gradient(
         180deg,
         #06071B 0%,
         #56113D 10%,
         #06071B 100%
-    );
+    ); */
 }
 img.p-community-icon {
     height: 100%;
@@ -264,14 +223,11 @@ a.p-community-icon:active {
     z-index: 1;
     top: -10rem;
 }
-.zero-height img {
+.big-button img {
     height: 5rem;
     position: relative;
     top: -0.25rem;
     margin-right: 1rem;
-}
-.zero-height .big-button {
-    height: 3rem;
 }
 .big-button {
     display: inline-flex;
@@ -284,6 +240,7 @@ a.p-community-icon:active {
     filter: brightness(100%);
     font-size: 200%;
     backdrop-filter: blur(0);
+    height: 3rem;
 }
 .big-button:before {
     position: absolute;
@@ -308,6 +265,32 @@ a.p-community-icon:active {
     filter: drop-shadow(0 0 1rem #F784F2);
 }
 </style>
+
+<script>
+function updateBackground() {
+    let scrollTop = window.scrollY;
+    let scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+    let scrollProgress = scrollTop / scrollMax;
+
+    let backgroundHeight = 2.0 * window.innerHeight;
+    let heightDistance = backgroundHeight - window.innerHeight;
+    let offsetY = heightDistance * -scrollProgress;
+
+    let blur = 0.3;
+    if (scrollProgress > 0.3) {
+        blur = 0.1;
+    }
+
+    let el = document.querySelector('#hero-background');
+    el.style.setProperty("background-position-y", offsetY+"px");
+    el.style.setProperty("filter", "blur("+blur+"rem)");
+}
+
+updateBackground();
+window.addEventListener("load", updateBackground);
+document.addEventListener('scroll', updateBackground);
+window.addEventListener('resize', updateBackground);
+</script>
 
 <div class="choose-your-journey">
     <div class="options">
@@ -342,50 +325,50 @@ a.p-community-icon:active {
     </div>
 </div>
 
-<div class="p-section">
-    <div style="text-align: left;">
-        <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
-        <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
-        <p><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
-    </div>
-</div>
-
-<div class="p-section p-section-highlight">
-    <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
-        <video autoplay loop style="width: 24rem;">
-        <source src="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4" type="video/mp4">
-        </video>
-    </a>
-    <div class="p-section-right">
+<div class="pitch">
+    <div class="p-section">
         <div style="text-align: left;">
-            <h2>Cross-platform graphics in ~60 seconds</h2>
-            <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Just zig, git, and curl - no build tools, no system dependencies. (<a href="">how?</a>)</small>
-        </div>
-        <div>
-<code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-example-textured-cube
-</pre></code>
-            <small>Requires <a href="https://ziglang.org">zig 0.10.x</a> | 
-<a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md#known-issues">known issues</a>
-</small>
+            <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
+            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
+            <p><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
         </div>
     </div>
-</div>
-
-<div class="p-section">
-    <div style="text-align: left;">
-        <h2>Effortless cross-compilation</h2>
-        <p>Windows, macOS, Linux & Steam Deck builds at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
+    <div class="p-section p-section-highlight">
+        <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
+            <video autoplay loop style="width: 24rem;">
+            <source src="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4" type="video/mp4">
+            </video>
+        </a>
+        <div class="p-section-right">
+            <div style="text-align: left;">
+                <h2>Cross-platform graphics in ~60 seconds</h2>
+                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Just zig, git, and curl - no build tools, no system dependencies. (<a href="">how?</a>)</small>
+            </div>
+            <div>
+<code><pre class="code">
+git clone --recursive https://github.com/hexops/mach-examples
+cd mach-examples/
+zig build run-textured-cube
+</pre></code>
+                <small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
+    <a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md#known-issues">known issues</a>
+    </small>
+            </div>
+        </div>
+    </div>
+    <div class="p-section">
+        <div style="text-align: left;">
+            <h2>Effortless cross-compilation</h2>
+            <p>Windows, macOS, Linux & Steam Deck builds at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
 <code><pre class="code">
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-windows</strong>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-linux</strong>
 <strong>$</strong> zig build -Dtarget=<strong>x86_64-macos</strong>.12
 <strong>$</strong> zig build -Dtarget=<strong>aarch64-macos</strong>.12
 </pre></code>
+        </div>
+        <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
     </div>
-    <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
 </div>
 
 <div class="community">
@@ -433,5 +416,11 @@ zig build run-example-textured-cube
                 <!-- tier2 --><a href="https://github.com/wilsonk"><img src="https://images.weserv.nl/?url=github.com/wilsonk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jamii"><img src="https://images.weserv.nl/?url=github.com/jamii.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ziglang"><img src="https://images.weserv.nl/?url=github.com/ziglang.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shintales"><img src="https://images.weserv.nl/?url=github.com/shintales.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/m3talsmith"><img src="https://images.weserv.nl/?url=github.com/m3talsmith.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/mitchellh"><img src="https://images.weserv.nl/?url=github.com/mitchellh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dzrw"><img src="https://images.weserv.nl/?url=github.com/dzrw.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/sid405"><img src="https://images.weserv.nl/?url=github.com/sid405.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/davidroman0O"><img src="https://images.weserv.nl/?url=github.com/davidroman0O.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier2 --><!-- tier1 --><a href="https://github.com/mattnite"><img src="https://images.weserv.nl/?url=github.com/mattnite.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/andrewrk"><img src="https://images.weserv.nl/?url=github.com/andrewrk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Luukdegram"><img src="https://images.weserv.nl/?url=github.com/Luukdegram.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Jack-Ji"><img src="https://images.weserv.nl/?url=github.com/Jack-Ji.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kristoff-it"><img src="https://images.weserv.nl/?url=github.com/kristoff-it.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/tauoverpi"><img src="https://images.weserv.nl/?url=github.com/tauoverpi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/TommiSinivuo"><img src="https://images.weserv.nl/?url=github.com/TommiSinivuo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jayschwa"><img src="https://images.weserv.nl/?url=github.com/jayschwa.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jacobsandlund"><img src="https://images.weserv.nl/?url=github.com/jacobsandlund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jorangreef"><img src="https://images.weserv.nl/?url=github.com/jorangreef.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/karelp"><img src="https://images.weserv.nl/?url=github.com/karelp.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ifreund"><img src="https://images.weserv.nl/?url=github.com/ifreund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shritesh"><img src="https://images.weserv.nl/?url=github.com/shritesh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/user01"><img src="https://images.weserv.nl/?url=github.com/user01.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/silversquirl"><img src="https://images.weserv.nl/?url=github.com/silversquirl.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/teknico"><img src="https://images.weserv.nl/?url=github.com/teknico.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/LostKobrakai"><img src="https://images.weserv.nl/?url=github.com/LostKobrakai.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jagt"><img src="https://images.weserv.nl/?url=github.com/jagt.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ChrisGute"><img src="https://images.weserv.nl/?url=github.com/ChrisGute.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dylanmcdiarmid"><img src="https://images.weserv.nl/?url=github.com/dylanmcdiarmid.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/MEATANDMEAT"><img src="https://images.weserv.nl/?url=github.com/MEATANDMEAT.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/johnburton"><img src="https://images.weserv.nl/?url=github.com/johnburton.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ryupold"><img src="https://images.weserv.nl/?url=github.com/ryupold.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/genejo"><img src="https://images.weserv.nl/?url=github.com/genejo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/hryx"><img src="https://images.weserv.nl/?url=github.com/hryx.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/r4gus"><img src="https://images.weserv.nl/?url=github.com/r4gus.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/batiati"><img src="https://images.weserv.nl/?url=github.com/batiati.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kooparse"><img src="https://images.weserv.nl/?url=github.com/kooparse.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Manuzor"><img src="https://images.weserv.nl/?url=github.com/Manuzor.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier1 -->
             </div>
         </div>
+    </div>
+    <div class="p-section">
+        <a href="/docs" class="big-button">
+            <img src="/img/wrench.svg">
+            Choose your journey
+        </a>
     </div>
 </div>
