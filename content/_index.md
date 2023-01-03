@@ -248,6 +248,7 @@ a.p-community-icon:active {
     filter: brightness(100%);
     font-size: 200%;
     backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     height: 3rem;
 
     background-repeat: no-repeat;
@@ -272,9 +273,12 @@ a.p-community-icon:active {
 .big-button:before {
     position: absolute;
     z-index: -1;
-    top: 0; right: 0; bottom: 0; left: 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    width: 35rem;
+    margin-left: -3rem;
+    height: 7rem;
 
     clip-path: polygon(
         0 0,
