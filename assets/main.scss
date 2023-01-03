@@ -36,6 +36,7 @@ body {
     }
 }
 
+
 main p,
 main li,
 small,
@@ -182,6 +183,8 @@ p {
     }
 
     &>span {
+        border-top: 1px solid #00000026;
+        z-index: 2;
         height: 1.25rem;
         padding: 0.5rem;
         background: rgba(255, 255, 255, 0.1);

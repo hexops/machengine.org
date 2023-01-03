@@ -136,7 +136,6 @@ h2 {
 #hero-background {
     display: block;
     background-image: url(img/castle.webp);
-    filter: blur(0.3rem);
 }
 
 .choose-your-journey {
@@ -152,7 +151,7 @@ h2 {
 .choose-your-journey .core {
     display: flex;
     flex-direction: column;
-    height: 50rem;
+    height: 100vh;
 }
 .choose-your-journey .content>h1 {
     margin-top: 3rem;
@@ -170,7 +169,6 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 2rem;
 }
 .choose-your-journey .core>.content {
     align-items: flex-end;
@@ -190,7 +188,7 @@ h2 {
 .choose-your-journey .core {
 }
 .pitch {
-    background: #333a48;
+    background: #729d9f;
     padding-bottom: 2.5rem;
 }
 .community {
@@ -221,7 +219,7 @@ a.p-community-icon:active {
     height: 0;
     position: relative;
     z-index: 1;
-    top: -10rem;
+    top: -12rem;
 }
 .big-button img {
     height: 5rem;
@@ -285,6 +283,10 @@ a.p-community-icon:active {
     transition-duration: 0.5s;
 }
 
+.p-section.final-choose-your-journey {
+    padding-top: 20%;
+    padding-bottom: 15%;
+}
 .p-section .big-button {
     color: black;
 }
@@ -303,12 +305,17 @@ function updateBackground() {
     let heightDistance = backgroundHeight - window.innerHeight;
     let offsetY = heightDistance * -scrollProgress;
 
-    let blur = 0.3;
-    if (scrollProgress > 0.3) {
-        blur = 0.1;
-    }
-
     let el = document.querySelector('#hero-background');
+    let blur = 0.0;
+    if (scrollProgress > 0.34) {
+        blur = 0.75;
+    }
+    if (scrollProgress > 0.8) {
+        let fadeInRegion = ((scrollProgress-0.8)*10.0) / 2.0;
+        if (fadeInRegion > 1.0) fadeInRegion = 1.0;
+        blur = 1.0 - fadeInRegion;
+        console.log(fadeInRegion);
+    }
     el.style.setProperty("background-position-y", offsetY+"px");
     el.style.setProperty("filter", "blur("+blur+"rem)");
 }
@@ -444,7 +451,7 @@ zig build run-textured-cube
             </div>
         </div>
     </div>
-    <div class="p-section">
+    <div class="p-section final-choose-your-journey">
         <a href="/docs" class="big-button">
             <img src="/img/wrench.svg">
             Choose your journey
