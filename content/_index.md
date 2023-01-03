@@ -85,10 +85,15 @@ h2 {
   color: white;
   background: black;
 }
+.contributors img,
 .sponsors img {
     width: 3rem;
     height: 3rem;
     margin: .25rem;
+}
+.contributors h2,
+.sponsors h2 {
+    text-shadow: 2px 2px black;
 }
 
 @media (max-width:700px) {
@@ -101,9 +106,11 @@ h2 {
     .p-section small { margin: 0; display: block; text-align: center; }
     .p-img-left { margin: auto; margin-top: 2rem; margin-bottom: -1rem; height: 6rem; }
     .p-img-right { margin: auto; margin-bottom: 2rem; margin-top: -1rem; height: 6rem; }
+    .p-section.contributors>div>div,
     .p-section.sponsors>div>div {
         text-align: center !important;
     }
+    .p-section.contributors>img,
     .p-section.sponsors>img {
         position: relative;
         left: -1rem;
@@ -364,7 +371,7 @@ window.addEventListener('resize', updateBackground);
                 <span><em>Composable</em>, tooling-oriented, data-driven</span>
                 <span>For building games & desktop/mobile apps in <a href="https://ziglang.org/">Zig</a>.</span>
                 <video autoplay loop muted>
-                    <source src="https://user-images.githubusercontent.com/3173176/164985604-8f86fac1-68aa-4f64-a33f-1f7f45219d31.mp4" type="video/mp4">
+                    <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
                 </video>
             </div>
         </div>
@@ -375,7 +382,7 @@ window.addEventListener('resize', updateBackground);
                 <span>Window, input, GPU & nothing else. Zig and C APIs.</span>
                 <span><em>Truly</em> cross-platform: desktop, web (soon), and mobile (future)</span>
                 <video autoplay loop muted>
-                    <source src="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4" type="video/mp4">
+                    <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
                 </video>
             </div>
         </div>
@@ -397,9 +404,9 @@ window.addEventListener('resize', updateBackground);
         </div>
     </div>
     <div class="p-section p-section-highlight">
-        <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
+        <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm">
             <video autoplay loop muted style="width: 24rem;">
-            <source src="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4" type="video/mp4">
+            <source src="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm" type="video/webm">
             </video>
         </a>
         <div class="p-section-right">
@@ -463,14 +470,34 @@ zig build run-textured-cube
             <div style="text-align: left;">
                 <h2>Open source, always & forever</h2>
                 <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than Mach; I want there to be a modern, truly open source, modular game engine in a simple, powerful language like Zig. <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a> and I dream of being beholden to users not investors.</p>
-                <p>If you can contribute time, I'd love your help in reaching Mach 1.0! <a href="https://github.com/sponsors/slimsag">Donations</a> are also very appreciated, though it's not the amount that counts but rather the fact that you believe in Mach.</p>
-                <p>Special thanks to all these people for thier immense support:</p>
+                <p>Stephen here! There are few things in life I am more passionate about, I need there to be a modern, truly open source, modular game engine in a simple, powerful language like Zig.</p>
+                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a> and I dream of being beholden to users, not investors. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach Mach 1 and my dreams overall, I will be eternally grateful.</p>
+                <p>Special thanks to all these people for thier immense support</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-section contributors">
+        <div style="max-width: 50rem; width: 100%;">
+            <h2>Contributors</h2>
+            <div style="text-align: left; margin-top: 1rem;">
+                <!--
+                    This list is derived from:
+                        https://github.com/hexops/mach/graphs/contributors
+                        https://github.com/hexops/mach-examples/graphs/contributors
+                    Anyone with 15+ commits, and who wishes to be featured here, may be.
+                -->
+                <a href="https://github.com/alichraghi"><img src="https://images.weserv.nl/?url=github.com/alichraghi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+                <a href="https://github.com/iddev5"><img src="https://images.weserv.nl/?url=github.com/iddev5.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+                <a href="https://github.com/InKryption"><img src="https://images.weserv.nl/?url=github.com/InKryption.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+                <a href="https://github.com/PiergiorgioZagaria"><img src="https://images.weserv.nl/?url=github.com/PiergiorgioZagaria.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+                <a href="https://github.com/silversquirl"><img src="https://images.weserv.nl/?url=github.com/silversquirl.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
+                <a href="https://github.com/kdchambers"><img src="https://images.weserv.nl/?url=github.com/kdchambers.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a>
             </div>
         </div>
     </div>
     <div class="p-section sponsors">
         <div>
+            <h2>Supporters</h2>
             <div style="max-width: 50rem; text-align: left; margin-top: 1rem;">
                 <!-- tier2 --><a href="https://github.com/tauoverpi"><img src="https://images.weserv.nl/?url=github.com/tauoverpi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jamii"><img src="https://images.weserv.nl/?url=github.com/jamii.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ziglang"><img src="https://images.weserv.nl/?url=github.com/ziglang.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shintales"><img src="https://images.weserv.nl/?url=github.com/shintales.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/m3talsmith"><img src="https://images.weserv.nl/?url=github.com/m3talsmith.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/mitchellh"><img src="https://images.weserv.nl/?url=github.com/mitchellh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dzrw"><img src="https://images.weserv.nl/?url=github.com/dzrw.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/davidroman0O"><img src="https://images.weserv.nl/?url=github.com/davidroman0O.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/batiati"><img src="https://images.weserv.nl/?url=github.com/batiati.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/arsdragonfly"><img src="https://images.weserv.nl/?url=github.com/arsdragonfly.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier2 --><!-- tier1 --><a href="https://github.com/mattnite"><img src="https://images.weserv.nl/?url=github.com/mattnite.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/andrewrk"><img src="https://images.weserv.nl/?url=github.com/andrewrk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kristoff-it"><img src="https://images.weserv.nl/?url=github.com/kristoff-it.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/TommiSinivuo"><img src="https://images.weserv.nl/?url=github.com/TommiSinivuo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jayschwa"><img src="https://images.weserv.nl/?url=github.com/jayschwa.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jacobsandlund"><img src="https://images.weserv.nl/?url=github.com/jacobsandlund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jorangreef"><img src="https://images.weserv.nl/?url=github.com/jorangreef.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/karelp"><img src="https://images.weserv.nl/?url=github.com/karelp.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ifreund"><img src="https://images.weserv.nl/?url=github.com/ifreund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shritesh"><img src="https://images.weserv.nl/?url=github.com/shritesh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/nickcernis"><img src="https://images.weserv.nl/?url=github.com/nickcernis.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/user01"><img src="https://images.weserv.nl/?url=github.com/user01.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/silversquirl"><img src="https://images.weserv.nl/?url=github.com/silversquirl.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/sdnts"><img src="https://images.weserv.nl/?url=github.com/sdnts.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/teknico"><img src="https://images.weserv.nl/?url=github.com/teknico.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/LostKobrakai"><img src="https://images.weserv.nl/?url=github.com/LostKobrakai.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jagt"><img src="https://images.weserv.nl/?url=github.com/jagt.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ChrisGute"><img src="https://images.weserv.nl/?url=github.com/ChrisGute.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dylanmcdiarmid"><img src="https://images.weserv.nl/?url=github.com/dylanmcdiarmid.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/MEATANDMEAT"><img src="https://images.weserv.nl/?url=github.com/MEATANDMEAT.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/johnburton"><img src="https://images.weserv.nl/?url=github.com/johnburton.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ryupold"><img src="https://images.weserv.nl/?url=github.com/ryupold.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/hryx"><img src="https://images.weserv.nl/?url=github.com/hryx.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/r4gus"><img src="https://images.weserv.nl/?url=github.com/r4gus.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kooparse"><img src="https://images.weserv.nl/?url=github.com/kooparse.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Manuzor"><img src="https://images.weserv.nl/?url=github.com/Manuzor.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/peartreegames"><img src="https://images.weserv.nl/?url=github.com/peartreegames.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/C-BJ"><img src="https://images.weserv.nl/?url=github.com/C-BJ.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/gegogi"><img src="https://images.weserv.nl/?url=github.com/gegogi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier1 -->
             </div>
