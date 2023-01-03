@@ -70,7 +70,7 @@ h2 {
 
 .code {
     text-align: left;
-    background: #c2c2c2;
+    background: #ffeadf;
     color: black;
     padding: 0.5rem;
     font-weight: bold;
@@ -304,7 +304,7 @@ a.p-community-icon:active {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgb(26, 54, 59);
+    background: rgba(26, 54, 59, 0.6);
     backdrop-filter: blur(0.5rem);
     border-radius: 0.5rem;
     padding: 1rem;
@@ -378,7 +378,7 @@ window.addEventListener('resize', updateBackground);
         <div class="core">
             <div class="content">
                 <h1 align="center">Mach core</h1>
-                <h2>Modern alternative to SDL/GLFW.</h2>
+                <h2>Modern alternative to SDL/GLFW</h2>
                 <span>Window, input, GPU & nothing else. Zig and C APIs.</span>
                 <span><em>Truly</em> cross-platform: desktop, web (soon), and mobile (future)</span>
                 <video autoplay loop muted>
@@ -412,7 +412,7 @@ window.addEventListener('resize', updateBackground);
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>Try it out in just ~60 seconds</h2>
-                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="">how?</a>)</small>
+                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="/doc/about#zero-fuss-installation">how?</a>)</small>
             </div>
             <div>
 <code><pre class="code">
@@ -421,7 +421,7 @@ cd mach-examples/
 zig build run-textured-cube
 </pre></code>
                 <small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
-    <a href="https://github.com/hexops/mach/blob/main/doc/known-issues.md#known-issues">known issues</a>
+    <a href="/docs/known-issues">known issues</a>
     </small>
             </div>
         </div>
@@ -431,10 +431,10 @@ zig build run-textured-cube
             <h2>Effortless cross-compilation</h2>
             <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
 <code><pre class="code">
-<strong>$</strong> zig build -Dtarget=<strong>x86_64-windows</strong>
-<strong>$</strong> zig build -Dtarget=<strong>x86_64-linux</strong>
-<strong>$</strong> zig build -Dtarget=<strong>x86_64-macos</strong>.12
-<strong>$</strong> zig build -Dtarget=<strong>aarch64-macos</strong>.12
+<strong>$</strong> zig build -Dtarget=x86_64-windows
+<strong>$</strong> zig build -Dtarget=x86_64-linux
+<strong>$</strong> zig build -Dtarget=x86_64-macos
+<strong>$</strong> zig build -Dtarget=aarch64-macos
 </pre></code>
         </div>
         <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
