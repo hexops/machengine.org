@@ -409,7 +409,7 @@ zig build run-textured-cube
         <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg">
         <div style="text-align: left; width: 30rem;">
             <h1>Community</h1>
-            <small>Small but growing, you'll find most of us on Discord.</small>
+            <small>Small but growing, you'll find most of us on Discord and GitHub.</small>
             <br>
             <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon">
                 <img alt="Discord" class="p-community-icon" src="/img/discord.svg">
@@ -417,11 +417,8 @@ zig build run-textured-cube
             <a href="https://github.com/hexops/mach" class="p-community-icon">
                 <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
             </a>
-            <a href="https://twitter.com/machengine" class="p-community-icon">
-                <img alt="Twitter" class="p-community-icon" src="/img/twitter.svg">
-            </a>
-            <a href="https://matrix.to/#/#hexops:matrix.org" class="p-community-icon">
-                <img alt="Matrix" class="p-community-icon" src="/img/matrix.svg">
+            <a href="https://reddit.com/r/machengine" class="p-community-icon">
+                <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
             </a>
             <br>
             <br>
@@ -432,7 +429,7 @@ zig build run-textured-cube
 
 <div class="community">
     <div class="p-section">
-        <a href="https://twitter.com/slimsag">
+        <a href="https://github.com/slimsag">
             <img class="p-img-left p-img-small" style="border-radius: 100%; height: 7.5rem; margin-right: 2rem;" src="https://avatars.githubusercontent.com/u/3173176?v=4">
         </a>
         <div style="text-align: left;">
