@@ -363,7 +363,7 @@ window.addEventListener('resize', updateBackground);
                 <h2>Competitive in spirit with Godot/Unity/Unreal</h2>
                 <span><em>Composable</em>, tooling-oriented, data-driven</span>
                 <span>For building games & desktop/mobile apps in <a href="https://ziglang.org/">Zig</a>.</span>
-                <video autoplay loop>
+                <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/164985604-8f86fac1-68aa-4f64-a33f-1f7f45219d31.mp4" type="video/mp4">
                 </video>
             </div>
@@ -374,7 +374,7 @@ window.addEventListener('resize', updateBackground);
                 <h2>Modern alternative to SDL/GLFW.</h2>
                 <span>Window, input, GPU & nothing else. Zig and C APIs.</span>
                 <span><em>Truly</em> cross-platform: desktop, web (soon), and mobile (future)</span>
-                <video autoplay loop>
+                <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/163732353-14657abc-d8d6-4367-847f-2b06821a1727.mp4" type="video/mp4">
                 </video>
             </div>
@@ -398,7 +398,7 @@ window.addEventListener('resize', updateBackground);
     </div>
     <div class="p-section p-section-highlight">
         <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4">
-            <video autoplay loop style="width: 24rem;">
+            <video autoplay loop muted style="width: 24rem;">
             <source src="https://user-images.githubusercontent.com/3173176/164985623-93e01957-a86b-4607-827d-2a6cda32a409.mp4" type="video/mp4">
             </video>
         </a>
