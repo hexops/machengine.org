@@ -148,6 +148,9 @@ h2 {
 .choose-your-journey {
     display: flex;
     flex-direction: column;
+    height: calc(100vh - 3rem);
+    max-width: 100%;
+    overflow: hidden;
 }
 .choose-your-journey>.options {
     display: flex;
@@ -158,7 +161,6 @@ h2 {
 .choose-your-journey .core {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 3rem);
 }
 .choose-your-journey .content>h1 {
     margin-top: 3rem;
@@ -170,6 +172,7 @@ h2 {
     width: 30rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    box-shadow: 0 0 2rem #0a1619;
 }
 .choose-your-journey .engine>.content,
 .choose-your-journey .core>.content {
@@ -224,12 +227,6 @@ a.p-community-icon:active {
     background: #515151;
 }
 
-.zero-height {
-    height: 0;
-    position: relative;
-    z-index: 1;
-    top: -8.75rem;
-}
 .big-button img {
     height: 5rem;
     position: relative;
@@ -237,6 +234,7 @@ a.p-community-icon:active {
     margin-right: 1rem;
 }
 .big-button {
+    margin-top: 2rem;
     text-shadow: 2px 2px #000;
     display: inline-flex;
     align-items: center;
@@ -247,8 +245,8 @@ a.p-community-icon:active {
     padding-left: 3rem;
     filter: brightness(100%);
     font-size: 200%;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
     height: 3rem;
 
     background-repeat: no-repeat;
@@ -372,7 +370,7 @@ window.addEventListener('resize', updateBackground);
         <div class="engine">
             <div class="content">
                 <h1 style="font-size: 40px;">Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
-                <h2>Competitive in spirit with Godot/Unity/Unreal</h2>
+                <h2>Competitive in spirit with other engines</h2>
                 <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
                 </video>
@@ -388,7 +386,7 @@ window.addEventListener('resize', updateBackground);
             </div>
         </div>
     </div>
-    <div class="zero-height">
+    <div>
         <a href="/docs" class="big-button">
             <img src="/img/wrench.svg">
             Choose your journey
@@ -405,11 +403,9 @@ window.addEventListener('resize', updateBackground);
         </div>
     </div>
     <div class="p-section p-section-highlight">
-        <a style="margin-right: 1rem;" href="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm">
-            <video autoplay loop muted style="width: 24rem;">
-            <source src="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm" type="video/webm">
-            </video>
-        </a>
+        <video autoplay loop muted playsinline style="width: 24rem;">
+        <source src="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm" type="video/webm">
+        </video>
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>Try it out in just ~60 seconds</h2>
@@ -471,9 +467,9 @@ zig build run-textured-cube
             <div style="text-align: left;">
                 <h2>Open source, always & forever</h2>
                 <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about, I need there to be a modern, truly open source, modular game engine in a simple, powerful language like Zig.</p>
-                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a> and I dream of being beholden to users, not investors. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach Mach 1 and my dreams overall, I will be eternally grateful.</p>
-                <p>Special thanks to all these people for thier immense support</p>
+                <p>Stephen here! There are few things in life I am more passionate about than having a modern, truly open source, modular game engine in a simple, powerful language like Zig.</p>
+                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a> and I dream of being beholden to users of Mach and players of my games, not investors.</p>
+                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach Mach 1, I will be eternally grateful. Special thanks to all these people for thier immense support:</p>
             </div>
         </div>
     </div>
