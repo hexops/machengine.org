@@ -80,6 +80,11 @@ p {
         filter: invert(100%);
     }
 }
+.auto-color-inverted {
+    @media (prefers-color-scheme: light) {
+        filter: invert(100%);
+    }
+}
 
 .invert-color {
     filter: invert(100%);

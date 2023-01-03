@@ -68,6 +68,11 @@ h2 {
     margin-top: 0;
 }
 
+.img-link {
+   text-decoration: none;
+   outline:none;
+}}
+
 .code {
     text-align: left;
     background: #ffeadf;
@@ -394,7 +399,7 @@ window.addEventListener('resize', updateBackground);
         <div class="core">
             <div class="content">
                 <h1 style="font-size: 40px;">Mach core</h1>
-                <h2>Modern alternative to SDL/GLFW</h2>
+                <h2>Modern alternative to SDL/etc</h2>
                 <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
                 </video>
@@ -451,6 +456,72 @@ zig build run-textured-cube
         </div>
         <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
     </div>
+    <div class="p-section">
+        <img class="p-img-right auto-color" style="height: 12rem; margin-right: 1rem;" src="/img/penguin.svg"></img>
+        <div style="text-align: left;">
+            <h2>First-class Linux support</h2>
+            <p>We aim to <em>truly</em> support Linux. Native Vulkan, and OpenGL/GLES fallbacks, plus support for both X11 and Wayland in the same binary via runtime detection.</p>
+            <p>From mesa drivers-to your experimental compositor-and broken vsync implementation, we'll make it run as well as we can.</p>
+        </div>
+    </div>
+    <div class="p-section" style="border-top: 1px solid #414153; border-top-width: 0.5rem; margin-top: 6rem;">
+        <img style="height: 10rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/core.svg">
+        <div style="text-align: left;">
+            <h1 style="margin-top: 0;">Mach core & standalone libraries</h1>
+            <p>Mach engine is built atop a solid foundation called <em>Mach core</em> and a set of standalone libraries, which together help build the Zig gamedev ecosystem.</p>
+        </div>
+    </div>
+    <div class="p-section">
+        <div style="text-align: left;">
+            <h2>A modern alternative to SDL/etc</h2>
+            <p><em>Mach core</em> gets you a Window+Input+GPU, nothing else.</p>
+            <p>Includes zero-fuss installation, cross-compilation at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
+            <p>Use it from Zig or via our C ABI, and soon you'll be able to compile to WebAssembly and Mobile targets using the same API.</p>
+        </div>
+        <img class="p-img-left auto-color-inverted" style="height: 12rem;" src="/img/mach_core_icon.svg"></img>
+    </div>
+    <div class="p-section">
+        <div style="text-align: center;">
+            <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
+            <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
+            <br/>
+            <a href="https://github.com/hexops/mach-gpu" class="img-link">
+                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/gpu.svg">
+            </a>
+            <a href="https://github.com/hexops/mach/tree/main/libs/ecs" class="img-link">
+                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/ecs.svg">
+            </a>
+            <a href="https://github.com/hexops/mach/tree/main/libs/sysaudio" class="img-link">
+                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/sysaudio.svg">
+            </a>
+            <a href="https://github.com/hexops/mach/tree/main/libs/sysjs" class="img-link">
+                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/sysjs.svg">
+            </a>
+        </div>
+    </div>
+    <div class="p-section" style="border-top: 1px solid #414153; border-top-width: 0.5rem; margin-top: 6rem;">
+        <img style="height: 12rem; margin-right: 1rem; padding-top: 3rem; margin-top: -2.5rem;" src="/img/mach_icon_dark.svg">
+        <div style="text-align: left;">
+            <h1 style="margin-top: 0;">Mach engine (coming soon)</h1>
+            <p>Our higher-level libraries for <em>Mach engine</em> are not ready for use yet, and work on the GUI editor has not yet begun. This section is to give a taste of what we're building towards.</p>
+        </div>
+    </div>
+    <div class="p-section">
+        <div style="text-align: left;">
+            <h2>Modular</h2>
+            <p>Mach engine is designed to be <em>modular</em>, the only part you must adopt is our Entity Component System (as all modules are built using this to integrate with one another.)</p>
+            <p>All modules will be <em>optional</em>, so that you can easily plug-and-play different ones for making GUIs, rendering 2D sprites, 3D meshes, physics & more.</p>
+        </div>
+        <img class="p-img-left auto-color" src="/img/puzzle_heart.svg"></img>
+    </div>
+    <div class="p-section" style="margin-bottom: 3rem;">
+        <img class="p-img-right auto-color" src="/img/thought_bubble.svg" style="height: 12rem; margin-right: 1rem;"></img>
+        <div style="text-align: left;">
+            <h2>Competitive in spirit with other engines</h2>
+            <p>We're planning a fully-fledged set of deeply integrated tools, a proper editor, the whole deal-we're not kidding around here.</p>
+            <p>But we're also realistic, and only want to speak once we really have something to show that you'll love - so please wait to hear our voice.</p>
+        </div>
+    </div>
 </div>
 
 <div class="community">
@@ -471,6 +542,21 @@ zig build run-textured-cube
             </a>
             <br>
             <small>There's plenty to do, so if you're eager to get involved please join the community, say hi, check out the code and see if you can contribute!</small>
+        </div>
+    </div>
+    <div class="p-section always-open-source">
+        <div class="transparent-card">
+            <a href="https://github.com/slimsag">
+                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
+            </a>
+            <div style="text-align: left;">
+                <h2>Open source, always & forever</h2>
+                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
+                <p>Stephen here! There are few things in life I am more passionate about than Mach - a project I've been dreaming of for over a decade. A modern, modular game engine in a simple & powerful language like Zig-exploring how simple and intuitive gamedev tooling could be.</p>
+                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a>, and I believe we should own our tools. Mach is <em>truly</em> open source, not "open source" and secretly beholden to a cabal of investors who expect multi-million dollar returns in the future.</p>
+                <p>I effectively work <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">two jobs</a>, building towards a simple, modest, future where I can earn a living making Mach for you, and creating high-quality games for everyone.</p>
+                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my dreams, I will be eternally grateful and do everything in my power to make you proud.</p>
+            </div>
         </div>
     </div>
     <div class="p-section contributors">
@@ -497,21 +583,6 @@ zig build run-textured-cube
             <h2>Supporters</h2>
             <div style="max-width: 50rem; text-align: left; margin-top: 1rem;">
                 <!-- tier2 --><a href="https://github.com/tauoverpi"><img src="https://images.weserv.nl/?url=github.com/tauoverpi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jamii"><img src="https://images.weserv.nl/?url=github.com/jamii.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ziglang"><img src="https://images.weserv.nl/?url=github.com/ziglang.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shintales"><img src="https://images.weserv.nl/?url=github.com/shintales.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/m3talsmith"><img src="https://images.weserv.nl/?url=github.com/m3talsmith.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/mitchellh"><img src="https://images.weserv.nl/?url=github.com/mitchellh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dzrw"><img src="https://images.weserv.nl/?url=github.com/dzrw.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/davidroman0O"><img src="https://images.weserv.nl/?url=github.com/davidroman0O.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/batiati"><img src="https://images.weserv.nl/?url=github.com/batiati.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/arsdragonfly"><img src="https://images.weserv.nl/?url=github.com/arsdragonfly.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier2 --><!-- tier1 --><a href="https://github.com/mattnite"><img src="https://images.weserv.nl/?url=github.com/mattnite.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/andrewrk"><img src="https://images.weserv.nl/?url=github.com/andrewrk.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kristoff-it"><img src="https://images.weserv.nl/?url=github.com/kristoff-it.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/TommiSinivuo"><img src="https://images.weserv.nl/?url=github.com/TommiSinivuo.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jayschwa"><img src="https://images.weserv.nl/?url=github.com/jayschwa.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jacobsandlund"><img src="https://images.weserv.nl/?url=github.com/jacobsandlund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jorangreef"><img src="https://images.weserv.nl/?url=github.com/jorangreef.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/karelp"><img src="https://images.weserv.nl/?url=github.com/karelp.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ifreund"><img src="https://images.weserv.nl/?url=github.com/ifreund.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/shritesh"><img src="https://images.weserv.nl/?url=github.com/shritesh.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/nickcernis"><img src="https://images.weserv.nl/?url=github.com/nickcernis.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/user01"><img src="https://images.weserv.nl/?url=github.com/user01.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/silversquirl"><img src="https://images.weserv.nl/?url=github.com/silversquirl.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/sdnts"><img src="https://images.weserv.nl/?url=github.com/sdnts.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/teknico"><img src="https://images.weserv.nl/?url=github.com/teknico.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/LostKobrakai"><img src="https://images.weserv.nl/?url=github.com/LostKobrakai.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/jagt"><img src="https://images.weserv.nl/?url=github.com/jagt.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ChrisGute"><img src="https://images.weserv.nl/?url=github.com/ChrisGute.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/dylanmcdiarmid"><img src="https://images.weserv.nl/?url=github.com/dylanmcdiarmid.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/MEATANDMEAT"><img src="https://images.weserv.nl/?url=github.com/MEATANDMEAT.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/johnburton"><img src="https://images.weserv.nl/?url=github.com/johnburton.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/ryupold"><img src="https://images.weserv.nl/?url=github.com/ryupold.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/hryx"><img src="https://images.weserv.nl/?url=github.com/hryx.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/r4gus"><img src="https://images.weserv.nl/?url=github.com/r4gus.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/kooparse"><img src="https://images.weserv.nl/?url=github.com/kooparse.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/Manuzor"><img src="https://images.weserv.nl/?url=github.com/Manuzor.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/peartreegames"><img src="https://images.weserv.nl/?url=github.com/peartreegames.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/C-BJ"><img src="https://images.weserv.nl/?url=github.com/C-BJ.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><a href="https://github.com/gegogi"><img src="https://images.weserv.nl/?url=github.com/gegogi.png?v=4&h=60&w=60&fit=cover&mask=circle&maxage=7d" width="60px" alt="" /></a><!-- tier1 -->
-            </div>
-        </div>
-    </div>
-    <div class="p-section always-open-source">
-        <div class="transparent-card">
-            <a href="https://github.com/slimsag">
-                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
-            </a>
-            <div style="text-align: left;">
-                <h2>Open source, always & forever</h2>
-                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than Mach - a project I've been dreaming of for over a decade. A modern, modular game engine in a simple & powerful language like Zig-exploring how simple and intuitive gamedev tooling could be.</p>
-                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a>, and I believe we should own our tools. Mach is <em>truly</em> open source, not "open source" and secretly beholden to a cabal of investors who expect multi-million dollar returns in the future.</p>
-                <p>I effectively work <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">two jobs</a>, building towards a simple, modest, future where I can earn a living making Mach for you, and creating high-quality games for everyone.</p>
-                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my dreams, I will be eternally grateful and do everything in my power to make you proud.</p>
             </div>
         </div>
     </div>
