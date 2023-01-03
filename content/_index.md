@@ -241,6 +241,25 @@ a.p-community-icon:active {
     font-size: 200%;
     backdrop-filter: blur(0);
     height: 3rem;
+
+    background-repeat: no-repeat;
+    background-position: -2400px -240px, 0 0;
+    background-size: 250% 250%, 100% 100%;
+    transition: background-position 0s ease;
+    background-image: -webkit-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
+    background-image: linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
 }
 .big-button:before {
     position: absolute;
@@ -262,7 +281,15 @@ a.p-community-icon:active {
 
 .big-button:hover,
 .big-button:active {
-    filter: drop-shadow(0 0 1rem #F784F2);
+    background-position: 0 0, 0 0;
+    transition-duration: 0.5s;
+}
+
+.p-section .big-button {
+    color: black;
+}
+.p-section .big-button:before {
+    background: rgba(255, 255, 255, 0.3);
 }
 </style>
 

@@ -108,7 +108,6 @@ p {
     z-index: 1;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0.5rem);
-    border-bottom: 1px solid grey;
 
     .content {
         display: flex;
@@ -147,7 +146,8 @@ p {
 
             &:hover,
             &:active {
-                background: #515151;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(0.5rem);
             }
         }
 
@@ -207,10 +207,6 @@ p {
     margin-right: auto;
     // width: calc(100% - 2em);
     width: 100%;
-    margin-top: -3.3rem;
-    @if $alert {
-        margin-top: -2rem;
-    }
 
     main {
         display: flex;
