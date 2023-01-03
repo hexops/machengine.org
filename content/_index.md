@@ -177,6 +177,7 @@ h2 {
     flex-direction: column;
     text-align: left;
     text-shadow: 2px 2px 6px black;
+    margin-top: 1rem;
 }
 .choose-your-journey .core>.content {
     align-items: flex-end;
@@ -366,10 +367,8 @@ window.addEventListener('resize', updateBackground);
     <div class="options">
         <div class="engine">
             <div class="content">
-                <h1>Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
+                <h1 style="font-size: 40px;">Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
                 <h2>Competitive in spirit with Godot/Unity/Unreal</h2>
-                <span><em>Composable</em>, tooling-oriented, data-driven</span>
-                <span>For building games & desktop/mobile apps in <a href="https://ziglang.org/">Zig</a>.</span>
                 <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
                 </video>
@@ -377,10 +376,8 @@ window.addEventListener('resize', updateBackground);
         </div>
         <div class="core">
             <div class="content">
-                <h1 align="center">Mach core</h1>
+                <h1 style="font-size: 40px;">Mach core</h1>
                 <h2>Modern alternative to SDL/GLFW</h2>
-                <span>Window, input, GPU & nothing else. Zig and C APIs.</span>
-                <span><em>Truly</em> cross-platform: desktop, web (soon), and mobile (future)</span>
                 <video autoplay loop muted>
                     <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
                 </video>
