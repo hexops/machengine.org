@@ -1,5 +1,15 @@
+@import "../theme.scss";
+
 .navbar .content .logo>.img {
     @media (prefers-color-scheme: dark) {
         background-image: url(../img/logo_blue_light.svg);
     }
+}
+.contributors,
+.sponsors,
+.alert,
+.alert a,
+.choose-your-journey,
+.big-button {
+    color: $dark_fg;    
 }

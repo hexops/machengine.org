@@ -139,7 +139,11 @@ images: ["/img/mach-opengraph.png"]
     margin-top: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 0 0rem #0a1619;
-    animation: 2s ease-out 0s 1 boxShadowFadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: boxShadowFadeIn;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 @keyframes boxShadowFadeIn {
     0% {
