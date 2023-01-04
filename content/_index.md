@@ -312,21 +312,36 @@ zig build run-textured-cube
             <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
             <br/>
             <a href="https://github.com/hexops/mach-gpu" class="img-link">
-                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/gpu.svg">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/gpu/logo_standalone_dark.svg">
+                    <img alt="mach/gpu" src="/assets/media/gpu/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
             </a>
             <a href="https://github.com/hexops/mach/tree/main/libs/ecs" class="img-link">
-                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/ecs.svg">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/ecs/logo_standalone_dark.svg">
+                    <img alt="mach/ecs" src="/assets/media/ecs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
             </a>
             <a href="https://github.com/hexops/mach/tree/main/libs/sysaudio" class="img-link">
-                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/sysaudio.svg">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysaudio/logo_standalone_dark.svg">
+                    <img alt="mach/sysaudio" src="/assets/media/sysaudio/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
             </a>
             <a href="https://github.com/hexops/mach/tree/main/libs/sysjs" class="img-link">
-                <img style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/sysjs.svg">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysjs/logo_standalone_dark.svg">
+                    <img alt="mach/gpu" src="/assets/media/sysjs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
             </a>
         </div>
     </div>
     <div class="p-section" style="border-top: 1px solid #414153; border-top-width: 0.5rem; margin-top: 6rem;">
-        <img style="height: 12rem; margin-right: 1rem; padding-top: 3rem; margin-top: -2.5rem;" src="/img/mach_icon_dark.svg">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="/assets/media/mach/icon_dark.svg">
+            <img alt="Mach" style="height: 10rem; margin-right: 1rem; padding-top: 3rem; margin-top: -2.5rem;" src="/assets/media/mach/icon_light.svg">
+        </picture>
         <div style="text-align: left;">
             <h1 style="margin-top: 0;">Mach engine (coming soon)</h1>
             <p>Our higher-level libraries for <em>Mach engine</em> are not ready for use yet, and work on the GUI editor has not yet begun. This section is to give a taste of what we're building towards.</p>
