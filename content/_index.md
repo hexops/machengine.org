@@ -8,18 +8,6 @@ images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
-.p-warning {
-    text-align: center;
-    padding: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background: red;
-}
-@media (prefers-color-scheme: light) {
-    .p-warning, .p-warning a {
-        color: #F8F9FB;
-    }
-}
 .p-section {
     display: flex;
     flex-direction: row;
@@ -63,33 +51,6 @@ images: ["/img/mach-opengraph.png"]
     text-align: left;
 }
 
-h2 {
-    text-align: left;
-    margin-top: 0;
-}
-
-.img-link {
-   text-decoration: none;
-   outline:none;
-}}
-
-.code {
-    text-align: left;
-    background: #ffeadf;
-    color: black;
-    padding: 0.5rem;
-    font-weight: bold;
-}
-
-.code::-moz-selection { /* Code for Firefox */
-  color: white;
-  background: black;
-}
-
-.code::selection {
-  color: white;
-  background: black;
-}
 .contributors img,
 .sponsors img {
     width: 3rem;
@@ -102,7 +63,6 @@ h2 {
 }
 
 @media (max-width:700px) {
-    .p-warning { margin-top: 0; }
     .p-logo { margin: auto; margin-top: 0; margin-bottom: -2rem; }
     .p-logo img { margin-top: -1rem; }
     .p-section { margin-top: 4rem; flex-direction: column; }
@@ -218,14 +178,6 @@ h2 {
     background: #0a1619;
     padding-bottom: 2.5rem;
 }
-.community {
-    /* background: linear-gradient(
-        180deg,
-        #06071B 0%,
-        #56113D 10%,
-        #06071B 100%
-    ); */
-}
 img.p-community-icon {
     height: 100%;
     /* https://codepen.io/sosuke/pen/Pjoqqp */
@@ -242,74 +194,6 @@ a.p-community-icon:active {
     background: #515151;
 }
 
-.big-button img {
-    height: 5rem;
-    position: relative;
-    top: -0.25rem;
-    margin-right: 1rem;
-}
-.big-button {
-    margin-top: 2rem;
-    text-shadow: 2px 2px #000;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    line-height: 3rem;
-    padding: 2rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    filter: brightness(100%);
-    font-size: 200%;
-    backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
-    height: 3rem;
-
-    background-repeat: no-repeat;
-    background-position: -2400px -240px, 0 0;
-    background-size: 250% 250%, 100% 100%;
-    transition: background-position 0s ease;
-    background-image: -webkit-linear-gradient(
-        top left,
-        rgba(255, 255, 255, 0.0) 0%,
-        rgba(255, 255, 255, 0.2) 37%,
-        rgba(255, 255, 255, 0.8) 45%,
-        rgba(255, 255, 255, 0.0) 100%
-    );
-    background-image: linear-gradient(
-        0 0,
-        rgba(255, 255, 255, 0.0) 0%,
-        rgba(255, 255, 255, 0.2) 37%,
-        rgba(255, 255, 255, 0.8) 45%,
-        rgba(255, 255, 255, 0.0) 100%
-    );
-}
-.big-button:before {
-    position: absolute;
-    z-index: -1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
-    width: 35rem;
-    margin-left: -3rem;
-    height: 7rem;
-
-    clip-path: polygon(
-        0 0,
-        calc(100% - 1rem) 0,
-        100% 1rem,
-        100% 100%,
-        1rem 100%,
-        0 calc(100% - 1rem)
-    );
-    content: ''
-}
-
-.big-button:hover,
-.big-button:active {
-    background-position: 0 0, 0 0;
-    transition-duration: 0.5s;
-}
-
 .p-section.final-choose-your-journey {
     padding-top: 20%;
     padding-bottom: 15%;
@@ -318,23 +202,6 @@ a.p-community-icon:active {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.transparent-card {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: rgba(26, 54, 59, 0.6);
-    backdrop-filter: blur(1rem);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.transparent-card,
-.transparent-card a,
-.transparent-card a:active {
-    color: white;
-}
 .always-open-source>div {
     padding-left: 0;
 }

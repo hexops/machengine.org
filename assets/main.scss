@@ -30,6 +30,7 @@ body {
     background-position-y: top;
     background-size: 125% 200%;
 }
+
 @media (max-width:800px) {
     #hero-background {
         background-size: auto 200%;
@@ -80,6 +81,7 @@ p {
         filter: invert(100%);
     }
 }
+
 .auto-color-inverted {
     @media (prefers-color-scheme: light) {
         filter: invert(100%);
@@ -185,6 +187,7 @@ p {
     z-index: 1;
     justify-content: center;
     display: flex;
+
     @if not $alert {
         display: none;
     }
@@ -199,6 +202,7 @@ p {
         -webkit-backdrop-filter: blur(0.5rem);
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
+
         @if $next {
             background: red;
             color: white;
@@ -278,4 +282,118 @@ main {
     font-size: 12px;
     justify-content: space-between;
     width: 80%;
+}
+
+.big-button img {
+    height: 5rem;
+    position: relative;
+    top: -0.25rem;
+    margin-right: 1rem;
+}
+.big-button {
+    margin-top: 2rem;
+    text-shadow: 2px 2px #000;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 3rem;
+    padding: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    filter: brightness(100%);
+    font-size: 200%;
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    height: 3rem;
+
+    background-repeat: no-repeat;
+    background-position: -2400px -240px, 0 0;
+    background-size: 250% 250%, 100% 100%;
+    transition: background-position 0s ease;
+    background-image: -webkit-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
+    background-image: linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
+}
+.big-button:before {
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    width: 35rem;
+    margin-left: -3rem;
+    height: 7rem;
+
+    clip-path: polygon(
+        0 0,
+        calc(100% - 1rem) 0,
+        100% 1rem,
+        100% 100%,
+        1rem 100%,
+        0 calc(100% - 1rem)
+    );
+    content: ''
+}
+
+.big-button:hover,
+.big-button:active {
+    background-position: 0 0, 0 0;
+    transition-duration: 0.5s;
+}
+
+.transparent-card {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(26, 54, 59, 0.6);
+    backdrop-filter: blur(1rem);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.transparent-card,
+.transparent-card a,
+.transparent-card a:active {
+    color: white;
+}
+
+h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.img-link {
+   text-decoration: none;
+   outline:none;
+}
+
+.code {
+    text-align: left;
+    background: #ffeadf;
+    color: black;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.code::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+.code::selection {
+  color: white;
+  background: black;
 }
