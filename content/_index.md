@@ -107,7 +107,7 @@ images: ["/img/mach-opengraph.png"]
 
 #hero-background {
     display: block;
-    background-image: url(img/castle.webp);
+    background-image: url(img/castle_poly.webp);
 }
 
 .choose-your-journey {
@@ -211,46 +211,6 @@ a.p-community-icon:active {
     margin-right: 3rem;
 }
 </style>
-
-<script>
-function updateBackground() {
-    let scrollTop = window.scrollY;
-    let scrollMax = document.documentElement.scrollHeight - window.innerHeight;
-    let scrollProgress = scrollTop / scrollMax;
-
-    let backgroundHeight = 2.0 * window.innerHeight;
-    let heightDistance = backgroundHeight - window.innerHeight;
-    let offsetY = heightDistance * -scrollProgress;
-
-    let brightness0 = 1.2;
-    let brightness1 = 1.2;
-    let brightness2 = 1.6;
-    let blur0 = 0.0;
-    let blur1 = 0.75;
-    let blur2 = 0.0;
-
-    let el = document.querySelector('#hero-background');
-    let blur = blur0;
-    let brightness = brightness0;
-    if (scrollProgress > 0.34) {
-        blur = blur1;
-        brightness = brightness1;
-    }
-    if (scrollProgress > 0.8) {
-        let fadeInRegion = ((scrollProgress-0.8)*10.0) / 2.0;
-        if (fadeInRegion > 1.0) fadeInRegion = 1.0;
-        blur = (blur2-blur1 * fadeInRegion) + blur1;
-        brightness = ((brightness2-brightness1) * fadeInRegion) + brightness1;
-    }
-    el.style.setProperty("background-position-y", offsetY+"px");
-    el.style.setProperty("filter", "blur("+blur+"rem) brightness("+brightness+")");
-}
-
-updateBackground();
-window.addEventListener("load", updateBackground);
-document.addEventListener('scroll', updateBackground);
-window.addEventListener('resize', updateBackground);
-</script>
 
 <div class="choose-your-journey">
     <div class="options">

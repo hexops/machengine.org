@@ -25,14 +25,15 @@ body {
 #hero-background {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 200%;
     background-position-x: center;
     background-position-y: top;
-    background-size: 125% 200%;
+    background-size: 125% 100%;
 }
 
 @media (max-width:800px) {
     #hero-background {
+        height: 200%;
         background-size: auto 200%;
     }
 }
@@ -222,10 +223,12 @@ p {
     margin-right: auto;
     // width: calc(100% - 2em);
     width: 100%;
+    overflow: hidden;
 
     main {
         display: flex;
         z-index: 1;
+        min-height: calc(100vh - 10rem);
     }
 }
 
