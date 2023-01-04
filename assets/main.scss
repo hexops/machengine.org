@@ -5,6 +5,8 @@ $next: false;
 // Whether an alert is shown at the top of the page or not.
 $alert: true;
 
+@import "theme.scss";
+
 html,
 body {
     height: 100%;
@@ -13,12 +15,12 @@ body {
     padding: 0;
     line-height: 1.25;
     font-family: Orbitron;
-    background: white;
-    color: #0f0f0f;
+    background: $light_bg;
+    color: $light_fg;
 
     @media (prefers-color-scheme: dark) {
-        background: #06071B;
-        color: #E0D9F6;
+        background: $dark_bg;
+        color: $dark_fg;
     }
 }
 
@@ -52,14 +54,15 @@ main li {
 }
 
 a {
-    color: #0f0f0f;
+    color: $light_fg;
 
     @media (prefers-color-scheme: dark) {
-        color: #F8F9FB;
+        color: $dark_fg;
     }
 }
 
 blockquote {
+    // TODO(theme)
     color: grey;
 }
 
@@ -113,11 +116,21 @@ p {
     }
 }
 
+@mixin glass {
+    background: $glass_color;
+    backdrop-filter: $glass_blur;
+    -webkit-backdrop-filter: $glass_blur;
+}
+
+@mixin glass_text_block {
+    background: $glass_text_block_color;
+    backdrop-filter: $glass_text_block_blur;
+    -webkit-backdrop-filter: $glass_text_block_blur;
+}
+
 .navbar {
+    @include glass;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
 
     .content {
         display: flex;
@@ -152,20 +165,18 @@ p {
             height: 100%;
             padding-right: 1rem;
             padding-left: 1rem;
-            color: #F8F9FB;
-
-            &:hover,
-            &:active {
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(0.5rem);
-                -webkit-backdrop-filter: blur(0.5rem);
-            }
+            color: $dark_fg;
         }
 
         &>div>a:not(.logo):not(.svg-item) {
             padding-top: 0.25rem;
         }
     }
+}
+
+.glass-link:hover,
+.glass-link:active {
+  @include glass;
 }
 
 @media (max-width:480px) {
@@ -194,19 +205,17 @@ p {
     }
 
     &>span {
+        @include glass_text_block;
         border-top: 1px solid #00000026;
         z-index: 2;
         height: 1.25rem;
         padding: 0.5rem;
-        background: rgba(26, 54, 59, 0.6);
-        backdrop-filter: blur(0.5rem);
-        -webkit-backdrop-filter: blur(0.5rem);
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
 
         @if $next {
-            background: red;
-            color: white;
+            background: $warning_bg;
+            color: $dark_fg;
         }
     }
 }
@@ -248,6 +257,7 @@ main {
 }
 
 .home,
+.docs,
 .unlimited,
 .single {
     display: flex;
@@ -256,6 +266,7 @@ main {
 }
 
 .home,
+.docs,
 .unlimited {
     width: 100%;
     text-align: center;
@@ -294,6 +305,7 @@ main {
     margin-right: 1rem;
 }
 .big-button {
+    @include glass;
     margin-top: 2rem;
     text-shadow: 2px 2px #000;
     display: inline-flex;
@@ -305,8 +317,6 @@ main {
     padding-left: 3rem;
     filter: brightness(100%);
     font-size: 200%;
-    backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
     height: 3rem;
 
     background-repeat: no-repeat;
@@ -329,11 +339,9 @@ main {
     );
 }
 .big-button:before {
+    @include glass;
     position: absolute;
     z-index: -1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
     width: 35rem;
     margin-left: -3rem;
     height: 7rem;
@@ -356,12 +364,12 @@ main {
 }
 
 .transparent-card {
+    @include glass_text_block;
     text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
     background: rgba(26, 54, 59, 0.6);
-    backdrop-filter: blur(1rem);
     border-radius: 0.5rem;
     padding: 1rem;
     padding-top: 2rem;
@@ -370,7 +378,7 @@ main {
 .transparent-card,
 .transparent-card a,
 .transparent-card a:active {
-    color: white;
+    color: $dark_fg;
 }
 
 h2 {
@@ -384,19 +392,22 @@ h2 {
 }
 
 .code {
-    text-align: left;
-    background: #ffeadf;
-    color: black;
-    padding: 0.5rem;
-    font-weight: bold;
+  text-align: left;
+  // TODO(theme)
+  background: #ffeadf;
+  color: black;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 
 .code::-moz-selection { /* Code for Firefox */
+  // TODO(theme)
   color: white;
   background: black;
 }
 
 .code::selection {
+  // TODO(theme)
   color: white;
   background: black;
 }

@@ -8,20 +8,6 @@ images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
-.p-warning {
-    text-align: center;
-    padding: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background: red;
-    margin-left: -1rem;
-    margin-right: -1rem;
-}
-@media (prefers-color-scheme: light) {
-    .p-warning, .p-warning a {
-        color: #F8F9FB;
-    }
-}
 .p-section {
     display: flex;
     flex-direction: row;

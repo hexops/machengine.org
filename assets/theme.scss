@@ -1,0 +1,18 @@
+$light_bg: #f8f9fb;
+$light_fg: black;
+
+$dark_bg: #0a1619;
+$dark_fg: #E0D9F6;
+
+$warning_bg: red;
+$glass_color: rgba(255, 255, 255, 0.1);
+$glass_blur: blur(0.5rem);
+$glass_text_block_color: rgba(26, 54, 59, 0.6);
+$glass_text_block_blur: blur(1.0rem);
+
+.color-bg { background-color: $light_bg; }
+.color-fg { color: $light_fg; }
+@media (prefers-color-scheme: dark) {
+    .color-bg { background-color: $dark_bg; }
+    .color-fg { color: $dark_fg; }
+}

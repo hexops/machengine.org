@@ -175,7 +175,6 @@ images: ["/img/mach-opengraph.png"]
 .choose-your-journey .core {
 }
 .pitch {
-    background: #0a1619;
     padding-bottom: 2.5rem;
 }
 img.p-community-icon {
@@ -241,7 +240,7 @@ a.p-community-icon:active {
     </div>
 </div>
 
-<div class="pitch">
+<div class="pitch color-bg color-fg">
     <div class="p-section">
         <div style="text-align: left;">
             <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
@@ -358,13 +357,13 @@ zig build run-textured-cube
             <h1 style="margin-top: 0;">Community</h1>
             <small>Small but growing, you'll find most of us on Discord and GitHub.</small>
             <br>
-            <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon">
+            <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon glass-link">
                 <img alt="Discord" class="p-community-icon" src="/img/discord.svg">
             </a>
-            <a href="https://github.com/hexops/mach" class="p-community-icon">
+            <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
                 <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
             </a>
-            <a href="https://reddit.com/r/machengine" class="p-community-icon">
+            <a href="https://reddit.com/r/machengine" class="p-community-icon glass-link">
                 <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
             </a>
             <br>
