@@ -188,10 +188,6 @@ a.p-community-icon {
     height: 3rem;
     text-decoration: none;
 }
-a.p-community-icon:hover,
-a.p-community-icon:active {
-    background: #515151;
-}
 
 .p-section.final-choose-your-journey {
     padding-top: 20%;

@@ -44,33 +44,6 @@ h2 {
     margin-top: 0;
 }
 
-.code-inline {
-    display: inline-block;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
-.code-inline>a {
-    color: black;
-}
-
-.code {
-    text-align: left;
-    background: #c2c2c2;
-    color: black;
-    padding: 0.5rem;
-    font-weight: bold;
-}
-
-.code::-moz-selection { /* Code for Firefox */
-  color: white;
-  background: black;
-}
-
-.code::selection {
-  color: white;
-  background: black;
-}
-
 @media (max-width:700px) {
     .p-warning { margin-top: 0; }
     .p-logo { margin: auto; margin-top: 0; margin-bottom: -2rem; }
