@@ -1,13 +1,9 @@
 {{ define "main" }}
+{{ $style := resources.Get "layouts/home.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 <main aria-role="main" class="main-home">
   <div class="home">
-    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
     {{.Content}}
-  </div>
-  <div>
-    {{ range first 10 .Site.RegularPages }}
-        {{ .Render "summary"}}
-    {{ end }}
   </div>
 </main>
 {{ end }}

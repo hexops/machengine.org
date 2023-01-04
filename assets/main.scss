@@ -152,11 +152,18 @@ p {
             padding-right: 1em;
         }
 
-        .logo img {
-            height: 2.25rem;
-            display: flex;
+        .logo>.img {
+          width: 9.5rem;
+          height: 2.25rem;
+          display: flex;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(img/logo_blue_light.svg);
+          @media (prefers-color-scheme: dark) {
+            background-image: url(img/logo_blue_dark.svg);
+          }
         }
-
+      
         &>div>a:not(.logo) {
             display: inline-flex;
             align-items: center;

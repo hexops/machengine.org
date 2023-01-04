@@ -1,0 +1,5 @@
+.navbar .content .logo>.img {
+    @media (prefers-color-scheme: dark) {
+        background-image: url(../img/logo_blue_light.svg);
+    }
+}
