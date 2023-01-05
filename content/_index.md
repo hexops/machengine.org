@@ -130,7 +130,7 @@ override_css: "layouts/home.scss"
 .choose-your-journey .content>h2 {
     margin-bottom: 1rem;
 }
-.choose-your-journey .content>video {
+.choose-your-journey .content>a>video {
     width: 30rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -209,18 +209,22 @@ a.p-community-icon {
             <div class="content">
                 <h1 style="font-size: 40px;">Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
                 <h2>Competitive in spirit with other engines</h2>
-                <video autoplay loop muted>
-                    <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
-                </video>
+                <a href="/docs/engine">
+                    <video autoplay loop muted>
+                        <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
+                    </video>
+                </a>
             </div>
         </div>
         <div class="core">
             <div class="content">
                 <h1 style="font-size: 40px;">Mach core</h1>
                 <h2>Modern alternative to SDL/etc</h2>
-                <video autoplay loop muted>
-                    <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
-                </video>
+                <a href="/docs/core">
+                    <video autoplay loop muted>
+                        <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
+                    </video>
+                </a>
             </div>
         </div>
     </div>
@@ -234,7 +238,9 @@ a.p-community-icon {
 
 <div class="color-fg" style="margin-top: 3rem;">
     <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0; clip-path: inset(0 0 -10rem 0)">
-        <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
+        <a href="https://ziglang.org">
+            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
+        </a>
         <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
     </div>
     <div class="p-section color-bg">
@@ -256,7 +262,7 @@ cd mach-examples/
 zig build run-textured-cube
 </pre></code>
                 <small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
-    <a href="/docs/known-issues">known issues</a>
+    <a href="/docs/core/known-issues">known issues</a>
     </small>
             </div>
         </div>
@@ -296,7 +302,7 @@ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>A modern alternative to SDL/etc</h2>
-            <p><em>Mach core</em> gets you a Window+Input+GPU, nothing else.</p>
+            <p><a href="/docs/core"><em>Mach core</em></a> provides a Window+Input+GPU, nothing else.</p>
             <p>Includes zero-fuss installation, cross-compilation at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
             <p>Use it from Zig or via our C ABI, and soon you'll be able to compile to WebAssembly and Mobile targets using the same API.</p>
         </div>
@@ -304,28 +310,30 @@ zig build run-textured-cube
     </div>
     <div class="p-section color-bg">
         <div style="text-align: center;">
-            <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
+            <a href="docs/core/libraries">
+                <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
+            </a>
             <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
             <br/>
-            <a href="https://github.com/hexops/mach-gpu" class="img-link">
+            <a href="docs/core/libraries#gpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/media/gpu/logo_standalone_dark.svg">
                     <img alt="mach/gpu" src="/assets/media/gpu/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="https://github.com/hexops/mach/tree/main/libs/ecs" class="img-link">
+            <a href="docs/core/libraries#ecs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/media/ecs/logo_standalone_dark.svg">
                     <img alt="mach/ecs" src="/assets/media/ecs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="https://github.com/hexops/mach/tree/main/libs/sysaudio" class="img-link">
+            <a href="docs/core/libraries#sysaudio" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysaudio/logo_standalone_dark.svg">
                     <img alt="mach/sysaudio" src="/assets/media/sysaudio/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="https://github.com/hexops/mach/tree/main/libs/sysjs" class="img-link">
+            <a href="docs/core/libraries#sysjs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysjs/logo_standalone_dark.svg">
                     <img alt="mach/gpu" src="/assets/media/sysjs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
@@ -350,7 +358,7 @@ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Modular</h2>
-            <p>Mach engine is designed to be <em>modular</em>, the only part you must adopt is our Entity Component System (as all modules are built using this to integrate with one another.)</p>
+            <p><a href="doc/engine">Mach engine</a> is designed to be <em>modular</em>, the only part you must adopt is our Entity Component System (as all modules are built using this to integrate with one another.)</p>
             <p>All modules will be <em>optional</em>, so that you can easily plug-and-play different ones for making GUIs, rendering 2D sprites, 3D meshes, physics & more.</p>
         </div>
         <img class="p-img-left auto-color" src="/img/puzzle_heart.svg"></img>

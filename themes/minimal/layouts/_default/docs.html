@@ -1,39 +1,61 @@
+{{ define "sidebar" }}
+  <!-- map[menu:map[core:map[title:About]] rss_ignore:true title:Core] -->
+
+  {{ $currentPage := . }}
+
+  {{ $menuKeys := slice }}
+  {{ range $key, $val := $currentPage.Params.menu }}
+    {{ if ne $key "docs" }}
+      {{ $menuKeys = $menuKeys | append $key }}
+    {{ end }}
+  {{ end }}
+  {{ $menuKey := or (index $menuKeys 0) "docs" }}
+
+  {{ with .Site.Menus }}
+    {{ if $menuKey }}
+      {{ range (index . $menuKey) }}
+      {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent $menuKey . }}active{{ end }}">
+          <h3>
+            {{ .Pre }}
+            <span>{{ or .Title .Name }}</span>
+          </h3>
+        </li>
+        <ul class="sub-menu">
+          {{ range .Children }}
+            <li class="{{ if $currentPage.IsMenuCurrent $menuKey . }}active{{ end }}">
+              <a href="{{ .URL }}">{{ or .Title .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ else }}
+        <li>
+          <a href="{{ .URL }}">
+            {{ .Pre }}
+            <span>{{ or .Title .Name }}</span>
+          </a>
+        </li>
+      {{ end }}
+      {{ end }}
+    {{end}}
+  {{end}}
+{{end}}
+
 {{ define "main" }}
 {{ $style := resources.Get "layouts/docs.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <main aria-role="main" class="main-docs">
   <aside>
     <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.docs }}
-        {{ if .HasChildren }}
-          <li class="{{ if $currentPage.HasMenuCurrent "docs" . }}active{{ end }}">
-            <a href="#">
-              {{ .Pre }}
-              <span>{{ .Name }}</span>
-            </a>
-          </li>
-          <ul class="sub-menu">
-            {{ range .Children }}
-              <li class="{{ if $currentPage.IsMenuCurrent "docs" . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Name }}</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ else }}
-          <li>
-            <a href="{{ .URL }}">
-              {{ .Pre }}
-              <span>{{ .Name }}</span>
-            </a>
-          </li>
-        {{ end }}
-      {{ end }}
+      {{ template "sidebar" . }}
     </ul>
   </aside>
-  <div class="docs">
-    {{ .Content }}
+  <div class="docs">{{ .Content }}</div>
+  <div class="toc">
+  {{if ge (strings.Count "<li>" .TableOfContents) 1 }}
+    <h3>Table of contents</h3>
+    {{.TableOfContents}}
+  {{end}}
   </div>
-  {{.TableOfContents}}
 </main>
 {{ end }}

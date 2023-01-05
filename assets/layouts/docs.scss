@@ -1,7 +1,89 @@
 @import "../_theme.scss";
 @import "../_main.scss";
 
-.main-docs {
+.docs {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
     width: 100%;
-    margin-top: 3rem;
+}
+.main-docs {
+    align-self: center;
+    justify-content: center;
+    flex-direction: row;
+    .docs {
+        padding: 3rem;
+        max-width: calc(100% - 20rem - 20rem);
+        text-align: left;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+        h1:first-of-type {
+            margin-top: 1rem;
+        }
+        pre {
+            padding: 1rem;
+        }
+    }
+    aside {
+        flex: 0 0 auto;
+    }
+    aside,
+    .toc {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        padding: 0;
+        margin: 0;
+        padding-top: 3rem;
+    }
+    .toc h3 {
+        margin: 0;
+        padding: 0;
+    }
+}
+.toc,
+.toc a {
+    font-size: small;
+}
+aside>ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-weight: bold;
+    background: $light_bg2;
+    @media (prefers-color-scheme: dark) {
+        background: $dark_bg2;
+    }
+    li {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    a, h3 {
+        margin: 0;
+        padding: 1rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        width: 100%;
+    }
+    h3 {
+        margin-top: 1rem;
+        border-bottom: 1px solid black;
+    }
+    a {
+        &:hover {
+            @include glass;
+        }
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            text-decoration: none;            
+        }
+    }
 }

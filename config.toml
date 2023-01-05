@@ -6,3 +6,66 @@ canonifyURLs = true
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[menu]
+[[menu.docs]]
+  name = 'choose your journey'
+  url = '/docs'
+  weight = 100
+[[menu.docs]]
+  name = 'Engine'
+  identifier = 'Engine'
+  weight = 200
+[[menu.docs]]
+  name = 'Core'
+  identifier = 'Core'
+  weight = 300
+
+[[menu.docs]]
+  parent = 'Engine'
+  identifier = 'engine-overview'
+  name = 'overview'
+  url = '/docs/engine'
+
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-overview'
+  name = 'overview'
+  url = '/docs/core'
+  weight = 100
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-overview'
+  name = 'overview'
+  url = '/docs/core'
+  weight = 200
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-examples'
+  name = 'examples'
+  url = '/docs/core/examples'
+  weight = 300
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-getting-started'
+  name = 'getting started'
+  url = '/docs/core/getting-started'
+  weight = 400
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-libraries'
+  name = 'libraries'
+  url = '/docs/core/libraries'
+  weight = 500
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-known-issues'
+  name = 'known issues'
+  url = '/docs/core/known-issues'
+  weight = 600
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-nixos-usage'
+  name = 'nixOS usage'
+  url = '/docs/core/nixos-usage'
+  weight = 700

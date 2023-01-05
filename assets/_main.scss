@@ -62,6 +62,7 @@ a {
 blockquote {
     // TODO(theme)
     color: grey;
+    margin-bottom: 0;
 }
 
 h1,
@@ -138,7 +139,7 @@ p {
 
 .navbar {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 0 2.0rem rgba(0,0,0,0.6);
     background: $light_bg;
     @media (prefers-color-scheme: dark) {
@@ -282,7 +283,6 @@ main {
 }
 
 .home,
-.docs,
 .unlimited,
 .single {
     display: flex;
@@ -291,7 +291,6 @@ main {
 }
 
 .home,
-.docs,
 .unlimited {
     width: 100%;
     text-align: center;
@@ -417,7 +416,7 @@ main {
 
 h2 {
     text-align: left;
-    margin-top: 0;
+    margin-top: 2rem;
 }
 
 .img-link {
