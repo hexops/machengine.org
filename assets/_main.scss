@@ -135,8 +135,12 @@ p {
 }
 
 .navbar {
-    @include glass;
     z-index: 1;
+    box-shadow: 0 0 2.0rem rgba(0,0,0,0.6);
+    background: $light_bg1;
+    @media (prefers-color-scheme: dark) {
+        background: $dark_bg1;
+    }
 
     .content {
         display: flex;
@@ -181,6 +185,7 @@ p {
             color: $light_fg;
             @media (prefers-color-scheme: dark) {
                 color: $dark_fg;
+                text-shadow: 0 0 0.2rem black;
             }
         }
 
@@ -381,6 +386,10 @@ main {
     @media (prefers-reduced-motion: reduce) {
         transition-duration: 0s;
     }
+}
+
+.glass {
+    @include glass;
 }
 
 .transparent-card {

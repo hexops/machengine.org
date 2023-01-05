@@ -12,13 +12,13 @@ override_css: "layouts/home.scss"
 .p-section {
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
+    padding-top: 3rem;
+    margin-top: 0;
     align-items: center;
     justify-content: center;
 }
-.p-section-highlight {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+.p-section:last-child {
+    padding-bottom: 3rem;
 }
 .p-section-right {
     margin-left: 1rem;
@@ -174,9 +174,6 @@ override_css: "layouts/home.scss"
 }
 .choose-your-journey .core {
 }
-.pitch {
-    padding-bottom: 2.5rem;
-}
 img.p-community-icon {
     height: 100%;
     /* https://codepen.io/sosuke/pen/Pjoqqp */
@@ -236,15 +233,15 @@ a.p-community-icon {
     </div>
 </div>
 
-<div class="pitch color-bg color-fg">
-    <div class="p-section">
-        <div style="text-align: left;">
-            <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
-            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
-            <p><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
-        </div>
+<div class="color-fg" style="margin-top: 3rem;">
+    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0; clip-path: inset(0 0 -10rem 0)">
+        <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
+        <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
     </div>
-    <div class="p-section p-section-highlight">
+    <div class="p-section color-bg">
+        <strong style="width: 40rem; border-left: 2px solid black; border-right: 2px solid black; text-align: left; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;"><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</strong>
+    </div>
+    <div class="p-section color-bg">
         <video autoplay loop muted playsinline style="width: 24rem;">
         <source src="https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm" type="video/webm">
         </video>
@@ -265,7 +262,7 @@ zig build run-textured-cube
             </div>
         </div>
     </div>
-    <div class="p-section">
+    <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Effortless cross-compilation</h2>
             <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
@@ -278,7 +275,7 @@ zig build run-textured-cube
         </div>
         <img class="p-img-left auto-color" src="/img/cpu.svg"></img>
     </div>
-    <div class="p-section">
+    <div class="p-section color-bg">
         <img class="p-img-right auto-color" style="height: 12rem; margin-right: 1rem;" src="/img/penguin.svg"></img>
         <div style="text-align: left;">
             <h2>First-class Linux support</h2>
@@ -286,14 +283,18 @@ zig build run-textured-cube
             <p>From mesa drivers-to your experimental compositor-and broken vsync implementation, we'll make it run as well as we can.</p>
         </div>
     </div>
-    <div class="p-section" style="border-top: 1px solid #414153; border-top-width: 0.5rem; margin-top: 6rem;">
-        <img style="height: 10rem; margin-right: 1rem; margin-top: 0.5rem;" src="/img/core.svg">
-        <div style="text-align: left;">
-            <h1 style="margin-top: 0;">Mach core & standalone libraries</h1>
-            <p>Mach engine is built atop a solid foundation called <em>Mach core</em> and a set of standalone libraries, which together help build the Zig gamedev ecosystem.</p>
-        </div>
+</div>
+
+
+<div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
+    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
+        <img style="float: left; height: 8rem; margin-right: 1rem; margin-top: -1rem; margin-bottom: -1rem;" class="p-image-left" src="/img/core.svg">
+        <h1 style="margin-top: 0; text-align: left;">Mach core & standalone libraries</h1>
     </div>
-    <div class="p-section">
+    <div class="p-section color-bg">
+        <strong style="width: 40rem; border-left: 2px solid black; border-right: 2px solid black; text-align: left; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;">Mach engine is built atop a solid foundation called <em>Mach core</em> and a set of standalone libraries, which together help build the Zig gamedev ecosystem.</strong>
+    </div>
+    <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>A modern alternative to SDL/etc</h2>
             <p><em>Mach core</em> gets you a Window+Input+GPU, nothing else.</p>
@@ -302,7 +303,7 @@ zig build run-textured-cube
         </div>
         <img class="p-img-left auto-color-inverted" style="height: 12rem;" src="/img/mach_core_icon.svg"></img>
     </div>
-    <div class="p-section">
+    <div class="p-section color-bg">
         <div style="text-align: center;">
             <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
             <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
@@ -333,17 +334,21 @@ zig build run-textured-cube
             </a>
         </div>
     </div>
-    <div class="p-section" style="border-top: 1px solid #414153; border-top-width: 0.5rem; margin-top: 6rem;">
+</div>
+
+
+<div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
+    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/media/mach/icon_dark.svg">
-            <img alt="Mach" style="height: 10rem; margin-right: 1rem; padding-top: 3rem; margin-top: -2.5rem;" src="/assets/media/mach/icon_light.svg">
+            <img alt="Mach" style="height: 8rem; margin-right: 1rem; padding-top: 3rem; margin-top: -3.5rem; margin-bottom: -1rem;" src="/assets/media/mach/icon_light.svg">
         </picture>
-        <div style="text-align: left;">
-            <h1 style="margin-top: 0;">Mach engine (coming soon)</h1>
-            <p>Our higher-level libraries for <em>Mach engine</em> are not ready for use yet, and work on the GUI editor has not yet begun. This section is to give a taste of what we're building towards.</p>
-        </div>
+        <h1 style="margin-top: 0; text-align: left;">Mach engine (coming soon)</h1>
     </div>
-    <div class="p-section">
+    <div class="p-section color-bg">
+        <strong style="width: 40rem; border-left: 2px solid black; border-right: 2px solid black; text-align: left; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;">Our higher-level libraries for <em>Mach engine</em> are not ready for use yet, and work on the GUI editor has not yet begun. This section is to give a taste of what we're building towards.</strong>
+    </div>
+    <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Modular</h2>
             <p>Mach engine is designed to be <em>modular</em>, the only part you must adopt is our Entity Component System (as all modules are built using this to integrate with one another.)</p>
@@ -351,7 +356,7 @@ zig build run-textured-cube
         </div>
         <img class="p-img-left auto-color" src="/img/puzzle_heart.svg"></img>
     </div>
-    <div class="p-section" style="margin-bottom: 3rem;">
+    <div class="p-section color-bg">
         <img class="p-img-right auto-color" src="/img/thought_bubble.svg" style="height: 12rem; margin-right: 1rem;"></img>
         <div style="text-align: left;">
             <h2>Competitive in spirit with other engines</h2>
@@ -361,7 +366,21 @@ zig build run-textured-cube
     </div>
 </div>
 
-<div class="community">
+<div class="community" style="margin-top: 3rem;">
+    <div class="p-section always-open-source">
+        <div class="transparent-card">
+            <a href="https://github.com/slimsag">
+                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
+            </a>
+            <div style="text-align: left;">
+                <h2>Open source, always & forever</h2>
+                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
+                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev tooling could be.</p>
+                <p>FOSS <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">is in my roots</a>, I believe we should own our tools and they should empower <em>us</em>-not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the 'open source' game</a> where investors sideload a business off the community expecting multi-million dollar returns in a few years. VCs have urged me to take investment and start businesses around my projects, but Mach needs to be for people like you and me-it needs to be <a href="https://kristoff.it/blog/software-you-can-love/">software you can love</a>, and the big tech model is incompatible.</p>
+                <p>I work <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double-time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, and creating high-quality games for all. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful.</p>
+            </div>
+        </div>
+    </div>
     <div class="p-section" style="margin-top: 1rem;">
         <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg">
         <div class="transparent-card" style="width: 30rem; display: block;">
@@ -379,21 +398,6 @@ zig build run-textured-cube
             </a>
             <br>
             <small>There's plenty to do, so if you're eager to get involved please join the community, say hi, check out the code and see if you can contribute!</small>
-        </div>
-    </div>
-    <div class="p-section always-open-source">
-        <div class="transparent-card">
-            <a href="https://github.com/slimsag">
-                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
-            </a>
-            <div style="text-align: left;">
-                <h2>Open source, always & forever</h2>
-                <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev tooling could be.</p>
-                <p><a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">FOSS is in my roots</a>: we should own our tools, they should empower <em>us</em>, not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the open source game</a> where investors behind the scenes expect multi-million dollar returns in a few years time by sideloading a business off the community. I've had VCs urge me to take investment and start businesses around my open source work before, and I could get investment for Mach if I wanted.</p>
-                <p>But Mach needs to be for people like you and me: it needs to be <a href="https://kristoff.it/blog/software-you-can-love/">Software You Can Love</a> - and the big tech model is not compatible with that as we see with other engines today. Instead, I am working <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, and creating high-quality games for all.</p>
-                <p>If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful and will make you proud one day in the future.</p>
-            </div>
         </div>
     </div>
     <div class="p-section contributors">

@@ -1,9 +1,11 @@
 $light_bg: #f8f9fb !default;
+$light_bg1: #f8f9fb !default;
 $light_fg: black !default;
 $glass_color_light: rgba(0, 0, 0, 0.1) !default;
 $glass_text_block_color_light: rgba(138, 171, 176, 0.6) !default;
 
 $dark_bg: #0a1619 !default;
+$dark_bg1: #183a42 !default;
 $dark_fg: #E0D9F6 !default;
 $glass_color_dark: rgba(255, 255, 255, 0.1) !default;
 $glass_text_block_color_dark: rgba(26, 54, 59, 0.6) !default;
@@ -14,7 +16,9 @@ $glass_text_block_blur: blur(1.0rem) !default;
 
 .color-bg { background-color: $light_bg; }
 .color-fg { color: $light_fg; }
+.color-bg1 { background-color: $light_bg1; }
 @media (prefers-color-scheme: dark) {
     .color-bg { background-color: $dark_bg; }
     .color-fg { color: $dark_fg; }
+    .color-bg1 { background-color: $dark_bg1; }
 }

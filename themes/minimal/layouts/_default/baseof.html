@@ -18,31 +18,52 @@
                 let heightDistance = backgroundHeight - window.innerHeight;
                 let offsetY = heightDistance * -scrollProgress;
 
-                let brightness0 = 1.2;
-                let brightness1 = 1.2;
-                let brightness2 = 1.6;
-                let blur0 = 0.0;
-                let blur1 = 0.75;
-                let blur2 = 0.0;
+                let isLightMode = !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+                let stops = [
+                    {
+                        position: 0.0,
+                        blur: 0.0,
+                        brightness: isLightMode ? 2.0 : 1.2,
+                    },
+                    {
+                        position: 0.1,
+                        blur: 0.0,
+                        brightness: isLightMode ? 2.0 : 1.0,
+                    },
+                    {
+                        position: 0.8,
+                        blur: 0.75,
+                        brightness: isLightMode ? 1.5 : 1.0,
+                    },
+                    {
+                        position: 1.0,
+                        blur: 0.0,
+                        brightness: isLightMode ? 1.2 : 1.2,
+                    },
+                ]
 
                 let el = document.querySelector('#hero-background');
-                let blur = blur0;
-                let brightness = brightness0;
-                if (scrollProgress > 0.34) {
-                    blur = blur1;
-                    brightness = brightness1;
+                let lastStop = 0;
+                let nextStop = 0;
+                while (scrollProgress > stops[nextStop].position) {
+                    lastStop = nextStop;
+                    nextStop++;
                 }
-                if (scrollProgress > 0.8) {
-                    let fadeInRegion = ((scrollProgress-0.8)*10.0) / 2.0;
-                    if (fadeInRegion > 1.0) fadeInRegion = 1.0;
-                    blur = (blur2-blur1 * fadeInRegion) + blur1;
-                    brightness = ((brightness2-brightness1) * fadeInRegion) + brightness1;
-                }
+
+                let range = stops[nextStop].position - stops[lastStop].position;
+                let stopProgress = (scrollProgress-stops[lastStop].position) / range || 0;
+
+                let position = stops[lastStop].position + ((stops[nextStop].position-stops[lastStop].position) * stopProgress);
+                let blur = stops[lastStop].blur + ((stops[nextStop].blur-stops[lastStop].blur) * stopProgress);
+                let brightness = stops[lastStop].brightness + ((stops[nextStop].brightness-stops[lastStop].brightness) * stopProgress);
+
                 // Round blur/brightness to two decimel places, and offsetY to whole pixels.
                 // Doing this reduces CSS state changes and improves perf.
                 blur = Math.round((blur + Number.EPSILON) * 100) / 100;
                 brightness = Math.round((brightness + Number.EPSILON) * 100) / 100;
                 offsetY = Math.round(offsetY);
+
                 el.style.setProperty("transform", "translateY("+offsetY+"px)");
                 el.style.setProperty("filter", "blur("+blur+"rem) brightness("+brightness+")");
             }
@@ -51,6 +72,7 @@
             window.addEventListener("load", updateBackground);
             document.addEventListener('scroll', updateBackground);
             window.addEventListener('resize', updateBackground);
-        </script>
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateBackground);
+</script>
     </body>
 </html>
