@@ -17,3 +17,12 @@ $glass_text_block_color_light: rgba(26, 54, 59, 0.6); // $glass_text_block_color
 .footer a {
     color: $dark_fg;
 }
+.svg-icon {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
+}
+
+#hero-background {
+    display: block;
+    background-image: url(../img/castle_poly.webp);
+}

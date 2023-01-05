@@ -106,11 +106,6 @@ override_css: "layouts/home.scss"
     }
 }
 
-#hero-background {
-    display: block;
-    background-image: url(img/castle_poly.webp);
-}
-
 .choose-your-journey {
     display: flex;
     flex-direction: column;
