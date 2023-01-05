@@ -160,9 +160,9 @@ p {
           display: flex;
           background-repeat: no-repeat;
           background-size: contain;
-          background-image: url(img/logo_blue_dark.svg);
+          background-image: url("../img/logo_blue_dark.svg");
           @media (prefers-color-scheme: dark) {
-            background-image: url(img/logo_blue_light.svg);
+            background-image: url("../img/logo_blue_light.svg");
           }
         }
       
