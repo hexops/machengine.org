@@ -2,7 +2,8 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        <div id="hero-background">&nbsp;</div>
+        <div id="hero-background-0">&nbsp;</div>
+        <div id="hero-background-1">&nbsp;</div>
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
@@ -13,37 +14,49 @@
                 let scrollTop = window.scrollY;
                 let scrollMax = document.documentElement.scrollHeight - window.innerHeight;
                 let scrollProgress = scrollTop / scrollMax;
+                if (scrollProgress < 0) {
+                    scrollProgress = 0.0;
+                }
 
                 let backgroundHeight = 2.0 * window.innerHeight;
                 let heightDistance = backgroundHeight - window.innerHeight;
-                let offsetY = heightDistance * -scrollProgress;
-
                 let isLightMode = !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                heightDistance -= isLightMode ? 300 : 225;
+                let offsetY = heightDistance * -scrollProgress;
 
                 let stops = [
                     {
                         position: 0.0,
                         blur: 0.0,
-                        brightness: isLightMode ? 2.0 : 1.2,
+                        brightness: isLightMode ? 2.0 : 0.6,
+                        blend: 0.0,
                     },
                     {
                         position: 0.1,
                         blur: 0.0,
-                        brightness: isLightMode ? 2.0 : 1.0,
+                        brightness: isLightMode ? 2.0 : 0.6,
+                        blend: 0.0,
                     },
                     {
                         position: 0.8,
                         blur: 0.75,
                         brightness: isLightMode ? 1.5 : 1.0,
+                        blend: 0.0,
+                    },
+                    {
+                        position: 0.90,
+                        blur: 0.0,
+                        brightness: isLightMode ? 1.2 : 1.0,
+                        blend: 0.0,
                     },
                     {
                         position: 1.0,
                         blur: 0.0,
-                        brightness: isLightMode ? 1.2 : 1.2,
+                        brightness: isLightMode ? 1.2 : 1.0,
+                        blend: 1.0,
                     },
                 ]
 
-                let el = document.querySelector('#hero-background');
                 let lastStop = 0;
                 let nextStop = 0;
                 while (scrollProgress > stops[nextStop].position) {
@@ -57,15 +70,31 @@
                 let position = stops[lastStop].position + ((stops[nextStop].position-stops[lastStop].position) * stopProgress);
                 let blur = stops[lastStop].blur + ((stops[nextStop].blur-stops[lastStop].blur) * stopProgress);
                 let brightness = stops[lastStop].brightness + ((stops[nextStop].brightness-stops[lastStop].brightness) * stopProgress);
+                let blend = stops[lastStop].blend + ((stops[nextStop].blend-stops[lastStop].blend) * stopProgress);
 
                 // Round blur/brightness to two decimel places, and offsetY to whole pixels.
                 // Doing this reduces CSS state changes and improves perf.
                 blur = Math.round((blur + Number.EPSILON) * 100) / 100;
                 brightness = Math.round((brightness + Number.EPSILON) * 100) / 100;
+                blend = Math.round((blend + Number.EPSILON) * 100) / 100;
                 offsetY = Math.round(offsetY);
 
-                el.style.setProperty("transform", "translateY("+offsetY+"px)");
-                el.style.setProperty("filter", "blur("+blur+"rem) brightness("+brightness+")");
+                let el0 = document.querySelector('#hero-background-0');
+                if (blend >= 1.0-Number.EPSILON) {
+                    el0.style.setProperty("display", "none");
+                } else {
+                    el0.style.setProperty("display", "block");
+                    el0.style.setProperty("transform", "translateY("+offsetY+"px)");
+                    el0.style.setProperty("filter", "blur("+blur+"rem) brightness("+brightness+")");
+                }
+                let el1 = document.querySelector('#hero-background-1');
+                if (blend <= 0.0+Number.EPSILON) {
+                    el1.style.setProperty("display", "none");
+                } else {
+                    el1.style.setProperty("display", "block");
+                    el1.style.setProperty("transform", "translateY("+offsetY+"px)");
+                    el1.style.setProperty("filter", "blur("+blur+"rem) brightness("+brightness+") opacity("+blend+")");
+                }
             }
 
             updateBackground();

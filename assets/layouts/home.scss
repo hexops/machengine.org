@@ -1,50 +1,33 @@
-// $glass_color_light: rgba(255, 255, 255, 0.1); // $glass_color_dark
-$glass_text_block_color_light: rgba(26, 54, 59, 0.6); // $glass_text_block_color_dark
-
 @import "../_theme.scss";
 @import "../_main.scss";
 
-.navbar .content .logo>.img {
-    background-image: url("../img/logo_blue_light.svg");
-}
 .contributors,
 .sponsors,
-.alert,
-.alert a,
-.navbar .content > div > a:not(.logo),
-.choose-your-journey,
-.big-button,
 .footer a {
     color: $dark_fg;
 }
-.svg-icon {
-    /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
-}
-.choose-your-journey .engine > .content, .choose-your-journey .core > .content {
-    text-shadow: 0 0 1rem black, 0 0 0.5rem black !important;
-}
 .navbar {
     @include glass;
-    .content > div > a:not(.logo) {
-        @media (prefers-color-scheme: light) {
-            text-shadow: 0 0 0.6rem black, 0 0 0.3rem black;
-        }
-    }
-}
-.glass {
-    background: rgba(26, 54, 59, 0.6);
-    @media (prefers-color-scheme: light) {
-        background: $glass_color_light;
-    }
+    background: $light_bg;
     @media (prefers-color-scheme: dark) {
-        text-shadow: 0 0 0.6rem black, 0 0 0.3rem black;
+        background: $dark_bg;
     }
 }
-.transparent-card {
-    background: rgba(26, 54, 59, 0.9);
+.glass, .big-button {
+    color: $dark_fg;
+    text-shadow: 0 0 0.6rem black, 0 0 0.3rem black;
 }
-#hero-background {
+#hero-background-0 {
     display: block;
-    background-image: url(../img/castle_poly.webp);
+    background-image: url(../img/core_poly_low_light.svg);
+    @media (prefers-color-scheme: dark) {
+        background-image: url(../img/core_poly_low_dark.svg);
+    }
+}
+#hero-background-1 {
+    display: block;
+    background-image: url(../img/core_poly_high_light.jpg);
+    @media (prefers-color-scheme: dark) {
+        background-image: url(../img/core_poly_high_dark.jpg);
+    }
 }

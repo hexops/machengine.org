@@ -154,7 +154,6 @@ override_css: "layouts/home.scss"
     display: flex;
     flex-direction: column;
     text-align: left;
-    text-shadow: 2px 2px 6px black;
     margin-top: 1rem;
 }
 .choose-your-journey .core>.content {
