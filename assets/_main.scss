@@ -5,8 +5,6 @@ $next: false;
 // Whether an alert is shown at the top of the page or not.
 $alert: true;
 
-@import "theme.scss";
-
 html,
 body {
     height: 100%;
@@ -17,7 +15,6 @@ body {
     font-family: Orbitron;
     background: $light_bg;
     color: $light_fg;
-
     @media (prefers-color-scheme: dark) {
         background: $dark_bg;
         color: $dark_fg;
@@ -55,7 +52,6 @@ main li {
 
 a {
     color: $light_fg;
-
     @media (prefers-color-scheme: dark) {
         color: $dark_fg;
     }
@@ -117,15 +113,21 @@ p {
 }
 
 @mixin glass {
-    background: $glass_color;
+    background: $glass_color_light;
     backdrop-filter: $glass_blur;
     -webkit-backdrop-filter: $glass_blur;
+    @media (prefers-color-scheme: dark) {
+        background: $glass_color_dark;
+    }
 }
 
 @mixin glass_text_block {
-    background: $glass_text_block_color;
+    background: $glass_text_block_color_light;
     backdrop-filter: $glass_text_block_blur;
     -webkit-backdrop-filter: $glass_text_block_blur;
+    @media (prefers-color-scheme: dark) {
+        background: $glass_text_block_color_dark;
+    }
 }
 
 .navbar {
@@ -158,9 +160,9 @@ p {
           display: flex;
           background-repeat: no-repeat;
           background-size: contain;
-          background-image: url(img/logo_blue_light.svg);
+          background-image: url(img/logo_blue_dark.svg);
           @media (prefers-color-scheme: dark) {
-            background-image: url(img/logo_blue_dark.svg);
+            background-image: url(img/logo_blue_light.svg);
           }
         }
       
@@ -172,7 +174,10 @@ p {
             height: 100%;
             padding-right: 1rem;
             padding-left: 1rem;
-            color: $dark_fg;
+            color: $light_fg;
+            @media (prefers-color-scheme: dark) {
+                color: $light_fg;
+            }
         }
 
         &>div>a:not(.logo):not(.svg-item) {
@@ -368,6 +373,9 @@ main {
 .big-button:active {
     background-position: 0 0, 0 0;
     transition-duration: 0.5s;
+    @media (prefers-reduced-motion: reduce) {
+        transition-duration: 0s;
+    }
 }
 
 .transparent-card {

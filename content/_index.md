@@ -2,9 +2,10 @@
 title: "Mach"
 description: "Game engine & graphics toolkit for the future"
 draft: false
-layout: "unlimited"
 rss_ignore: true
 images: ["/img/mach-opengraph.png"]
+layout: "home"
+override_css: "layouts/home.scss"
 ---
 
 <style>

@@ -1,15 +1,19 @@
-@import "../theme.scss";
+$glass_color_light: rgba(255, 255, 255, 0.1); // $glass_color_dark
+$glass_text_block_color_light: rgba(26, 54, 59, 0.6); // $glass_text_block_color_dark
+
+@import "../_theme.scss";
+@import "../_main.scss";
 
 .navbar .content .logo>.img {
-    @media (prefers-color-scheme: dark) {
-        background-image: url(../img/logo_blue_light.svg);
-    }
+    background-image: url(../img/logo_blue_light.svg);
 }
 .contributors,
 .sponsors,
 .alert,
 .alert a,
+.navbar .content > div > a:not(.logo),
 .choose-your-journey,
-.big-button {
-    color: $dark_fg;    
+.big-button,
+.footer a {
+    color: $dark_fg;
 }

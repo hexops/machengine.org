@@ -1,7 +1,12 @@
 <head>
-    {{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    {{ with $.Params.override_css }}
+        {{ $style := resources.Get $.Params.override_css | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{else}}
+        {{ $style := resources.Get "layouts/default.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{end}}
     <link rel="stylesheet" href="/assets/font/stylesheet.css">
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <script async defer data-domain="hexops.com" src="https://machengine.org/opendata.js"></script>
     <meta charset="utf-8">
     <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
