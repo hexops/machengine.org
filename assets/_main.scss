@@ -5,6 +5,10 @@ $next: false;
 // Whether an alert is shown at the top of the page or not.
 $alert: true;
 
+*, html {
+    scroll-behavior: smooth !important;
+}
+
 html,
 body {
     height: 100%;
@@ -140,7 +144,6 @@ p {
 .navbar {
     position: relative;
     z-index: 2;
-    box-shadow: 0 0 2.0rem rgba(0,0,0,0.6);
     background: $light_bg;
     @media (prefers-color-scheme: dark) {
         background: $dark_bg;
@@ -233,11 +236,14 @@ p {
     &>span {
         @include glass_text_block;
         border-top: 1px solid #00000026;
-        z-index: 2;
         height: 1.25rem;
         padding: 0.5rem;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
+        width: 100%;
+        box-shadow: inset 0 1rem 1rem -1rem rgba(0,0,0,0.6);
+        text-align: center;
+        z-index: 2;
 
         @if $next {
             background: $warning_bg;
@@ -330,7 +336,7 @@ main {
 }
 .big-button {
     @include glass;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -364,7 +370,8 @@ main {
         rgba(255, 255, 255, 0.0) 100%
     );
 }
-.big-button:before {
+.big-button::before,
+.big-button-false-before::before {
     @include glass;
     position: absolute;
     z-index: -1;
@@ -390,6 +397,13 @@ main {
     @media (prefers-reduced-motion: reduce) {
         transition-duration: 0s;
     }
+}
+
+.big-button.glass-hover {
+    background: none;
+}
+.big-button.glass-hover:hover {
+    @include glass;
 }
 
 .glass {

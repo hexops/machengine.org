@@ -201,13 +201,83 @@ a.p-community-icon {
     height: 7.5rem;
     margin-right: 3rem;
 }
+
+.content>h1>a {
+    text-decoration: none;
+}
+
+.choose-journey {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.choose-journey .primary,
+.choose-journey .secondary {
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+.choose-journey .secondary {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -8rem;
+    opacity: 0;
+    visibility: none;
+    z-index: -1;
+    width: 29rem;
+	animation-duration: 0.25s;
+    margin: 0;
+}
+.choose-journey .secondary.big-button-false-before::before {
+    margin-top: 1rem;
+}
+.choose-journey .secondary .big-button {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+}
+.choose-journey .secondary .big-button:first-of-type {
+    margin-left: -3rem;
+}
+.choose-journey .secondary .big-button:last-of-type {
+    margin-right: -3rem;
+}
+.choose-journey .secondary .big-button::before {
+    content: none;
+}
+
+@keyframes chooseJourneyFadeIn {
+	0% {
+		opacity: 0;
+        visibility: none;
+        z-index: -1;
+	}
+	100% {
+		opacity: 1;
+        visibility: visible;
+        z-index: 1;
+	}
+}
+@keyframes chooseJourneyFadeOut {
+	0% {
+		opacity: 1;
+        visibility: visible;
+	}
+	100% {
+		opacity: 0;
+        visibility: none;
+	}
+}
 </style>
 
 <div class="choose-your-journey">
     <div class="options">
         <div class="engine">
             <div class="content">
-                <h1 style="font-size: 40px;">Mach engine <span style="font-size: 12px;">(coming soon)</span></h1>
+                <h1 style="font-size: 40px;"><a href="/docs/engine">Mach engine</a> <span style="font-size: 12px;">(coming soon)</span></h1>
                 <h2>Competitive in spirit with other engines</h2>
                 <a href="/docs/engine">
                     <video autoplay loop muted>
@@ -218,7 +288,7 @@ a.p-community-icon {
         </div>
         <div class="core">
             <div class="content">
-                <h1 style="font-size: 40px;">Mach core</h1>
+                <h1 style="font-size: 40px;"><a href="/docs/core">Mach core</a></h1>
                 <h2>Modern alternative to SDL/etc</h2>
                 <a href="/docs/core">
                     <video autoplay loop muted>
@@ -228,11 +298,15 @@ a.p-community-icon {
             </div>
         </div>
     </div>
-    <div>
-        <a href="/docs" class="big-button">
+    <div class="choose-journey">
+        <a href="#" class="big-button primary" onclick="chooseJourney(event)">
             <img src="/img/wrench.svg">
             Choose your journey
         </a>
+        <div class="secondary big-button-false-before">
+            <a href="/docs/engine" class="big-button glass-hover">Engine</a>
+            <a href="/docs/core" class="big-button glass-hover">Core</a>
+        </div>
     </div>
 </div>
 
@@ -435,9 +509,23 @@ zig build run-textured-cube
         </div>
     </div>
     <div class="p-section final-choose-your-journey">
-        <a href="/docs" class="big-button">
+        <a href="#" class="big-button" onclick="scrollToTop(event)">
             <img src="/img/wrench.svg">
             Choose your journey
         </a>
     </div>
 </div>
+<script>
+function chooseJourney(e) {
+    e.preventDefault();
+    document.querySelector('.choose-journey .primary').style.setProperty('animation-name', 'chooseJourneyFadeOut');
+    document.querySelector('.choose-journey .secondary').style.setProperty('animation-name', 'chooseJourneyFadeIn');
+}
+function scrollToTop(e) {
+    e.preventDefault();
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+    setTimeout(() => {
+      chooseJourney(e);
+    }, 1000)
+}
+</script>

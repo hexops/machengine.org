@@ -1,39 +1,54 @@
 ---
-title: "Choose your journey"
+title: "Mach engine documentation"
 draft: false
 layout: "docs"
 rss_ignore: true
 ---
 
 <style>
-.text-center {
-    text-align: center;
-}
-.flex-row-center {
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-}
-.margin-0 {
-    margin: 0;
-}
-.padding-0 {
-    padding: 0;
-}
-.padding-1 {
-    padding: 1rem;
-}
-.horizontal-divider {
-    border-right: 2px solid black;
-    height: 100%;
-    display: inline-block;
+.p-community-icon {
+    height: 3rem;
+    padding: 0.5rem;
+    padding-bottom: 3rem;
 }
 </style>
 
-<h1 class="text-center" style="margin-top: 10rem;">Choose your journey</h1>
-<div class="flex-row-center h1-no-pad">
-    <a href="engine" class="padding-1"><h1 class="margin-0 padding-0 inline-block">Engine</h1></a>
-    <div class="horizontal-divider"></div>
-    <a href="core" class="padding-1"><h1 class="margin-0 padding-0 inline-block">Core</h1></a>
+<div>
+    <img style="height: 20rem; float: right; padding-left: 1rem;" class="auto-color" src="../img/wrench_rocket.svg"></img>
+    <p>
+        <span style="font-family: Orbitron; font-size: 22px;">Documentation</span>
+        <br/>
+        <br/>
+        Welcome to the documentation for Mach engine & Mach core!
+        <br/>
+        <br/>
+        To learn more about Mach, understand what it is, etc. please see our <a href="../">homepage</a>.
+    </p>
+    <div style="display: flex; flex-direction: row; margin-top: 2rem;">
+        <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon glass-link">
+            <img alt="Discord" class="p-community-icon" src="/img/discord.svg">
+        </a>
+        <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
+            <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
+        </a>
+        <a href="https://reddit.com/r/machengine" class="p-community-icon glass-link">
+            <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
+        </a>
+    </div>
 </div>
+
+<h2 style="margin-top: 0;">Early stages</h2>
+
+Mach is still in its infancy - things are improving rapidly, not all APIs are stable, and we're missing lots of basic things. We're simple humans building towards a dream, so please try your best to help us towards that.
+
+## Contributing
+
+We would love your help building Mach, there's a ton to do and little time! Whether you're an experienced gamedev, or just someone interested in learning Zig, there are likely ways you could help us towards our dreams.
+
+The best way to contribute is to familiarize yourself with what's missing-and there's no better way to do this than to think about what you would need to build your own game/app using it, see what you would need first-hand, and then help us by proposing/discussing changes from there.
+
+Be sure to join our Discord as that lets us help you faster so we can reach the finish line sooner. :)
+
+## Improve this site
+
+If you notice typos, missing information, etc. - please feel free to let us know by [filing an issue](https://github.com/hexops/mach/issues) or [sending us a PR](https://github.com/hexops/machengine.org/tree/main/content) which would be greatly appreciated!

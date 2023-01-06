@@ -61,7 +61,8 @@ h2 {
 }
 
 .animated-demo > video, .static-demo > img {
-    width: 20rem;
+    min-width: 20rem;
+    max-width: 20rem;
 }
 </style>
 

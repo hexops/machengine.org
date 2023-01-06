@@ -26,9 +26,6 @@
             padding: 1rem;
         }
     }
-    aside {
-        flex: 0 0 auto;
-    }
     aside,
     .toc {
         display: flex;
@@ -36,11 +33,19 @@
         width: 20rem;
         padding: 0;
         margin: 0;
-        padding-top: 3rem;
     }
-    .toc h3 {
-        margin: 0;
-        padding: 0;
+    aside {
+        flex: 0 0 auto;
+        &>ul {
+            padding-top: 3rem;
+        }
+    }
+    .toc {
+        padding-top: 3rem;
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 .toc,
