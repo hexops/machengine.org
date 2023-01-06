@@ -43,9 +43,9 @@ Mach is still in its infancy - things are improving rapidly, not all APIs are st
 
 ## Contributing
 
-We would love your help building Mach, there's a ton to do and little time! Whether you're an experienced gamedev, or just someone interested in learning Zig, there are likely ways you could help us towards our dreams.
+We would love your help building Mach, there's lots to do and little time! Whether you're an experienced gamedev, or just someone interested in learning Zig, there are likely ways you could help us towards our dreams from small bug fixes to larger architecture challenges.
 
-The best way to contribute is to familiarize yourself with what's missing-and there's no better way to do this than to think about what you would need to build your own game/app using it, see what you would need first-hand, and then help us by proposing/discussing changes from there.
+The best way to contribute is to familiarize yourself with what's missing today: there's no better way to do this than to think about what you would need to build your own game/app using it, see what you would need first hand, and then help us by proposing/discussing those changes.
 
 Be sure to join our Discord as that lets us help you faster so we can reach the finish line sooner. :)
 
