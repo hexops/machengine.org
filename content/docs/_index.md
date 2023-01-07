@@ -7,11 +7,12 @@ rss_ignore: true
 
 <style>
 .p-community-icon {
-    height: 3rem;
+    height: calc(3rem + 0.5rem + 0.5rem);
     padding: 0.5rem;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 img.p-community-icon {
+    height: 3rem;
     /* https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
 }
