@@ -11,10 +11,19 @@ rss_ignore: true
     padding: 0.5rem;
     padding-bottom: 3rem;
 }
+img.p-community-icon {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
+}
+@media (prefers-color-scheme: light) {
+    img.p-community-icon {
+        filter: none;
+    }
+}
 </style>
 
 <div>
-    <img style="height: 20rem; float: right; padding-left: 1rem;" class="auto-color" src="../img/wrench_rocket.svg"></img>
+    <img style="height: 20rem; float: right; padding-left: 1rem;" src="../img/wrench_rocket.svg"></img>
     <p>
         <span style="font-family: Orbitron; font-size: 22px;">Documentation</span>
         <br/>

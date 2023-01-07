@@ -9,7 +9,7 @@ unsafe = true
 
 [menu]
 [[menu.docs]]
-  name = 'choose your journey'
+  name = 'Choose your journey'
   url = '/docs'
   weight = 100
 [[menu.docs]]
@@ -24,48 +24,48 @@ unsafe = true
 [[menu.docs]]
   parent = 'Engine'
   identifier = 'engine-overview'
-  name = 'overview'
+  name = 'Overview'
   url = '/docs/engine'
 
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-overview'
-  name = 'overview'
+  name = 'Overview'
   url = '/docs/core'
   weight = 100
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-overview'
-  name = 'overview'
+  name = 'Overview'
   url = '/docs/core'
   weight = 200
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-examples'
-  name = 'examples'
+  name = 'Examples'
   url = '/docs/core/examples'
   weight = 300
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-getting-started'
-  name = 'getting started'
+  name = 'Getting started'
   url = '/docs/core/getting-started'
   weight = 400
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-libraries'
-  name = 'libraries'
+  name = 'Libraries'
   url = '/docs/core/libraries'
   weight = 500
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-known-issues'
-  name = 'known issues'
+  name = 'Known issues'
   url = '/docs/core/known-issues'
   weight = 600
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-nixos-usage'
-  name = 'nixOS usage'
+  name = 'NixOS usage'
   url = '/docs/core/nixos-usage'
   weight = 700
