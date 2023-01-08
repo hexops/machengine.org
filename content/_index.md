@@ -327,7 +327,7 @@ a.p-community-icon {
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>Try it out in just ~60 seconds</h2>
-                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="/doc/about#zero-fuss-installation">how?</a>)</small>
+                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="docs/about/goals#zero-fuss-installation">how?</a>)</small>
             </div>
             <div>
 <code><pre class="code">
@@ -344,7 +344,7 @@ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Effortless cross-compilation</h2>
-            <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
+            <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon. (<a href="docs/about/goals#seamless-cross-compilation"><small>how?</small></a>)</p>
 <code><pre class="code">
 <strong>$</strong> zig build -Dtarget=x86_64-windows
 <strong>$</strong> zig build -Dtarget=x86_64-linux
@@ -377,7 +377,7 @@ zig build run-textured-cube
         <div style="text-align: left;">
             <h2>A modern alternative to SDL/etc</h2>
             <p><a href="/docs/core"><em>Mach core</em></a> provides a Window+Input+GPU, nothing else.</p>
-            <p>Includes zero-fuss installation, cross-compilation at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
+            <p>Includes <a href="docs/about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="docs/about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
             <p>Use it from Zig or via our C ABI, and soon you'll be able to compile to WebAssembly and Mobile targets using the same API.</p>
         </div>
         <img class="p-img-left auto-color-inverted" style="height: 12rem;" src="/img/mach_core_icon.svg"></img>
