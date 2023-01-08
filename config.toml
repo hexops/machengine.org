@@ -20,6 +20,14 @@ unsafe = true
   name = 'Core'
   identifier = 'Core'
   weight = 300
+[[menu.docs]]
+  name = 'Libraries'
+  identifier = 'libs'
+  weight = 400
+[[menu.docs]]
+  name = 'About'
+  identifier = 'about'
+  weight = 500
 
 [[menu.docs]]
   parent = 'Engine'
@@ -69,3 +77,17 @@ unsafe = true
   name = 'NixOS usage'
   url = '/docs/core/nixos-usage'
   weight = 700
+
+[[menu.docs]]
+  parent = 'libs'
+  identifier = 'libs-glfw'
+  name = 'mach/glfw'
+  url = '/docs/libs/glfw'
+  weight = 100
+
+[[menu.docs]]
+  parent = 'about'
+  identifier = 'about-goals'
+  name = 'Project goals'
+  url = '/docs/about/goals'
+  weight = 100
