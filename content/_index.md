@@ -358,8 +358,8 @@ zig build run-textured-cube
         <img class="p-img-right auto-color" style="height: 12rem; margin-right: 1rem;" src="/img/penguin.svg"></img>
         <div style="text-align: left;">
             <h2>First-class Linux support</h2>
-            <p>We aim to <em>truly</em> support Linux. Native Vulkan, and OpenGL/GLES fallbacks, plus support for both X11 and Wayland in the same binary via runtime detection.</p>
-            <p>From mesa drivers-to your experimental compositor-and broken vsync implementation, we'll make it run as well as we can.</p>
+            <p>We aim to <em>truly</em> support Linux. Native Vulkan, OpenGL/GLES fallbacks, support for both X11 and Wayland in the same binary via runtime detection, and <a href="https://github.com/FeralInteractive/gamemode">gamemode</a> optimization support out of the box.</p>
+            <p>From mesa drivers-to your experimental compositor (and broken vsync implementation), we'll make it run as well as we can.</p>
         </div>
     </div>
 </div>
@@ -383,7 +383,7 @@ zig build run-textured-cube
         <img class="p-img-left auto-color-inverted" style="height: 12rem;" src="/img/mach_core_icon.svg"></img>
     </div>
     <div class="p-section color-bg">
-        <div style="text-align: center;">
+        <div style="text-align: center; max-width: 65rem;">
             <a href="docs/core/libraries">
                 <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
             </a>
@@ -391,26 +391,62 @@ zig build run-textured-cube
             <br/>
             <a href="docs/core/libraries#gpu" class="img-link">
                 <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/gpu/logo_standalone_dark.svg">
-                    <img alt="mach/gpu" src="/assets/media/gpu/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
+                    <img alt="mach/gpu" src="/assets/mach/gpu-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="docs/core/libraries#ecs" class="img-link">
                 <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/ecs/logo_standalone_dark.svg">
-                    <img alt="mach/ecs" src="/assets/media/ecs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-dark.svg">
+                    <img alt="mach/ecs" src="/assets/mach/ecs-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="docs/core/libraries#sysaudio" class="img-link">
                 <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysaudio/logo_standalone_dark.svg">
-                    <img alt="mach/sysaudio" src="/assets/media/sysaudio/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysaudio-dark.svg">
+                    <img alt="mach/sysaudio" src="/assets/mach/sysaudio-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="docs/core/libraries#sysjs" class="img-link">
                 <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/media/sysjs/logo_standalone_dark.svg">
-                    <img alt="mach/gpu" src="/assets/media/sysjs/logo_standalone_light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysjs-dark.svg">
+                    <img alt="mach/sysjs" src="/assets/mach/sysjs-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#glfw" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
+                    <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#freetype" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/freetype-dark.svg">
+                    <img alt="mach/freetype" src="/assets/mach/freetype-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#gamemode" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gamemode-dark.svg">
+                    <img alt="mach/gamemode" src="/assets/mach/gamemode-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#basisu" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/basisu-dark.svg">
+                    <img alt="mach/basisu" src="/assets/mach/basisu-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#model3d" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-dark.svg">
+                    <img alt="mach/model3d" src="/assets/mach/model3d-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="docs/core/libraries#earcut" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/earcut-dark.svg">
+                    <img alt="mach/earcut" src="/assets/mach/earcut-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
         </div>
@@ -456,9 +492,9 @@ zig build run-textured-cube
             <div style="text-align: left;">
                 <h2>Open source, always & forever</h2>
                 <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev tooling could be.</p>
-                <p>FOSS <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">is in my roots</a>, I believe we should own our tools and they should empower <em>us</em>-not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the 'open source' game</a> where investors sideload a business off the community expecting multi-million dollar returns in a few years. VCs have urged me to take investment and start businesses around my projects, but Mach needs to be for people like you and me-it needs to be <a href="https://kristoff.it/blog/software-you-can-love/">software you can love</a>, and the big tech model is incompatible.</p>
-                <p>I work <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double-time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, and creating high-quality games for all. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful.</p>
+                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev and application development tooling could be.</p>
+                <p>FOSS <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">is in my roots</a>, I believe we should own our tools and they should empower <em>us</em>-not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the 'open source' game</a> which is so prevelant today. Mach needs to be for people like you and me-it needs to be genuinely free and open source <a href="https://kristoff.it/blog/software-you-can-love/">software you can love</a>.</p>
+                <p>I am working <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double-time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, and creating high-quality games for all. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful.</p>
             </div>
         </div>
     </div>
