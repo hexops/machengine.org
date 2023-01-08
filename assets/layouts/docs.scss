@@ -22,8 +22,8 @@
         h1:first-of-type {
             margin-top: 1rem;
         }
-        pre {
-            padding: 1rem;
+        h3, h4, h5, h6 {
+            margin-top: 1rem;
         }
     }
     aside,
@@ -41,7 +41,7 @@
         }
     }
     .toc {
-        padding-top: 3rem;
+        padding-top: 4rem;
         h3 {
             margin: 0;
             padding: 0;
