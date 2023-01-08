@@ -88,7 +88,6 @@ It provides a quite nice API for interfacing with JS code, without ever leaving 
 ### Other libraries
 
 * https://github.com/hexops/mach-freetype
-* https://github.com/hexops/mach-glfw
 * https://github.com/hexops/fastfilter
 * https://github.com/hexops/mach/tree/main/libs/basisu
 * https://github.com/hexops/mach/tree/main/libs/earcut

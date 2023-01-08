@@ -413,7 +413,7 @@ zig build run-textured-cube
                     <img alt="mach/sysjs" src="/assets/mach/sysjs-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#glfw" class="img-link">
+            <a href="docs/libs/glfw" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
                     <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
