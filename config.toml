@@ -77,13 +77,25 @@ unsafe = true
   name = 'NixOS usage'
   url = '/docs/core/nixos-usage'
   weight = 700
+[[menu.docs]]
+  parent = 'Core'
+  identifier = 'core-migrations'
+  name = 'Migrations'
+  url = '/docs/core/migrations'
+  weight = 700
 
+[[menu.docs]]
+  parent = 'libs'
+  identifier = 'libs-overview'
+  name = 'Overview'
+  url = '/docs/libs'
+  weight = 100
 [[menu.docs]]
   parent = 'libs'
   identifier = 'libs-glfw'
   name = 'mach/glfw'
   url = '/docs/libs/glfw'
-  weight = 100
+  weight = 200
 
 [[menu.docs]]
   parent = 'about'

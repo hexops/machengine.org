@@ -42,6 +42,10 @@ h2 {
     text-align: left;
     margin-top: 0;
 }
+pre {
+    max-width: 25rem;
+    font-size: 12px;
+}
 
 @media (max-width:700px) {
     .p-warning { margin-top: 0; }

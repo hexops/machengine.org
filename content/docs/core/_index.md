@@ -15,7 +15,7 @@ rss_ignore: true
     <span style="font-family: Orbitron; font-size: 22px;"><em>Window+Input+GPU, nothing else.</em></span>
     <br/>
     <br/>
-    Zero-fuss installation, cross-compilation at the flip of a switch, and broad platform support is the guarantee of all Mach libraries.
+    As with all Mach libraries, <a href="../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../about/goals#platform-support">broad platform support</a> is guaranteed.
     </br>
     </br>
     Mach core provides the power of Vulkan, DirectX, Metal, and modern OpenGL in a single concise graphics API - by compiling Google Chrome's WebGPU implementation natively via Zig (no cmake/ninja/gn/etc) into a single static library.
@@ -58,7 +58,7 @@ From mesa drivers-to your experimental compositor-and broken vsync implementatio
 
 ## Standalone libraries
 
-It's worth noting that Mach provides a handful of [100% standalone standard libraries](standalone) for game development in Zig that pair well with Mach core. These are entirely optional separate repositories you may want to check out.
+It's worth noting that Mach provides a handful of [100% standalone standard libraries](../libs) for game development in Zig that pair well with Mach core. These are entirely optional separate repositories you may want to check out.
 
 ## Getting started
 
