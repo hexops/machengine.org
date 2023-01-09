@@ -113,7 +113,7 @@ fn errorCallback(error_code: glfw.Error, description: [:0]const u8) void {
 }
 
 pub fn main() !void {
-    glfw.setErrorCallback(Platform.errorCallback);
+    glfw.setErrorCallback(errorCallback);;
     if (!glfw.init(.{})) {
         std.log.err("failed to initialize GLFW: {?s}", .{glfw.getErrorString()});
         std.process.exit(1);
