@@ -61,22 +61,16 @@ unsafe = true
   weight = 400
 [[menu.docs]]
   parent = 'Core'
-  identifier = 'core-libraries'
-  name = 'Libraries'
-  url = '/docs/core/libraries'
-  weight = 500
-[[menu.docs]]
-  parent = 'Core'
   identifier = 'core-known-issues'
   name = 'Known issues'
   url = '/docs/core/known-issues'
-  weight = 600
+  weight = 500
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-nixos-usage'
   name = 'NixOS usage'
   url = '/docs/core/nixos-usage'
-  weight = 700
+  weight = 600
 [[menu.docs]]
   parent = 'Core'
   identifier = 'core-migrations'
@@ -108,6 +102,12 @@ unsafe = true
   name = 'mach/freetype'
   url = '/docs/libs/freetype'
   weight = 400
+[[menu.docs]]
+  parent = 'libs'
+  identifier = 'libs-experimental'
+  name = 'Experimental'
+  url = '/docs/libs/experimental'
+  weight = 500
 
 [[menu.docs]]
   parent = 'about'

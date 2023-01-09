@@ -6,7 +6,7 @@ layout: "docs"
 rss_ignore: true
 ---
 
-# Mach standalone libraries
+# Standaone Zig gamedev libraries
 
 Mach provides a set of 100% standalone, high-quality Zig gamedev libraries on which it is built.
 
@@ -26,3 +26,9 @@ Stable libraries can expect no major API changes, with minor (sometimes small AP
 
 Experimental libraries may have their APIs change without notice.
 
+* [mach/sysaudio](experimental#sysaudio) - lightweight cross-platform audio input/output (originally a port of Andrew Kelley's libsoundio to Zig.)
+* [mach/sysjs](experimental#sysjs) - provides Zig with the ability to call from WebAssembly into JavaScript.
+* [mach/earcut](experimental#earcut) - industrial-strength polygon triangulation.
+* [mach/basisu](experimental#basisu) - basis universal (supercompressed textures) for Zig.
+* [mach/model3d](experimental#model3d) - Model3D file loading (a format that tries to address the shortcomings of glTF)
+* [mach/ecs](experimental#ecs) - the Entity Component System library that we're building as part of an [in-depth blog series](https://devlog.hexops.com/categories/build-an-ecs/) from first-principles.
