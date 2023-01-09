@@ -101,7 +101,13 @@ unsafe = true
   identifier = 'libs-gpu'
   name = 'mach/gpu'
   url = '/docs/libs/gpu'
-  weight = 200
+  weight = 300
+[[menu.docs]]
+  parent = 'libs'
+  identifier = 'libs-freetype'
+  name = 'mach/freetype'
+  url = '/docs/libs/freetype'
+  weight = 400
 
 [[menu.docs]]
   parent = 'about'

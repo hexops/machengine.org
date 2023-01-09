@@ -6,7 +6,7 @@ layout: "docs"
 rss_ignore: true
 ---
 
-# mach/glfw: perfected GLFW bindings for Zig
+# Perfected GLFW bindings for Zig
 
 <div style="margin-top: 2rem;">
     <a href="https://github.com/hexops/mach-glfw" class="img-link" style="float: right; padding-left: 1rem;">

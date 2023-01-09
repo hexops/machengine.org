@@ -6,7 +6,7 @@ layout: "docs"
 rss_ignore: true
 ---
 
-# mach/gpu: the WebGPU interface for Zig
+# The WebGPU interface for Zig
 
 <div style="margin-top: 2rem;">
     <a href="[docs/core/libraries#glfw](https://github.com/hexops/mach-gpu)" class="img-link" style="float: right; padding-left: 1rem;">
