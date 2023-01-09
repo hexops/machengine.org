@@ -9,6 +9,10 @@ rss_ignore: true
 
 If you're trying to run the Mach examples or similar, you may be running into one of these known issues.
 
+## nixOS
+
+If you are using nixOS, we have tips on how to use Mach with it [here](../nixos-usage).
+
 ## Windows
 
 ## File not found

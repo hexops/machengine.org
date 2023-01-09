@@ -67,16 +67,10 @@ unsafe = true
   weight = 500
 [[menu.docs]]
   parent = 'Core'
-  identifier = 'core-nixos-usage'
-  name = 'NixOS usage'
-  url = '/docs/core/nixos-usage'
-  weight = 600
-[[menu.docs]]
-  parent = 'Core'
   identifier = 'core-migrations'
   name = 'Migrations'
   url = '/docs/core/migrations'
-  weight = 700
+  weight = 600
 
 [[menu.docs]]
   parent = 'libs'
