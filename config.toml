@@ -96,6 +96,12 @@ unsafe = true
   name = 'mach/glfw'
   url = '/docs/libs/glfw'
   weight = 200
+[[menu.docs]]
+  parent = 'libs'
+  identifier = 'libs-gpu'
+  name = 'mach/gpu'
+  url = '/docs/libs/gpu'
+  weight = 200
 
 [[menu.docs]]
   parent = 'about'

@@ -9,7 +9,7 @@ rss_ignore: true
 # mach/glfw: perfected GLFW bindings for Zig
 
 <div style="margin-top: 2rem;">
-    <a href="docs/core/libraries#glfw" class="img-link" style="float: right; padding-left: 1rem;">
+    <a href="https://github.com/hexops/mach-glfw" class="img-link" style="float: right; padding-left: 1rem;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
             <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
@@ -21,7 +21,7 @@ rss_ignore: true
     <span style="font-family: Orbitron;"><em>Quick links:</em></span>
     <br/>
     <ul style="display: inline-block;">
-        <li><a href="https://github.com/hexops/mach/tree/main/libs/glfw">mach/glfw on GitHub</a></li>
+        <li><a href="https://github.com/hexops/mach-glfw">mach/glfw on GitHub</a></li>
         <li><a href="https://devlog.hexops.com/2021/perfecting-glfw-for-zig-and-finding-undefined-behavior/">Perfecting GLFW for Zig</a> (article)</li>
     </ul>
 </div>

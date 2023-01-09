@@ -16,9 +16,10 @@ Although Mach is developed in a monorepo (one big repository), our stable librar
 
 ## Stable libraries
 
-In the event that a major change is required to one of our stable libraries, we will provide details on how to upgrade in our [migration notes](../core/migrations.md).
+Stable libraries can expect no major API changes, with minor (sometimes small API breakages) improvements. In the event that a non-obvious / major change is required, we provide [migration notes](../core/migrations.md).
 
 * [mach/glfw](glfw) - perfected GLFW bindings for Zig
+* [mach/gpu](gpu) - the WebGPU interface for Zig
 
 ## Experimental
 
