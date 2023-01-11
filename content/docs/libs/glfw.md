@@ -108,12 +108,12 @@ Now in your code you may import and use GLFW:
 const glfw = @import("glfw");
 
 /// Default GLFW error handling callback
-fn errorCallback(error_code: glfw.Error, description: [:0]const u8) void {
+fn errorCallback(error_code: glfw.ErrorCode, description: [:0]const u8) void {
     std.log.err("glfw: {}: {s}\n", .{ error_code, description });
 }
 
 pub fn main() !void {
-    glfw.setErrorCallback(errorCallback);;
+    glfw.setErrorCallback(errorCallback);
     if (!glfw.init(.{})) {
         std.log.err("failed to initialize GLFW: {?s}", .{glfw.getErrorString()});
         std.process.exit(1);
@@ -136,31 +136,41 @@ pub fn main() !void {
 
 ## Error handling
 
-For details on why our GLFW bindings don't return Zig errors, see [this PR](https://github.com/hexops/mach/pull/662) - the TL;DR is that GLFW errors rarely signal a problem where your application should exit.
+For details on why our GLFW bindings don't return Zig errors, see [this PR](https://github.com/hexops/mach/pull/662) - the TL;DR is that GLFW errors rarely signal a problem where your application should _exit_.
 
 You should be very mindful about what you do when you encoounter a GLFW error. If it's not truly critical to the execution of your application, you should almost always just print the error and continue trying to run. This will ensure the greatest platform support across e.g. more obscure X11 compositors and Wayland. Write your code to be resilient to GLFW errors and continue running best-effort where possible.
 
 ### Overview
 
-After making a GLFW function call, you should check errors explicitly using one of:
-
-* `glfw.getErrorString()` - returns an error message or `null` if none present
-* `glfw.getError()` - returns a Zig error or void if none is present
-* `glfw.mustGetError()` - returns a Zig error or panics if none is present
-* `glfw.setErrorCallback` - if you just want to log your errors (I do NOT suggest terminating your application if this callback is invoked.)
-
-Here are some specific examples:
-
-### Initialization
-
-If initialization fails, your application really cannot continue, so print the detailed error message string and exit:
+After making a GLFW function call, you should check errors explicitly. Here are some specific examples:
 
 ```zig
-if (!glfw.init(.{})) {
-    std.log.err("failed to initialize GLFW: {?s}", .{glfw.getErrorString()});
-    std.process.exit(1);
+const pos = window.getPos();
+
+// Option 1: convert a GLFW error into a Zig error.
+glfw.getErrorCode() catch |err| {
+    std.log.err("failed to get window position: error={}", .{err});
+    return err; // Or fall back to an alternative implementation.
+};
+
+// Option 2: log a human-readable description of the error.
+if (glfw.getErrorString()) |description| {
+    std.log.err("failed to get window position: {s}", .{description});
+    // ...
+}
+
+// Option 3: use a combination of the above approaches.
+if (glfw.getError()) |err| {
+    const error_code = err.error_code; // Zig error
+    const description = err.description; // Human-readable description
+    std.log.err("failed to get window position: error={}: {s}", .{error_code, description});
+    // ...
 }
 ```
+
+Note that the above example relies on GLFW's saved error being empty; otherwise, previously emitted errors may be mistaken for an error caused by `window.getPos()`.
+
+If your application frequently ignores errors, it may be necessary to call `glfw.clearError()` or `defer glfw.clearError()` to ensure a clean slate for future error handling.
 
 ### Creating a window
 
