@@ -3,9 +3,9 @@ title: "Mach"
 description: "Game engine & graphics toolkit for the future"
 draft: false
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 layout: "home"
 override_css: "layouts/home.scss"
+images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
@@ -109,8 +109,8 @@ override_css: "layouts/home.scss"
 .choose-your-journey {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 3rem);
-    min-height: 47.5rem;
+    height: 1rem;
+    min-height: 47rem;
     max-width: 100%;
     overflow: hidden;
 }
@@ -185,10 +185,6 @@ a.p-community-icon {
     text-decoration: none;
 }
 
-.p-section.final-choose-your-journey {
-    padding-top: 20%;
-    padding-bottom: 15%;
-}
 .p-section .big-button:before {
     background: rgba(255, 255, 255, 0.3);
 }
@@ -270,6 +266,11 @@ a.p-community-icon {
 		opacity: 0;
         visibility: none;
 	}
+}
+
+.community {
+    background: rgb(255,255,255, 0.1);
+    background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 100%);
 }
 </style>
 
@@ -366,7 +367,7 @@ zig build run-textured-cube
 
 
 <div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
-    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
+    <div class="p-section glass bright" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
         <img style="float: left; height: 8rem; margin-right: 1rem; margin-top: -1rem; margin-bottom: -1rem;" class="p-image-left" src="/img/core.svg">
         <h1 style="margin-top: 0; text-align: left;">Mach core & standalone libraries</h1>
     </div>
@@ -455,7 +456,7 @@ zig build run-textured-cube
 
 
 <div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
-    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
+    <div class="p-section glass bright-2" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/media/mach/icon_dark.svg">
             <img alt="Mach" style="height: 8rem; margin-right: 1rem; padding-top: 3rem; margin-top: -3.5rem; margin-bottom: -1rem;" src="/assets/media/mach/icon_light.svg">
@@ -483,7 +484,7 @@ zig build run-textured-cube
     </div>
 </div>
 
-<div class="community" style="margin-top: 3rem;">
+<div class="community glass">
     <div class="p-section always-open-source">
         <div class="transparent-card">
             <a href="https://github.com/slimsag">
@@ -517,6 +518,8 @@ zig build run-textured-cube
             <small>There's plenty to do, so if you're eager to get involved please join the community, say hi, check out the code and see if you can contribute!</small>
         </div>
     </div>
+</div>
+<div style="margin-top: 3rem;">
     <div class="p-section contributors">
         <div style="max-width: 50rem; width: 100%;">
             <h2>Contributors</h2>
@@ -559,7 +562,7 @@ function chooseJourney(e) {
 }
 function scrollToTop(e) {
     e.preventDefault();
-    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+    document.querySelector("#content").scroll({top: 0, left: 0, behavior: 'smooth'});
     setTimeout(() => {
       chooseJourney(e);
     }, 1000)

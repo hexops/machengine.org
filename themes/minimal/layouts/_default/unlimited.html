@@ -1,7 +1,11 @@
 {{ define "main" }}
-<main aria-role="main" class="main-unlimited">
-  <div class="unlimited">
-    {{.Content}}
-  </div>
-</main>
+{{- partial "header.html" . -}}
+<div id="content">
+  <main aria-role="main" class="main-unlimited">
+    <div class="unlimited">
+      {{.Content}}
+    </div>
+  </main>
+  {{- partial "footer.html" . -}}
+</div>
 {{ end }}

@@ -17,21 +17,73 @@
     color: $dark_fg;
     text-shadow: 0 0 0.6rem black, 0 0 0.3rem black;
 }
-#hero-background-0 {
-    display: block;
-    background-image: url(../img/core_poly_low_light.svg);
-    @media (prefers-color-scheme: dark) {
-        background-image: url(../img/core_poly_low_dark.svg);
-    }
-}
-#hero-background-1 {
-    display: block;
-    background-image: url(../img/core_poly_high_light.jpg);
-    @media (prefers-color-scheme: dark) {
-        background-image: url(../img/core_poly_high_dark.jpg);
-    }
-}
 h2 {
     text-align: left;
     margin-top: 0;
+}
+.glass.bright {
+    @media (prefers-color-scheme: light) {
+        backdrop-filter: $glass_blur brightness(1.4);
+        -webkit-backdrop-filter: $glass_blur brightness(1.4);
+    }
+}
+.glass.bright-2 {
+    @media (prefers-color-scheme: light) {
+        backdrop-filter: $glass_blur brightness(3.4);
+        -webkit-backdrop-filter: $glass_blur brightness(3.4);
+    }
+}
+.home-background-image {
+    display: block;
+    background-image: url(../img/core_poly_light_4k.jpg);
+    @media (prefers-color-scheme: dark) {
+        background-image: url(../img/core_poly_dark_4k.jpg);
+    }
+}
+.p-section.final-choose-your-journey {
+    height: calc(100vh - 15rem);
+}
+
+.parallax-container {
+    margin: 0;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    perspective: 12px;
+    perspective-origin: 50% 275%;
+    background: white;
+    @media (prefers-color-scheme: dark) {
+        background: black;
+    }
+
+    height: 100vh;
+}
+.home-background-image {
+    display: block;
+    position: absolute;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vmax;
+    width: 100vmax;
+}
+.index-0 {
+    transform: translate3d(0, 0, -5px) scale(calc(7 / 3));
+    top: 20vmax;
+}
+.parallax-layer.bottom-container {
+    position: relative;
+    height: 0;
+    transform: translate3d(0, 0, -5px) scale(calc(7 / 3));
+    bottom: 306vh;
+    z-index: -1;
+}
+.index-1 {
+    position: relative;
+    background-position-y: center;
+    height: 100vh;
+}
+
+.parallax-layer.home-content-footer {
+    transform: translateZ(0);
+    width: 100%;
 }
