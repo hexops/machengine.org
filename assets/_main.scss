@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.25;
-    font-family: Orbitron;
+    font-family: 'Inter';
     background: $light_bg;
     color: $light_fg;
     @media (prefers-color-scheme: dark) {
@@ -25,11 +25,8 @@ body {
     }
 }
 
-main p,
-main li,
-small,
-span {
-    font-family: Verdana, Geneva, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Orbitron, Inter;
 }
 
 main p,
