@@ -64,7 +64,8 @@ h2 {
     background-repeat: no-repeat;
     overflow: hidden;
     height: 100vmax;
-    width: 100vmax;
+    width: 80vmax;
+    left: 10vmax;
 }
 .index-0 {
     transform: translate3d(0, 0, -5px) scale(calc(7 / 3));
@@ -79,8 +80,9 @@ h2 {
 }
 .index-1 {
     position: relative;
-    background-position-y: center;
+    background-position-y: 25%;
     height: 100vh;
+    top: 20vh;
 }
 
 .parallax-layer.home-content-footer {
