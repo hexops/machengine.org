@@ -1,0 +1,66 @@
+<!doctype html><html><head><link rel=stylesheet href=https://machengine.org/next/layouts/default.b3c4eddb5ec0a40d0b4f3d1abace1acf6108af76dad6307928acf3d61bc87570.css><link rel=stylesheet href=https://machengine.org/next/assets/font/stylesheet.css><script async defer data-domain=hexops.com src=https://machengine.org/opendata.js></script><meta charset=utf-8><title>Migration notes - Mach core v0.2 API redesign | Mach engine - game engine & graphics toolkit for the future</title><link rel=canonical href=https://machengine.org/next/docs/core/migrations/2023-core-api/><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:title" content="Migration notes - Mach core v0.2 API redesign"><meta property="og:description" content="In the event of a breaking change, this page details any migration steps neccessary to upgrade your code to the latest version of Mach core or one of our standalone libraries."><meta property="og:type" content="article"><meta property="og:url" content="https://machengine.org/next/docs/core/migrations/2023-core-api/"><meta property="article:section" content="docs"><meta name=twitter:card content="summary"><meta name=twitter:title content="Migration notes - Mach core v0.2 API redesign"><meta name=twitter:description content="In the event of a breaking change, this page details any migration steps neccessary to upgrade your code to the latest version of Mach core or one of our standalone libraries."></head><body><div class=navbar><div class=content><a href=https://machengine.org/next/ class=logo><div class=img></div></a><div><a href=https://machengine.org/next/docs class="item glass-link">docs</a>
+<a href=https://github.com/sponsors/slimsag class="item glass-link">donate</a>
+<a href=https://devlog.hexops.com/categories/mach/ class="item glass-link">devlog</a>
+<a href=https://github.com/hexops/mach class="svg-item glass-link"><img alt=GitHub class=svg-icon src=https://machengine.org/next/img/github.svg></a>
+<a href=https://discord.gg/XNG3NZgCqp class="svg-item glass-link"><img alt=Discord class=svg-icon src=https://machengine.org/next/img/discord.svg></a></div></div></div><div class="alert next"><span><strong>HEY YOU!</strong> We're still working on this site, please don't share it in very public places :)</span></div><div class="alert not-next"><span><strong>Mach v0.2 has been released!</strong> For all the details check out <a href=https://devlog.hexops.com/2022/perfecting-webgpu-native/>the announcement</a></span></div><div id=content><link rel=stylesheet href=https://machengine.org/next/layouts/docs.f06c75f56c5979c1e745bb88e0f5ad1dfeec494c32ce7dc25f27fb10e00ada82.css><main aria-role=main class=main-docs><aside><ul><li><h3><span>Engine</span></h3></li><ul class=sub-menu><li><a href=https://machengine.org/next/docs/engine>Overview</a></li></ul><li><h3><span>Core</span></h3></li><ul class=sub-menu><li><a href=https://machengine.org/next/docs/core>Overview</a></li><li><a href=https://machengine.org/next/docs/core/examples>Examples</a></li><li><a href=https://machengine.org/next/docs/core/getting-started>Getting started</a></li><li><a href=https://machengine.org/next/docs/core/known-issues>Known issues</a></li><li><a href=https://machengine.org/next/docs/core/migrations>Migrations</a></li></ul><li><h3><span>Libraries</span></h3></li><ul class=sub-menu><li><a href=https://machengine.org/next/docs/libs>Overview</a></li><li><a href=https://machengine.org/next/docs/libs/glfw>mach/glfw</a></li><li><a href=https://machengine.org/next/docs/libs/gpu>mach/gpu</a></li><li><a href=https://machengine.org/next/docs/libs/freetype>mach/freetype</a></li><li><a href=https://machengine.org/next/docs/libs/experimental>Experimental</a></li></ul><li><h3><span>About</span></h3></li><ul class=sub-menu><li><a href=https://machengine.org/next/docs/about/goals>Project goals</a></li></ul></ul></aside><div class=docs><h1 id=machcore-v02-api-redesign>mach/core: v0.2 API redesign</h1><p>Mach v0.2 brought a complete redesign of the mach/core API. To upgrade your application, see the notes below.</p><p>See also the <a href=../>migration notes</a> page.</p><h2 id=updating-your-application>Updating your application</h2><p>Previously, a complete Mach Core application looked something like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>const</span> App <span style=color:#f92672>=</span> @This();
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> init(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App, core<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>mach.Core) <span style=color:#f92672>!</span><span style=color:#66d9ef>void</span> {
+    <span style=color:#75715e>// ...
+</span><span style=color:#75715e></span>}
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> deinit(_<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App, _<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>mach.Core) <span style=color:#66d9ef>void</span> {}
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> update(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App, core<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>mach.Core) <span style=color:#f92672>!</span><span style=color:#66d9ef>void</span> {
+    <span style=color:#66d9ef>while</span> (core.pollEvent()) <span style=color:#f92672>|</span>event<span style=color:#f92672>|</span> {
+        <span style=color:#66d9ef>switch</span> (event) {
+            .key_press <span style=color:#f92672>=&gt;</span> <span style=color:#f92672>|</span>ev<span style=color:#f92672>|</span> {
+                <span style=color:#66d9ef>if</span> (ev.key <span style=color:#f92672>==</span> .space) core.close();
+            },
+            <span style=color:#66d9ef>else</span> <span style=color:#f92672>=&gt;</span> {},
+        }
+    }
+    <span style=color:#75715e>// core.swap_chain_format
+</span><span style=color:#75715e></span>    core.swap_chain.<span style=color:#f92672>?</span>.present();
+}
+
+<span style=color:#75715e>// optional
+</span><span style=color:#75715e></span><span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> resize(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App, core<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>mach.Core, width<span style=color:#f92672>:</span> <span style=color:#66d9ef>u32</span>, height<span style=color:#f92672>:</span> <span style=color:#66d9ef>u32</span>) <span style=color:#f92672>!</span><span style=color:#66d9ef>void</span> {
+    <span style=color:#75715e>// use core.device
+</span><span style=color:#75715e></span>}
+</code></pre></div><p>After these changes, the above now looks like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>const</span> App <span style=color:#f92672>=</span> @This();
+
+<span style=color:#66d9ef>var</span> gpa <span style=color:#f92672>=</span> std.heap.GeneralPurposeAllocator(.{}){};
+
+core<span style=color:#f92672>:</span> mach.Core,
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> init(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App) <span style=color:#f92672>!</span><span style=color:#66d9ef>void</span> {
+    <span style=color:#66d9ef>const</span> allocator <span style=color:#f92672>=</span> gpa.allocator();
+    <span style=color:#66d9ef>try</span> app.core.init(allocator, .{});
+    <span style=color:#75715e>// ...
+</span><span style=color:#75715e></span>}
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> deinit(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App) <span style=color:#66d9ef>void</span> {
+    <span style=color:#66d9ef>defer</span> _ <span style=color:#f92672>=</span> gpa.deinit();
+    <span style=color:#66d9ef>defer</span> app.core.deinit();
+}
+
+<span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> update(app<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>App) <span style=color:#f92672>!</span><span style=color:#66d9ef>bool</span> {
+    <span style=color:#66d9ef>var</span> iter <span style=color:#f92672>=</span> app.core.pollEvents();
+    <span style=color:#66d9ef>while</span> (iter.next()) <span style=color:#f92672>|</span>event<span style=color:#f92672>|</span> {
+        <span style=color:#66d9ef>switch</span> (event) {
+            .key_press <span style=color:#f92672>=&gt;</span> <span style=color:#f92672>|</span>ev<span style=color:#f92672>|</span> {
+                <span style=color:#66d9ef>if</span> (ev.key <span style=color:#f92672>==</span> .space) core.close();
+            },
+            .framebuffer_resize <span style=color:#f92672>=&gt;</span> <span style=color:#f92672>|</span>ev<span style=color:#f92672>|</span> {
+                <span style=color:#75715e>// optional event - framebuffer resized to ev.width, ev.height
+</span><span style=color:#75715e></span>                <span style=color:#75715e>// use app.core.device()
+</span><span style=color:#75715e></span>            },
+            .close <span style=color:#f92672>=&gt;</span> <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>,
+            <span style=color:#66d9ef>else</span> <span style=color:#f92672>=&gt;</span> {},
+        }
+    }
+    <span style=color:#75715e>// core.swap_chain_format -&gt; core.descriptor().format
+</span><span style=color:#75715e></span>    core.swapchain().present();
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+}
+</code></pre></div><p>Notably:</p><ul><li><code>mach.Core</code> is no longer a parameter provided to your <code>App</code>, instead, Mach only calls <code>init</code>/<code>update</code>/<code>deinit</code> callbacks of your app, and you are responsible for maintaining a <code>mach.Core</code> instance and using it.</li><li>It is now possible to specify your own allocator for <code>mach.Core</code> to use.</li><li><code>core.pollEvent</code> has been renamed to <code>core.pollEvents</code> and now returns an iterator of events.</li><li><code>App.update</code> must now return <code>!bool</code> instead of <code>!void</code>, the bool indicates if the program should exit.</li><li><code>App.resize</code> is no longer an allowed optional callback, instead a <code>framebuffer_resize</code> event was added.</li><li>A <code>.close</code> event was added which you should handle by e.g. <code>return true</code> to exit the program.</li><li>Some commonly used fields were renamed:<ul><li><code>core.swapchain</code> -> <code>core.swapchain()</code></li><li><code>core.swap_chain_format</code> -> <code>core.descriptor().format</code></li></ul></li></ul><h2 id=questions>Questions?</h2><p>Trouble updating, or have questions? We&rsquo;re always happy to help, feel free to <a href=../../../discord.md>join our Discord</a>!</p></div><div class=toc><h3>Table of contents</h3><nav id=TableOfContents><ul><li><a href=#updating-your-application>Updating your application</a></li><li><a href=#questions>Questions?</a></li></ul></nav></div></main><div class=footer><a href=https://hexops.com/privacy>Privacy matters</a><p><a href=https://machengine.org/next/docs#improve-this-site>Improve this site</a> | <a href=https://github.com/sponsors/slimsag>Sponsor on GitHub</a> | <a href=https://devlog.hexops.com/>Hexops' devlog</a></p></div></div></body></html>
