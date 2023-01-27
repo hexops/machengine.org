@@ -9,25 +9,21 @@ unsafe = true
 
 [menu]
 [[menu.docs]]
-  name = 'Choose your journey'
-  url = '/docs'
-  weight = 100
-[[menu.docs]]
   name = 'Engine'
   identifier = 'Engine'
-  weight = 200
+  weight = 100
 [[menu.docs]]
   name = 'Core'
   identifier = 'Core'
-  weight = 300
+  weight = 200
 [[menu.docs]]
   name = 'Libraries'
   identifier = 'libs'
-  weight = 400
+  weight = 300
 [[menu.docs]]
   name = 'About'
   identifier = 'about'
-  weight = 500
+  weight = 400
 
 [[menu.docs]]
   parent = 'Engine'
