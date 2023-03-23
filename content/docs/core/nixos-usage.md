@@ -60,6 +60,13 @@ env NIXPKGS_ALLOW_UNFREE=1 nix-shell -p steam-run
 
 (then `zig build run-textured-cube` as usual)
 
+## Known issues
+### Incorrect cursor behavior with cursormode set to disabled
+
+If your cursor is not hidden and behaves "jumpy" after setting cursormode to disabled, you will need to add the `pkgs.xorg.libXcursor` package as an additional buildinput. This is required for both Xorg and Wayland.
+
+If capturing the cursor is not required, libXcursor can be omitted.
+
 ## Debugging tips
 
 * Mach requires a functional Vulkan graphics driver by default, but you can also try OpenGL via `MACH_GPU_BACKEND=opengl`
