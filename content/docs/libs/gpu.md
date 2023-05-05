@@ -117,7 +117,7 @@ const gpu = @import("libs/mach-gpu/sdk.zig").Sdk(.{
 pub fn build(b: *Builder) !void {
     ...
     // Link to mach/gpu
-    exe.addPackage(gpu.pkg(b));
+    exe.addModule("gpu", gpu.module(b));
     try gpu.link(b, exe, .{});
 }
 ```
