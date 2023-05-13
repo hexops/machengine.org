@@ -20,7 +20,7 @@ As with all Mach libraries, <a href=../../about/goals#zero-fuss-installation>zer
 <span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> build(b<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>Builder) <span style=color:#f92672>!</span><span style=color:#66d9ef>void</span> {
     ...
     <span style=color:#75715e>// Link to mach/gpu
-</span><span style=color:#75715e></span>    exe.addPackage(gpu.pkg(b));
+</span><span style=color:#75715e></span>    exe.addModule(<span style=color:#e6db74>&#34;gpu&#34;</span>, gpu.module(b));
     <span style=color:#66d9ef>try</span> gpu.link(b, exe, .{});
 }
 </code></pre></div></div><div class=toc><h3>Table of contents</h3><nav id=TableOfContents><ul><li><a href=#goals>Goals</a></li><li><a href=#non-goals>Non-goals</a></li><li><a href=#features>Features</a><ul><li><a href=#compile-time-interface>Compile-time interface</a></li><li><a href=#gpuexport>gpu.Export</a></li><li><a href=#quality-of-life-improvements>Quality of life improvements</a></li></ul></li><li><a href=#examples>Examples</a><ul><li><a href=#webgpu--glfw-example>WebGPU + GLFW example</a></li><li><a href=#consider-mach-core>Consider Mach core</a></li></ul></li><li><a href=#getting-started>Getting started</a><ul><li><a href=#adding-dependency>Adding dependency</a></li></ul></li></ul></nav></div></main><div class=footer><a href=https://hexops.com/privacy>Privacy matters</a><p><a href=https://machengine.org/next/docs#improve-this-site>Improve this site</a> | <a href=https://github.com/sponsors/slimsag>Sponsor on GitHub</a> | <a href=https://devlog.hexops.com/>Hexops' devlog</a></p></div></div></body></html>
