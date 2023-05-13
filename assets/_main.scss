@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.25;
-    font-family: Orbitron;
+    font-family: 'Inter', sans-serif;
     background: $light_bg;
     color: $light_fg;
     @media (prefers-color-scheme: dark) {
@@ -25,11 +25,11 @@ body {
     }
 }
 
-main p,
-main li,
-small,
-span {
-    font-family: Verdana, Geneva, sans-serif;
+h1, h2, h3, h4, h5, h6,
+.glass-link,
+.big-button,
+.sub-menu {
+    font-family: Orbitron;
 }
 
 main p,
@@ -61,7 +61,6 @@ h6 {
 }
 
 .subtext {
-    font-family: Verdana, Geneva, sans-serif;
     font-size: 80%;
     padding-left: 0.5rem;
 }
@@ -463,9 +462,6 @@ thead {
 }
 td, th {
     padding: 0.5rem;
-}
-tr {
-    font-family: Verdana, Geneva, sans-serif;
 }
 tr:nth-child(even) {
     background: white;
