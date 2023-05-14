@@ -278,9 +278,9 @@ a.p-community-icon {
     <div class="options">
         <div class="engine">
             <div class="content">
-                <h1 style="font-size: 40px;"><a href="/docs/engine">Mach engine</a> <span style="font-size: 12px;">(coming soon)</span></h1>
+                <h1 style="font-size: 40px;"><a href="/engine">Mach engine</a> <span style="font-size: 12px;">(coming soon)</span></h1>
                 <h2>Competitive in spirit with other engines</h2>
-                <a href="/docs/engine">
+                <a href="/engine">
                     <video autoplay loop muted>
                         <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
                     </video>
@@ -289,9 +289,9 @@ a.p-community-icon {
         </div>
         <div class="core">
             <div class="content">
-                <h1 style="font-size: 40px;"><a href="/docs/core">Mach core</a></h1>
+                <h1 style="font-size: 40px;"><a href="/core">Mach core</a></h1>
                 <h2>Modern alternative to SDL/etc</h2>
-                <a href="/docs/core">
+                <a href="/core">
                     <video autoplay loop muted>
                         <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
                     </video>
@@ -305,8 +305,8 @@ a.p-community-icon {
             Choose your journey
         </a>
         <div class="secondary big-button-false-before">
-            <a href="/docs/engine" class="big-button glass-hover">Engine</a>
-            <a href="/docs/core" class="big-button glass-hover">Core</a>
+            <a href="/engine" class="big-button glass-hover">Engine</a>
+            <a href="/core" class="big-button glass-hover">Core</a>
         </div>
     </div>
 </div>
@@ -328,7 +328,7 @@ a.p-community-icon {
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>Try it out in just ~60 seconds</h2>
-                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="docs/about/goals#zero-fuss-installation">how?</a>)</small>
+                <small style="margin-left: 1rem; display: inline-block; width: 35rem;">Only  zig, git, and curl required. No build tools, no system dependencies. (<a href="/about/goals#zero-fuss-installation">how?</a>)</small>
             </div>
             <div>
 <code><pre class="code">
@@ -337,7 +337,7 @@ cd mach-examples/
 zig build run-textured-cube
 </pre></code>
                 <small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
-    <a href="/docs/core/known-issues">known issues</a>
+    <a href="/about/known-issues">known issues</a>
     </small>
             </div>
         </div>
@@ -345,7 +345,7 @@ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Effortless cross-compilation</h2>
-            <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon. (<a href="docs/about/goals#seamless-cross-compilation"><small>how?</small></a>)</p>
+            <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon. (<a href="/about/goals#seamless-cross-compilation"><small>how?</small></a>)</p>
 <code><pre class="code">
 <strong>$</strong> zig build -Dtarget=x86_64-windows
 <strong>$</strong> zig build -Dtarget=x86_64-linux
@@ -377,74 +377,74 @@ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>A modern alternative to SDL/etc</h2>
-            <p><a href="/docs/core"><em>Mach core</em></a> provides a Window+Input+GPU, nothing else.</p>
-            <p>Includes <a href="docs/about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="docs/about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
+            <p><a href="/core"><em>Mach core</em></a> provides a Window+Input+GPU, nothing else.</p>
+            <p>Includes <a href="/about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="/about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
             <p>Use it from Zig or via our C ABI, and soon you'll be able to compile to WebAssembly and Mobile targets using the same API.</p>
         </div>
         <img class="p-img-left auto-color-inverted" style="height: 12rem;" src="/img/mach_core_icon.svg"></img>
     </div>
     <div class="p-section color-bg">
         <div style="text-align: center; max-width: 65rem;">
-            <a href="docs/core/libraries">
+            <a href="/core/libraries">
                 <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
             </a>
             <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
             <br/>
-            <a href="docs/core/libraries#gpu" class="img-link">
+            <a href="/core/libraries#gpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
                     <img alt="mach/gpu" src="/assets/mach/gpu-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#ecs" class="img-link">
+            <a href="/core/libraries#ecs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-dark.svg">
                     <img alt="mach/ecs" src="/assets/mach/ecs-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#sysaudio" class="img-link">
+            <a href="/core/libraries#sysaudio" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysaudio-dark.svg">
                     <img alt="mach/sysaudio" src="/assets/mach/sysaudio-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#sysjs" class="img-link">
+            <a href="/core/libraries#sysjs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysjs-dark.svg">
                     <img alt="mach/sysjs" src="/assets/mach/sysjs-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/libs/glfw" class="img-link">
+            <a href="/libs/glfw" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
                     <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#freetype" class="img-link">
+            <a href="/core/libraries#freetype" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/freetype-dark.svg">
                     <img alt="mach/freetype" src="/assets/mach/freetype-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#gamemode" class="img-link">
+            <a href="/core/libraries#gamemode" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gamemode-dark.svg">
                     <img alt="mach/gamemode" src="/assets/mach/gamemode-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#basisu" class="img-link">
+            <a href="/core/libraries#basisu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/basisu-dark.svg">
                     <img alt="mach/basisu" src="/assets/mach/basisu-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#model3d" class="img-link">
+            <a href="/core/libraries#model3d" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-dark.svg">
                     <img alt="mach/model3d" src="/assets/mach/model3d-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="docs/core/libraries#earcut" class="img-link">
+            <a href="/core/libraries#earcut" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/earcut-dark.svg">
                     <img alt="mach/earcut" src="/assets/mach/earcut-light.svg" style="height: 5rem; margin-right: 1rem; margin-top: 0.5rem;">

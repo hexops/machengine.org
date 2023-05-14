@@ -2,6 +2,7 @@
 title: "Known issues - Mach engine"
 draft: false
 layout: "docs"
+docs_type: "about"
 rss_ignore: true
 ---
 

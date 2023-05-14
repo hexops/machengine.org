@@ -5,11 +5,11 @@
 
   {{ $menuKeys := slice }}
   {{ range $key, $val := $currentPage.Params.menu }}
-    {{ if ne $key "docs" }}
+    {{ if ne $key $currentPage.Params.docs_type }}
       {{ $menuKeys = $menuKeys | append $key }}
     {{ end }}
   {{ end }}
-  {{ $menuKey := or (index $menuKeys 0) "docs" }}
+  {{ $menuKey := or (index $menuKeys 0) $currentPage.Params.docs_type }}
 
   {{ with .Site.Menus }}
     {{ if $menuKey }}

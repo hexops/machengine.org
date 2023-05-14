@@ -3,6 +3,7 @@ title: "Mach core: a modern alternative to SDL/etc"
 description: "Mach core is a modern alternative to SDL, GLFW+OpenGL, etc. It is truly cross-platform, featuring desktop, web (soon), and mobile (future) support all under the same Zig & C API. With it you get a window+input+GPU, nothing else. Zero-fuss installation, cross-compilation at the flip of a switch, powered by Google's WebGPU implementation."
 draft: false
 layout: "docs"
+docs_type: "core"
 rss_ignore: true
 ---
 

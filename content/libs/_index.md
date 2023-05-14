@@ -3,6 +3,7 @@ title: "Mach libs: 100% standalone Zig gamedev libraries"
 description: "Mach provides a set of 100% standalone, high-quality Zig gamedev libraries on which it is built, they all feature zero-fuss installation, broad platform support, and cross-compilation at the flip of a switch."
 draft: false
 layout: "docs"
+docs_type: "libs"
 rss_ignore: true
 ---
 

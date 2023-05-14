@@ -15,100 +15,173 @@ baseURL = 'https://machengine.org/next'
 unsafe = true
 
 [menu]
-[[menu.docs]]
-  name = 'Engine'
-  identifier = 'Engine'
+[[menu.engine]]
+  identifier = 'engine'
+  name = 'Engine overview'
+  url = '/engine'
   weight = 100
-[[menu.docs]]
-  name = 'Core'
-  identifier = 'Core'
+[[menu.engine]]
+  identifier = 'engine-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
   weight = 200
-[[menu.docs]]
-  name = 'Libraries'
-  identifier = 'libs'
-  weight = 300
-[[menu.docs]]
-  name = 'About'
-  identifier = 'about'
-  weight = 400
 
-[[menu.docs]]
-  parent = 'Engine'
-  identifier = 'engine-overview'
-  name = 'Overview'
-  url = '/docs/engine'
-
-[[menu.docs]]
-  parent = 'Core'
-  identifier = 'core-overview'
-  name = 'Overview'
-  url = '/docs/core'
+[[menu.core]]
+  identifier = 'core'
+  name = 'Core overview'
+  url = '/core'
   weight = 100
-[[menu.docs]]
-  parent = 'Core'
-  identifier = 'core-overview'
-  name = 'Overview'
-  url = '/docs/core'
-  weight = 200
-[[menu.docs]]
-  parent = 'Core'
+[[menu.core]]
   identifier = 'core-examples'
   name = 'Examples'
-  url = '/docs/core/examples'
-  weight = 300
-[[menu.docs]]
-  parent = 'Core'
+  url = '/core/examples'
+  weight = 200
+[[menu.core]]
   identifier = 'core-getting-started'
   name = 'Getting started'
-  url = '/docs/core/getting-started'
-  weight = 400
-[[menu.docs]]
-  parent = 'Core'
-  identifier = 'core-known-issues'
-  name = 'Known issues'
-  url = '/docs/core/known-issues'
-  weight = 500
-[[menu.docs]]
-  parent = 'Core'
+  url = '/core/getting-started'
+  weight = 300
+[[menu.core]]
   identifier = 'core-migrations'
   name = 'Migrations'
-  url = '/docs/core/migrations'
-  weight = 600
-
-[[menu.docs]]
-  parent = 'libs'
-  identifier = 'libs-overview'
-  name = 'Overview'
-  url = '/docs/libs'
-  weight = 100
-[[menu.docs]]
-  parent = 'libs'
-  identifier = 'libs-glfw'
-  name = 'mach/glfw'
-  url = '/docs/libs/glfw'
-  weight = 200
-[[menu.docs]]
-  parent = 'libs'
-  identifier = 'libs-gpu'
-  name = 'mach/gpu'
-  url = '/docs/libs/gpu'
-  weight = 300
-[[menu.docs]]
-  parent = 'libs'
-  identifier = 'libs-freetype'
-  name = 'mach/freetype'
-  url = '/docs/libs/freetype'
+  url = '/core/migrations'
   weight = 400
-[[menu.docs]]
-  parent = 'libs'
-  identifier = 'libs-experimental'
-  name = 'Experimental'
-  url = '/docs/libs/experimental'
+[[menu.core]]
+  identifier = 'core-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
   weight = 500
 
-[[menu.docs]]
-  parent = 'about'
+
+
+[[menu.libs]]
+  identifier = 'libs'
+  name = 'Libraries'
+  url = '/libs'
+  weight = 100
+[[menu.libs]]
+  identifier = 'libs-glfw'
+  name = 'mach/glfw'
+  url = '/libs/glfw'
+  weight = 200
+[[menu.libs]]
+  identifier = 'libs-gpu'
+  name = 'mach/gpu'
+  url = '/libs/gpu'
+  weight = 300
+[[menu.libs]]
+  identifier = 'libs-freetype'
+  name = 'mach/freetype'
+  url = '/libs/freetype'
+  weight = 400
+[[menu.libs]]
+  identifier = 'libs-experimental'
+  name = 'Experimental'
+  url = '/libs/experimental'
+  weight = 500
+[[menu.libs]]
+  identifier = 'libs-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
+  weight = 600
+
+[[menu.about]]
+  identifier = 'about'
+  name = 'About the project'
+  url = '/about'
+  weight = 100
+[[menu.about]]
   identifier = 'about-goals'
   name = 'Project goals'
-  url = '/docs/about/goals'
-  weight = 100
+  url = '/about/goals'
+  weight = 200
+[[menu.about]]
+  identifier = 'about-platforms'
+  name = 'Platform support'
+  url = '/about/platforms'
+  weight = 300
+[[menu.about]]
+  identifier = 'about-known-issues'
+  name = 'Known issues'
+  url = '/about/known-issues'
+  weight = 400
+
+[[menu.about]]
+  identifier = 'about-engine'
+  name = 'Engine'
+  url = '/engine'
+  weight = 10000
+[[menu.about]]
+  parent = 'about-engine'
+  identifier = 'about-engine-coming-soon'
+  name = 'Coming soon'
+  url = '/engine'
+  weight = 10100
+
+[[menu.about]]
+  identifier = 'about-core'
+  name = 'Core'
+  url = '/core'
+  weight = 20000
+[[menu.about]]
+  parent = 'about-core'
+  identifier = 'about-core-overview'
+  name = 'Overview'
+  url = '/core'
+  weight = 20100
+[[menu.about]]
+  parent = 'about-core'
+  identifier = 'about-core-examples'
+  name = 'Examples'
+  url = '/core/examples'
+  weight = 20200
+[[menu.about]]
+  parent = 'about-core'
+  identifier = 'about-core-getting-started'
+  name = 'Getting started'
+  url = '/core/getting-started'
+  weight = 20300
+[[menu.about]]
+  parent = 'about-core'
+  identifier = 'about-core-migrations'
+  name = 'Migrations'
+  url = '/core/migrations'
+  weight = 20400
+
+
+
+[[menu.about]]
+  identifier = 'about-libs'
+  name = 'Libraries'
+  url = '/libs'
+  weight = 30000
+[[menu.about]]
+  parent = 'about-libs'
+  identifier = 'about-libs-overview'
+  name = 'Overview'
+  url = '/libs'
+  weight = 30100
+[[menu.about]]
+  parent = 'about-libs'
+  identifier = 'about-libs-glfw'
+  name = 'mach-glfw'
+  url = '/libs/glfw'
+  weight = 30200
+[[menu.about]]
+  parent = 'about-libs'
+  identifier = 'about-libs-gpu'
+  name = 'mach-gpu'
+  url = '/libs/gpu'
+  weight = 30300
+[[menu.about]]
+  parent = 'about-libs'
+  identifier = 'about-libs-freetype'
+  name = 'mach-freetype'
+  url = '/libs/freetype'
+  weight = 30400
+[[menu.about]]
+  parent = 'about-libs'
+  identifier = 'about-libs-experimental'
+  name = 'Experimental'
+  url = '/libs/experimental'
+  weight = 30500

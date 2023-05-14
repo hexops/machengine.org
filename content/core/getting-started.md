@@ -2,6 +2,7 @@
 title: "Getting started - Mach core"
 draft: false
 layout: "docs"
+docs_type: "core"
 rss_ignore: true
 ---
 

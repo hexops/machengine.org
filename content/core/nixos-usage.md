@@ -2,6 +2,7 @@
 title: "nixOS usage - Mach engine"
 draft: false
 layout: "docs"
+docs_type: "core"
 rss_ignore: true
 ---
 

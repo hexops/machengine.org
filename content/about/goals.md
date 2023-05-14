@@ -3,6 +3,7 @@ title: "Project goals - Mach engine"
 description: "This page provides a brief overview of the goals of Mach, principals we hold to, etc."
 draft: false
 layout: "docs"
+docs_type: "about"
 rss_ignore: true
 ---
 

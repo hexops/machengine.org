@@ -2,6 +2,7 @@
 title: "Mach engine: a game engine for the future"
 draft: false
 layout: "docs"
+docs_type: "engine"
 rss_ignore: true
 ---
 

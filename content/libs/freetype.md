@@ -3,6 +3,7 @@ title: "mach/freetype: Ziggified FreeType 2 bindings"
 description: "mach/glfw provides GLFW bindings for Zig with 100% API coverage, zero-fuss installation, cross-compilation, and more."
 draft: false
 layout: "docs"
+docs_type: "libs"
 rss_ignore: true
 ---
 

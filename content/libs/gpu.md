@@ -3,6 +3,7 @@ title: "mach/gpu: the WebGPU interface for Zig"
 description: "mach/gpu provides a truly cross-platform graphics API for Zig (desktop, mobile, and web) with unified low-level graphics & compute backed by Vulkan, Metal, D3D12, and OpenGL (as a best-effort fallback.)"
 draft: false
 layout: "docs"
+docs_type: "libs"
 rss_ignore: true
 ---
 
