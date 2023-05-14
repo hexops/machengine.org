@@ -2,7 +2,7 @@
 title: "Coordinate system (+Y up, left-handed) - Mach engine"
 draft: false
 layout: "docs"
-docs_type: "math"
+docs_type: "engine"
 rss_ignore: true
 ---
 
