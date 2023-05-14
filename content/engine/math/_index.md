@@ -26,5 +26,3 @@ Note: many people will say "row major" or "column major" and implicitly mean thr
 * Texture coordinates:     +Y down; (0, 0) is at the top-left corner.
 
 This coordinate system is consistent with WebGPU, Metal, DirectX, and Unity (NDC only.)
-
-Note that since +Y is up (not +Z), developers can seamlessly transition from 2D applications to 3D applications by adding the Z component. This is in contrast to e.g. Z-up coordinate systems, where 2D and 3D must differ.
