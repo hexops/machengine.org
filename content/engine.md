@@ -9,7 +9,7 @@ rss_ignore: true
 # Mach engine: game engine & graphics toolkit
 
 <p>
-    <img style="height: 15rem; float: right; padding-left: 1rem;" class="auto-color" src="https://user-images.githubusercontent.com/3173176/163735828-eb10335d-c984-4f7b-90cc-1e0a0edec1d0.png"></img>
+    <img style="height: 15rem; float: right; padding-left: 1rem;" class="auto-color" src="/img/engine-drawing.png"></img>
     <span style="font-family: Orbitron; font-size: 22px;"><em>Competitive in spirit with other engines</em></span>
     <br/>
     <br/>

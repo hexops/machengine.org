@@ -20,7 +20,7 @@ If you are using nixOS, we have tips on how to use Mach with it [here](../nixos-
 
 If you encounter an error like this:
 
-![image](https://user-images.githubusercontent.com/3173176/160296281-0f68cfb9-65b0-4c0a-9623-2b2132f96a4b.png)
+![image](/img/windows-symlinks.png)
 
 Windows does not have symlinks enabled, or Git is not configured to use them. This is very annoying and [has been reported to Microsoft](https://twitter.com/slimsag/status/1508114938933362688).
 

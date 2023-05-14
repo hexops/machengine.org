@@ -314,7 +314,7 @@ a.p-community-icon {
 <div class="color-fg" style="margin-top: 3rem;">
     <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0; clip-path: inset(0 0 -10rem 0)">
         <a href="https://ziglang.org">
-            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="https://raw.githubusercontent.com/ziglang/logo/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg">
+            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="/img/zig-mark.svg">
         </a>
         <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
     </div>
@@ -488,7 +488,7 @@ zig build run-textured-cube
     <div class="p-section always-open-source">
         <div class="transparent-card">
             <a href="https://github.com/slimsag">
-                <img class="p-img-left p-img-small" src="https://avatars.githubusercontent.com/u/3173176?v=4">
+                <img class="p-img-left p-img-small" src="/img/slimsag-profile.png">
             </a>
             <div style="text-align: left;">
                 <h2>Open source, always & forever</h2>

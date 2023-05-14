@@ -16,7 +16,7 @@ This page covers more broad project goals that apply to all Mach projects, code,
 ## Zero-fuss installation
 
 <div>
-    <img alt="no more apt-get install" src="https://user-images.githubusercontent.com/3173176/159140683-0714eb12-806a-43e5-980f-63aa0d998fc2.png" style="width: 20rem; float: left; padding-right: 2rem;"></img>
+    <img alt="no more apt-get install" src="/img/not-this-anything-but-this.png" style="width: 20rem; float: left; padding-right: 2rem;"></img>
     <p>All too often we see people get a sudden burst of inspiration: "I'm going to finally start my game/app this weekend!" only to see them utlimately get bogged down by setting up their dev environment, ending their weekend with "well.. at least I got the hello world running" - there is no greater drain on human inspiration.</p>
     <p>This is why Mach focuses so heavily on zero-fuss installation: <strong>you only need Zig, Git, and Curl to use Mach. Nothing else.</strong> No more `apt-get install` lists. No more cmake/ninja/dependency-hell.</p>
 </div>

@@ -52,7 +52,7 @@ Why create a ziggified GLFW wrapper, instead of just using `@cImport` and interf
 <h3 style="margin-top: 1rem;">Vulkan</h3>
 
 <p>
-    <img src="https://user-images.githubusercontent.com/3173176/139573985-d862f35a-e78e-40c2-bc0c-9c4fb68d6ecd.png" style="width: 20rem; float: left;">
+    <img src="/img/mach-glfw-vulkan-example.png" style="width: 20rem; float: left;">
     Since mach/glfw is only bindings to GLFW, you'll need to bring-your-own Vulkan library if that is how you intend to use it.
     <br/>
     <br/>
@@ -62,7 +62,7 @@ Why create a ziggified GLFW wrapper, instead of just using `@cImport` and interf
 <h3 style="margin-top: 2rem;">OpenGL</h3>
 
 <p>
-    <img src="https://user-images.githubusercontent.com/3173176/203870354-0a5d9349-02db-49d0-9666-483d15a41cbb.png" style="width: 20rem; float: right;">
+    <img src="/img/mach-glfw-opengl-example.png" style="width: 20rem; float: right;">
     Since mach/glfw is only bindings to GLFW, you'll need to bring-your-own OpenGL library if that is how you intend to use it.
     <br/>
     <br/>

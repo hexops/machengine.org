@@ -1,17 +1,17 @@
 <div class="navbar">
     <div class="content">
-        <a href="/" class="logo">
+        <a href="{{$.Site.BaseURL}}" class="logo">
             <div class="img"></div>
         </a>
         <div>
-            <a href="/about" class="item glass-link">about</a>
+            <a href="{{$.Site.BaseURL}}about" class="item glass-link">about</a>
             <a href="https://github.com/sponsors/slimsag" class="item glass-link">donate</a>
             <a href="https://devlog.hexops.com/categories/mach/" class="item glass-link">devlog</a>
             <a href="https://github.com/hexops/mach" class="svg-item glass-link">
-                <img alt="GitHub" class="svg-icon" src="/img/github.svg">
+                <img alt="GitHub" class="svg-icon" src="{{$.Site.BaseURL}}img/github.svg">
             </a>
             <a href="https://discord.gg/XNG3NZgCqp" class="svg-item glass-link">
-                <img alt="Discord" class="svg-icon" src="/img/discord.svg">
+                <img alt="Discord" class="svg-icon" src="{{$.Site.BaseURL}}img/discord.svg">
             </a>
         </div>
     </div>
