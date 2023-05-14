@@ -16,9 +16,18 @@
         </div>
     </div>
 </div>
-<div class="alert next">
-    <span><strong>HEY YOU!</strong> We're still working on this site, please don't share it in very public places :)</span>
-</div>
-<div class="alert not-next">
-    <span><strong>Mach v0.2 has been released!</strong> For all the details check out <a href="https://devlog.hexops.com/2022/perfecting-webgpu-native/">the announcement</a></span>
-</div>
+{{ if eq $.Site.Params.branch "main" }}
+    {{ with $.Site.Params.alert }}
+        <div class="alert">
+            <span>{{ . | $.RenderString }}</span>
+        </div>
+    {{ end }}
+{{ else if eq $.Site.Params.branch "next" }}
+    <div class="alert warning">
+        <span><strong>HEY YOU!</strong> We're still working on this site, please don't share it in very public places :)</span>
+    </div>
+{{ else }}
+    <div class="alert">
+        <span><strong>You are viewing an old version of Mach (v0.2)</strong> see the <a href="https://machengine.org">latest version here.</a></span>
+    </div>
+{{ end }}

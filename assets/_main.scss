@@ -1,10 +1,3 @@
-// When true, a warning is displayed at the top of the page indicating this is the next
-// version of the website and not to share it.
-$next: true;
-
-// Whether an alert is shown at the top of the page or not.
-$alert: true;
-
 *, html {
     scroll-behavior: smooth !important;
 }
@@ -94,18 +87,6 @@ p {
     @media (prefers-color-scheme: dark) {
         /* https://codepen.io/sosuke/pen/Pjoqqp */
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(143deg) brightness(105%) contrast(104%);
-    }
-}
-
-.next {
-    @if not $next {
-        display: none !important;
-    }
-}
-
-.not-next {
-    @if $next {
-        display: none !important;
     }
 }
 
@@ -215,10 +196,10 @@ p {
     justify-content: center;
     display: flex;
 
-    @if not $alert {
-        display: none;
+    &.warning>span {
+        background: $warning_bg;
+        color: $dark_fg;
     }
-
     &>span {
         @include glass_text_block;
         border-top: 1px solid #00000026;
@@ -230,11 +211,6 @@ p {
         box-shadow: inset 0 1rem 1rem -1rem rgba(0,0,0,0.6);
         text-align: center;
         z-index: 2;
-
-        @if $next {
-            background: $warning_bg;
-            color: $dark_fg;
-        }
     }
 }
 

@@ -1,8 +1,15 @@
-baseURL = 'https://machengine.org/next'
 languageCode = 'en-us'
 title = 'Mach engine - game engine & graphics toolkit for the future'
 theme = "minimal"
-canonifyURLs = true
+canonifyURLs = true # Required for Hugo to rewrite Markdown links with baseURL in support of our site versioning
+
+# Important: This should be configured according to the branch.
+baseURL = 'https://machengine.org/next'
+[params]
+  branch = 'next'
+
+  # Other branch-agnostic site params below
+  alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2022/perfecting-webgpu-native/)'
 
 [markup.goldmark.renderer]
 unsafe = true
