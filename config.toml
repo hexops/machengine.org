@@ -56,7 +56,7 @@ unsafe = true
 
 [[menu.libs]]
   identifier = 'libs'
-  name = 'Libraries'
+  name = 'Libraries overview'
   url = '/libs'
   weight = 100
 [[menu.libs]]

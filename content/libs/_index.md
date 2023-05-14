@@ -7,7 +7,7 @@ docs_type: "libs"
 rss_ignore: true
 ---
 
-# Standaone Zig gamedev libraries
+# Standalone Zig gamedev libraries
 
 Mach provides a set of 100% standalone, high-quality Zig gamedev libraries on which it is built.
 
