@@ -371,21 +371,20 @@ main {
     @include glass;
 }
 
-.transparent-card {
-    @include glass_text_block;
+.card {
+    background: $dark_bg1;
     text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgba(26, 54, 59, 0.6);
     border-radius: 0.5rem;
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.transparent-card,
-.transparent-card a,
-.transparent-card a:active {
+.card,
+.card a,
+.card a:active {
     color: $dark_fg;
 }
 

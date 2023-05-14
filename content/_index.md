@@ -483,9 +483,9 @@ zig build run-textured-cube
     </div>
 </div>
 
-<div class="community glass">
+<div class="community">
     <div class="p-section always-open-source">
-        <div class="transparent-card">
+        <div class="card">
             <a href="https://github.com/slimsag">
                 <img class="p-img-left p-img-small" src="/img/slimsag-profile.png">
             </a>
@@ -500,7 +500,7 @@ zig build run-textured-cube
     </div>
     <div class="p-section" style="margin-top: 1rem;">
         <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg">
-        <div class="transparent-card" style="width: 30rem; display: block;">
+        <div class="card" style="width: 30rem; display: block;">
             <h1 style="margin-top: 0;">Community</h1>
             <small>Small but growing, you'll find most of us on Discord and GitHub.</small>
             <br>
