@@ -129,6 +129,7 @@ h2 {
 </style>
 
 <div class="p-warning">
+    You are viewing an older version of the site (Mach v0.1), see the <a href="https://machengine.org">latest version here</a>.<br/>
     Mach is still early stages - see <a href="#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
 </div>
 
