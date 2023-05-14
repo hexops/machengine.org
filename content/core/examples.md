@@ -74,7 +74,7 @@ pre {
 <h1 align="center">Mach core examples</h1>
 
 <small style="margin-top: 0rem; text-align: center;">
-    All examples require Zig nightly v0.12+, see <a href="/about/known-issues">known issues</a>.
+    All examples require <a href="https://github.com/hexops/mach#supported-zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a>
 </small>
 
 <div class="p-section">

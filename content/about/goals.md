@@ -51,34 +51,4 @@ Through this, we are able to effectively fetch the required dependencies/headers
 
 These dependencies are generally compile-time only, i.e. we use them to link to a dynamic library, but our binaries are not shipped with the application only used for linking. We rely on a very small set of system dependencies effectively guaranteed to be present on any of our supported targets, and all other dependencies are built from source.
 
-## Platform support
-
-We aim to support a broad array of operating systems and architectures, as long as they are reasonably used by desktop/mobile consumers or someone would like to contribute and maintain support for them.
-
-| OS             | x86_64 | aarch64 | WebAssembly | notes                                                                                                                                                        |
-| -------------- | ------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| macOS          | ✅      | ✅       |             | last 3 major versions supported;                                                                                                                             |
-| Windows        | ✅      | 🏃       |             | windows 7+ supported; windows ARM support in progress                                                                                                        |
-| Linux          | ✅      | 🏃       |             | linux ARM support in progress                                                                                                                                |
-| SteamOS (deck) | ✅      |         |             | truly native (Vulkan); no controller/OS integration yet; [demo video](https://devlog.hexops.com/2022/perfecting-webgpu-native/#dawnwebgpu-on-the-steam-deck) |
-| Browser        |        |         | 🏃           | everything except WebGPU working.                                                                                                                            |
-| iOS            |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |
-| Android        |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |
-
-Please note there are some project/feature-specific caveats to the above:
-
-| Project  | Caveats                                                                                                           |
-| -------- | ----------------------------------------------------------------------------------------------------------------- |
-| sysaudio | not yet supported on macOS; we'd like to fix this soon. (issue)                                                   |
-| basisu   | WebAssembly target not tested (issue)                                                                             |
-| model3d  | WebAssembly target not tested (issue)                                                                             |
-| freetype | WebAssembly target not tested (issue)                                                                             |
-| GLFW     | only works on desktop platforms; Mach core provides an abstraction layer above this that is truly cross-platform. |
-| gamemode | linux-only by nature                                                                                              |
-| sysjs    | WebAssembly-only by nature                                                                                        |
-
-## Console support
-
-Console support is a goal <em>in future years</em>, but we're realistic this will not happen soon. From a technical POV it will be achieved by nature of compiling your Zig project into C/C++ code (which Zig supports as an output target) and using the console's native C/C++ toolchain for final compilation/linkage.
-
-We intend for Hexops to offer a private, minimal set of plugins that will enable console support/features behind the necessary NDAs/legal agreements console manufacturers require of partners and publishers. We are optimistic about offering this as an at-cost service.
+See also our [platform support](/about/platforms).

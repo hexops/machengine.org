@@ -336,8 +336,7 @@ git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
 zig build run-textured-cube
 </pre></code>
-                <small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
-    <a href="/about/known-issues">known issues</a>
+                <small>Requires <a href="https://github.com/hexops/mach#supported-zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
     </small>
             </div>
         </div>
