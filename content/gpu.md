@@ -4,7 +4,7 @@ description: "mach/gpu: native, low-level graphics for Zig via WebGPU (DirectX 1
 draft: false
 layout: "unlimited"
 rss_ignore: true
-images: ["https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_light.svg"]
+images: ["/img/gpu/logo_light.svg"]
 ---
 
 <style>
@@ -112,8 +112,8 @@ h2 {
 </div>
 
 <picture>
-    <source srcset="https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_dark.svg" media="(prefers-color-scheme: dark)">
-    <img style="max-height: 9rem; width:80%; margin: 1rem;" src="https://raw.githubusercontent.com/hexops/media/b71e82ae9ea20c22a2eb3ab95d8ba48684635620/gpu/logo_light.svg">
+    <source srcset="/img/gpu/logo_dark.svg" media="(prefers-color-scheme: dark)">
+    <img style="max-height: 9rem; width:80%; margin: 1rem;" src="/img/gpu/logo_light.svg">
 </picture>
 
 <h1 style="margin-top: 0; margin-bottom: 0;" align="center">The WebGPU interface for Zig</h1>

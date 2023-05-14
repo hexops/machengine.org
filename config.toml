@@ -1,7 +1,8 @@
-baseURL = 'https://machengine.org'
+baseURL = 'https://machengine.org/v0.1'
 languageCode = 'en-us'
 title = 'Mach engine - game engine & graphics toolkit for the future'
 theme = "minimal"
+canonifyurls = true
 
 [markup.goldmark.renderer]
 unsafe = true

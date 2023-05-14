@@ -132,7 +132,7 @@ h2 {
     Mach is still early stages - see <a href="#early-stages">what we have today</a> and <em><a href="https://twitter.com/machengine">stay tuned.</a></em>
 </div>
 
-<div class="p-logo"><img class="auto-color" src="https://raw.githubusercontent.com/hexops/media/234e15f265b19743c580a078b2d68660c92675d4/mach/logo_tagline.svg"></img></div>
+<div class="p-logo"><img class="auto-color" src="/img/mach/logo_tagline.svg"></img></div>
 
 <div class="p-section p-section-highlight">
     <a href="/core-example/boids.mp4">
@@ -157,7 +157,7 @@ zig build run-boids
 </div>
 
 <div class="p-section">
-    <a href="https://user-images.githubusercontent.com/3173176/159140683-0714eb12-806a-43e5-980f-63aa0d998fc2.png"><img class="p-img-right" style="height: 15rem;" src="https://user-images.githubusercontent.com/3173176/159140683-0714eb12-806a-43e5-980f-63aa0d998fc2.png"></img></a>
+    <a href="/img/not-this-anything-but-this.png"><img class="p-img-right" style="height: 15rem;" src="/img/not-this-anything-but-this.png"></img></a>
     <div style="text-align: left;">
         <h2>All you need is zig, git, and curl.</h2>
         <small style="margin-left: 1rem;">No more installing tools & dependencies to get started</small>
@@ -212,7 +212,9 @@ zig build run-boids
     <small style="display: inline-block; padding-top: 1rem">
         Broadcast at the first ever European Zig meetup in Milan, Italy.
     </small>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/m3gOX26LOeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a href="https://www.youtube.com/watch?v=m3gOX26LOeM" target="_blank">
+        <img width="560" height="315" src="/img/youtube-mgewn2022.png">
+    </a>
 </div>
 
 <div class="p-section">
