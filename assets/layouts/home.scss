@@ -74,15 +74,66 @@ h2 {
 .parallax-layer.bottom-container {
     position: relative;
     height: 0;
-    transform: translate3d(0, 0, -5px) scale(calc(7 / 3));
-    bottom: 306vh;
+    transform: translate3d(-50px, 0, -20px) scale(calc(15 / 3));
+    bottom: 890vh;
     z-index: -1;
 }
 .index-1 {
     position: relative;
-    background-position-y: 25%;
     height: 100vh;
-    top: 20vh;
+    background-position-y: 20%;
+    top: 30vh;
+    @media (prefers-color-scheme: dark) { top: calc(30vh - 10vh); }
+    @media (max-width:1300px) {
+        top: 36vh;
+        @media (prefers-color-scheme: dark) { top: calc(36vh - 10vh); }
+    }
+    @media (max-width:1200px) {
+        top: 38.5vh;
+        @media (prefers-color-scheme: dark) { top: calc(38.5vh - 10vh); }
+    }
+    @media (max-width:1100px) {
+        top: 40vh;
+        @media (prefers-color-scheme: dark) { top: calc(40vh - 5vh); }
+    }
+    @media (max-width:1050px) {
+        top: 42.5vh;
+        @media (prefers-color-scheme: dark) { top: calc(42.5vh - 5vh); }
+    }
+    @media (max-width:1000px) {
+        top: 45vh;
+        @media (prefers-color-scheme: dark) { top: calc(45vh - 5vh); }
+    }
+    @media (max-width:800px) {
+        left: 10vw;
+        top: 45vh;
+        @media (prefers-color-scheme: dark) { top: calc(45vh - 5vh); }
+    }
+    @media (max-width:750px) {
+        left: 5vw;
+        top: 50vh;
+        @media (prefers-color-scheme: dark) { top: calc(50vh - 5vh); }
+    }
+    @media (max-width:700px) {
+        left: 2.5vw;
+        top: 50vh;
+        @media (prefers-color-scheme: dark) { top: calc(50vh - 5vh); }
+    }
+    @media (max-width:650px) {
+        left: 0vw;
+        top: 50vh;
+        @media (prefers-color-scheme: dark) { top: calc(50vh - 5vh); }
+    }
+    @media (max-width:600px) {
+        left: -2.5vw;
+        top: 50vh;
+        @media (prefers-color-scheme: dark) { top: calc(50vh - 5vh); }
+    }
+    @media (max-width:550px) {
+        left: -5vw;
+        top: 50vh;
+        @media (prefers-color-scheme: dark) { top: calc(50vh - 5vh); }
+    }
 }
 
 .parallax-layer.home-content-footer {
