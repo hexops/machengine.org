@@ -279,7 +279,7 @@ a.p-community-icon {
         <div class="engine">
             <div class="content">
                 <h1 style="font-size: 40px;"><a href="/engine">Mach engine</a> <span style="font-size: 12px;">(coming soon)</span></h1>
-                <h2>Competitive in spirit with other engines</h2>
+                <h2>Modular alternative to modern engines</h2>
                 <a href="/engine">
                     <video autoplay loop muted>
                         <source src="https://user-images.githubusercontent.com/3173176/210317135-9f3d068b-cdb8-40a1-b23d-cebaa0a962f3.webm" type="video/webm">
@@ -290,7 +290,7 @@ a.p-community-icon {
         <div class="core">
             <div class="content">
                 <h1 style="font-size: 40px;"><a href="/core">Mach core</a></h1>
-                <h2>Modern alternative to SDL/etc</h2>
+                <h2>Window+Input+GPU, truly cross-platform</h2>
                 <a href="/core">
                     <video autoplay loop muted>
                         <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
@@ -376,7 +376,7 @@ zig build run-textured-cube
     </div>
     <div class="p-section color-bg">
         <div style="text-align: left;">
-            <h2>A modern alternative to SDL/etc</h2>
+            <h2>Window+Input+GPU, truly cross-platform</h2>
             <p><a href="/core"><em>Mach core</em></a> provides a Window+Input+GPU, nothing else.</p>
             <p>Includes <a href="/about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="/about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and the power of Vulkan/DirectX/Metal/OpenGL in a concise, modern graphics API (including compute) natively using Google's WebGPU implementation.</p>
             <p>Use it from Zig or via our C ABI, and soon you'll be able to compile to WebAssembly and Mobile targets using the same API.</p>
@@ -388,7 +388,7 @@ zig build run-textured-cube
             <a href="/libs">
                 <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
             </a>
-            <p>Mach provides 11+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
+            <p>Mach provides 10+ high-quality standalone Zig libraries, helping to build out the Zig gamedev ecosystem.</p>
             <br/>
             <a href="/libs/gpu" class="img-link">
                 <picture>
@@ -493,9 +493,9 @@ zig build run-textured-cube
             <div style="text-align: left;">
                 <h2>Open source, always & forever</h2>
                 <small style="margin-left: 1rem;">Apache or MIT licensed, at your choosing.</small>
-                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev and application development tooling could be.</p>
-                <p>FOSS <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">is in my roots</a>, I believe we should own our tools and they should empower <em>us</em>-not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the 'open source' game</a> which is so prevelant today. Mach needs to be for people like you and me-it needs to be genuinely free and open source <a href="https://kristoff.it/blog/software-you-can-love/">software you can love</a>.</p>
-                <p>I am working <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double-time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, and creating high-quality games for all. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful.</p>
+                <p>Stephen here! There are few things in life I am more passionate about than Mach. I've been dreaming of it for over a decade: a modern, modular game engine in a simple & powerful language like Zig, exploring how much more simple and intuitive gamedev and application development could be.</p>
+                <p>FOSS <a href="https://devlog.hexops.com/2021/increasing-my-contribution-to-zig-to-200-a-month#i-grew-up-playing-linux-games-like-mania-drive">is in my roots</a>, I believe we should own our tools and they should empower <em>us</em>-not be part of <a href="https://kristoff.it/blog/the-open-source-game/">the 'open source' game</a> which is so prevelant today. Mach needs to be for people like you and me-it needs to genuinely be <a href="https://kristoff.it/blog/software-you-can-love/">software you can love</a>.</p>
+                <p>I am working <a href="https://devlog.hexops.com/2021/i-write-code-100-hours-a-week/">double-time</a> towards my dreams: a simple, modest, future where I can earn a living building Mach for you, creating high-quality games for all. If you can contribute time or <a href="https://github.com/sponsors/slimsag">donate</a> to help me reach my goals, I will be eternally grateful.</p>
             </div>
         </div>
     </div>

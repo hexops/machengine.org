@@ -1,6 +1,6 @@
 ---
 title: "Examples - Mach core"
-description: "Mach core is a modern alternative to SDL, GLFW+OpenGL, etc. Get started in under 60s with these examples."
+description: "Mach core provides Window+Input+GPU, truly cross-platform, nothing else. Get started in under 60s with these examples."
 draft: false
 layout: "docs"
 docs_type: "core"
@@ -74,7 +74,7 @@ pre {
 <h1 align="center">Mach core examples</h1>
 
 <small style="margin-top: 0rem; text-align: center;">
-    All examples require Zig nightly v0.11+, see <a href="/about/known-issues">known issues</a>.
+    All examples require Zig nightly v0.12+, see <a href="/about/known-issues">known issues</a>.
 </small>
 
 <div class="p-section">
