@@ -10,7 +10,7 @@ rss_ignore: true
 # The WebGPU interface for Zig
 
 <div style="margin-top: 2rem;">
-    <a href="[docs/core/libraries#glfw](https://github.com/hexops/mach-gpu)" class="img-link" style="float: right; padding-left: 1rem;">
+    <a href="https://github.com/hexops/mach-gpu" class="img-link" style="float: right; padding-left: 1rem;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
             <img alt="mach/gpu" src="/assets/mach/gpu-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
