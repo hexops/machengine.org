@@ -85,6 +85,22 @@ unsafe = true
   url = '/about/known-issues'
   weight = 600
 
+[[menu.math]]
+  identifier = 'math'
+  name = 'Math overview'
+  url = '/math'
+  weight = 100
+[[menu.math]]
+  identifier = 'math-coordinate-system'
+  name = 'Coordinate system'
+  url = '/math/coordinate-system'
+  weight = 200
+[[menu.math]]
+  identifier = 'math-matrix-storage'
+  name = 'Matrix storage'
+  url = '/math/matrix-storage'
+  weight = 300
+
 [[menu.about]]
   identifier = 'about'
   name = 'About the project'
@@ -117,6 +133,30 @@ unsafe = true
   name = 'Coming soon'
   url = '/engine'
   weight = 10100
+
+[[menu.about]]
+  identifier = 'about-math'
+  name = 'Math'
+  url = '/math'
+  weight = 15000
+[[menu.about]]
+  parent = 'about-math'
+  identifier = 'about-math-overview'
+  name = 'Overview'
+  url = '/math'
+  weight = 15100
+[[menu.about]]
+  parent = 'about-math'
+  identifier = 'about-math-coordinate-system'
+  name = 'Coordinate system'
+  url = '/math/coordinate-system'
+  weight = 15200
+[[menu.about]]
+  parent = 'about-math'
+  identifier = 'about-math-matrix-storage'
+  name = 'Matrix storage'
+  url = '/math/matrix-storage'
+  weight = 15300
 
 [[menu.about]]
   identifier = 'about-core'
