@@ -27,7 +27,7 @@ Non-main branches are configured in a few special ways. When creating a new bran
 We adhere to strict URL linking policies, in order to ensure that once an old version of the site is moved to a versioned URL like e.g. https://machengine.org/v0.1 that the site does not break:
 
 * Markdown files should ALWAYS link to absolute `/foo` URLs, never relative (`foo`, `../foo`) URLs.
-* HTML files should ALWAYS link to `{{$.Site.BaseURL}}foo`, never `foo`, `/foo` or `../foo`.
+* HTML files should ALWAYS link to `{{$.Site.BaseURL}}/foo`, never `foo`, `/foo` or `../foo`.
 
 ### Small file hosting
 

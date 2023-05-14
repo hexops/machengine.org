@@ -6,10 +6,10 @@
         {{ $style := resources.Get "layouts/default.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{end}}
-    <link rel="icon" type="image/x-icon" href="{{$.Site.BaseURL}}favicon.ico">
-    <link rel="stylesheet" href="{{$.Site.BaseURL}}assets/font/stylesheet.css">
-    <link rel="stylesheet" href="{{$.Site.BaseURL}}assets/font/inter/inter.css">
-    <script async defer data-domain="hexops.com" src="{{$.Site.BaseURL}}opendata.js"></script>
+    <link rel="icon" type="image/x-icon" href="{{$.Site.BaseURL}}/favicon.ico">
+    <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/stylesheet.css">
+    <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/inter/inter.css">
+    <script async defer data-domain="hexops.com" src="{{$.Site.BaseURL}}/opendata.js"></script>
     <meta charset="utf-8">
     <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <link rel = 'canonical' href = '{{ .Permalink }}'>
