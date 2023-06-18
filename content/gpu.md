@@ -147,7 +147,7 @@ h2 {
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-advanced-gen-texture-light
+zig build run-core-advanced-gen-texture-light
 </pre></code>
         </div>
         <small>~770 lines of code</small>
@@ -162,7 +162,7 @@ zig build run-advanced-gen-texture-light
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-textured-cube
+zig build run-core-textured-cube
 </pre></code>
         </div>
         <small>~310 lines of code</small>
@@ -187,7 +187,7 @@ zig build run-textured-cube
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-cubemap
+zig build run-core-cubemap
 </pre></code>
         </div>
         <small>~370 lines of code</small>
@@ -202,7 +202,7 @@ zig build run-cubemap
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-boids
+zig build run-core-boids
 </pre></code>
         </div>
         <small>~280 lines of code</small>
@@ -225,7 +225,7 @@ zig build run-boids
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-image-blur
+zig build run-core-image-blur
 </pre></code>
         </div>
         <small>~320 lines of code</small>
@@ -240,7 +240,7 @@ zig build run-image-blur
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-triangle
+zig build run-core-triangle
 </pre></code>
         </div>
         <small>~70 lines of code</small>
@@ -263,7 +263,7 @@ zig build run-triangle
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-rotating-cube
+zig build run-core-rotating-cube
 </pre></code>
         </div>
         <small>~220 lines of code</small>
@@ -278,7 +278,7 @@ zig build run-rotating-cube
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-two-cubes
+zig build run-core-two-cubes
 </pre></code>
         </div>
         <small>~250 lines of code</small>
@@ -303,7 +303,7 @@ zig build run-two-cubes
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-instanced-cube
+zig build run-core-instanced-cube
 </pre></code>
         </div>
         <small>~230 lines of code</small>
@@ -318,7 +318,7 @@ zig build run-instanced-cube
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-fractal-cube
+zig build run-core-fractal-cube
 </pre></code>
         </div>
         <small>~390 lines of code</small>
@@ -341,7 +341,7 @@ zig build run-fractal-cube
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-triangle-msaa
+zig build run-core-triangle-msaa
 </pre></code>
         </div>
         <small>~110 lines of code</small>
@@ -356,7 +356,7 @@ zig build run-triangle-msaa
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-map-async
+zig build run-core-map-async
 </pre></code>
         </div>
         <small>~80 lines of code</small>

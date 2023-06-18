@@ -146,7 +146,7 @@ h2 {
 <code><pre class="code">
 git clone --recursive https://github.com/hexops/mach-examples
 cd mach-examples/
-zig build run-boids
+zig build run-core-boids
 </pre></code>
             <small>Cross-platform graphics, a unified shader language & compute shaders.</small>
             <br/><small>Requires <a href="https://ziglang.org">zig 0.11.x</a> | 
