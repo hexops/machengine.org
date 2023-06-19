@@ -12,9 +12,12 @@ If you haven't already, check out the [examples](examples) as these are the best
 
 ## Creating a project
 
-1. Run `zig init-exe` to create your project, add Mach as a Git submodule:
+1. Create your project, with Mach as a Git submodule:
 
-```
+```sh
+mkdir myapp/
+cd myapp/
+zig init-exe
 git submodule add https://github.com/hexops/mach libs/mach
 ```
 
