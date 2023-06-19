@@ -18,6 +18,7 @@ If you haven't already, check out the [examples](examples) as these are the best
 mkdir myapp/
 cd myapp/
 zig init-exe
+git init
 git submodule add https://github.com/hexops/mach libs/mach
 ```
 
