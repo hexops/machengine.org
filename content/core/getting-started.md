@@ -12,52 +12,48 @@ If you haven't already, check out the [examples](examples) as these are the best
 
 ## Creating a project
 
-First run `zig init-exe` to create your project, then add Mach as a Git submodule:
+1. Run `zig init-exe` to create your project, add Mach as a Git submodule:
 
 ```
 git submodule add https://github.com/hexops/mach libs/mach
 ```
 
-In your `build.zig`, use `mach.App` to define your application:
+2. Edit your `build.zig` file to use `mach.App` declaring how to build your application:
 
 ```zig
 const std = @import("std");
 const mach = @import("libs/mach/build.zig");
 
-pub fn build(b: *std.build.Builder) !void {
+pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
-    const mode = b.standardReleaseOptions();
+    const optimize = b.standardOptimizeOption(.{});
 
     const app = try mach.App.init(b, .{
         .name = "myapp",
         .src = "src/main.zig",
         .target = target,
-        .deps = &[_]std.build.Pkg{},
-        .mode = mode,
+        .deps = &[_]std.build.ModuleDependency{},
+        .optimize = optimize,
     });
     try app.link(.{});
     app.install();
 
-    const run_cmd = try app.run();
-    run_cmd.dependOn(b.getInstallStep());
+    const run_cmd = app.addRunArtifact();
+    run_cmd.step.dependOn(b.getInstallStep());
 
     const run_step = b.step("run", "Run the app");
-    run_step.dependOn(run_cmd);
+    run_step.dependOn(&run_cmd.step);
 }
 ```
 
-Now your `src/main.zig` file can import Mach:
+3. Next to your `build.zig` file, create a new `build.zig.zon` file [with these contents](https://raw.githubusercontent.com/hexops/mach-examples/main/build.zig.zon).
 
-```zig
-const mach = @import("mach");
-```
-
-To render a triangle, add two files to your `src/` directory:
+4. To render a triangle, you may now add these two files to your `src/` directory:
 
 * [`main.zig`](https://raw.githubusercontent.com/hexops/mach-examples/main/core/triangle/main.zig)
 * [`shader.wgsl`](https://raw.githubusercontent.com/hexops/mach-examples/main/core/triangle/shader.wgsl)
 
-Finally, use `zig build run` to launch your application.
+Finally, use `zig build run` to launch your application!
 
 ## Cross-compilation
 
