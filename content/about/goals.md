@@ -31,9 +31,9 @@ At the flip of a switch it is possible to cross-compile to nearly any target:
 
 ```
 $ zig build -Dtarget=x86_64-windows
-$ zig build -Dtarget=x86_64-linux
-$ zig build -Dtarget=x86_64-macos.12
-$ zig build -Dtarget=aarch64-macos.12
+$ zig build -Dtarget=x86_64-linux-gnu
+$ zig build -Dtarget=x86_64-macos
+$ zig build -Dtarget=aarch64-macos
 ```
 
 This is made possible in a few ways:

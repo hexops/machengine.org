@@ -347,7 +347,7 @@ zig build run-core-textured-cube
             <p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon. (<a href="/about/goals#seamless-cross-compilation"><small>how?</small></a>)</p>
 <code><pre class="code">
 <strong>$</strong> zig build -Dtarget=x86_64-windows
-<strong>$</strong> zig build -Dtarget=x86_64-linux
+<strong>$</strong> zig build -Dtarget=x86_64-linux-gnu
 <strong>$</strong> zig build -Dtarget=x86_64-macos
 <strong>$</strong> zig build -Dtarget=aarch64-macos
 </pre></code>
