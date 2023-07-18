@@ -332,9 +332,9 @@ a.p-community-icon {
             </div>
             <div>
 <code><pre class="code">
-git clone --recursive https://github.com/hexops/mach-examples
-cd mach-examples/
-zig build run-core-textured-cube
+git clone --recursive https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-textured-cube
 </pre></code>
                 <small>Requires <a href="https://github.com/hexops/mach#supported-zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
     </small>
