@@ -11,12 +11,22 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../libs) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
-## core: v0.2 API redesign
+## mach-core: multithreaded rendering & standalone usage
+
+mach-core is now available as a 100% standalone repository/library. The documentation has been updated to reflect this.
+
+Additionally, we have landed [multi-threaded rendering support](https://github.com/hexops/mach-core/pull/15) which allows native applications to run at e.g. 60FPS while handling input events at 240hz. Additionally, it enables butter-smooth window resizing.
+
+## mach-glfw: package manager usage
+
+If you are a user of mach-glfw, note that we have adopted the experimental Zig package manager. It is not perfect yet and there are many papercuts; for details on how to update your codebase [please see this](https://github.com/hexops/mach/issues/861#issuecomment-1638185447)
+
+## mach-core: v0.2 API redesign
 <div class="subtext">2023-01-27 - affects all mach/core users</div>
 
 Mach v0.2 brings a complete redesign of the mach/core API. To upgrade your application see [the upgrade guide](2023-core-api)
 
-## glfw: error handling improvements
+## mach-glfw: error handling improvements
 <div class="subtext">2023-01-10 - affects all mach/glfw users</div>
 
 We've made another error handling improvement to the `mach/glfw` API:
