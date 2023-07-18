@@ -8,9 +8,9 @@
 Choose your journey</a><div class="secondary big-button-false-before"><a href=https://machengine.org/next/engine class="big-button glass-hover">Engine</a>
 <a href=https://machengine.org/next/core class="big-button glass-hover">Core</a></div></div></div><div class=color-fg style=margin-top:3rem><div class="p-section glass" style="height:6rem;box-shadow:0 0 3rem black;padding-bottom:1rem;padding-top:1rem;margin-top:0;clip-path:inset(0 0 -10rem 0)"><a href=https://ziglang.org><img style=float:left;height:5rem;margin-right:1rem;margin-top:.5rem class=p-image-left src=https://machengine.org/next/img/zig-mark.svg></a><h1 style=margin-top:0>Built with love, hard-work & Zig</h1></div><div class="p-section color-bg"><strong style="width:40rem;border-left:2px solid #000;border-right:2px solid #000;text-align:left;padding:1rem;padding-top:0;padding-bottom:0;margin-top:0"><a href=https://ziglang.org>Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</strong></div><div class="p-section color-bg"><video autoplay loop muted playsinline style=width:24rem>
 <source src=https://user-images.githubusercontent.com/3173176/210317154-90e7a41c-2b44-4ee6-956f-5a93285e19ef.webm type=video/webm></video><div class=p-section-right><div style=text-align:left><h2>Try it out in just ~60 seconds</h2><small style=margin-left:1rem;display:inline-block;width:35rem>Only zig, git, and curl required. No build tools, no system dependencies. (<a href=https://machengine.org/next/about/goals#zero-fuss-installation>how?</a>)</small></div><div><code><pre class=code>
-git clone --recursive https://github.com/hexops/mach-examples
-cd mach-examples/
-zig build run-core-textured-cube
+git clone --recursive https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-textured-cube
 </pre></code><small>Requires <a href=https://github.com/hexops/mach#supported-zig-version>this Zig nightly version</a> | <a href=https://machengine.org/next/about/known-issues>known issues</a></small></small></div></div></div><div class="p-section color-bg"><div style=text-align:left><h2>Effortless cross-compilation</h2><p>Cross-compile to Windows, macOS, Linux & Steam Deck at the flip of a switch. WebAssembly, Android & iOS coming soon. (<a href=https://machengine.org/next/about/goals#seamless-cross-compilation><small>how?</small></a>)</p><code><pre class=code>
 <strong>$</strong> zig build -Dtarget=x86_64-windows
 <strong>$</strong> zig build -Dtarget=x86_64-linux-gnu
