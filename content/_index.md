@@ -510,9 +510,6 @@ zig build run-textured-cube
             <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
                 <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
             </a>
-            <a href="https://reddit.com/r/machengine" class="p-community-icon glass-link">
-                <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
-            </a>
             <br>
             <small>There's plenty to do, so if you're eager to get involved please join the community, say hi, check out the code and see if you can contribute!</small>
         </div>

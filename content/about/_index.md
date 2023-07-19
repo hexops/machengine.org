@@ -39,9 +39,6 @@ img.p-community-icon {
         <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
             <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
         </a>
-        <a href="https://reddit.com/r/machengine" class="p-community-icon glass-link">
-            <img alt="Reddit" class="p-community-icon" src="/img/reddit.svg">
-        </a>
     </div>
 </div>
 
