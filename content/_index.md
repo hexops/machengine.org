@@ -392,61 +392,61 @@ zig build run-textured-cube
             <a href="/libs/gpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
-                    <img alt="mach/gpu" src="/assets/mach/gpu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-gpu" src="/assets/mach/gpu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machecs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-dark.svg">
-                    <img alt="mach/ecs" src="/assets/mach/ecs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-ecs" src="/assets/mach/ecs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machsysaudio" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysaudio-dark.svg">
-                    <img alt="mach/sysaudio" src="/assets/mach/sysaudio-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-sysaudio" src="/assets/mach/sysaudio-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machsysjs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysjs-dark.svg">
-                    <img alt="mach/sysjs" src="/assets/mach/sysjs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-sysjs" src="/assets/mach/sysjs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/glfw" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
-                    <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-glfw" src="/assets/mach/glfw-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/freetype" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/freetype-dark.svg">
-                    <img alt="mach/freetype" src="/assets/mach/freetype-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-freetype" src="/assets/mach/freetype-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machgamemode" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gamemode-dark.svg">
-                    <img alt="mach/gamemode" src="/assets/mach/gamemode-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-gamemode" src="/assets/mach/gamemode-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machbasisu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/basisu-dark.svg">
-                    <img alt="mach/basisu" src="/assets/mach/basisu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-basisu" src="/assets/mach/basisu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machmodel3d" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-dark.svg">
-                    <img alt="mach/model3d" src="/assets/mach/model3d-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-model3d" src="/assets/mach/model3d-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/libs/experimental#machearcut" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/earcut-dark.svg">
-                    <img alt="mach/earcut" src="/assets/mach/earcut-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <img alt="mach-earcut" src="/assets/mach/earcut-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
         </div>

@@ -1,6 +1,6 @@
 ---
-title: "mach/gpu: the gpu.Interface for Zig"
-description: "mach/gpu provides native, low-level graphics for Zig via WebGPU (DirectX 12, Metal, and Vulkan.) Get started in under 60s with these examples."
+title: "mach-gpu: the gpu.Interface for Zig"
+description: "Native, low-level graphics for Zig via WebGPU (DirectX 12, Metal, and Vulkan.) Get started in under 60s with these examples."
 draft: false
 layout: "docs"
 docs_type: "about"

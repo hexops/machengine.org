@@ -84,17 +84,17 @@ unsafe = true
   weight = 100
 [[menu.libs]]
   identifier = 'libs-glfw'
-  name = 'mach/glfw'
+  name = 'mach-glfw'
   url = '/libs/glfw'
   weight = 200
 [[menu.libs]]
   identifier = 'libs-gpu'
-  name = 'mach/gpu'
+  name = 'mach-gpu'
   url = '/libs/gpu'
   weight = 300
 [[menu.libs]]
   identifier = 'libs-freetype'
-  name = 'mach/freetype'
+  name = 'mach-freetype'
   url = '/libs/freetype'
   weight = 400
 [[menu.libs]]

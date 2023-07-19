@@ -1,11 +1,19 @@
 ---
-title: "mach/freetype: Ziggified FreeType 2 bindings"
-description: "mach/glfw provides GLFW bindings for Zig with 100% API coverage, zero-fuss installation, cross-compilation, and more."
+title: "mach-freetype: Ziggified FreeType 2 bindings"
+description: "Zig bindings to Freetype 2 core API, HarfBuzz, with optional brotli/woff2 support."
 draft: false
 layout: "docs"
 docs_type: "libs"
 rss_ignore: true
 ---
+
+Zig bindings to FreeType and HarfBuzz, featuring:
+
+* 99% FreeType 2 core API coverage.
+* (optional) HarfBuzz bindings, which is critical for proper Unicode rendering.
+* (optional) brotli support for woff2 fonts
+* (optional) external zlib linkage
+
 
 # Ziggified FreeType 2 bindings
 
@@ -13,7 +21,7 @@ rss_ignore: true
     <a href="https://github.com/hexops/mach-freetype" class="img-link" style="float: right; padding-left: 1rem;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/freetype-dark.svg">
-            <img alt="mach/freetype" src="/assets/mach/freetype-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
+            <img alt="mach-freetype" src="/assets/mach/freetype-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
         </picture>
     </a>
     As with all Mach libraries, <a href="../../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../../about/goals#platform-support">broad platform support</a> is guaranteed.
@@ -22,13 +30,13 @@ rss_ignore: true
     <span style="font-family: Orbitron;"><em>Quick links:</em></span>
     <br/>
     <ul style="display: inline-block;">
-        <li><a href="https://github.com/hexops/mach-freetype">mach/freetype on GitHub</a></li>
+        <li><a href="https://github.com/hexops/mach-freetype">mach-freetype on GitHub</a></li>
     </ul>
 </div>
 
 ## Features
 
-Builds all of FreeType (and dependencies if needed) from source, featuring:
+Zig bindings to FreeType and HarfBuzz, featuring:
 
 * 99% FreeType 2 core API coverage.
 * (optional) HarfBuzz bindings, which is critical for proper Unicode rendering.

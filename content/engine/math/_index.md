@@ -8,7 +8,7 @@ rss_ignore: true
 
 # Mach's math library is opinionated
 
-Math is hard enough as-is, without you having to question ground truths while problem solving. As a result, Mach's math library takes a more opinionated approach than some other math libraries: we try to encourage you through API design to use what we believe to be the best choices. For example, other math libraries provide both LH and RH (left-handed and right-handed) variants for each operation, and they sit on equal footing for you to choose from; mach/math may also provide both variants as needed for conversions, but unlike other libraries will bless one choice with e.g. a shorter function name to nudge you in the right direction and towards _consistency_.
+Math is hard enough as-is, without you having to question ground truths while problem solving. As a result, Mach's math library takes a more opinionated approach than some other math libraries: we try to encourage you through API design to use what we believe to be the best choices. For example, other math libraries provide both LH and RH (left-handed and right-handed) variants for each operation, and they sit on equal footing for you to choose from; mach.math may also provide both variants as needed for conversions, but unlike other libraries will bless one choice with e.g. a shorter function name to nudge you in the right direction and towards _consistency_.
 
 ## Matrices
 

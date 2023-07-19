@@ -22,14 +22,14 @@ Additionally, we have landed [multi-threaded rendering support](https://github.c
 If you are a user of mach-glfw, note that we have adopted the experimental Zig package manager. It is not perfect yet and there are many papercuts; for details on how to update your codebase [please see this](https://github.com/hexops/mach/issues/861#issuecomment-1638185447)
 
 ## mach-core: v0.2 API redesign
-<div class="subtext">2023-01-27 - affects all mach/core users</div>
+<div class="subtext">2023-01-27 - affects all mach-core users</div>
 
-Mach v0.2 brings a complete redesign of the mach/core API. To upgrade your application see [the upgrade guide](2023-core-api)
+Mach v0.2 brings a complete redesign of the mach-core API. To upgrade your application see [the upgrade guide](2023-core-api)
 
 ## mach-glfw: error handling improvements
-<div class="subtext">2023-01-10 - affects all mach/glfw users</div>
+<div class="subtext">2023-01-10 - affects all mach-glfw users</div>
 
-We've made another error handling improvement to the `mach/glfw` API:
+We've made another error handling improvement to the `mach-glfw` API:
 
 - `glfw.getError` has been renamed to `glfw.getErrorCode` (returns a Zig error type still)
 - `glfw.getError` instead now returns a struct with _both_ the error message and Zig error type.
@@ -38,9 +38,9 @@ We've made another error handling improvement to the `mach/glfw` API:
 * [More information](https://github.com/hexops/mach/pull/668)
 
 ## glfw: error handling changes
-<div class="subtext">2023-01-08 - affects all mach/glfw users</div>
+<div class="subtext">2023-01-08 - affects all mach-glfw users</div>
 
-We have completely overhauled the mach/glfw error handling approach to help users better avoid footguns and ultimately improve the ability of Zig GLFW applications to run on more obscure X11 window managers and Wayland in general.
+We have completely overhauled the mach-glfw error handling approach to help users better avoid footguns and ultimately improve the ability of Zig GLFW applications to run on more obscure X11 window managers and Wayland in general.
 
 * [More information](https://github.com/hexops/mach/pull/662)
 * How to update: please see "The solution" in https://github.com/hexops/mach/pull/662

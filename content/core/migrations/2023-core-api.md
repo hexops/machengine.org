@@ -7,9 +7,9 @@ docs_type: "core"
 rss_ignore: true
 ---
 
-# mach/core: v0.2 API redesign
+# mach-core: v0.2 API redesign
 
-Mach v0.2 brought a complete redesign of the mach/core API. To upgrade your application, see the notes below.
+Mach v0.2 brought a complete redesign of the mach-core API. To upgrade your application, see the notes below.
 
 See also the [migration notes](../) page.
 

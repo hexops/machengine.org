@@ -1,6 +1,6 @@
 ---
-title: "mach/glfw: perfected GLFW bindings for Zig"
-description: "mach/glfw provides GLFW bindings for Zig with 100% API coverage, zero-fuss installation, cross-compilation, and more."
+title: "mach-glfw: perfected GLFW bindings for Zig"
+description: "GLFW bindings for Zig with 100% API coverage, zero-fuss installation, cross-compilation, and more."
 draft: false
 layout: "docs"
 docs_type: "libs"
@@ -13,7 +13,7 @@ rss_ignore: true
     <a href="https://github.com/hexops/mach-glfw" class="img-link" style="float: right; padding-left: 1rem;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
-            <img alt="mach/glfw" src="/assets/mach/glfw-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
+            <img alt="mach-glfw" src="/assets/mach/glfw-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
         </picture>
     </a>
     As with all Mach libraries, <a href="../../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../../about/goals#platform-support">broad platform support</a> is guaranteed.
@@ -22,7 +22,7 @@ rss_ignore: true
     <span style="font-family: Orbitron;"><em>Quick links:</em></span>
     <br/>
     <ul style="display: inline-block;">
-        <li><a href="https://github.com/hexops/mach-glfw">mach/glfw on GitHub</a></li>
+        <li><a href="https://github.com/hexops/mach-glfw">mach-glfw on GitHub</a></li>
         <li><a href="https://devlog.hexops.com/2021/perfecting-glfw-for-zig-and-finding-undefined-behavior/">Perfecting GLFW for Zig</a> (article)</li>
     </ul>
 </div>
@@ -31,7 +31,7 @@ rss_ignore: true
 
 <h3 style="margin-top: 1rem;">100% API coverage, 130+ tests, etc.</h3>
 
-`mach/glfw` bindings have 100% API coverage of GLFW v3.3.4. Every function, type, constant, etc. has been wrapped in a ziggified API.
+`mach-glfw` has 100% API coverage of GLFW v3.3.4. Every function, type, constant, etc. has been wrapped in a ziggified API.
 
 There are 130+ tests, and CI tests on all major platforms as well as cross-compilation between platforms:
 
@@ -53,7 +53,7 @@ Why create a ziggified GLFW wrapper, instead of just using `@cImport` and interf
 
 <p>
     <img src="/img/mach-glfw-vulkan-example.png" style="width: 20rem; float: left;">
-    Since mach/glfw is only bindings to GLFW, you'll need to bring-your-own Vulkan library if that is how you intend to use it.
+    Since mach-glfw is only bindings to GLFW, you'll need to bring-your-own Vulkan library if that is how you intend to use it.
     <br/>
     <br/>
     For a Vulkan usage example, see <a href="https://github.com/hexops/mach-glfw-vulkan-example">mach-glfw-vulkan-example</a> - but note that it may not have the same broad platform support / cross-compilation guarantees due to using external libraries.
@@ -63,7 +63,7 @@ Why create a ziggified GLFW wrapper, instead of just using `@cImport` and interf
 
 <p>
     <img src="/img/mach-glfw-opengl-example.png" style="width: 20rem; float: right;">
-    Since mach/glfw is only bindings to GLFW, you'll need to bring-your-own OpenGL library if that is how you intend to use it.
+    Since mach-glfw is only bindings to GLFW, you'll need to bring-your-own OpenGL library if that is how you intend to use it.
     <br/>
     <br/>
     For a OpenGL usage example, see <a href="https://github.com/hexops/mach-glfw-opengl-example">mach-glfw-opengl-example</a> - but note that it may not have the same broad platform support / cross-compilation guarantees due to using external libraries.
@@ -72,7 +72,7 @@ Why create a ziggified GLFW wrapper, instead of just using `@cImport` and interf
 <h3 style="margin-top: 2rem;">WebGPU</h3>
 
 <p>
-    WebGPU requires a bit of setup code, and a WebGPU implementation is required. If you like, you can use our standalone mach/gpu bindings with the mach/gpu-dawn implementation of WebGPU and bind it to a GLFW window following <a href="https://github.com/hexops/mach-gpu/tree/main/examples">this example</a>.
+    WebGPU requires a bit of setup code, and a WebGPU implementation is required. If you like, you can use our standalone mach-gpu bindings with the mach-gpu-dawn implementation of WebGPU and bind it to a GLFW window following <a href="https://github.com/hexops/mach-gpu/tree/main/examples">this example</a>.
     <br/>
     <br/>
     If you are considering this option, we suggest <a href="../core">Mach core</a> as it would provide you with the same functionality (Window+Input+WebGPU) with much broader platform support (e.g. you get mobile/web support in the future for free.)
