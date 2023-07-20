@@ -13,9 +13,16 @@ To learn more about Mach's library stability guarantees, check out the [librarie
 
 ## mach-core: multithreaded rendering & standalone usage
 
-mach-core is now available as a 100% standalone repository/library. The documentation has been updated to reflect this.
+mach-core is now available as a 100% standalone repository / Zig package. The [getting started](../getting-started.md) documentation has been updated to reflect this.
 
-Additionally, we have landed [multi-threaded rendering support](https://github.com/hexops/mach-core/pull/15) which allows native applications to run at e.g. 60FPS while handling input events at 240hz. Additionally, it enables butter-smooth window resizing.
+Additionally, we have landed [multi-threaded rendering support](https://github.com/hexops/mach-core/pull/15) which allows native applications to run at e.g. 60FPS while handling input events at 240hz. It also enables butter-smooth window resizing.
+
+API changes:
+
+* `core.framebufferSize()` has been removed in favor of `core.descriptor().width` and `core.descriptor().height`
+* `App.init` and `App.deinit` are executed on the main thread, `App.update` is executed in a separate thread.
+* Input events are enqueued/bufferred, and you can poll them whenever you like (e.g. you may handle input mid-frame if you like.)
+* `setWaitTimeout` / "waiting" APIs are being redesigned and are not yet functional. e.g. for the case of a  desktop app that you rightfully want to be low-power, in this scenario you need a way to slow event polling of both the main thread and rendering thread - which is not yet possible.
 
 ## mach-glfw: package manager usage
 
