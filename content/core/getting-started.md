@@ -92,8 +92,8 @@ pub fn build(b: *std.Build) !void {
 
 To begin coding your project, we suggesting copying the two files from the `triangle` example into your `src/` folder:
 
-* [`main.zig`](https://raw.githubusercontent.com/hexops/mach-examples/main/core/triangle/main.zig)
-* [`shader.wgsl`](https://raw.githubusercontent.com/hexops/mach-examples/main/core/triangle/shader.wgsl)
+* [`main.zig`](https://raw.githubusercontent.com/hexops/mach-core/main/examples/triangle/main.zig)
+* [`shader.wgsl`](https://raw.githubusercontent.com/hexops/mach-core/main/examples/triangle/shader.wgsl)
 
 ## Building your project
 
