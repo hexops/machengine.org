@@ -33,18 +33,16 @@ git submodule update --init --recursive
         .deps <span style=color:#f92672>=</span> <span style=color:#f92672>&amp;</span>[_]std.build.ModuleDependency{},
         .optimize <span style=color:#f92672>=</span> optimize,
     });
-    <span style=color:#66d9ef>try</span> app.link(.{});
-    app.install();
 
-    b.installArtifact(app.step);
+    <span style=color:#66d9ef>const</span> install_step <span style=color:#f92672>=</span> b.step(<span style=color:#e6db74>&#34;install&#34;</span>, <span style=color:#e6db74>&#34;Install the app&#34;</span>);
+    install_step.dependOn(<span style=color:#f92672>&amp;</span>app.install.step);
+    b.getInstallStep().dependOn(install_step);
 
-    <span style=color:#66d9ef>const</span> run_cmd <span style=color:#f92672>=</span> b.addRunArtifact(app.step);
-    run_cmd.step.dependOn(b.getInstallStep());
     <span style=color:#66d9ef>if</span> (b.args) <span style=color:#f92672>|</span>args<span style=color:#f92672>|</span> {
-        run_cmd.addArgs(args);
+        app.run_step.addArgs(args);
     }
     <span style=color:#66d9ef>const</span> run_step <span style=color:#f92672>=</span> b.step(<span style=color:#e6db74>&#34;run&#34;</span>, <span style=color:#e6db74>&#34;Run the app&#34;</span>);
-    run_step.dependOn(<span style=color:#f92672>&amp;</span>run_cmd.step);
+    run_step.dependOn(<span style=color:#f92672>&amp;</span>app.run.step);
 
     <span style=color:#66d9ef>const</span> unit_tests <span style=color:#f92672>=</span> b.addTest(.{
         .root_source_file <span style=color:#f92672>=</span> .{ .path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;src/main.zig&#34;</span> },
