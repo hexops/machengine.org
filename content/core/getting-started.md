@@ -66,18 +66,16 @@ pub fn build(b: *std.Build) !void {
         .deps = &[_]std.build.ModuleDependency{},
         .optimize = optimize,
     });
-    try app.link(.{});
-    app.install();
 
-    b.installArtifact(app.step);
+    const install_step = b.step("install", "Install the app");
+    install_step.dependOn(&app.install.step);
+    b.getInstallStep().dependOn(install_step);
 
-    const run_cmd = b.addRunArtifact(app.step);
-    run_cmd.step.dependOn(b.getInstallStep());
     if (b.args) |args| {
-        run_cmd.addArgs(args);
+        app.run_step.addArgs(args);
     }
     const run_step = b.step("run", "Run the app");
-    run_step.dependOn(&run_cmd.step);
+    run_step.dependOn(&app.run.step);
 
     const unit_tests = b.addTest(.{
         .root_source_file = .{ .path = "src/main.zig" },
