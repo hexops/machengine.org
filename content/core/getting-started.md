@@ -38,6 +38,8 @@ git submodule add https://github.com/hexops/mach-gpu-dawn libs/mach-gpu-dawn
 git submodule update --init --recursive
 ```
 
+### Create build.zig.zon dependency file
+
 Copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, next to your `build.zig`.
 
 ### Setup build.zig
@@ -66,10 +68,6 @@ pub fn build(b: *std.Build) !void {
         .deps = &[_]std.build.ModuleDependency{},
         .optimize = optimize,
     });
-
-    const install_step = b.step("install", "Install the app");
-    install_step.dependOn(&app.install.step);
-    b.getInstallStep().dependOn(install_step);
 
     if (b.args) |args| {
         app.run_step.addArgs(args);
