@@ -11,6 +11,43 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../libs) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach-core: build system changes
+
+The following fields/functions from `mach.App` in `build.zig` have been removed:
+
+* `.step`
+* `.install()`
+* `.addRunArtifact()`
+* `.getInstallStep()`
+* `.link(.{ .gpu_dawn_options = .{} })`
+
+The following have been added:
+
+* `.compile.step`
+* `.install.step`
+* `.run.step`
+* `App.init(.{ .gpu_dawn_options = .{} })`
+
+Suggested usage is now e.g.:
+
+```zig
+const app = try core.App.init(...);
+
+const install_step = b.step("install", "Install " ++ example.name);
+install_step.dependOn(&app.install.step);
+b.getInstallStep().dependOn(install_step);
+
+const run_step = b.step("run", "Run " ++ example.name);
+run_step.dependOn(&app.run.step);
+```
+
+It is also possible to add a 'compile only' step now, for e.g. checking code merely builds should you want to:
+
+```zig
+const compile_step = b.step("compile", "Install " ++ example.name);
+compile_step.dependOn(&app.compile.step);
+```
+
 ## mach-core: multithreaded rendering & standalone usage
 
 mach-core is now available as a 100% standalone repository / Zig package. The [getting started](../getting-started.md) documentation has been updated to reflect this.
