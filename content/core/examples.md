@@ -93,7 +93,7 @@ cd mach-core/
 zig build run-advanced-gen-texture-light
 </pre></code>
         </div>
-        <small>~770 lines of code</small>
+        <small>~770 lines of code | Complexity: High</small>
     </div>
 </div>
 
@@ -108,7 +108,7 @@ cd mach-core/
 zig build run-textured-cube
 </pre></code>
         </div>
-        <small>~310 lines of code</small>
+        <small>~310 lines of code | Complexity: Medium</small>
     </div>
     <a class="animated-demo" href="/core-example/textured-cube.mp4">
         <video autoplay loop muted>
@@ -133,7 +133,7 @@ cd mach-core/
 zig build run-cubemap
 </pre></code>
         </div>
-        <small>~370 lines of code</small>
+        <small>~370 lines of code | Complexity: Medium</small>
     </div>
 </div>
 
@@ -148,7 +148,7 @@ cd mach-core/
 zig build run-boids
 </pre></code>
         </div>
-        <small>~280 lines of code</small>
+        <small>~280 lines of code | Complexity: Medium</small>
     </div>
     <a class="animated-demo" href="/core-example/boids.mp4">
         <video autoplay loop muted>
@@ -171,7 +171,7 @@ cd mach-core/
 zig build run-image-blur
 </pre></code>
         </div>
-        <small>~320 lines of code</small>
+        <small>~320 lines of code | Complexity: Medium</small>
     </div>
 </div>
 
@@ -186,7 +186,7 @@ cd mach-core/
 zig build run-triangle
 </pre></code>
         </div>
-        <small>~70 lines of code</small>
+        <small>~70 lines of code | Complexity: Low</small>
     </div>
     <a class="static-demo" href="/core-example/triangle.png">
         <img src="/core-example/triangle.png" />
@@ -209,7 +209,7 @@ cd mach-core/
 zig build run-rotating-cube
 </pre></code>
         </div>
-        <small>~220 lines of code</small>
+        <small>~220 lines of code | Complexity: Medium</small>
     </div>
 </div>
 
@@ -224,7 +224,7 @@ cd mach-core/
 zig build run-two-cubes
 </pre></code>
         </div>
-        <small>~250 lines of code</small>
+        <small>~250 lines of code | Complexity: Medium</small>
     </div>
     <a class="animated-demo" href="/core-example/two-cubes.mp4">
         <video autoplay loop muted>
@@ -249,7 +249,7 @@ cd mach-core/
 zig build run-instanced-cube
 </pre></code>
         </div>
-        <small>~230 lines of code</small>
+        <small>~230 lines of code | Complexity: Medium</small>
     </div>
 </div>
 
@@ -264,7 +264,7 @@ cd mach-core/
 zig build run-fractal-cube
 </pre></code>
         </div>
-        <small>~390 lines of code</small>
+        <small>~390 lines of code | Complexity: Medium</small>
     </div>
     <a class="animated-demo" href="/core-example/fractal-cube.mp4">
         <video autoplay loop muted>
@@ -287,7 +287,7 @@ cd mach-core/
 zig build run-triangle-msaa
 </pre></code>
         </div>
-        <small>~110 lines of code</small>
+        <small>~110 lines of code | Complexity: Low</small>
     </div>
 </div>
 
@@ -302,7 +302,7 @@ cd mach-core/
 zig build run-map-async
 </pre></code>
         </div>
-        <small>~80 lines of code</small>
+        <small>~80 lines of code | Complexity: Low</small>
     </div>
     <a class="static-demo" href="/core-example/map-async.png">
         <img src="/core-example/map-async.png" />
