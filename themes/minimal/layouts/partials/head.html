@@ -6,7 +6,16 @@
         {{ $style := resources.Get "layouts/default.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{end}}
-    <link rel="icon" type="image/x-icon" href="{{$.Site.BaseURL}}/favicon.ico">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{$.Site.BaseURL}}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{$.Site.BaseURL}}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{$.Site.BaseURL}}/favicon-16x16.png">
+    <link rel="manifest" href="{{$.Site.BaseURL}}/site.webmanifest">
+    <link rel="mask-icon" href="{{$.Site.BaseURL}}/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/stylesheet.css">
     <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/inter/inter.css">
     <script async defer data-domain="hexops.com" src="{{$.Site.BaseURL}}/opendata.js"></script>
