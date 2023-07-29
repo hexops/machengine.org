@@ -1,17 +1,12 @@
 {{ define "main" }}
-<div id="content" class="parallax-container">
-  <div class="parallax-layer home-background-image index-0">&nbsp;</div>
-  <div class="parallax-layer home-content-footer">
+<div id="content">
     {{- partial "header.html" . -}}
-    <main aria-role="main" class="parallax-layer main-home">
+    <main aria-role="main" class="main-home">
       <div class="home">
         {{.Content}}
       </div>
     </main>
     {{- partial "footer.html" . -}}
-  </div>
-  <div class="parallax-layer bottom-container">
-    <div class="home-background-image index-1">&nbsp;</div>
   </div>
 </div>
 {{ end }}
