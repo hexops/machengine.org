@@ -5,6 +5,7 @@ draft: false
 layout: "docs"
 docs_type: "libs"
 rss_ignore: true
+images: ["/img/mach-opengraph.png"]
 ---
 
 # Standalone Zig gamedev libraries

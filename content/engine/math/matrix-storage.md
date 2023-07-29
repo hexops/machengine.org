@@ -4,6 +4,7 @@ draft: false
 layout: "docs"
 docs_type: "engine"
 rss_ignore: true
+images: ["/img/mach-opengraph.png"]
 ---
 
 # Matrix storage

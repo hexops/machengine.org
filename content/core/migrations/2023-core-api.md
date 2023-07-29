@@ -5,6 +5,7 @@ draft: false
 layout: "docs"
 docs_type: "core"
 rss_ignore: true
+images: ["/img/mach-opengraph.png"]
 ---
 
 # mach-core: v0.2 API redesign

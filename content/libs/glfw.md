@@ -5,6 +5,7 @@ draft: false
 layout: "docs"
 docs_type: "libs"
 rss_ignore: true
+images: ["/img/mach-opengraph.png"]
 ---
 
 # Perfected GLFW bindings for Zig

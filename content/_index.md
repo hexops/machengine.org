@@ -5,7 +5,7 @@ draft: false
 rss_ignore: true
 layout: "home"
 override_css: "layouts/home.scss"
-images: ["img/mach-opengraph.png"]
+images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
