@@ -1,5 +1,6 @@
 languageCode = 'en-us'
-title = 'Mach engine - game engine & graphics toolkit for the future'
+title = 'Mach: zig game engine & graphics toolkit'
+description = "The Zig game engine & graphics toolkit for building high-performance, native, truly-cross-platform games, visualizations & desktop/mobile apps."
 theme = "minimal"
 canonifyURLs = true # Required for Hugo to rewrite Markdown links with baseURL in support of our site versioning
 

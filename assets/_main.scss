@@ -97,7 +97,7 @@ p {
     backdrop-filter: $glass_blur;
     -webkit-backdrop-filter: $glass_blur;
     @media (prefers-color-scheme: dark) {
-        background: $glass_color_dark;
+        background-color: $glass_color_dark;
     }
 }
 
@@ -124,8 +124,8 @@ p {
         justify-content: space-between;
         height: 3.3rem;
         margin: auto;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 6rem;
+        margin-right: 6rem;
 
         >div {
             display: flex;
@@ -135,7 +135,7 @@ p {
 
         .logo {
             display: inline-block;
-            padding-left: 1em;
+            padding-left: 0;
             padding-right: 1em;
         }
 
@@ -166,17 +166,45 @@ p {
                 text-shadow: 0 0 0.2rem black;
             }
         }
-        &>div>a:not(.logo):hover, &>div>a:not(.logo):active {
+        &>div>a.donate-button {
+            color: white;
+            text-shadow: none;
+            text-shadow: 1px 2px 2px rgba(0,0,0,0.6);
+            border-radius: 0.75rem;
+            border: 1px solid #9be3ff;
+            height: 2.25rem;
+            background-color: #3cc1f5;
+            background-image: linear-gradient(350deg, #33a3ce, #8adbfb);
+            box-shadow: rgba(0, 82, 255, 0.1) 2px 5px 5px 0px, rgba(0, 82, 255, 0.1) 1px 10px 25px 0px, rgba(0, 82, 255, 0.3) 2px 5px 30px 0px;
+            margin-right: 1rem;
+            img {
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+                height: 1rem;
+                @media (prefers-color-scheme: light) {
+                    filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.4)) invert(100%);
+                }
+            }
+            @media (prefers-color-scheme: dark) {
+                border: 1px solid #6cb7d4;
+                background-color: #1490c2;
+                background-image: linear-gradient(350deg, #13769d, #4ca1c3);
+            }
+        }
+        &>div>a.donate-button:hover, &>div>a.donate-button:active {
+            filter: brightness(110%);
+            // color: $light_fg;
+        }
+        &>div>a:not(.logo):not(.donate-button):hover, &>div>a:not(.logo):not(.donate-button):active {
             color: $light_fg1;
             @media (prefers-color-scheme: dark) {
                 color: $dark_fg1;
             }
         }
-        &>div>a:not(.logo):hover.svg-item, &>div>a:not(.logo):active.svg-item {
+        &>div>a:not(.logo):not(.donate-button):hover.svg-item, &>div>a:not(.logo):not(.donate-button):active.svg-item {
             filter: invert(50%);
         }
 
-        &>div>a:not(.logo):not(.svg-item) {
+        &>div>a:not(.logo):not(.svg-item):not(.donate-button) {
             padding-top: 0.25rem;
             height: calc(100% - 0.25rem);
         }
@@ -205,7 +233,7 @@ p {
 
 .alert {
     height: 0;
-    z-index: 1;
+    z-index: 2;
     justify-content: center;
     display: flex;
 
@@ -321,6 +349,7 @@ main {
     filter: brightness(100%);
     font-size: 200%;
     height: 3rem;
+    animation: flashyLoad;
     @media (prefers-color-scheme: dark) {
         text-shadow: 2px 2px #000;
     }
@@ -369,7 +398,15 @@ main {
     background-position: 0 0, 0 0;
     transition-duration: 0.5s;
     @media (prefers-reduced-motion: reduce) {
-        transition-duration: 0s;
+        transition-duration: 0.1s;
+    }
+}
+@keyframes flashyLoad {
+    0% {
+        background-position: -2400px -240px, 0 0;
+    }
+    100% {
+        background-position: 800px 0, 0 0;
     }
 }
 

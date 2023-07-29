@@ -3,6 +3,7 @@ $light_bg1: #f8f9fb !default;
 $light_bg2: #ebebeb !default;
 $light_fg: hsl(0, 0%, 0%) !default;
 $light_fg1: hsl(0, 0%, 50%) !default;
+$light_fg2: hsl(0, 0%, 75%) !default;
 $glass_color_light: rgba(0, 0, 0, 0.1) !default;
 $glass_text_block_color_light: rgba(138, 171, 176, 0.6) !default;
 
@@ -11,6 +12,7 @@ $dark_bg1: #183a42 !default;
 $dark_bg2: #0e1e21 !default;
 $dark_fg: hsl(180, 27%, 100%) !default;
 $dark_fg1: hsl(180, 27%, 50%) !default;
+$dark_fg2: hsl(180, 27%, 25%) !default;
 $glass_color_dark: rgba(255, 255, 255, 0.1) !default;
 $glass_text_block_color_dark: rgba(26, 54, 59, 0.6) !default;
 
@@ -18,11 +20,13 @@ $warning_bg: red !default;
 $glass_blur: blur(0.5rem) !default;
 $glass_text_block_blur: blur(1.0rem) !default;
 
+.color-border { border-color: $light_fg2 !important; }
 .color-bg { background-color: $light_bg; }
 .color-fg { color: $light_fg; }
 .color-fg1 { color: $light_fg1; }
 .color-bg1 { background-color: $light_bg1; }
 @media (prefers-color-scheme: dark) {
+    .color-border { border-color: $dark_fg2 !important; }
     .color-bg { background-color: $dark_bg; }
     .color-fg { color: $dark_fg; }
     .color-fg1 { color: $dark_fg1; }
