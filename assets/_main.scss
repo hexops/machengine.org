@@ -18,8 +18,11 @@ body {
     }
 }
 
+.plain-font {
+    font-family: 'Inter', sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6,
-.glass-link,
 .big-button {
     font-family: Orbitron;
 }
@@ -119,9 +122,10 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 3rem;
-        max-width: 70rem;
+        height: 3.3rem;
         margin: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
 
         >div {
             display: flex;
@@ -152,6 +156,7 @@ p {
             align-items: center;
             text-decoration: none;
             line-height: 3rem;
+            font-weight: 600;
             height: 100%;
             padding-right: 1rem;
             padding-left: 1rem;
@@ -160,6 +165,15 @@ p {
                 color: $dark_fg;
                 text-shadow: 0 0 0.2rem black;
             }
+        }
+        &>div>a:not(.logo):hover, &>div>a:not(.logo):active {
+            color: $light_fg1;
+            @media (prefers-color-scheme: dark) {
+                color: $dark_fg1;
+            }
+        }
+        &>div>a:not(.logo):hover.svg-item, &>div>a:not(.logo):active.svg-item {
+            filter: invert(50%);
         }
 
         &>div>a:not(.logo):not(.svg-item) {
@@ -171,7 +185,7 @@ p {
 
 .glass-link:hover,
 .glass-link:active {
-  @include glass;
+    @include glass;
 }
 
 @media (max-width:480px) {
