@@ -39,6 +39,14 @@ Windows does not have symlinks enabled, or Git is not configured to use them. Th
 
 This is a curl SSL CA issue, you may want to Google for proper solutions on your system. That said, you can `set CURL_INSECURE=true` and retry to disable SSL verification if you want to workaround the issue.
 
+## Unresponsive white window
+
+You may be encountering [this issue](https://github.com/glfw/glfw/issues/1284):
+
+* Symptoms: unresponsive white window, Windows 11
+* Suspected cause: Corsair iCue, other bad system drivers
+* Workaround: reboot Windows
+
 ## Linux
 
 ### "Error: vkCreateInstance failed with VK_ERROR_INCOMPATIBLE_DRIVER"
