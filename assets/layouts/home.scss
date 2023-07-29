@@ -1,9 +1,6 @@
 @import "../_theme.scss";
 @import "../_main.scss";
 
-.footer a {
-    color: $dark_fg;
-}
 .navbar {
     @include glass;
     background: $light_bg;
