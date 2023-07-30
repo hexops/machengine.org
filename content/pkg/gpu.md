@@ -50,9 +50,9 @@ images: ["/img/mach-opengraph.png"]
 
 There are multiple _implementations_ of the interface, including:
 
-* `mach-gpu-dawn` - backed by Dawn, the native WebGPU implementation used in Google Chrome.
+* [mach-gpu-dawn](mach-gpu-dawn) - backed by Dawn, the native WebGPU implementation used in Google Chrome.
+* [mach-gpu-dusk](mach-gpu-dusk) - a highly experimental pure Zig WebGPU implementation
 * (future) A WebAssembly implementation, using the browser's builtin implementation.
-* [Crescent](https://github.com/silversquirl/crescent) - a simple/experimental WebGPU implementation written in Zig using Vulkan.
 
 ### gpu.Export
 

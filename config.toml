@@ -84,11 +84,6 @@ unsafe = true
   url = '/pkg'
   weight = 100
 [[menu.pkg]]
-  identifier = 'pkg-experimental'
-  name = 'Experimental'
-  url = '/pkg/experimental'
-  weight = 101
-[[menu.pkg]]
   identifier = 'pkg-c'
   name = 'C libraries / headers'
   url = '/pkg/c'
@@ -219,26 +214,31 @@ unsafe = true
   url = '/about/known-issues'
   weight = 400
 [[menu.about]]
+  identifier = 'about-stability'
+  name = 'Stability'
+  url = '/about/stability'
+  weight = 500
+[[menu.about]]
   identifier = 'about-keycomp'
   name = 'Key components'
   url = '/engine'
-  weight = 500
+  weight = 600
 
 [[menu.about]]
   identifier = 'about-keycomp-engine'
   parent = 'about-keycomp'
   name = 'Engine ⮕'
   url = '/engine'
-  weight = 500
+  weight = 6000
 [[menu.about]]
   identifier = 'about-keycomp-core'
   parent = 'about-keycomp'
   name = 'Core ⮕'
   url = '/core'
-  weight = 600
+  weight = 6100
 [[menu.about]]
   identifier = 'about-keycomp-pkg'
   parent = 'about-keycomp'
   name = 'Packages ⮕'
   url = '/pkg'
-  weight = 700
+  weight = 6200
