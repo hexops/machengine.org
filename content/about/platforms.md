@@ -20,23 +20,11 @@ We aim to support a broad array of operating systems and architectures, as long 
 | -------------- | ------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | macOS          | ✅      | ✅       |             | last 3 major versions supported;                                                                                                                             |
 | Windows        | ✅      | 🏃       |             | windows 7+ supported; ARM support is WIP                                                                                                                     |
-| Linux          | ✅      | 🏃       |             | linux ARM support WIP                                                                                                                                        |
+| Linux          | ✅      | ✅       |             |                                                                                                                                                              |
 | SteamOS (deck) | ✅      |         |             | truly native (Vulkan); no controller/OS integration yet; [demo video](https://devlog.hexops.com/2022/perfecting-webgpu-native/#dawnwebgpu-on-the-steam-deck) |
 | Browser        |        |         | 🏃           | WebGPU not working; audio, input, recompile-on-reload, etc. is working                                                                                       |
 | iOS            |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |
 | Android        |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |
-
-Standalone libraries have some caveats to the above:
-
-| Project  | Caveats                                                                                                           |
-| -------- | ----------------------------------------------------------------------------------------------------------------- |
-| sysaudio | not yet supported on macOS; we're actively fixing this actively. (issue)                                          |
-| basisu   | WebAssembly target not tested (issue)                                                                             |
-| model3d  | WebAssembly target not tested (issue)                                                                             |
-| freetype | WebAssembly target not tested (issue)                                                                             |
-| GLFW     | only works on desktop platforms; Mach core provides an abstraction layer above this that is truly cross-platform. |
-| gamemode | linux-only (by nature)                                                                                            |
-| sysjs    | WebAssembly-only (by nature)                                                                                      |
 
 ## Console support
 
