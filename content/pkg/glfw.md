@@ -3,7 +3,7 @@ title: "mach-glfw: perfected GLFW bindings for Zig"
 description: "GLFW bindings for Zig with 100% API coverage, zero-fuss installation, cross-compilation, and more."
 draft: false
 layout: "docs"
-docs_type: "libs"
+docs_type: "pkg"
 rss_ignore: true
 images: ["/img/mach-opengraph.png"]
 ---

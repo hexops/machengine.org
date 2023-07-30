@@ -3,7 +3,7 @@ title: "mach-freetype: Ziggified FreeType 2 bindings"
 description: "Zig bindings to Freetype 2 core API, HarfBuzz, with optional brotli/woff2 support."
 draft: false
 layout: "docs"
-docs_type: "libs"
+docs_type: "pkg"
 rss_ignore: true
 images: ["/img/mach-opengraph.png"]
 ---

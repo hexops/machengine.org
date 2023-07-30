@@ -3,7 +3,7 @@ title: "Experimental libraries - Mach"
 description: "Experimental Mach standalone libraries for Zig gamedev, including ones for Entity Component Systems, interacting with JavaScript via WebAssembly, audio input/output, and more."
 draft: false
 layout: "docs"
-docs_type: "libs"
+docs_type: "pkg"
 rss_ignore: true
 images: ["/img/mach-opengraph.png"]
 ---

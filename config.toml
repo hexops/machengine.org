@@ -78,33 +78,33 @@ unsafe = true
 
 
 
-[[menu.libs]]
-  identifier = 'libs'
-  name = 'Libraries overview'
-  url = '/libs'
+[[menu.pkg]]
+  identifier = 'pkg'
+  name = 'Packages overview'
+  url = '/pkg'
   weight = 100
-[[menu.libs]]
-  identifier = 'libs-glfw'
+[[menu.pkg]]
+  identifier = 'pkg-glfw'
   name = 'mach-glfw'
-  url = '/libs/glfw'
+  url = '/pkg/glfw'
   weight = 200
-[[menu.libs]]
-  identifier = 'libs-gpu'
+[[menu.pkg]]
+  identifier = 'pkg-gpu'
   name = 'mach-gpu'
-  url = '/libs/gpu'
+  url = '/pkg/gpu'
   weight = 300
-[[menu.libs]]
-  identifier = 'libs-freetype'
+[[menu.pkg]]
+  identifier = 'pkg-freetype'
   name = 'mach-freetype'
-  url = '/libs/freetype'
+  url = '/pkg/freetype'
   weight = 400
-[[menu.libs]]
-  identifier = 'libs-experimental'
+[[menu.pkg]]
+  identifier = 'pkg-experimental'
   name = 'Experimental'
-  url = '/libs/experimental'
+  url = '/pkg/experimental'
   weight = 500
-[[menu.libs]]
-  identifier = 'libs-known-issues'
+[[menu.pkg]]
+  identifier = 'pkg-known-issues'
   name = 'Known issues ⮕'
   url = '/about/known-issues'
   weight = 600
@@ -139,18 +139,18 @@ unsafe = true
 [[menu.about]]
   identifier = 'about-keycomp-engine'
   parent = 'about-keycomp'
-  name = 'Engine'
+  name = 'Engine ⮕'
   url = '/engine'
   weight = 500
 [[menu.about]]
   identifier = 'about-keycomp-core'
   parent = 'about-keycomp'
-  name = 'Core'
+  name = 'Core ⮕'
   url = '/core'
   weight = 600
 [[menu.about]]
   identifier = 'about-keycomp-pkg'
   parent = 'about-keycomp'
-  name = 'Packages'
-  url = '/libs'
+  name = 'Packages ⮕'
+  url = '/pkg'
   weight = 700

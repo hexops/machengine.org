@@ -403,66 +403,66 @@ $ zig build run-textured-cube
     </div>
     <div class="p-section color-bg">
         <div style="text-align: center; max-width: 65rem;">
-            <a href="/libs">
+            <a href="/pkg">
                 <h2 style="margin-top: 0; text-align: center;">Standalone libraries</h2>
             </a>
             <p>Mach additionally provides some of the highest-quality standalone gamedev libraries in the Zig ecosystem, including:</p>
             <br/>
-            <a href="/libs/gpu" class="img-link">
+            <a href="/pkg/gpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
                     <img alt="mach-gpu" src="/assets/mach/gpu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machecs" class="img-link">
+            <a href="/pkg/experimental#machecs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-dark.svg">
                     <img alt="mach-ecs" src="/assets/mach/ecs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machsysaudio" class="img-link">
+            <a href="/pkg/experimental#machsysaudio" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysaudio-dark.svg">
                     <img alt="mach-sysaudio" src="/assets/mach/sysaudio-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machsysjs" class="img-link">
+            <a href="/pkg/experimental#machsysjs" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysjs-dark.svg">
                     <img alt="mach-sysjs" src="/assets/mach/sysjs-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/glfw" class="img-link">
+            <a href="/pkg/glfw" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-dark.svg">
                     <img alt="mach-glfw" src="/assets/mach/glfw-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/freetype" class="img-link">
+            <a href="/pkg/freetype" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/freetype-dark.svg">
                     <img alt="mach-freetype" src="/assets/mach/freetype-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machgamemode" class="img-link">
+            <a href="/pkg/experimental#machgamemode" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gamemode-dark.svg">
                     <img alt="mach-gamemode" src="/assets/mach/gamemode-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machbasisu" class="img-link">
+            <a href="/pkg/experimental#machbasisu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/basisu-dark.svg">
                     <img alt="mach-basisu" src="/assets/mach/basisu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machmodel3d" class="img-link">
+            <a href="/pkg/experimental#machmodel3d" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-dark.svg">
                     <img alt="mach-model3d" src="/assets/mach/model3d-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/libs/experimental#machearcut" class="img-link">
+            <a href="/pkg/experimental#machearcut" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/earcut-dark.svg">
                     <img alt="mach-earcut" src="/assets/mach/earcut-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">

@@ -68,4 +68,4 @@ Today mach-core can be used from Zig, but we are aiming to have a C ABI so that 
 
 ## (optional) companion libraries
 
-Outside of mach-core, we also provide a handful of [100% standalone standard Zig libraries](../libs) for game development that pair well with Mach core. These are entirely optional (separate repositories) that you may want to check out for audio I/O, 3D model loading, etc.
+Outside of mach-core, we also provide a handful of [100% standalone standard Zig libraries](../pkg) for game development that pair well with Mach core. These are entirely optional (separate repositories) that you may want to check out for audio I/O, 3D model loading, etc.

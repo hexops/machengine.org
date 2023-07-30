@@ -10,7 +10,7 @@ images: ["/img/mach-opengraph.png"]
 
 # Migration notes
 
-To learn more about Mach's library stability guarantees, check out the [libraries overview](../libs) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
+To learn more about Mach's library stability guarantees, check out the [libraries overview](../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
 ## mach-core: build system changes
 
