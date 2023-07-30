@@ -84,30 +84,118 @@ unsafe = true
   url = '/pkg'
   weight = 100
 [[menu.pkg]]
-  identifier = 'pkg-glfw'
-  name = 'mach-glfw'
-  url = '/pkg/glfw'
-  weight = 200
-[[menu.pkg]]
-  identifier = 'pkg-gpu'
-  name = 'mach-gpu'
-  url = '/pkg/gpu'
-  weight = 300
-[[menu.pkg]]
-  identifier = 'pkg-freetype'
-  name = 'mach-freetype'
-  url = '/pkg/freetype'
-  weight = 400
-[[menu.pkg]]
   identifier = 'pkg-experimental'
   name = 'Experimental'
   url = '/pkg/experimental'
-  weight = 500
+  weight = 101
 [[menu.pkg]]
-  identifier = 'pkg-known-issues'
-  name = 'Known issues ⮕'
-  url = '/about/known-issues'
-  weight = 600
+  identifier = 'pkg-c'
+  name = 'C libraries / headers'
+  url = '/pkg/c'
+  weight = 200
+
+[[menu.pkg]]
+  identifier = 'pkg-pure'
+  name = 'Pure Zig'
+  url = '/pkg'
+  weight = 200
+[[menu.pkg]]
+  identifier = 'pkg-pure-ecs'
+  parent = 'pkg-pure'
+  name = 'ecs'
+  url = '/pkg/mach-ecs'
+  weight = 2000
+[[menu.pkg]]
+  identifier = 'pkg-pure-sysaudio'
+  parent = 'pkg-pure'
+  name = 'sysaudio'
+  url = '/pkg/mach-sysaudio'
+  weight = 2100
+[[menu.pkg]]
+  identifier = 'pkg-pure-sysjs'
+  parent = 'pkg-pure'
+  name = 'sysjs'
+  url = '/pkg/mach-pure-sysjs'
+  weight = 2200
+[[menu.pkg]]
+  identifier = 'pkg-pure-dusk'
+  parent = 'pkg-pure'
+  name = 'dusk'
+  url = '/pkg/mach-dusk'
+  weight = 2300
+[[menu.pkg]]
+  identifier = 'pkg-pure-gamemode'
+  parent = 'pkg-pure'
+  name = 'gamemode'
+  url = '/pkg/mach-gamemode'
+  weight = 2400
+[[menu.pkg]]
+  identifier = 'pkg-pure-earcut'
+  parent = 'pkg-pure'
+  name = 'earcut'
+  url = '/pkg/mach-earcut'
+  weight = 2500
+[[menu.pkg]]
+  identifier = 'pkg-pure-fastfilter'
+  parent = 'pkg-pure'
+  name = 'fastfilter'
+  url = '/pkg/mach-fastfilter'
+  weight = 2600
+
+
+[[menu.pkg]]
+  identifier = 'pkg-bind'
+  name = 'Bindings'
+  url = '/pkg'
+  weight = 300
+[[menu.pkg]]
+  identifier = 'pkg-bind-gpu'
+  parent = 'pkg-bind'
+  name = 'gpu'
+  url = '/pkg/mach-gpu'
+  weight = 3000
+[[menu.pkg]]
+  identifier = 'pkg-bind-gpu-dawn'
+  parent = 'pkg-bind'
+  name = 'gpu-dawn'
+  url = '/pkg/mach-gpu-dawn'
+  weight = 3100
+[[menu.pkg]]
+  identifier = 'pkg-bind-basisu'
+  parent = 'pkg-bind'
+  name = 'basisu'
+  url = '/pkg/mach-basisu'
+  weight = 3200
+[[menu.pkg]]
+  identifier = 'pkg-bind-freetype'
+  parent = 'pkg-bind'
+  name = 'freetype'
+  url = '/pkg/mach-freetype'
+  weight = 3300
+[[menu.pkg]]
+  identifier = 'pkg-bind-glfw'
+  parent = 'pkg-bind'
+  name = 'glfw'
+  url = '/pkg/mach-glfw'
+  weight = 3400
+[[menu.pkg]]
+  identifier = 'pkg-bind-model3d'
+  parent = 'pkg-bind'
+  name = 'model3d'
+  url = '/pkg/mach-model3d'
+  weight = 3500
+[[menu.pkg]]
+  identifier = 'pkg-bind-opus'
+  parent = 'pkg-bind'
+  name = 'opus'
+  url = '/pkg/mach-opus'
+  weight = 3600
+[[menu.pkg]]
+  identifier = 'pkg-bind-flac'
+  parent = 'pkg-bind'
+  name = 'flac'
+  url = '/pkg/mach-flac'
+  weight = 3700
 
 
 [[menu.about]]
