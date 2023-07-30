@@ -130,90 +130,27 @@ unsafe = true
   name = 'Known issues'
   url = '/about/known-issues'
   weight = 400
+[[menu.about]]
+  identifier = 'about-keycomp'
+  name = 'Key components'
+  url = '/engine'
+  weight = 500
 
 [[menu.about]]
-  identifier = 'about-engine'
+  identifier = 'about-keycomp-engine'
+  parent = 'about-keycomp'
   name = 'Engine'
   url = '/engine'
-  weight = 10000
+  weight = 500
 [[menu.about]]
-  parent = 'about-engine'
-  identifier = 'about-engine-coming-soon'
-  name = 'Coming soon'
-  url = '/engine'
-  weight = 10100
-[[menu.about]]
-  parent = 'about-engine'
-  identifier = 'about-engine-math'
-  name = 'Math'
-  url = '/engine/math'
-  weight = 10200
-
-
-[[menu.about]]
-  identifier = 'about-core'
+  identifier = 'about-keycomp-core'
+  parent = 'about-keycomp'
   name = 'Core'
   url = '/core'
-  weight = 20000
+  weight = 600
 [[menu.about]]
-  parent = 'about-core'
-  identifier = 'about-core-overview'
-  name = 'Overview'
-  url = '/core'
-  weight = 20100
-[[menu.about]]
-  parent = 'about-core'
-  identifier = 'about-core-examples'
-  name = 'Examples'
-  url = '/core/examples'
-  weight = 20200
-[[menu.about]]
-  parent = 'about-core'
-  identifier = 'about-core-getting-started'
-  name = 'Getting started'
-  url = '/core/getting-started'
-  weight = 20300
-[[menu.about]]
-  parent = 'about-core'
-  identifier = 'about-core-migrations'
-  name = 'Migrations'
-  url = '/core/migrations'
-  weight = 20400
-
-
-
-[[menu.about]]
-  identifier = 'about-libs'
-  name = 'Libraries'
+  identifier = 'about-keycomp-pkg'
+  parent = 'about-keycomp'
+  name = 'Packages'
   url = '/libs'
-  weight = 30000
-[[menu.about]]
-  parent = 'about-libs'
-  identifier = 'about-libs-overview'
-  name = 'Overview'
-  url = '/libs'
-  weight = 30100
-[[menu.about]]
-  parent = 'about-libs'
-  identifier = 'about-libs-glfw'
-  name = 'mach-glfw'
-  url = '/libs/glfw'
-  weight = 30200
-[[menu.about]]
-  parent = 'about-libs'
-  identifier = 'about-libs-gpu'
-  name = 'mach-gpu'
-  url = '/libs/gpu'
-  weight = 30300
-[[menu.about]]
-  parent = 'about-libs'
-  identifier = 'about-libs-freetype'
-  name = 'mach-freetype'
-  url = '/libs/freetype'
-  weight = 30400
-[[menu.about]]
-  parent = 'about-libs'
-  identifier = 'about-libs-experimental'
-  name = 'Experimental'
-  url = '/libs/experimental'
-  weight = 30500
+  weight = 700
