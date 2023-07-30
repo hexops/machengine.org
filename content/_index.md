@@ -282,7 +282,7 @@ a.p-community-icon {
         <div>
             <h1 style="font-size: 600%; padding: 0; margin: 0;">Mach</h1>
             <h2 style="font-size: 150%; padding: 0; margin-top: -1rem;">Zig game engine & graphics toolkit</h2>
-            <h3 style="font-size: 100%; padding: 0; margin: 0; margin-top: 2rem; max-width: 36rem;">For building high-performance, truly cross-platform, robust & modular games, visualizations, and desktop/mobile GUI apps.</h3>
+            <p style="font-size: 100%; padding: 0; margin: 0; margin-top: 2rem; max-width: 36rem;">For building high-performance, truly cross-platform, robust & modular games, visualizations, and desktop/mobile GUI apps.</p>
             <p><a href="#">What's new in v0.2?</a></p>
         </div>
         <div>
