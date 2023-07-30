@@ -13,7 +13,7 @@
     flex-direction: row;
     .docs {
         padding: 3rem;
-        max-width: calc(100% - 20rem - 20rem);
+        max-width: calc(100% - 15rem - 25rem);
         text-align: left;
         overflow: hidden;
         img {
@@ -30,9 +30,14 @@
     .toc {
         display: flex;
         flex-direction: column;
-        width: 20rem;
         padding: 0;
         margin: 0;
+    }
+    aside {
+        width: 15rem;
+    }
+    .toc {
+        width: 25rem;
     }
     aside {
         flex: 0 0 auto;
