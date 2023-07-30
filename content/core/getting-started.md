@@ -71,7 +71,7 @@ pub fn build(b: *std.Build) !void {
     });
 
     if (b.args) |args| {
-        app.run_step.addArgs(args);
+        app.run.addArgs(args);
     }
     const run_step = b.step("run", "Run the app");
     run_step.dependOn(&app.run.step);
