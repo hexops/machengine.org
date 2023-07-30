@@ -167,21 +167,21 @@ p {
             }
         }
         &>div>a.donate-button {
-            color: white;
+            color: black;
             text-shadow: none;
-            text-shadow: 1px 2px 2px rgba(0,0,0,0.6);
+            text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.6);
             border-radius: 0.75rem;
-            border: 1px solid #9be3ff;
+            border: 2px solid #9be3ff;
             height: 2.25rem;
             background-color: #3cc1f5;
             background-image: linear-gradient(350deg, #33a3ce, #8adbfb);
-            box-shadow: rgba(0, 82, 255, 0.1) 2px 5px 5px 0px, rgba(0, 82, 255, 0.1) 1px 10px 25px 0px, rgba(0, 82, 255, 0.3) 2px 5px 30px 0px;
+            box-shadow: rgba(0,82,255,0.1) 2px 5px 3px 0px,rgba(0,82,255,0.1) 1px 5px 12px 0px,rgba(0,82,255,0.3) 2px 2px 15px 0px;
             margin-right: 1rem;
             img {
-                filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.4));
+                filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
                 height: 1rem;
                 @media (prefers-color-scheme: light) {
-                    filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.4)) invert(100%);
+                    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
                 }
             }
             @media (prefers-color-scheme: dark) {
