@@ -48,7 +48,7 @@ unsafe = true
 
 [[menu.engine]]
   identifier = 'engine-gpu'
-  name = 'WebGPU'
+  name = 'GPU'
   weight = 300
 [[menu.engine]]
   parent = 'engine-gpu'
@@ -62,6 +62,12 @@ unsafe = true
   name = 'Memory management'
   url = '/engine/gpu/memory'
   weight = 302
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-errors'
+  name = 'Error handling'
+  url = '/engine/gpu/errors'
+  weight = 303
 
 
 [[menu.engine]]
