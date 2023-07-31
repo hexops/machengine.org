@@ -44,6 +44,26 @@ unsafe = true
   name = 'Matrix storage'
   url = '/engine/math/matrix-storage'
   weight = 203
+
+
+[[menu.engine]]
+  identifier = 'engine-gpu'
+  name = 'WebGPU'
+  weight = 300
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-overview'
+  name = 'Overview'
+  url = '/engine/gpu'
+  weight = 301
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-memory'
+  name = 'Memory management'
+  url = '/engine/gpu/memory'
+  weight = 302
+
+
 [[menu.engine]]
   identifier = 'engine-known-issues'
   name = 'Known issues ⮕'
