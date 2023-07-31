@@ -50,6 +50,12 @@ You may be encountering [this issue](https://github.com/glfw/glfw/issues/1284):
 
 ## Linux
 
+### How can I switch between Wayland/X11?
+
+Mach builds with support for both Wayland and X11 in the same binary. By default, Mach will make use of X11 if it is available.
+
+You can force the use of Wayland by setting `DISPLAY` to an empty string, e.g. `DISPLAY= ./triangle`.
+
 ### "Error: vkCreateInstance failed with VK_ERROR_INCOMPATIBLE_DRIVER"
 
 Some distros require packages to be installed to support the Vulkan graphics API.
