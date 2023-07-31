@@ -1,11 +1,10 @@
 ---
-title: "Examples - Mach core"
+title: "Core examples"
 description: "Mach core provides Window+Input+GPU, truly cross-platform, nothing else. Get started in under 60s with these examples."
 draft: false
 layout: "docs"
 docs_type: "core"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 <style>

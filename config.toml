@@ -11,6 +11,7 @@ baseURL = 'https://machengine.org/next'
 
   # Other branch-agnostic site params below
   alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2022/perfecting-webgpu-native/)'
+  debug_opengraph_images = false
 
 [markup.goldmark.renderer]
 unsafe = true

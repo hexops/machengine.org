@@ -52,6 +52,15 @@
         {{ template "sidebar" . }}
       </ul>
     </aside>
+    {{ if $.Site.Params.debug_opengraph_images }}
+      <div style="margin-top: 3rem;">
+        {{- $featured := partial "get-opengraph-image.html" . }}
+        Featured: {{$featured}}
+        {{- with $featured -}}
+        <img height="200" style="border: 100px solid gray;" src="{{ $featured.Permalink }}">
+        {{end}}
+      </div>>
+    {{ end }}
     <div class="docs">{{ .Content }}</div>
     <div class="toc">
     {{if ge (strings.Count "<li>" .TableOfContents) 1 }}

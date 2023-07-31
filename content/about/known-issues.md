@@ -1,10 +1,10 @@
 ---
-title: "Known issues - Mach engine"
+title: "Known issues"
+description: "Not every issue is a fixable issue, but we sure can document them and their workarounds."
 draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Known issues

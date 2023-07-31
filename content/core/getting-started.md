@@ -1,10 +1,9 @@
 ---
-title: "Getting started - Mach core"
+title: "Getting started"
 draft: false
 layout: "docs"
 docs_type: "core"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Getting Started with _Mach core_

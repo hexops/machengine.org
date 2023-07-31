@@ -1,11 +1,10 @@
 ---
-title: "C libraries / headers packaged via Zig - Mach"
-description: "Experimental Mach standalone libraries for Zig gamedev, including ones for Entity Component Systems, interacting with JavaScript via WebAssembly, audio input/output, and more."
+title: "C packages"
+description: "Mach provides an ecosystem of C libraries via the Zig package manager. These aren't Zig bindings, but rather just projects built using build.zig"
 draft: false
 layout: "docs"
 docs_type: "pkg"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # C libraries & headers packaged via the Zig build system

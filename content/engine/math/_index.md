@@ -1,10 +1,10 @@
 ---
-title: "Mach's math library is opinionated - Mach engine"
+title: "Math"
+description: "Math is hard enough as-is, without you having to question ground truths while problem solving. As a result, Mach's math library is opinionated "
 draft: false
 layout: "docs"
 docs_type: "engine"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Mach's math library is opinionated

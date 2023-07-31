@@ -5,7 +5,6 @@ draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 This page has moved: [Mach core examples](../core/examples)

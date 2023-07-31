@@ -1,10 +1,10 @@
 ---
-title: "Mach engine: a game engine for the future"
+title: "Engine overview"
+description: "Zig game engine & graphics toolkit for building high-performance, truly cross-platform games, visualizations, and desktop/mobile GUI apps."
 draft: false
 layout: "docs"
 docs_type: "engine"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Mach engine: game engine & graphics toolkit

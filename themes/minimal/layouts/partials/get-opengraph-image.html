@@ -1,0 +1,79 @@
+{{ $images := $.Resources.ByType "image" }}
+{{ $featured := $images.GetMatch "*opengraph*" }}
+{{ if not $featured }}
+    {{ $featured = resources.Get "/opengraph/template.png" }}
+
+    {{ $textOptions := dict }}
+    {{ $text := "" }}
+
+    <!-- Draw topic in top-left of image -->
+    {{ if eq $.Params.docs_type "engine" }}
+        {{ $text = "Engine" }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 60
+            "lineSpacing" 10
+            "x" 40 "y" 10
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{ else if eq $.Params.docs_type "core" }}
+        {{ $text = "Core" }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 60
+            "lineSpacing" 10
+            "x" 65 "y" 10
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{ else if eq $.Params.docs_type "pkg" }}
+        {{ $text = "Packages" }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 45
+            "lineSpacing" 10
+            "x" 30 "y" 20
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{ else }}
+        {{ $text = "Mach" }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 60
+            "lineSpacing" 10
+            "x" 60 "y" 10
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{end}}
+    {{ $featured = $featured | images.Filter (images.Text $text $textOptions) }}
+
+    <!-- Draw title in top-right of image -->
+    {{ with $.Params.short_title }}
+        {{ $text = $.Params.short_title }}
+    {{ else }}
+        {{ $text = $.LinkTitle }}
+    {{ end }}
+    {{ $textOptions = dict 
+        "color" "#000"
+        "size" 120
+        "lineSpacing" 10
+        "x" 360 "y" 40
+        "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+    }}
+    {{ $featured = $featured | images.Filter (images.Text $text $textOptions) }}
+
+    <!-- Draw description in bottom of image -->
+    {{ with $.Params.description }}
+        {{ $text = $.Params.description | strings.Truncate 145 | htmlUnescape | string }}
+    {{ else }}
+        {{ $text = "Mach engine documentation" }}
+    {{ end }}
+    {{ $textOptions = dict 
+        "color" "#000"
+        "size" 50
+        "lineSpacing" 20
+        "x" 45 "y" 405
+        "font" (resources.Get "/opengraph/Inter-Medium.ttf")
+    }}
+    {{ $featured = $featured | images.Filter (images.Text $text $textOptions) }}
+{{ end }}
+{{ return $featured }}

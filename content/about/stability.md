@@ -1,11 +1,10 @@
 ---
-title: "Stability - Mach"
-description: "We haven't reached Mach 1 yet, but Mach encompasses many projects and some are more stable than others. Here's how we think about stability in general."
+title: "Stability"
+description: "We haven't reached Mach 1 yet, but Mach encompasses many projects and some are more stable than others."
 draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # What stability means to us

@@ -1,11 +1,10 @@
 ---
-title: "Platform support - Mach engine"
-description: "Platforms and Zig versions Mach supports"
+title: "Platform support"
+description: "Platforms and Zig versions that Mach supports"
 draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 ## Supported Zig versions

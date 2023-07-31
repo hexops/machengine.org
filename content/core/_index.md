@@ -1,11 +1,10 @@
 ---
-title: "mach-core: window+input+GPU, truly cross-platform"
+title: "Core overview"
 description: "mach-core is an alternative to your traditional SDL or GLFW+OpenGL, etc. setup. It is truly cross-platform, featuring desktop, web (soon), and mobile (future) all under a single unified API. Zero-fuss installation, cross-compilation at the flip of a switch, powered by Google's WebGPU implementation."
 draft: false
 layout: "docs"
 docs_type: "core"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Mach core: Window+Input+GPU, truly cross-platform

@@ -1,11 +1,10 @@
 ---
-title: "Mach packages: 100% standalone Zig gamedev libraries"
+title: "Standalone packages"
 description: "Mach provides an ecosystem of 100% standalone, high-quality Zig gamedev packages, and they all feature zero-fuss installation, broad platform support, and cross-compilation at the flip of a switch."
 draft: false
 layout: "docs"
 docs_type: "pkg"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Standalone Zig gamedev packages

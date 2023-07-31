@@ -1,10 +1,9 @@
 ---
-title: "nixOS usage - Mach engine"
+title: "nixOS usage"
 draft: false
 layout: "docs"
 docs_type: "core"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 # Using Mach on nixOS

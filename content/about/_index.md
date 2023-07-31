@@ -1,10 +1,10 @@
 ---
-title: "About the project"
+title: "The project"
+description: "Mach is still in its infancy, but things are improving rapidly. We're simple humans building towards a dream, and you can join our effort."
 draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
-images: ["/img/mach-opengraph.png"]
 ---
 
 <style>
