@@ -19,7 +19,7 @@ rss_ignore: true
     <em>No more cmake/ninja/gn/apt-get/etc - just Zig, Git, and `curl`</em>; and at the flip of a switch you can seamlessly cross-compile for Windows/Linux/macOS, with browser support (in development), and mobile support (coming in the future) - all under a single unified API.
     </br>
     </br>
-    <a href="../about/goals#zero-fuss-installation">Zero-fuss installation</a>, <a href="../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../about/goals#platform-support">broad platform support</a> is our goal.
+    <a href="../about/goals#zero-fuss-installation">Zero-fuss installation</a>, <a href="../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../about/platforms">broad platform support</a> is our goal.
 </p>
 
 ## Under the hood

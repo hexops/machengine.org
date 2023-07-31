@@ -487,7 +487,7 @@ $ zig build run-textured-cube
     <div class="p-section color-bg">
         <div style="text-align: left;">
             <h2>Competitive with other engines</h2>
-            <p>Our ultimate aim is for <a href="doc/engine">Mach engine</a> to be a full modern engine, with a full GUI editor and all. A custom UI library, rendering engine, physics & more are all in scope and will be built out incrementally over the coming years.
+            <p>Our ultimate aim is for <a href="engine">Mach engine</a> to be a full modern engine, with a full GUI editor and all. A custom UI library, rendering engine, physics & more are all in scope and will be built out incrementally over the coming years.
             </p>
         </div>
         <img class="p-img-left auto-color" src="/img/puzzle_heart.svg"></img>

@@ -9,7 +9,7 @@ rss_ignore: true
 
 # Migration notes
 
-To learn more about Mach's library stability guarantees, check out the [libraries overview](../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
+To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
 ## mach-core: build system changes
 
@@ -50,7 +50,7 @@ compile_step.dependOn(&app.compile.step);
 
 ## mach-core: multithreaded rendering & standalone usage
 
-mach-core is now available as a 100% standalone repository / Zig package. The [getting started](../getting-started.md) documentation has been updated to reflect this.
+mach-core is now available as a 100% standalone repository / Zig package. The [getting started](../../getting-started) documentation has been updated to reflect this.
 
 Additionally, we have landed [multi-threaded rendering support](https://github.com/hexops/mach-core/pull/15) which allows native applications to run at e.g. 60FPS while handling input events at 240hz. It also enables butter-smooth window resizing.
 

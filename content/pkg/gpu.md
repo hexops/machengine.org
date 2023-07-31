@@ -16,7 +16,7 @@ rss_ignore: true
             <img alt="mach-gpu" src="/assets/mach/gpu-light.svg" style="width: 20rem; margin-right: 1rem; margin-top: 0.5rem;">
         </picture>
     </a>
-    As with all Mach libraries, <a href="../../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../../about/goals#platform-support">broad platform support</a> is guaranteed.
+    As with all Mach libraries, <a href="../../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../../about/platforms">broad platform support</a> is guaranteed.
     <br/>
     <br/>
     <span style="font-family: Orbitron;"><em>Quick links:</em></span>

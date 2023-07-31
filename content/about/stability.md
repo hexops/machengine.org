@@ -40,7 +40,7 @@ When we say a project is stable, we mean:
 
 We believe this gives us the flexibility to improve projects, as we're not locked into specific API design choices, and can balance/judge the impact of making such changes on a case-by-case basis rather than using a strict semantic definition of API compatibility. In other words, when we get something wrong, we'll be able to actually fix it.
 
-**With stable projects, we maintain _migration notes_** where we clearly document API changes and how to upgrade your code. For example, see [mach-core's migration notes](../core/migrations).
+**With stable projects, we maintain _migration notes_** where we clearly document API changes and how to upgrade your code. For example, see [mach-core's migration notes](../../core/migrations).
 
 ## What "experimental" means
 

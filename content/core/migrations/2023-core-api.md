@@ -100,4 +100,4 @@ Notably:
 
 ## Questions?
 
-Trouble updating, or have questions? We're always happy to help, feel free to [join our Discord](../../../discord.md)!
+Trouble updating, or have questions? We're always happy to help, feel free to [join our Discord](../../../discord)!

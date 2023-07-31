@@ -9,7 +9,7 @@ rss_ignore: true
 
 # Mach project goals
 
-For the goals of our engine itself (i.e. how we see the process of game development changing), please see [the Mach engine overview](../engine).
+For the goals of our engine itself (i.e. how we see the process of game development changing), please see [the Mach engine overview](../../engine).
 
 This page covers more broad project goals that apply to all Mach projects, code, standalone libraries, etc.
 
@@ -51,4 +51,4 @@ Through this, we are able to effectively fetch the required dependencies/headers
 
 These dependencies are generally compile-time only, i.e. we use them to link to a dynamic library, but our binaries are not shipped with the application only used for linking. We rely on a very small set of system dependencies effectively guaranteed to be present on any of our supported targets, and all other dependencies are built from source.
 
-See also our [platform support](/about/platforms).
+See also our [platform support](platforms).

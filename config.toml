@@ -111,7 +111,7 @@ unsafe = true
   identifier = 'pkg-pure-sysjs'
   parent = 'pkg-pure'
   name = 'sysjs'
-  url = '/pkg/mach-pure-sysjs'
+  url = '/pkg/mach-sysjs'
   weight = 2200
 [[menu.pkg]]
   identifier = 'pkg-pure-dusk'

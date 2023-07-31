@@ -9,7 +9,7 @@ rss_ignore: true
 
 # Standalone Zig gamedev packages
 
-Mach provides an ecosystem of 100% standalone, high-quality Zig gamedev packages - and they all feature <a href="../../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../../about/goals#platform-support">broad platform support</a>.
+Mach provides an ecosystem of 100% standalone, high-quality Zig gamedev packages - and they all feature <a href="../about/goals#zero-fuss-installation">zero-fuss installation</a>, <a href="../about/goals#seamless-cross-compilation">cross-compilation</a> at the flip of a switch, and <a href="../about/platforms">broad platform support</a>.
 
 ## Who are these for?
 

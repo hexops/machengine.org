@@ -84,7 +84,7 @@ pre {
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/advanced-gen-texture-light">advanced-gen-texture-light example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/advanced-gen-texture-light">advanced-gen-texture-light example</a></h2>
         <p>Generates a brick texture at comptime, uses Blinn-Phong lighting, and several pipelines. Move camera with arrow keys / WASD.</p>
         <div>
 <code><pre class="code">
@@ -99,7 +99,7 @@ zig build run-advanced-gen-texture-light
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/textured-cube">textured-cube example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/textured-cube">textured-cube example</a></h2>
         <p>Loads a PNG image and uploads the texture to the GPU. Renders it on a 3D cube.</p>
         <div>
 <code><pre class="code">
@@ -124,7 +124,7 @@ zig build run-textured-cube
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/cubemap">cubemap example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/cubemap">cubemap example</a></h2>
         <p>Renders a cubemap / skybox. Nothing fancy, but these are instrumental as backgrounds in games.</p>
         <div>
 <code><pre class="code">
@@ -139,7 +139,7 @@ zig build run-cubemap
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/boids">boids example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/boids">boids example</a></h2>
         <p>Uses a GPU compute shader to run calculations / simulate flocking behaviour of birds.</p>
         <div>
 <code><pre class="code">
@@ -162,7 +162,7 @@ zig build run-boids
         <img src="/core-example/image-blur.png" />
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/image-blur">image-blur example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/image-blur">image-blur example</a></h2>
         <p>Leverages a compute shader to blur an image, then renders it. Don't worry if the details are a bit fuzzy!</p>
         <div>
 <code><pre class="code">
@@ -177,7 +177,7 @@ zig build run-image-blur
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/triangle">triangle example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle">triangle example</a></h2>
         <p>This is where you should start learning. It tells the GPU to render 3 vertices (but doesn't transfer them using a vertex buffer or anything! The vertex positions are hard-coded in the shader.)</p>
         <div>
 <code><pre class="code">
@@ -200,7 +200,7 @@ zig build run-triangle
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/rotating-cube">rotating-cube example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/rotating-cube">rotating-cube example</a></h2>
         <p>Uploads a basic 3D cube to the GPU and renders it. Demonstrates how to use vertex buffers to transfer a model from the CPU to GPU, how to use vertex attributes & more.</p>
         <div>
 <code><pre class="code">
@@ -215,7 +215,7 @@ zig build run-rotating-cube
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/two-cubes">two-cubes example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/two-cubes">two-cubes example</a></h2>
         <p>Once you've learned how to render one cube, two is just 30 lines of code more!</p>
         <div>
 <code><pre class="code">
@@ -240,7 +240,7 @@ zig build run-two-cubes
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/instanced-cube">instanced-cube example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/instanced-cube">instanced-cube example</a></h2>
         <p>EVEN MORE CUBES! Instancing lets you duplicate an object & render it in multiple places with different parameters.</p>
         <div>
 <code><pre class="code">
@@ -255,7 +255,7 @@ zig build run-instanced-cube
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/fractal-cube">fractal-cube example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/fractal-cube">fractal-cube example</a></h2>
         <p>Cube-inception! Renders the scene to a texture, which is then rendered on the rotating cube itself as a texture!</p>
         <div>
 <code><pre class="code">
@@ -278,7 +278,7 @@ zig build run-fractal-cube
         <img src="/core-example/triangle-msaa.png" />
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/triangle-msaa">triangle-msaa example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle-msaa">triangle-msaa example</a></h2>
         <p>Remember that triangle from before? If we turn on MSAA (Multi-Sample Anti Aliasing) the edges will become <em>smooooth.</em></p>
         <div>
 <code><pre class="code">
@@ -293,7 +293,7 @@ zig build run-triangle-msaa
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-examples/tree/main/core/map-async">map-async example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/map-async">map-async example</a></h2>
         <p>Some of the best examples have <em>no graphics</em>. This one shows how to transfer data to the GPU, perform computations on that data using the GPU's parallel processing capbilities, and get results back on the CPU. If you're interested in GPU compute, this is the place to start!</p>
         <div>
 <code><pre class="code">

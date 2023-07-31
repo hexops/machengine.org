@@ -37,6 +37,6 @@ Header packages:
 Special cases:
 
 * [vulkan-zig-generated](https://github.com/hexops/vulkan-zig-generated) pre-generated Vulkan bindings
-* [xcode-frameworks](https://github.com/hexops/dawnxcode-frameworks) macOS XCode frameworks
+* [xcode-frameworks](https://github.com/hexops/xcode-frameworks) macOS XCode frameworks
 * [dawn](https://github.com/hexops/dawn) (wrench-generated source branches with vendored dependency tree)
 * [DirectXShaderCompilerwn](https://github.com/hexops/DirectXShaderCompiler) (fork for Zig compilation support)
