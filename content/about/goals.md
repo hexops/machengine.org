@@ -51,4 +51,4 @@ Through this, we are able to effectively fetch the required dependencies/headers
 
 These dependencies are generally compile-time only, i.e. we use them to link to a dynamic library, but our binaries are not shipped with the application only used for linking. We rely on a very small set of system dependencies effectively guaranteed to be present on any of our supported targets, and all other dependencies are built from source.
 
-See also our [platform support](platforms).
+See also our [platform support](../platforms).

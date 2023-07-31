@@ -58,8 +58,8 @@ Supporting every Linux distro and setup out there is hard - but we are providing
 * Both X11 and Wayland in the same binary (via runtime detection.)
 * Native Vulkan support, with OpenGL/GLES fallbacks
 * [gamemode support](https://github.com/hexops/mach-gamemode) enabled by default, for CPU governor, I/O priority, GPU performance mode & other optimizations to be enabled _only if_ you have gamemode installed on your system.
-* NixOS [usage instructions](../about/nixos-usage.md)
-* [Workarounds](../about/known-issues/#linux) as best we can when your mesa drivers, experimental compositor, or broken vsync implementation might just not be working as intended.
+* NixOS [usage instructions](../about/nixos-usage)
+* [Workarounds](../about/known-issues#linux) as best we can when your mesa drivers, experimental compositor, or broken vsync implementation might just not be working as intended.
 
 ## C API / language bindings
 
