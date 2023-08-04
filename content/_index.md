@@ -329,7 +329,7 @@ a.p-community-icon {
             </div>
             <div>
 <code><pre class="code">
-$ git clone --recursive https://github.com/hexops/mach-core
+$ git clone https://github.com/hexops/mach-core
 $ cd mach-core/
 $ zig build run-textured-cube
 </pre></code>
