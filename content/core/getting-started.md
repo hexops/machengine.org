@@ -10,12 +10,6 @@ rss_ignore: true
 
 Here you will learn how to use _mach-core_ in your own project/repository. If you haven't already, check out the [examples](../examples) as those describe how to actually use Mach core's APIs, this page just describes project setup.
 
-## Mach is now using the Zig package manager
-
-_Note: Mach has recently been updated to make use of the _experimental Zig package manager_, although it cannot yet be used for all our dependencies due to some bugs with it. You will need to use both some Git submodules and a `build.zig.zon` file for the Zig package manager._
-
-_This process is a little bit rough today, but we'll walk you through it and are working on improving it._
-
 ## Creating a new project
 
 ### Create Zig project
@@ -23,24 +17,14 @@ _This process is a little bit rough today, but we'll walk you through it and are
 ```sh
 mkdir myproject/
 cd myproject/
-git init
 zig init-exe
 ```
 
 ### Add dependencies
 
-Add mach-core and its dependencies as submodules:
+mach-core uses the Zig package manager. You'll need a `build.zig.zon` file next to your `build.zig` which has all the same dependencies as mach-core.
 
-```sh
-git submodule add https://github.com/hexops/mach-core libs/mach-core
-git submodule add https://github.com/hexops/mach-gpu libs/mach-gpu
-git submodule add https://github.com/hexops/mach-gpu-dawn libs/mach-gpu-dawn
-git submodule update --init --recursive
-```
-
-### Create build.zig.zon dependency file
-
-Copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, next to your `build.zig`.
+To start, simply copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, and palce it next to your `build.zig`.
 
 ### Setup build.zig
 
@@ -48,19 +32,13 @@ Your `build.zig` file will need to use `mach.App` to declare how your applicatio
 
 ```zig
 const std = @import("std");
-const mach_gpu_dawn = @import("libs/mach-gpu-dawn/build.zig");
-const mach_gpu = @import("libs/mach-gpu/build.zig").Sdk(.{
-    .gpu_dawn = mach_gpu_dawn,
-});
-const mach_core = @import("libs/mach-core/build.zig").Sdk(.{
-    .gpu_dawn = mach_gpu_dawn,
-    .gpu = mach_gpu,
-});
+const mach_core = @import("mach_core");
 
 pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
+    mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";
     const app = try mach_core.App.init(b, .{
         .name = "myapp",
         .src = "src/main.zig",
@@ -85,6 +63,8 @@ pub fn build(b: *std.Build) !void {
     test_step.dependOn(&run_unit_tests.step);
 }
 ```
+
+Note: the convoluted line `mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";` is currently required due to a bug in the Zig package manager [hexops/mach#902](https://github.com/hexops/mach/issues/902)
 
 ### Add example code
 
