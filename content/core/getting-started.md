@@ -1,5 +1,6 @@
 ---
 title: "Getting started"
+description: "Get started using Mach core in your own project, in your own repository."
 draft: false
 layout: "docs"
 docs_type: "core"
