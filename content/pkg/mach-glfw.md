@@ -15,10 +15,11 @@ rss_ignore: true
             <img alt="mach-gpu" src="/assets/mach/glfw-icon-light.svg" style="width: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
         </picture>
     </div>
+    <a href="https://github.com/hexops/mach-glfw">GitHub repository</a>
     <p>Perfected GLFW bindings for Zig, with 100% API coverage, zero-fuss installation, cross compilation, and more.</p>
 </div>
 
-* [Zero-fuss](../about/goals#zero-fuss-installation) installation, [cross-compilation](../about/goals#seamless-cross-compilation) at the flip of a switch, and [broad platform support](../about/platforms).
+* [Zero-fuss](../../about/goals#zero-fuss-installation) installation, [cross-compilation](../../about/goals#seamless-cross-compilation) at the flip of a switch, and [broad platform support](../../about/platforms).
 * 100% API coverage. Every function, type, constant, etc. has been exposed in a ziggified API.
 
 ## What does a ziggified GLFW API offer?
