@@ -328,11 +328,10 @@ a.p-community-icon {
                 <p style="margin-left: 1rem; display: inline-block; width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="https://github.com/hexops/mach#supported-zig-version">zig nightly</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
             </div>
             <div>
-<code><pre class="code">
-$ git clone https://github.com/hexops/mach-core
+<pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach-core
 $ cd mach-core/
 $ zig build run-textured-cube
-</pre></code>
+</code></pre>
                 <small>Requires <a href="https://github.com/hexops/mach#supported-zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
     </small>
             </div>
@@ -342,12 +341,11 @@ $ zig build run-textured-cube
         <div style="text-align: left; max-width: 30rem;">
             <h2>Effortless cross-compilation</h2>
             <p>Cross-compile to any OS at the flip of a switch. WebAssembly, Android & iOS coming soon.</p>
-<code><pre class="code">
-<strong>$</strong> zig build -Dtarget=x86_64-windows
-<strong>$</strong> zig build -Dtarget=x86_64-linux-gnu
-<strong>$</strong> zig build -Dtarget=x86_64-macos
-<strong>$</strong> zig build -Dtarget=aarch64-macos
-</pre></code>
+<pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ zig build -Dtarget=x86_64-windows
+$ zig build -Dtarget=x86_64-linux-gnu
+$ zig build -Dtarget=x86_64-macos
+$ zig build -Dtarget=aarch64-macos
+</code></pre>
         </div>
         <a href="https://user-images.githubusercontent.com/3173176/184556247-6e039490-99ee-48f4-91b4-d2cfd7a7f847.mp4" class="p-section-right">
             <video height="300px" autoplay loop muted>
