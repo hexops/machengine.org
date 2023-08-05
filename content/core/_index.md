@@ -7,7 +7,15 @@ docs_type: "core"
 rss_ignore: true
 ---
 
-# Mach core: Window+Input+GPU, truly cross-platform
+<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/core-full-dark.svg">
+        <img alt="mach-core" src="/assets/mach/core-full-light.svg" style="height: 7rem; margin-top: 1rem;">
+    </picture>
+    <a href="https://github.com/hexops/mach-core">GitHub repository</a>
+</div>
+
+# Window+Input+GPU, truly cross-platform
 
 <p>
     <video autoplay loop muted style="height: 20rem; float: right; padding-left: 1rem;">
