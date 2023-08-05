@@ -44,7 +44,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_gpu_dawn", b.dependency("mach_gpu_dawn", .{
+    exe.addModule("mach-gpu-dawn", b.dependency("mach_gpu_dawn", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-gpu-dawn"));

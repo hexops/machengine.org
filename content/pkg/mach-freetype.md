@@ -44,7 +44,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_freetype", b.dependency("mach_freetype", .{
+    exe.addModule("mach-freetype", b.dependency("mach_freetype", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-freetype"));

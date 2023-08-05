@@ -52,7 +52,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_earcut", b.dependency("mach_earcut", .{
+    exe.addModule("mach-earcut", b.dependency("mach_earcut", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-earcut"));

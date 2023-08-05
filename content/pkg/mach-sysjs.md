@@ -52,7 +52,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_sysjs", b.dependency("mach_sysjs", .{
+    exe.addModule("mach-sysjs", b.dependency("mach_sysjs", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-sysjs"));

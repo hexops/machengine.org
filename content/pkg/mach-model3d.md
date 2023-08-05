@@ -52,7 +52,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_model3d", b.dependency("mach_model3d", .{
+    exe.addModule("mach-model3d", b.dependency("mach_model3d", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-model3d"));
