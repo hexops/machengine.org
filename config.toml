@@ -161,7 +161,7 @@ unsafe = true
   identifier = 'pkg-pure-fastfilter'
   parent = 'pkg-pure'
   name = 'fastfilter'
-  url = '/pkg/mach-fastfilter'
+  url = '/pkg/fastfilter'
   weight = 2600
 
 
