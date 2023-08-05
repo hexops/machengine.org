@@ -408,7 +408,7 @@ $ zig build run-textured-cube
             </a>
             <p>Mach additionally provides some of the highest-quality standalone gamedev libraries in the Zig ecosystem, including:</p>
             <br/>
-            <a href="/pkg/gpu" class="img-link">
+            <a href="/pkg/mach-gpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-dark.svg">
                     <img alt="mach-gpu" src="/assets/mach/gpu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
@@ -466,6 +466,24 @@ $ zig build run-textured-cube
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/earcut-dark.svg">
                     <img alt="mach-earcut" src="/assets/mach/earcut-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="/pkg/mach-dusk" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/dusk-dark.svg">
+                    <img alt="mach-dusk" src="/assets/mach/dusk-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="/pkg/mach-flac" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/flac-dark.svg">
+                    <img alt="mach-flac" src="/assets/mach/flac-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                </picture>
+            </a>
+            <a href="/pkg/mach-opus" class="img-link">
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/opus-dark.svg">
+                    <img alt="mach-opus" src="/assets/mach/opus-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
         </div>
