@@ -18,7 +18,7 @@
 </span></span></code></pre></div><p>Run <code>zig build</code> in your project, and the compiler instruct you to add a <code>.hash = "..."</code> field next to <code>.url</code>:</p><pre tabindex=0><code>note: expected .hash = &#34;12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311&#34;,
 </code></pre><p>Then use the dependency in your <code>build.zig</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=display:flex><span><span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> build(b<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>std.Build) <span style=color:#66d9ef>void</span> {
 </span></span><span style=display:flex><span>    ...
-</span></span><span style=display:flex><span>    exe.addModule(<span style=color:#e6db74>&#34;mach_model3d&#34;</span>, b.dependency(<span style=color:#e6db74>&#34;mach_model3d&#34;</span>, .{
+</span></span><span style=display:flex><span>    exe.addModule(<span style=color:#e6db74>&#34;mach-model3d&#34;</span>, b.dependency(<span style=color:#e6db74>&#34;mach_model3d&#34;</span>, .{
 </span></span><span style=display:flex><span>        .target <span style=color:#f92672>=</span> target,
 </span></span><span style=display:flex><span>        .optimize <span style=color:#f92672>=</span> optimize,
 </span></span><span style=display:flex><span>    }).module(<span style=color:#e6db74>&#34;mach-model3d&#34;</span>));
