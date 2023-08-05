@@ -7,17 +7,15 @@ docs_type: "pkg"
 rss_ignore: true
 ---
 
-<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
-    <div style="display: flex; flex-direction: row; align-items: center;">
-        <h1 style="margin-right: 1rem;">mach-glfw</h1>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-icon-dark.svg">
-            <img alt="mach-gpu" src="/assets/mach/glfw-icon-light.svg" style="width: 5rem; margin-right: 1rem; margin-top: 0.5rem;">
-        </picture>
-    </div>
+<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-full-dark.svg">
+        <img alt="mach-glfw" src="/assets/mach/glfw-full-light.svg" style="height: 7rem; margin-top: 1rem;">
+    </picture>
     <a href="https://github.com/hexops/mach-glfw">GitHub repository</a>
-    <p>Perfected GLFW bindings for Zig, with 100% API coverage, zero-fuss installation, cross compilation, and more.</p>
 </div>
+
+Perfected GLFW bindings for Zig, with 100% API coverage, zero-fuss installation, cross compilation, and more.
 
 * [Zero-fuss](../../about/goals#zero-fuss-installation) installation, [cross-compilation](../../about/goals#seamless-cross-compilation) at the flip of a switch, and [broad platform support](../../about/platforms).
 * 100% API coverage. Every function, type, constant, etc. has been exposed in a ziggified API.
@@ -52,11 +50,11 @@ mach-glfw uses the Zig package manager:
 
 ```zig
 .mach_glfw = .{
-    .url = "https://pkg.machengine.org/mach-glfw/4d59b4d4e24142d9fbb6ed742c6ba89918a00e63.tar.gz",
+    .url = "https://pkg.machengine.org/mach-glfw/LATEST_COMMIT.tar.gz",
 },
 ```
 
-(change `$LATEST_COMMIT` to the actual latest mach-glfw commit hash.) Next, run `zig build` and the compiler will tell you to add a `.hash` entry next to the `.url`, follow its advice and copy+paste that next to the `.url`:
+(change `LATEST_COMMIT` to the actual latest mach-glfw commit hash.) Next, run `zig build` and the compiler will tell you to add a `.hash` entry next to the `.url`, follow its advice and copy+paste that next to the `.url`:
 
 ```
 note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
