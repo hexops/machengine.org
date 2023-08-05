@@ -1,5 +1,5 @@
 ---
-title: "mach-glfw"
+title: "mach glfw"
 description: "Perfected GLFW bindings for Zig, with 100% API coverage, zero-fuss installation, cross compilation, and more."
 draft: false
 layout: "docs"

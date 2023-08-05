@@ -1,6 +1,6 @@
 ---
-title: "mach ecs"
-description: "Mach's Entity Component System, written from first-principles and designed for deep tooling capabilities."
+title: "mach sysaudio"
+description: "Truly cross-platform, low-level, audio IO in Zig - input and output with minimal latency and a friendly API."
 draft: false
 layout: "docs"
 docs_type: "pkg"
@@ -9,19 +9,13 @@ rss_ignore: true
 
 <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-full-dark.svg">
-        <img alt="mach-ecs" src="/assets/mach/ecs-full-light.svg" style="height: 7rem; margin-top: 1rem;">
+        <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysaudio-full-dark.svg">
+        <img alt="mach-sysaudio" src="/assets/mach/sysaudio-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-ecs">GitHub repository</a>
+    <a href="https://github.com/hexops/mach-sysaudio">GitHub repository</a>
 </div>
 
-Mach's Entity Component System, written from first-principles and designed for deep tooling capabilities.
-
-## Experimental
-
-This is an **experimental** project according to [our stability guarantees](../../about/stability):
-
-> When a project has an experimental warning, it means all bets are off. You should carefully read the warning to understand why the project is experimental, and assume the worst.
+Truly cross-platform, low-level, audio IO in Zig - input and output with minimal latency and a friendly API.
 
 ## Getting started
 
@@ -32,8 +26,8 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
     .name = "mypkg",
     .version = "0.1.0",
     .dependencies = .{
-        .mach_ecs = .{
-            .url = "https://pkg.machengine.org/mach-ecs/LATEST_COMMIT.tar.gz",
+        .mach_sysaudio = .{
+            .url = "https://pkg.machengine.org/mach-sysaudio/LATEST_COMMIT.tar.gz",
         },
     },
 }
@@ -50,17 +44,17 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach_ecs", b.dependency("mach_ecs", .{
+    exe.addModule("mach_sysaudio", b.dependency("mach_sysaudio", .{
         .target = target,
         .optimize = optimize,
-    }).module("mach-ecs"));
+    }).module("mach-sysaudio"));
 }
 ```
 
 You can now use it in your `src/main.zig` file:
 
 ```zig
-const ecs = @import("mach-ecs");
+const sysaudio = @import("mach-sysaudio");
 ```
 
 ### Issues? Questions?
