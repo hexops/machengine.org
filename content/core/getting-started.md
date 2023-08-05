@@ -25,7 +25,21 @@ zig init-exe
 
 mach-core uses the Zig package manager. You'll need a `build.zig.zon` file next to your `build.zig` which has all the same dependencies as mach-core.
 
-To start, simply copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, and palce it next to your `build.zig`.
+To start, simply copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, and place it next to your `build.zig`.
+
+You will need to _add a `.mach_core` entry_:
+
+```zig
+.mach_core = .{
+    .url = "https://pkg.machengine.org/mach-core/69209f02d62ca8af64aa4084669ff6bc89c4d36f.tar.gz",
+},
+```
+
+Run `zig build` in your project, and the compiler instruct you to add a `.hash = "..."` field next to `.url`:
+
+```
+note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038c1337",
+```
 
 ### Setup build.zig
 
@@ -65,7 +79,7 @@ pub fn build(b: *std.Build) !void {
 }
 ```
 
-Note: the convoluted line `mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";` is currently required due to a bug in the Zig package manager [hexops/mach#902](https://github.com/hexops/mach/issues/902)
+Note: the convoluted line `mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";` is a workaround for a bug in the Zig package manager [hexops/mach#902](https://github.com/hexops/mach/issues/902)
 
 ### Add example code
 
