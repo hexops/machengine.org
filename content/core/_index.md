@@ -19,7 +19,7 @@ rss_ignore: true
 
 <p>
     <video autoplay loop muted style="height: 20rem; float: right; padding-left: 1rem;">
-        <source src="https://user-images.githubusercontent.com/3173176/210314999-b092b6f2-34ae-45aa-b6e9-c553a034835d.webm" type="video/webm">
+        <source src="https://media.machengine.org/core/example/boids-windowed.webm" type="video/webm">
     </video>
     Provides <em>the power of Vulkan, DirectX, Metal, and modern OpenGL in a single concise graphics API and shader language</em> - by compiling Google Chrome's WebGPU implementation natively using Zig.
     </br>
@@ -40,9 +40,23 @@ By default, we use prebuilt binaries of Dawn (the WebGPU implementation) so that
 
 ## Example showcase
 
-<a href="https://user-images.githubusercontent.com/3173176/173177664-2ac9e90b-9429-4b09-aaf9-b80b53fee49f.gif"><img align="left" src="https://user-images.githubusercontent.com/3173176/173177664-2ac9e90b-9429-4b09-aaf9-b80b53fee49f.gif" alt="example-advanced-gen-texture-light" height="190px"></img></a>
-<a href="https://user-images.githubusercontent.com/3173176/163936001-fd9eb918-7c29-4dcc-bfcb-5586f2ea1f9a.gif"><img align="left" src="https://user-images.githubusercontent.com/3173176/163936001-fd9eb918-7c29-4dcc-bfcb-5586f2ea1f9a.gif" alt="example-boids" height="190px"></img></a>
-<a href="https://user-images.githubusercontent.com/3173176/173177646-a3f0982c-f07b-496f-947b-265bdc71ece9.gif"><img src="https://user-images.githubusercontent.com/3173176/173177646-a3f0982c-f07b-496f-947b-265bdc71ece9.gif" alt="example-textured-cube" height="190px"></img></a>
+<div style="display: flex; flex-direction: row; justify-content: center;">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4">
+        <video autoplay loop muted height="190px">
+        <source src="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4" type="video/mp4">
+        </video>
+    </a>
+    <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
+        <video autoplay loop muted height="190px">
+        <source src="https://media.machengine.org/core/example/boids.mp4" type="video/mp4">
+        </video>
+    </a>
+    <a class="animated-demo" href="https://media.machengine.org/core/example/textured-cube.mp4">
+        <video autoplay loop muted height="190px">
+        <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
+        </video>
+    </a>
+</div>
 
 We have an [example showcase](examples) with 15+ Zig examples, including:
 

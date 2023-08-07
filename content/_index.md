@@ -347,9 +347,9 @@ $ zig build -Dtarget=x86_64-macos
 $ zig build -Dtarget=aarch64-macos
 </code></pre>
         </div>
-        <a href="https://user-images.githubusercontent.com/3173176/184556247-6e039490-99ee-48f4-91b4-d2cfd7a7f847.mp4" class="p-section-right">
+        <a href="https://media.machengine.org/core/example/steamdeck.mp4" class="p-section-right">
             <video height="300px" autoplay loop muted>
-            <source src="https://user-images.githubusercontent.com/3173176/184556247-6e039490-99ee-48f4-91b4-d2cfd7a7f847.mp4" type="video/webm">
+            <source src="https://media.machengine.org/core/example/steamdeck.mp4" type="video/webm">
             </video>
         </a>
         <!-- <img class="p-img-left auto-color" src="/img/cpu.svg"></img> -->
