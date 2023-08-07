@@ -309,6 +309,28 @@ zig build run-map-async
     </a>
 </div>
 
+<h2 style="margin-top: 3rem;">Learning order</h2>
+
+| Lines of code | Example                    |
+|---------------|----------------------------|
+| 79            | clear-color                |
+| 80            | triangle                   |
+| 86            | map-async                  |
+| 123           | triangle-msaa              |
+| 221           | rotating-cube              |
+| 230           | instanced-cube             |
+| 243           | two-cubes                  |
+| 294           | boids                      |
+| 322           | image-blur                 |
+| 337           | textured-cube              |
+| 378           | cubemap                    |
+| 381           | fractal-cube               |
+| 421           | sprite2d                   |
+| 547           | pixel-post-process         |
+| 588           | procedural-primitives      |
+| 780           | advanced-gen-texture-light |
+| 1040          | pbr-basic                  |
+| 1342          | deferred-rendering         |
 
 <div class="p-section">
     <img class="p-img-left" src="/img/wrench.svg"></img>
