@@ -579,7 +579,15 @@ $ zig build -Dtarget=aarch64-macos
 <script>
 function chooseJourney(e) {
     e.preventDefault();
-    document.querySelector('.choose-journey .primary').style.setProperty('animation-name', 'chooseJourneyFadeOut');
-    document.querySelector('.choose-journey .secondary').style.setProperty('animation-name', 'chooseJourneyFadeIn');
+    primary = document.querySelector('.choose-journey .primary');
+    primary.style.setProperty('animation-name', 'chooseJourneyFadeOut');
+    primary.style.setProperty('animation-timing-function', 'ease-in');
+    primary.style.setProperty('animation-duration', '0.25s');
+    primary.style.setProperty('animation-fill-mode', 'forwards');
+    secondary = document.querySelector('.choose-journey .secondary');
+    secondary.style.setProperty('animation-name', 'chooseJourneyFadeIn');
+    secondary.style.setProperty('animation-timing-function', 'ease-in');
+    secondary.style.setProperty('animation-duration', '0.25s');
+    secondary.style.setProperty('animation-fill-mode', 'forwards');
 }
 </script>
