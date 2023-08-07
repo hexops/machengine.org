@@ -78,9 +78,9 @@ pre {
 </small>
 
 <div class="p-section">
-    <a class="animated-demo" href="/core-example/advanced-gen-texture-light.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/advanced-gen-texture-light.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
@@ -110,17 +110,17 @@ zig build run-textured-cube
         </div>
         <small>~310 lines of code</small>
     </div>
-    <a class="animated-demo" href="/core-example/textured-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/textured-cube.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/textured-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="animated-demo" href="/core-example/cubemap.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/cubemap.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/cubemap.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/cubemap.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
@@ -150,16 +150,16 @@ zig build run-boids
         </div>
         <small>~280 lines of code</small>
     </div>
-    <a class="animated-demo" href="/core-example/boids.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/boids.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/boids.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="static-demo" href="/core-example/image-blur.png">
-        <img src="/core-example/image-blur.png" />
+    <a class="static-demo" href="https://media.machengine.org/core/example/image-blur.png">
+        <img src="https://media.machengine.org/core/example/image-blur.png" />
     </a>
     <div class="p-section-right">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/image-blur">image-blur example</a></h2>
@@ -188,15 +188,15 @@ zig build run-triangle
         </div>
         <small>~70 lines of code</small>
     </div>
-    <a class="static-demo" href="/core-example/triangle.png">
-        <img src="/core-example/triangle.png" />
+    <a class="static-demo" href="https://media.machengine.org/core/example/triangle.png">
+        <img src="https://media.machengine.org/core/example/triangle.png" />
     </a>
 </div>
 
 <div class="p-section">
-    <a class="animated-demo" href="/core-example/rotating-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/rotating-cube.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/rotating-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/rotating-cube.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
@@ -226,17 +226,17 @@ zig build run-two-cubes
         </div>
         <small>~250 lines of code</small>
     </div>
-    <a class="animated-demo" href="/core-example/two-cubes.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/two-cubes.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/two-cubes.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/two-cubes.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="animated-demo" href="/core-example/instanced-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/instanced-cube.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/instanced-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/instanced-cube.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
@@ -266,16 +266,16 @@ zig build run-fractal-cube
         </div>
         <small>~390 lines of code</small>
     </div>
-    <a class="animated-demo" href="/core-example/fractal-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/fractal-cube.mp4">
         <video autoplay loop muted>
-        <source src="/core-example/fractal-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/fractal-cube.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="static-demo" href="/core-example/triangle-msaa.png">
-        <img src="/core-example/triangle-msaa.png" />
+    <a class="static-demo" href="https://media.machengine.org/core/example/triangle-msaa.png">
+        <img src="https://media.machengine.org/core/example/triangle-msaa.png" />
     </a>
     <div class="p-section-right">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle-msaa">triangle-msaa example</a></h2>
@@ -304,8 +304,8 @@ zig build run-map-async
         </div>
         <small>~80 lines of code</small>
     </div>
-    <a class="static-demo" href="/core-example/map-async.png">
-        <img src="/core-example/map-async.png" />
+    <a class="static-demo" href="https://media.machengine.org/core/example/map-async.png">
+        <img src="https://media.machengine.org/core/example/map-async.png" />
     </a>
 </div>
 

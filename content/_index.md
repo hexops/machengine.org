@@ -286,9 +286,9 @@ a.p-community-icon {
             <p><a href="#">What's new in v0.2?</a></p>
         </div>
         <div>
-            <a href="/core-example/deferred-rendering.mp4">
+            <a href="https://media.machengine.org/core/example/deferred-rendering.mp4">
                 <video height="300px" autoplay loop muted>
-                <source src="/core-example/deferred-rendering.mp4" type="video/mp4">
+                <source src="https://media.machengine.org/core/example/deferred-rendering.mp4" type="video/mp4">
                 </video>
             </a>
         </div>
@@ -317,9 +317,9 @@ a.p-community-icon {
         <p style="width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;"><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
     </div>
     <div class="p-section color-bg">
-        <a href="/core-example/textured-cube.mp4" class="p-section-right">
+        <a href="https://media.machengine.org/core/example/textured-cube.mp4" class="p-section-right">
             <video height="300px" autoplay loop muted>
-            <source src="/core-example/textured-cube.mp4" type="video/mp4">
+            <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
             </video>
         </a>
         <div class="p-section-right">
@@ -380,16 +380,16 @@ $ zig build -Dtarget=aarch64-macos
             <p>Truly cross-platform, it supports desktop today, WebAssembly (soon) and Mobile (future) using the same unified API.</p>
             <p>Today, it is available to use via Zig. Support for other languages is planned in the future via a C ABI.</p>
         </div>
-        <a href="/core-example/two-cubes.mp4" class="p-section-right">
+        <a href="https://media.machengine.org/core/example/two-cubes.mp4" class="p-section-right">
             <video height="300px" autoplay loop muted>
-            <source src="/core-example/two-cubes.mp4" type="video/mp4">
+            <source src="https://media.machengine.org/core/example/two-cubes.mp4" type="video/mp4">
             </video>
         </a>
     </div>
     <div class="p-section color-bg">
-        <a href="/core-example/instanced-cube.mp4">
+        <a href="https://media.machengine.org/core/example/instanced-cube.mp4">
             <video height="300px" autoplay loop muted>
-            <source src="/core-example/instanced-cube.mp4" type="video/mp4">
+            <source src="https://media.machengine.org/core/example/instanced-cube.mp4" type="video/mp4">
             </video>
         </a>
         <div style="text-align: left;" class="p-section-right">

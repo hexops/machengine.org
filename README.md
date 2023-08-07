@@ -33,9 +33,10 @@ We adhere to strict URL linking policies, in order to ensure that once an old ve
 
 Small files (images, css, fonts, etc.) should always go in the `static/` directory and be committed to this repository. To avoid bloat, we try to keep such assets small.
 
-Linking to other sites for images/files is strictly prohibited.
+Linking to other sites for images/files is strictly prohibited, as we want this site to be self-contained generally.
 
 ### Video hosting
 
-* If short, we host a webm file on GitHub (not in Git)
-* If longer, we host it on YouTube.
+[media.machengine.org](https://github.com/hexops/media.machengine.org) exists to store and serve large files, such as videos, that are not small and shouldn't go into this repository.
+
+Long-form videos can also be hosted on YouTube.
