@@ -236,6 +236,11 @@ unsafe = true
   url = '/about/platforms'
   weight = 300
 [[menu.about]]
+  identifier = 'about-zig-version'
+  name = 'Zig version'
+  url = '/about/zig-version'
+  weight = 301
+[[menu.about]]
   identifier = 'about-known-issues'
   name = 'Known issues'
   url = '/about/known-issues'

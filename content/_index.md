@@ -325,14 +325,14 @@ a.p-community-icon {
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>On your machine in just ~60 seconds</h2>
-                <p style="margin-left: 1rem; display: inline-block; width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="https://github.com/hexops/mach#supported-zig-version">zig nightly</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
+                <p style="margin-left: 1rem; display: inline-block; width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="about/zig-version">zig</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
             </div>
             <div>
 <pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach-core
 $ cd mach-core/
 $ zig build run-textured-cube
 </code></pre>
-                <small>Requires <a href="https://github.com/hexops/mach#supported-zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
+                <small>Requires <a href="about/zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
     </small>
             </div>
         </div>

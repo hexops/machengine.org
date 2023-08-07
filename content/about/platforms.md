@@ -1,15 +1,11 @@
 ---
 title: "Platform support"
-description: "Platforms and Zig versions that Mach supports"
+description: "Platforms that Mach supports"
 draft: false
 layout: "docs"
 docs_type: "about"
 rss_ignore: true
 ---
-
-## Supported Zig versions
-
-All of Mach is tested with [this Zig version](https://github.com/hexops/mach#supported-zig-version), which is usually (but not always) the latest Zig nightly version. Sometimes newer versions will work, older versions almost never work due to occassional minor changes in the Zig standard library APIs.
 
 ## Platform support
 
