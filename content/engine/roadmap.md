@@ -57,3 +57,8 @@ We intend to accelerate our release schedule to about once every 6 months.
 - [ ] Custom GUI begins to mature
 - [ ] Initial editor development support
 - [ ] Mobile support
+- [ ] Dusk (our pure-Zig WebGPU implementation) matures enough to become the default.
+  - [ ] Mature Vulkan backend
+  - [ ] Mature Direct3D backend
+  - [ ] Mature Metal backend
+
