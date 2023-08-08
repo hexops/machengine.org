@@ -66,8 +66,8 @@ pre {
 }
 
 .animated-demo > video, .static-demo > img {
-    min-width: 20rem;
-    max-width: 20rem;
+    width: 20rem;
+    max-width: 20rem !important;
 }
 </style>
 
@@ -78,53 +78,146 @@ pre {
 </small>
 
 <div class="p-section">
-    <a class="animated-demo" href="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/deferred-rendering.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/deferred-rendering.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/advanced-gen-texture-light">advanced-gen-texture-light example</a></h2>
-        <p>Generates a brick texture at comptime, uses Blinn-Phong lighting, and several pipelines. Move camera with arrow keys / WASD.</p>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/deferred-rendering">deferred-rendering</a></h2>
+        <p>Dynamic lighting using deferred rendering techniques.</p>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach-core
 cd mach-core/
-zig build run-advanced-gen-texture-light
+zig build run-deferred-rendering
 </pre></code>
         </div>
-        <small>~770 lines of code</small>
+        <small>~1300 lines of code</small>
     </div>
 </div>
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/textured-cube">textured-cube example</a></h2>
-        <p>Loads a PNG image and uploads the texture to the GPU. Renders it on a 3D cube.</p>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/pbr-basic">pbr-basic</a></h2>
+        <p>Physically based rendering (PBR) materials</p>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach-core
 cd mach-core/
-zig build run-textured-cube
+zig build run-pbr-basic
 </pre></code>
         </div>
-        <small>~310 lines of code</small>
+        <small>~1000 lines of code</small>
     </div>
-    <a class="animated-demo" href="https://media.machengine.org/core/example/textured-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/pbr-basic.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/pbr-basic.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="animated-demo" href="https://media.machengine.org/core/example/cubemap.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/gen-texture-light.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/cubemap.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/gen-texture-light.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/cubemap">cubemap example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/gen-texture-light">gen-texture-light</a></h2>
+        <p>Generates a brick texture at comptime, uses Blinn-Phong lighting, and several pipelines. Move camera with arrow keys / WASD.</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-gen-texture-light
+</pre></code>
+        </div>
+        <small>~800 lines of code</small>
+    </div>
+</div>
+
+<div class="p-section">
+    <div class="p-section-left">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/procedural-primitives">procedural-primitives</a></h2>
+        <p>Procedurally generated geometry, implements a few different shapes (use arrow keys to switch between them.)</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-procedural-primitives
+</pre></code>
+        </div>
+        <small>~600 lines of code</small>
+    </div>
+    <a class="animated-demo" href="https://media.machengine.org/core/example/procedural-primitives.mp4">
+        <video autoplay loop muted>
+        <source src="https://media.machengine.org/core/example/procedural-primitives.mp4" type="video/mp4">
+        </video>
+    </a>
+</div>
+
+<div class="p-section">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/pixel-post-process.mp4">
+        <video autoplay loop muted>
+        <source src="https://media.machengine.org/core/example/pixel-post-process.mp4" type="video/mp4">
+        </video>
+    </a>
+    <div class="p-section-right">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/pixel-post-process">pixel-post-process</a></h2>
+        <p>A post-processing effect which pixelates the entire screen.</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-pixel-post-process
+</pre></code>
+        </div>
+        <small>~500 lines of code</small>
+    </div>
+</div>
+
+<div class="p-section">
+    <div class="p-section-left">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/sprite2d">sprite2d</a></h2>
+        <p>Loads a JSON file which describes a spritesheet, and renders sprites to the screen.</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-sprite2d
+</pre></code>
+        </div>
+        <small>~400 lines of code</small>
+    </div>
+    <a class="static-demo" href="https://media.machengine.org/core/example/sprite2d.jpg">
+        <img src="https://media.machengine.org/core/example/sprite2d.jpg" />
+    </a>
+</div>
+
+<div class="p-section">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/fractal-cube.mp4">
+        <video autoplay loop muted>
+        <source src="https://media.machengine.org/core/example/fractal-cube.mp4" type="video/mp4">
+        </video>
+    </a>
+    <div class="p-section-right">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/fractal-cube">fractal-cube</a></h2>
+        <p>Cube-inception! Renders the scene to a texture, which is then rendered on the rotating cube itself as a texture!</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-fractal-cube
+</pre></code>
+        </div>
+        <small>~400 lines of code</small>
+    </div>
+</div>
+
+<div class="p-section">
+    <div class="p-section-left">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/cubemap">cubemap</a></h2>
         <p>Renders a cubemap / skybox. Nothing fancy, but these are instrumental as backgrounds in games.</p>
         <div>
 <code><pre class="code">
@@ -133,36 +226,38 @@ cd mach-core/
 zig build run-cubemap
 </pre></code>
         </div>
-        <small>~370 lines of code</small>
+        <small>~400 lines of code</small>
     </div>
-</div>
-
-<div class="p-section">
-    <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/boids">boids example</a></h2>
-        <p>Uses a GPU compute shader to run calculations / simulate flocking behaviour of birds.</p>
-        <div>
-<code><pre class="code">
-git clone https://github.com/hexops/mach-core
-cd mach-core/
-zig build run-boids
-</pre></code>
-        </div>
-        <small>~280 lines of code</small>
-    </div>
-    <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/cubemap.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/boids.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/cubemap.mp4" type="video/mp4">
         </video>
     </a>
 </div>
 
 <div class="p-section">
-    <a class="static-demo" href="https://media.machengine.org/core/example/image-blur.png">
-        <img src="https://media.machengine.org/core/example/image-blur.png" />
+    <a class="animated-demo" href="https://media.machengine.org/core/example/textured-cube.mp4">
+        <video autoplay loop muted>
+        <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
+        </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/image-blur">image-blur example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/textured-cube">textured-cube</a></h2>
+        <p>Loads a PNG image and uploads the texture to the GPU. Renders it on a 3D cube.</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-textured-cube
+</pre></code>
+        </div>
+        <small>~300 lines of code</small>
+    </div>
+</div>
+
+<div class="p-section">
+    <div class="p-section-left">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/image-blur">image-blur</a></h2>
         <p>Leverages a compute shader to blur an image, then renders it. Don't worry if the details are a bit fuzzy!</p>
         <div>
 <code><pre class="code">
@@ -171,51 +266,36 @@ cd mach-core/
 zig build run-image-blur
 </pre></code>
         </div>
-        <small>~320 lines of code</small>
+        <small>~300 lines of code</small>
     </div>
-</div>
-
-<div class="p-section">
-    <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle">triangle example</a></h2>
-        <p>This is where you should start learning. It tells the GPU to render 3 vertices (but doesn't transfer them using a vertex buffer or anything! The vertex positions are hard-coded in the shader.)</p>
-        <div>
-<code><pre class="code">
-git clone https://github.com/hexops/mach-core
-cd mach-core/
-zig build run-triangle
-</pre></code>
-        </div>
-        <small>~70 lines of code</small>
-    </div>
-    <a class="static-demo" href="https://media.machengine.org/core/example/triangle.png">
-        <img src="https://media.machengine.org/core/example/triangle.png" />
+    <a class="static-demo" href="https://media.machengine.org/core/example/image-blur.png">
+        <img src="https://media.machengine.org/core/example/image-blur.png" />
     </a>
 </div>
 
 <div class="p-section">
-    <a class="animated-demo" href="https://media.machengine.org/core/example/rotating-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/rotating-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/boids.mp4" type="video/mp4">
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/rotating-cube">rotating-cube example</a></h2>
-        <p>Uploads a basic 3D cube to the GPU and renders it. Demonstrates how to use vertex buffers to transfer a model from the CPU to GPU, how to use vertex attributes & more.</p>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/boids">boids</a></h2>
+        <p>Uses a GPU compute shader to run calculations / simulate flocking behaviour of birds.</p>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach-core
 cd mach-core/
-zig build run-rotating-cube
+zig build run-boids
 </pre></code>
         </div>
-        <small>~220 lines of code</small>
+        <small>~300 lines of code</small>
     </div>
 </div>
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/two-cubes">two-cubes example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/two-cubes">two-cubes</a></h2>
         <p>Once you've learned how to render one cube, two is just 30 lines of code more!</p>
         <div>
 <code><pre class="code">
@@ -224,7 +304,7 @@ cd mach-core/
 zig build run-two-cubes
 </pre></code>
         </div>
-        <small>~250 lines of code</small>
+        <small>~200 lines of code</small>
     </div>
     <a class="animated-demo" href="https://media.machengine.org/core/example/two-cubes.mp4">
         <video autoplay loop muted>
@@ -240,7 +320,7 @@ zig build run-two-cubes
         </video>
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/instanced-cube">instanced-cube example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/instanced-cube">instanced-cube</a></h2>
         <p>EVEN MORE CUBES! Instancing lets you duplicate an object & render it in multiple places with different parameters.</p>
         <div>
 <code><pre class="code">
@@ -249,26 +329,26 @@ cd mach-core/
 zig build run-instanced-cube
 </pre></code>
         </div>
-        <small>~230 lines of code</small>
+        <small>~200 lines of code</small>
     </div>
 </div>
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/fractal-cube">fractal-cube example</a></h2>
-        <p>Cube-inception! Renders the scene to a texture, which is then rendered on the rotating cube itself as a texture!</p>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/rotating-cube">rotating-cube</a></h2>
+        <p>Uploads a basic 3D cube to the GPU and renders it. Demonstrates how to use vertex buffers to transfer a model from the CPU to GPU, how to use vertex attributes & more.</p>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach-core
 cd mach-core/
-zig build run-fractal-cube
+zig build run-rotating-cube
 </pre></code>
         </div>
-        <small>~390 lines of code</small>
+        <small>~200 lines of code</small>
     </div>
-    <a class="animated-demo" href="https://media.machengine.org/core/example/fractal-cube.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/rotating-cube.mp4">
         <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/fractal-cube.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/rotating-cube.mp4" type="video/mp4">
         </video>
     </a>
 </div>
@@ -278,7 +358,7 @@ zig build run-fractal-cube
         <img src="https://media.machengine.org/core/example/triangle-msaa.png" />
     </a>
     <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle-msaa">triangle-msaa example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle-msaa">triangle-msaa</a></h2>
         <p>Remember that triangle from before? If we turn on MSAA (Multi-Sample Anti Aliasing) the edges will become <em>smooooth.</em></p>
         <div>
 <code><pre class="code">
@@ -287,13 +367,34 @@ cd mach-core/
 zig build run-triangle-msaa
 </pre></code>
         </div>
-        <small>~110 lines of code</small>
+        <small>~100 lines of code</small>
     </div>
 </div>
 
 <div class="p-section">
     <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/map-async">map-async example</a></h2>
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle">triangle</a></h2>
+        <p>This is where you should start learning. It tells the GPU to render 3 vertices (but doesn't transfer them using a vertex buffer or anything! The vertex positions are hard-coded in the shader.)</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-triangle
+</pre></code>
+        </div>
+        <small>~100 lines of code</small>
+    </div>
+    <a class="static-demo" href="https://media.machengine.org/core/example/triangle.png">
+        <img src="https://media.machengine.org/core/example/triangle.png" />
+    </a>
+</div>
+
+<div class="p-section">
+    <a class="static-demo" href="https://media.machengine.org/core/example/map-async.png">
+        <img src="https://media.machengine.org/core/example/map-async.png" />
+    </a>
+    <div class="p-section-right">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/map-async">map-async</a></h2>
         <p>Some of the best examples have <em>no graphics</em>. This one shows how to transfer data to the GPU, perform computations on that data using the GPU's parallel processing capbilities, and get results back on the CPU. If you're interested in GPU compute, this is the place to start!</p>
         <div>
 <code><pre class="code">
@@ -302,41 +403,58 @@ cd mach-core/
 zig build run-map-async
 </pre></code>
         </div>
-        <small>~80 lines of code</small>
+        <small>~100 lines of code</small>
     </div>
-    <a class="static-demo" href="https://media.machengine.org/core/example/map-async.png">
-        <img src="https://media.machengine.org/core/example/map-async.png" />
+</div>
+
+<div class="p-section">
+    <div class="p-section-left">
+        <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/clear-color">clear-color</a></h2>
+        <p>As simple as it gets: a blue screen of doom</p>
+        <div>
+<code><pre class="code">
+git clone https://github.com/hexops/mach-core
+cd mach-core/
+zig build run-clear-color
+</pre></code>
+        </div>
+        <small>~100 lines of code</small>
+    </div>
+    <a class="static-demo" href="https://media.machengine.org/core/example/clear-color.jpg">
+        <img src="https://media.machengine.org/core/example/clear-color.jpg" />
     </a>
 </div>
 
-<h2 style="margin-top: 3rem;">Learning order</h2>
+<h2 style="margin-top: 3rem;">Learning</h2>
 
-| Lines of code | Example                    |
-|---------------|----------------------------|
-| 79            | clear-color                |
-| 80            | triangle                   |
-| 86            | map-async                  |
-| 123           | triangle-msaa              |
-| 221           | rotating-cube              |
-| 230           | instanced-cube             |
-| 243           | two-cubes                  |
-| 294           | boids                      |
-| 322           | image-blur                 |
-| 337           | textured-cube              |
-| 378           | cubemap                    |
-| 381           | fractal-cube               |
-| 421           | sprite2d                   |
-| 547           | pixel-post-process         |
-| 588           | procedural-primitives      |
-| 780           | advanced-gen-texture-light |
-| 1040          | pbr-basic                  |
-| 1342          | deferred-rendering         |
+You can start with the simplest examples first. There's also <a href="../../engine/gpu">plenty of great learning material</a> online for WebGPU (including video tutorials.)</p>
+
+| Lines of code | Example               |
+| ------------- | --------------------- |
+| 79            | clear-color           |
+| 80            | triangle              |
+| 86            | map-async             |
+| 123           | triangle-msaa         |
+| 221           | rotating-cube         |
+| 230           | instanced-cube        |
+| 243           | two-cubes             |
+| 294           | boids                 |
+| 322           | image-blur            |
+| 337           | textured-cube         |
+| 378           | cubemap               |
+| 381           | fractal-cube          |
+| 421           | sprite2d              |
+| 547           | pixel-post-process    |
+| 588           | procedural-primitives |
+| 780           | gen-texture-light     |
+| 1040          | pbr-basic             |
+| 1342          | deferred-rendering    |
 
 <div class="p-section">
     <img class="p-img-left" src="/img/wrench.svg"></img>
     <div class="p-section-right">
         <h2>Contribute</h2>
-        <p>We're looking for more contributors to <a href="https://github.com/hexops/mach/issues/230">help us build and port WebGPU examples</a> for Zig. If you prefer reading about WebGPU, there's plenty of great learning material online about <a href="https://surma.dev/things/webgpu/">compute</a> and rendering[<a href="https://twitter.com/Tojiro/status/1549852280270102528">0</a>][<a href="https://alain.xyz/blog/raw-webgpu">1</a>].</p>
+        <p>We're looking for more contributors to <a href="https://github.com/hexops/mach/issues/230">help us build and port a few more WebGPU examples</a> to Zig. There's <a href="../../engine/gpu">plenty of great learning material</a> online for both rendering and compute.</p>
         <p>Join our <a href="https://discord.gg/XNG3NZgCqp">Discord server</a> - we'd love to have you there and are happy to help!</p>
         <p>Special thanks to these people who've contributed to these examples:</p>
         <div style="max-width: 40rem; text-align: left; margin-top: 1rem;">

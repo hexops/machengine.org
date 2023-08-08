@@ -41,9 +41,9 @@ By default, we use prebuilt binaries of Dawn (the WebGPU implementation) so that
 ## Example showcase
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
-    <a class="animated-demo" href="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4">
+    <a class="animated-demo" href="https://media.machengine.org/core/example/gen-texture-light.mp4">
         <video autoplay loop muted height="190px">
-        <source src="https://media.machengine.org/core/example/advanced-gen-texture-light.mp4" type="video/mp4">
+        <source src="https://media.machengine.org/core/example/gen-texture-light.mp4" type="video/mp4">
         </video>
     </a>
     <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
