@@ -23,6 +23,16 @@ unsafe = true
   url = '/engine'
   weight = 100
 [[menu.engine]]
+  identifier = 'engine-roadmap'
+  name = 'Roadmap'
+  url = '/engine/roadmap'
+  weight = 101
+[[menu.engine]]
+  identifier = 'engine-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
+  weight = 102
+[[menu.engine]]
   identifier = 'engine-math'
   name = 'Math'
   weight = 200
@@ -68,13 +78,6 @@ unsafe = true
   name = 'Error handling'
   url = '/engine/gpu/errors'
   weight = 303
-
-
-[[menu.engine]]
-  identifier = 'engine-known-issues'
-  name = 'Known issues ⮕'
-  url = '/about/known-issues'
-  weight = 200
 
 
 [[menu.core]]

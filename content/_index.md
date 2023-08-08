@@ -498,7 +498,7 @@ $ zig build -Dtarget=aarch64-macos
         <h1 style="margin-top: 0; text-align: left;">Mach engine (coming soon)</h1>
     </div>
     <div class="p-section color-bg">
-        <p style="width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: left; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;">Mach engine is <strong>not ready for use yet and is in the early-stages of development.</strong></p>
+        <p style="width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0; background: red; padding: 1rem;"><strong>Mach engine is not ready for use yet and is in very early-stages of development.</strong></p>
     </div>
     <div class="p-section color-bg">
         <div style="text-align: left;">
@@ -514,6 +514,17 @@ $ zig build -Dtarget=aarch64-macos
             <h2>Deeply rooted in modularity</h2>
             <p>Unlike the monolithic engines of today, we aim for Mach to be deeply modular, data & tooling driven. Essentially, our entity component system will be more opinionated than others and will employ a unique message passing system, which will enable deep editor integration, debug tooling, and more. The ECS will act as a shared integration point for _modules_, which will all be optional, so that you can easily plug-and-play different modules for making UIs, rendering 2D sprites, 3D models, physics, etc.</p>
         </div>
+    </div>
+    <div class="p-section color-bg">
+        <div style="text-align: left;">
+            <h2>Roadmap</h2>
+            <p>There is a <em>long</em> road ahead, it's going to require a lot of work to get to where we are going.</p>
+            <p>
+                We've been working on Mach for ~2 years now, primarily building out the Zig gamedev ecosystem and building <a href="pkg">foundational packages</a> that we needed for <a href="core">Mach core</a> and the engine. As a result, we've really <em>just</em> broken ground on the engine side of things.
+            </p>
+            <p>See <a href="engine/roadmap">our roadmap</a> for a general idea of what we're up to today.</p>
+        </div>
+        <img class="p-img-left auto-color" src="/img/puzzle_heart.svg"></img>
     </div>
 </div>
 
