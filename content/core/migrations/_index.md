@@ -11,6 +11,106 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach-core: API design changes (2023-08-07)
+
+### printTitle
+
+Instead of writing e.g. this before:
+
+```zig
+const title = try std.fmt.bufPrintZ(&core.title, "Sprite2D [ FPS: {d} ]", .{@floor(1 / delta_time)});
+core.setTitle(title);
+```
+
+It is now possible to write just:
+
+```zig
+try core.printTitle("Sprite2D [ FPS: {d} ]", .{@floor(1 / delta_time)});
+```
+
+### Delta time, frame rate
+
+Internal timers now provide reasonable default methods of measuring frame rate, input rate, and frame delta time.
+
+* `core.frameRate()`
+* `core.inputRate()`
+* `core.delta_time` (f32 seconds)
+* `core.delta_time_ns` (u64 nanoseconds)
+
+### mach.Core is now a global
+
+* Your `App` struct no longer needs to have a field `core: mach.Core,` (before it was required, and the name MUST be `core`)
+* APIs that were accessible through a `*Core` instance before, e.g. `app.core.frameRate()`, are now accessible as global methods. e.g. `@import("core").frameRate()`
+* `core.init` no longer needs an allocator, instead `core.allocator` is used - which you can change at any point before calling `core.init()`
+
+#### Before
+
+```zig
+pub const App = @This();
+
+var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+
+core: mach.Core,
+
+pub fn init(app: *App) !void {
+    try app.core.init(gpa.allocator(), .{});
+    app.* = .{
+        // ...
+    };
+}
+
+pub fn deinit(app: *App) void {
+    defer _ = gpa.deinit();
+    defer app.core.deinit();
+    // ...
+}
+
+pub fn update(app: *App) !bool {
+    // ...
+    return false;
+}
+```
+
+#### After
+
+```zig
+pub const App = @This();
+
+pub fn init(app: *App) !void {
+    try core.init(.{});
+    app.* = .{
+        // ...
+    };
+}
+
+pub fn deinit(app: *App) void {
+    defer core.deinit();
+    // ...
+}
+
+pub fn update(app: *App) !bool {
+    // ...
+    return false;
+}
+```
+
+### Custom entrypoints
+
+It's now easier than ever to write a custom entrypoint for your application (e.g. `pub fn main`) if you really want/need to:
+
+* WASM: [42 lines of code](https://github.com/hexops/mach-core/blob/7a3d7e469dfc3893acbca163be79ed426c634317/src/platform/wasm/main.zig)
+* desktop: [33 lines of code](https://github.com/hexops/mach-core/blob/7a3d7e469dfc3893acbca163be79ed426c634317/src/platform/native/main.zig)
+
+### Fields instead of getters
+
+A few getters have been turned into fields instead:
+
+* `core.device()` -> `core.device`
+* `core.device().getQueue()` -> `core.queue`
+* `core.descriptor()` -> `core.descriptor`
+* `core.adapter()` -> `core.adapter`
+* `core.swapChain()` -> `core.swap_chain`
+
 ## mach-core: build system changes
 
 The following fields/functions from `mach.App` in `build.zig` have been removed:
