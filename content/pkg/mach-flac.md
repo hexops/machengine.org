@@ -15,7 +15,10 @@ rss_ignore: true
     <a href="https://github.com/hexops/mach-flac">GitHub repository</a>
 </div>
 
-FLAC audio decoding and encoding for Zig via the battle-hardened xiph.org libflac 
+FLAC audio decoding and encoding for Zig via the battle-hardened xiph.org libflac
+
+* [Zero-fuss](../../about/goals#zero-fuss-installation) installation, [cross-compilation](../../about/goals#seamless-cross-compilation) at the flip of a switch, and [broad platform support](../../about/platforms).
+* Encoding & decoding support
 
 ## Experimental
 
@@ -23,9 +26,20 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 > When a project has an experimental warning, it means all bets are off. You should carefully read the warning to understand why the project is experimental, and assume the worst.
 
-**Status:** Ready for use, but docs are not great. We're considering if flac is the right format for Mach.
+**Tracking issue:** https://github.com/hexops/mach/issues/959
 
 ## Getting started
+
+### TODO
+
+The docs below are incorrect and need to be updated. Currently the project can only be tested via:
+
+```
+zig build test
+ffplay -f s32le -ar 48000 -ac 2 zig-out/decode_output.pcm
+```
+
+### Incorrect docs
 
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
