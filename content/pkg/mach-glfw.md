@@ -70,7 +70,6 @@ Add the following to your `build.zig` below your `const exe = b.addExecutable(..
         .target = exe.target,
         .optimize = exe.optimize,
     });
-    exe.linkLibrary(glfw_dep.artifact("mach-glfw"));
     exe.addModule("mach-glfw", glfw_dep.module("mach-glfw"));
     try @import("mach_glfw").link(b, exe);
 ```
