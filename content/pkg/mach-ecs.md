@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/ecs-full-dark.svg">
         <img alt="mach-ecs" src="/assets/mach/ecs-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-ecs">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-ecs">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Aecs">Issue tracker</a>
+    </span>
 </div>
 
 Mach's Entity Component System, written from first-principles and designed for deep tooling capabilities.
@@ -65,7 +67,7 @@ You can now use it in your `src/main.zig` file:
 const ecs = @import("mach-ecs");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

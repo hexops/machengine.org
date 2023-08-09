@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/glfw-full-dark.svg">
         <img alt="mach-glfw" src="/assets/mach/glfw-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-glfw">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-glfw">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw">Issue tracker</a>
+    </span>
 </div>
 
 Perfected GLFW bindings for Zig, with 100% API coverage, zero-fuss installation, cross compilation, and more.
@@ -109,7 +111,7 @@ pub fn main() !void {
 }
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

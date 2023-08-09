@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-full-dark.svg">
         <img alt="mach-model3d" src="/assets/mach/model3d-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-model3d">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-model3d">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Amodel3d">Issue tracker</a>
+    </span>
 </div>
 
 Compact, featureful model format & alternative to glTF.
@@ -65,7 +67,7 @@ You can now use it in your `src/main.zig` file:
 const model3d = @import("mach-model3d");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

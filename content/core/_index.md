@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/core-full-dark.svg">
         <img alt="mach-core" src="/assets/mach/core-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-core">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-core">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Acore">Issue tracker</a>
+    </span>
 </div>
 
 # Window+Input+GPU, truly cross-platform

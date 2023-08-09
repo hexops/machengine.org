@@ -11,7 +11,12 @@ rss_ignore: true
 
 Binary fuse & xor filters for Zig (faster and smaller than bloom filters)
 
-<a href="/img/fastfilter.png"><img src="/img/fastfilter.png" style="width: 20rem;"></a>
+<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: left; margin-bottom: 1rem;">
+    <a href="/img/fastfilter.png"><img src="/img/fastfilter.png" style="width: 20rem; margin-top: 1rem;"></a>
+    <span>
+        <a href="https://github.com/hexops/fastfilter">GitHub repository</a> | <a href="https://github.com/hexops/fastfilter/issues">Issue tracker</a>
+    </span>
+</div>
 
 ## Getting started
 
@@ -53,7 +58,7 @@ You can now use it in your `src/main.zig` file:
 const earcut = @import("fastfilter");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

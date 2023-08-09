@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/gpu-full-dark.svg">
         <img alt="mach-gpu" src="/assets/mach/gpu-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-gpu">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-gpu">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Agpu">Issue tracker</a>
+    </span>
 </div>
 
 The WebGPU interface for Zig
@@ -57,7 +59,7 @@ You can now use it in your `src/main.zig` file:
 const gpu = @import("mach-gpu");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

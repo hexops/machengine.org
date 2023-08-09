@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysjs-full-dark.svg">
         <img alt="mach-sysjs" src="/assets/mach/sysjs-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-sysjs">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-sysjs">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Asysjs">Issue tracker</a>
+    </span>
 </div>
 
 Enables Zig <-> JS interoperability via code generation, with complex type support.
@@ -65,7 +67,7 @@ You can now use it in your `src/main.zig` file:
 const sysjs = @import("mach-sysjs");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

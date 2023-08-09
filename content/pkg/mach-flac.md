@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/flac-full-dark.svg">
         <img alt="mach-flac" src="/assets/mach/flac-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-flac">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-flac">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Aflac">Issue tracker</a>
+    </span>
 </div>
 
 FLAC audio decoding and encoding for Zig via the battle-hardened xiph.org libflac
@@ -79,7 +81,7 @@ You can now use it in your `src/main.zig` file:
 const flac = @import("mach-flac");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 

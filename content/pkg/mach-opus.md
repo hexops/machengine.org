@@ -12,7 +12,9 @@ rss_ignore: true
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/opus-full-dark.svg">
         <img alt="mach-opus" src="/assets/mach/opus-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
-    <a href="https://github.com/hexops/mach-opus">GitHub repository</a>
+    <span>
+        <a href="https://github.com/hexops/mach-opus">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Aopus">Issue tracker</a>
+    </span>
 </div>
 
 Opus audio decoding and encoding for Zig via the battle-hardened xiph.org libopus
@@ -65,7 +67,7 @@ You can now use it in your `src/main.zig` file:
 const opus = @import("mach-opus");
 ```
 
-### Issues? Questions?
+### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 
