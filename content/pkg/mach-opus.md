@@ -17,7 +17,7 @@ rss_ignore: true
     </span>
 </div>
 
-Opus audio decoding and encoding for Zig via the battle-hardened xiph.org libopus
+Opus audio decoding and encoding for Zig via the battle-hardened xiph.org libopus and libopusfile
 
 ## Experimental
 
@@ -28,6 +28,17 @@ This is an **experimental** project according to [our stability guarantees](../.
 **Tracking issue:** https://github.com/hexops/mach/issues/961
 
 ## Getting started
+
+### TODO
+
+The docs below are incorrect and need to be updated. Currently the project can only be tested via:
+
+```
+zig build test
+ffplay -f f32le -ar 48000 -ac 2 zig-out/raw_audio.pcm
+```
+
+### Incorrect docs
 
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
