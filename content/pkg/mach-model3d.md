@@ -19,6 +19,8 @@ rss_ignore: true
 
 Compact, featureful model format & alternative to glTF.
 
+[Model3D](https://gitlab.com/bztsrc/model3d/) is an up-and-coming compact, featureful, universal model format that tries to address the shortcomings of existing formats (yes, including glTF - see [their rationale](https://gitlab.com/bztsrc/model3d/#rationale).)
+
 ## Experimental
 
 This is an **experimental** project according to [our stability guarantees](../../about/stability):
@@ -66,6 +68,8 @@ You can now use it in your `src/main.zig` file:
 ```zig
 const model3d = @import("mach-model3d");
 ```
+
+For usage examples, you can look at the mach-core [pbr-basic example](https://github.com/hexops/mach-core/blob/main/examples/pbr-basic/main.zig) - note that a `vertex_writer.zig` helper is needed due to the way model3d stores data.
 
 ### Ran into trouble?
 
