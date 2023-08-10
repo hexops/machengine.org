@@ -19,6 +19,24 @@ rss_ignore: true
 
 Make your Linux games go brrr
 
+Enables Linux games written in Zig to _request [gamemode](https://github.com/FeralInteractive/gamemode) be enabled_, opting in to various CPU, GPU, and kernel optimizations. If the user's machine doesn't have gamemode, it simply does nothing. There are no dependencies and your game will still run without it normally.
+
+This is preferred as it means your game will automatically invoke gamemode for the user when running, rather than them having to manually enable it.
+
+## What is Linux GameMode?
+
+Used by titles such as DiRT 4, many Tomb Raider and Total War games, [GameMode](https://github.com/FeralInteractive/gamemode) is a daemon/lib combo for Linux that allows games to request a set of optimisations be temporarily applied to the host OS and/or a game process, including:
+
+>     CPU governor
+>     I/O priority
+>     Process niceness
+>     Kernel scheduler (SCHED_ISO)
+>     Screensaver inhibiting
+>     GPU performance mode (NVIDIA and AMD), GPU overclocking (NVIDIA)
+>     Custom scripts
+
+GameMode packages are available for Ubuntu, Debian, Solus, Arch, Gentoo, Fedora, OpenSUSE, Mageia and possibly more.
+
 ## Getting started
 
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
@@ -53,11 +71,24 @@ pub fn build(b: *std.Build) void {
 }
 ```
 
-You can now use it in your `src/main.zig` file:
+You can now use it in your `src/main.zig` file and use it:
 
 ```zig
 const gamemode = @import("mach-gamemode");
 ```
+
+### Usage
+
+The API is incredibly simple, when you want to start/stop gamemode simply call the function:
+
+```
+gamemode.start();
+gamemode.stop();
+```
+
+No errors are returned; mach-gamemode generally stays silent. If users don't have gamemode, or the platform is not linux, then nothing happens. Only if you have gamemode will it be enabled.
+
+One can check programatically if gamemode is active using `gamemode.isActive()`.
 
 ### Ran into trouble?
 
