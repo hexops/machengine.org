@@ -17,7 +17,14 @@ rss_ignore: true
     </span>
 </div>
 
-Mach's Entity Component System, written from first-principles and designed for deep tooling capabilities.
+The Mach entity component system, written from first-principles and designed for deep tooling capabilities.
+
+* Initially a 100% clean-room implementation, working from first-principles; later informed by research into how other open-source ECS work.
+* Enable deep tooling to provide tracing, editors, visualizers, profilers, etc.
+* Fast, optimal for CPU caches, multi-threaded, leverage comptime for type safety.
+* Dynamic, allow for very flexible runtime capabilities.
+
+We're publishing a blog series ["Let's build an Entity Component System from scatch"](https://devlog.hexops.com/categories/build-an-ecs/) as we go.
 
 ## Experimental
 
