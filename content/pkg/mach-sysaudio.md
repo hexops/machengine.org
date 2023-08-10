@@ -17,7 +17,16 @@ rss_ignore: true
     </span>
 </div>
 
-Truly cross-platform, low-level, audio IO in Zig - input and output with minimal latency and a friendly API.
+Truly cross-platform, low-level, audio IO in Zig - playback and recording with backends for:
+
+* Linux
+  * PulseAudio
+  * PipeWire
+  * Jack
+  * ALSA
+* Windows: WASAPI
+* macOS/iOS: CoreAudio
+* WebAssembly: WebAudio
 
 ## Getting started
 
@@ -58,6 +67,8 @@ You can now use it in your `src/main.zig` file:
 ```zig
 const sysaudio = @import("mach-sysaudio");
 ```
+
+See [here](https://github.com/hexops/mach-sysaudio/tree/main/examples) for example code.
 
 ### Ran into trouble?
 
