@@ -25,7 +25,7 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 > When a project has an experimental warning, it means all bets are off. You should carefully read the warning to understand why the project is experimental, and assume the worst.
 
-**Status:** Ready for use, but not well-tested. We are considering adding KTX2 support, and want to verify WASM compilation works.
+**Tracking issue:** https://github.com/hexops/mach/issues/965
 
 ## Getting started
 

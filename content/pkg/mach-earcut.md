@@ -25,8 +25,6 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 > When a project has an experimental warning, it means all bets are off. You should carefully read the warning to understand why the project is experimental, and assume the worst.
 
-**Status:** This is a port of mapbox/earcut, it should work well and matches the upstream implementation 1:1 but is not well-tested. If issues are found, our ability to resolve them will be limited.
-
 **Tracking issue:** https://github.com/hexops/mach/issues/967
 
 ## Background
