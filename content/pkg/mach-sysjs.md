@@ -25,7 +25,7 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 > When a project has an experimental warning, it means all bets are off. You should carefully read the warning to understand why the project is experimental, and assume the worst.
 
-**Status:** Not yet ready for use, undergoing a major rewrite.
+**Tracking issue:** https://github.com/hexops/mach/issues/970
 
 ## Getting started
 

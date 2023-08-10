@@ -27,6 +27,8 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 **Status:** This is a port of mapbox/earcut, it should work well and matches the upstream implementation 1:1 but is not well-tested. If issues are found, our ability to resolve them will be limited.
 
+**Tracking issue:** https://github.com/hexops/mach/issues/967
+
 ## Getting started
 
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
