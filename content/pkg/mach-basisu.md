@@ -67,6 +67,8 @@ You can now use it in your `src/main.zig` file:
 const basisu = @import("mach-basisu");
 ```
 
+See [this test](https://github.com/hexops/mach-basisu/blob/main/src/main.zig#L22-L47) for usage.
+
 ### Ran into trouble?
 
 Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
