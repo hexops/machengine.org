@@ -29,17 +29,6 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 ## Getting started
 
-### TODO
-
-The docs below are incorrect and need to be updated. Currently the project can only be tested via:
-
-```
-zig build test
-ffplay -f f32le -ar 48000 -ac 2 zig-out/raw_audio.pcm
-```
-
-### Incorrect docs
-
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
 ```zig
@@ -49,6 +38,9 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
     .dependencies = .{
         .mach_opus = .{
             .url = "https://pkg.machengine.org/mach-opus/LATEST_COMMIT.tar.gz",
+        },
+        .opusfile = .{
+            .url = "https://pkg.machengine.org/opusfile/LATEST_COMMIT.tar.gz",
         },
     },
 }
@@ -77,6 +69,8 @@ You can now use it in your `src/main.zig` file:
 ```zig
 const opus = @import("mach-opus");
 ```
+
+See [here](https://github.com/hexops/mach-opus/tree/main/examples) for example code.
 
 ### Ran into trouble?
 

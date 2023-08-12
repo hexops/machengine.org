@@ -40,11 +40,20 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
         .mach_sysaudio = .{
             .url = "https://pkg.machengine.org/mach-sysaudio/LATEST_COMMIT.tar.gz",
         },
+        .mach_sysjs = .{
+            .url = "https://pkg.machengine.org/mach-sysjs/LATEST_COMMIT.tar.gz",
+        },
+        .linux_audio_headers = .{
+            .url = "https://pkg.machengine.org/linux-audio-headers/LATEST_COMMIT.tar.gz",
+        },
+        .xcode_frameworks = .{
+            .url = "https://github.com/hexops/xcode-frameworks-pkg/archive/LATEST_COMMIT.tar.gz",
+        },
     },
 }
 ```
 
-Run `zig build` in your project, and the compiler instruct you to add a `.hash = "..."` field next to `.url`:
+Run `zig build` in your project, and the compiler instruct you to add a `.hash = "..."` fields next to `.url`:
 
 ```
 note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
@@ -53,12 +62,12 @@ note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeb
 Then use the dependency in your `build.zig`:
 
 ```zig
+const mach_sysaudio = @import("mach_sysaudio");
+
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach-sysaudio", b.dependency("mach_sysaudio", .{
-        .target = target,
-        .optimize = optimize,
-    }).module("mach-sysaudio"));
+    exe.addModule("mach-sysaudio", mach_sysaudio.module(b, optimize, target));
+    mach_sysaudio.link(b, exe);
 }
 ```
 

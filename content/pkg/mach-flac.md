@@ -32,17 +32,6 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 ## Getting started
 
-### TODO
-
-The docs below are incorrect and need to be updated. Currently the project can only be tested via:
-
-```
-zig build test
-ffplay -f s32le -ar 48000 -ac 2 zig-out/decode_output.pcm
-```
-
-### Incorrect docs
-
 Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
 ```zig
@@ -52,6 +41,9 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
     .dependencies = .{
         .mach_flac = .{
             .url = "https://pkg.machengine.org/mach-flac/LATEST_COMMIT.tar.gz",
+        },
+        .flac = .{
+            .url = "https://pkg.machengine.org/flac/LATEST_COMMIT.tar.gz",
         },
     },
 }
@@ -80,6 +72,8 @@ You can now use it in your `src/main.zig` file:
 ```zig
 const flac = @import("mach-flac");
 ```
+
+See [here](https://github.com/hexops/mach-flac/tree/main/examples) for example code.
 
 ### Ran into trouble?
 
