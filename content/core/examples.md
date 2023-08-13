@@ -97,7 +97,7 @@ zig build run-deferred-rendering
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="pbr-basic">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/pbr-basic">pbr-basic</a></h2>
         <p>Physically based rendering (PBR) materials</p>
@@ -117,7 +117,7 @@ zig build run-pbr-basic
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="gen-texture-light">
     <a class="animated-demo" href="https://media.machengine.org/core/example/gen-texture-light.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/gen-texture-light.mp4" type="video/mp4">
@@ -137,7 +137,7 @@ zig build run-gen-texture-light
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="procedural-primitives">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/procedural-primitives">procedural-primitives</a></h2>
         <p>Procedurally generated geometry, implements a few different shapes (use arrow keys to switch between them.)</p>
@@ -157,7 +157,7 @@ zig build run-procedural-primitives
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="pixel-post-process">
     <a class="animated-demo" href="https://media.machengine.org/core/example/pixel-post-process.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/pixel-post-process.mp4" type="video/mp4">
@@ -177,7 +177,7 @@ zig build run-pixel-post-process
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="sprite2d">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/sprite2d">sprite2d</a></h2>
         <p>Loads a JSON file which describes a spritesheet, and renders sprites to the screen.</p>
@@ -195,7 +195,7 @@ zig build run-sprite2d
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="fractal-cube">
     <a class="animated-demo" href="https://media.machengine.org/core/example/fractal-cube.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/fractal-cube.mp4" type="video/mp4">
@@ -215,7 +215,7 @@ zig build run-fractal-cube
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="cubemap">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/cubemap">cubemap</a></h2>
         <p>Renders a cubemap / skybox. Nothing fancy, but these are instrumental as backgrounds in games.</p>
@@ -235,7 +235,7 @@ zig build run-cubemap
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="textured-cube">
     <a class="animated-demo" href="https://media.machengine.org/core/example/textured-cube.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
@@ -255,7 +255,7 @@ zig build run-textured-cube
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="image-blur">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/image-blur">image-blur</a></h2>
         <p>Leverages a compute shader to blur an image, then renders it. Don't worry if the details are a bit fuzzy!</p>
@@ -273,7 +273,7 @@ zig build run-image-blur
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="boids">
     <a class="animated-demo" href="https://media.machengine.org/core/example/boids.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/boids.mp4" type="video/mp4">
@@ -293,7 +293,7 @@ zig build run-boids
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="two-cubes">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/two-cubes">two-cubes</a></h2>
         <p>Once you've learned how to render one cube, two is just 30 lines of code more!</p>
@@ -313,7 +313,7 @@ zig build run-two-cubes
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="instanced-cube">
     <a class="animated-demo" href="https://media.machengine.org/core/example/instanced-cube.mp4">
         <video autoplay loop muted>
         <source src="https://media.machengine.org/core/example/instanced-cube.mp4" type="video/mp4">
@@ -333,7 +333,7 @@ zig build run-instanced-cube
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="rotating-cube">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/rotating-cube">rotating-cube</a></h2>
         <p>Uploads a basic 3D cube to the GPU and renders it. Demonstrates how to use vertex buffers to transfer a model from the CPU to GPU, how to use vertex attributes & more.</p>
@@ -353,7 +353,7 @@ zig build run-rotating-cube
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="triangle-msaa">
     <a class="static-demo" href="https://media.machengine.org/core/example/triangle-msaa.png">
         <img src="https://media.machengine.org/core/example/triangle-msaa.png" />
     </a>
@@ -371,7 +371,7 @@ zig build run-triangle-msaa
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="triangle">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/triangle">triangle</a></h2>
         <p>This is where you should start learning. It tells the GPU to render 3 vertices (but doesn't transfer them using a vertex buffer or anything! The vertex positions are hard-coded in the shader.)</p>
@@ -389,7 +389,7 @@ zig build run-triangle
     </a>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="map-async">
     <a class="static-demo" href="https://media.machengine.org/core/example/map-async.png">
         <img src="https://media.machengine.org/core/example/map-async.png" />
     </a>
@@ -407,7 +407,7 @@ zig build run-map-async
     </div>
 </div>
 
-<div class="p-section">
+<div class="p-section" id="clear-color">
     <div class="p-section-left">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/clear-color">clear-color</a></h2>
         <p>As simple as it gets: a blue screen of doom</p>

@@ -9,9 +9,11 @@ rss_ignore: true
 
 # Mach project goals
 
-For the goals of our engine itself (i.e. how we see the process of game development changing), please see [the Mach engine overview](../../engine).
-
 This page covers more broad project goals that apply to all Mach projects, code, standalone libraries, etc.
+
+## Engine goals
+
+See [this page](../../engine).
 
 ## Zero-fuss installation
 

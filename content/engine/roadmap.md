@@ -19,7 +19,7 @@ We intend to accelerate our release schedule to about once every 6 months.
 
 ## v0.2 (finished)
 
-* [x] Mach core is an actual alternative to the traditional GLFW+OpenGL or SDL combo used by people.
+* [x] Mach core is an actual alternative to the traditional GLFW+OpenGL or SDL combo
   * Codebase is strictly separated and usable separate from Mach _engine_.
   * Examples are decent, and a basic 2D sprite rendering example exists.
   * We feel confident about the internals, feel good about the API design overall, etc.
@@ -30,7 +30,8 @@ We intend to accelerate our release schedule to about once every 6 months.
   * [x] mach-opus: lossy audio decoding support
   * [x] mach-gamemode: Linux gamemode optimization client (rewrite in Zig)
   * [x] mach-gpu: add infrastructure for automated updates & make it the best WebGPU interface for Zig
-* [x] Adopt the Zig self-hosted compiler and fully migrate to the package manager (eliminate all submodules.)
+* [x] Adopt the Zig self-hosted compiler
+* [x] Fully migrate to the experimental Zig package manager (eliminate all submodules)
 * [x] Begin prototyping engine design
   * [x] mach-ecs: prototyping & direction set for the future
   * [x] Prototype gfx2d sprite rendering ECS module / example
@@ -61,4 +62,3 @@ We intend to accelerate our release schedule to about once every 6 months.
   - [ ] Mature Vulkan backend
   - [ ] Mature Direct3D backend
   - [ ] Mature Metal backend
-

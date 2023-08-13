@@ -254,9 +254,9 @@ unsafe = true
   url = '/about/stability'
   weight = 500
 [[menu.about]]
-  identifier = 'about-keycomp'
-  name = 'Key components'
-  url = '/engine'
+  identifier = 'about-faq'
+  name = 'FAQ'
+  url = '/about/faq'
   weight = 600
 
 [[menu.about]]
