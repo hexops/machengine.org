@@ -31,10 +31,10 @@ jobs:
           hugo --minify
           mv public final
 
-          # Build the next branch (secret "next" version of website, only used during major redesign)
-          git checkout next
-          hugo --minify
-          mv public final/next
+          # # Build the next branch (secret "next" version of website, only used during major redesign)
+          # git checkout next
+          # hugo --minify
+          # mv public final/next
 
           # Deploy legacy versions in subfolders
           git checkout v0.1
