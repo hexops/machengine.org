@@ -155,6 +155,8 @@ Mach doesn't yet support _graphics_ in the browser ([issue #90](https://github.c
 
 ## Questions? Ran into an issue?
 
+Make sure you're using a [supported Zig version](/about/zig-version/)
+
 There are two ways to get help:
 
 * [File a GitHub issue](https://github.com/hexops/mach/issues)
