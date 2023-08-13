@@ -11,7 +11,11 @@ rss_ignore: true
 
 Here you will learn how to use _mach-core_ in your own project/repository. If you haven't already, check out the [examples](../examples) as those describe how to actually use Mach core's APIs, this page just describes project setup.
 
-## Creating a new project
+## Option 1: Copying the starter project
+
+If you like, you can simply start by copying [this starter project](https://github.com/hexops/mach-core-getting-started) - where we ran through all the steps below for you.
+
+## Option 2: Create a project from scratch
 
 ### Create Zig project
 
@@ -25,21 +29,27 @@ zig init-exe
 
 mach-core uses the Zig package manager. You'll need a `build.zig.zon` file next to your `build.zig` which has all the same dependencies as mach-core.
 
-To start, simply copy [mach-core's build.zig.zon](https://github.com/hexops/mach-core/blob/main/build.zig.zon) file into your project, and place it next to your `build.zig`.
-
-You will need to _add a `.mach_core` entry_:
+Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
 ```zig
-.mach_core = .{
-    .url = "https://pkg.machengine.org/mach-core/69209f02d62ca8af64aa4084669ff6bc89c4d36f.tar.gz",
-},
+.{
+    .name = "myproject",
+    .version = "0.1.0",
+    .dependencies = .{
+        .mach_core = .{
+            .url = "https://pkg.machengine.org/mach-core/LATEST_COMMIT.tar.gz",
+        },
+    },
+}
 ```
 
-Run `zig build` in your project, and the compiler instruct you to add a `.hash = "..."` field next to `.url`:
+Run `zig build` in your project, and the compiler will instruct you to add a `.hash = "..."` field next to `.url`:
 
 ```
-note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038c1337",
+note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
 ```
+
+Next you will need to copy all of [the mach-core dependencies](https://github.com/hexops/mach-core/blob/main/build.zig.zon) into your `build.zig.zon`. Your final file should look something [like this](https://github.com/hexops/mach-core-getting-started/blob/main/build.zig.zon)
 
 ### Setup build.zig
 
