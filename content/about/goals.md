@@ -23,7 +23,7 @@ This page covers more broad project goals that apply to all Mach projects, code,
 
 Mach is able to achieve this by doing the heavy lifting of compiling C/C++ dependencies by source for you, using Zig as the C/C++ compiler. We build GLFW, Google Chrome's WebGPU implementation, and much more using just Zig as a C/C++ compiler and avoid make/cmake/ninja/etc by taking on the hard work of using Zig as the build system too.
 
-In some cases building from source can take a few minutes, like building Google Chrome's WebGPU implementation-and we don't want you to have to wait-so we provide binaries by default which are used when you execute `zig build`. We understand the importance of 100% from-source builds, however, and they are possible using compiler flags like `-Ddawn-from-source=true` today (we're aiming to make this even simpler / a single flag. (issue))
+In some cases building from source can take a few minutes (like building Google Chrome's WebGPU implementation) and we don't want you to have to wait, so we provide binaries by default in that specific case which are used when you execute `zig build`. We understand the importance of 100% from-source builds, however, and so we make them possible at the flip of a switch `DAWN_FROM_SOURCE=true zig build`
 
 ## Seamless cross-compilation
 

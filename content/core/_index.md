@@ -38,7 +38,7 @@ We use Google Chrome's WebGPU implementation, Dawn, but we compile it using Zig 
 
 On desktop platforms, we use GLFW to create windows, set up Vulkan/Direct3D/etc. and provide an abstraction layer on top that will enable browser and mobile support in the future under the same API.
 
-By default, we use prebuilt binaries of Dawn (the WebGPU implementation) so that you don't have to wait for compilation, and also so that you can use a release build in your debug application for nice performance while developing your games/apps. But 100% from-source builds are always available at the flip of a switch `-Ddawn-from-source=true`. We use Zig's package manager to fetch the few libraries/headers we need to build from source, so you don't need to deal with with any external build systems or dependencies: just zig, git, and curl.
+By default, we use prebuilt binaries of Dawn (the WebGPU implementation) so that you don't have to wait for compilation, and also so that you can use a release build in your debug application for nice performance while developing your games/apps. But 100% from-source builds are always available at the flip of a switch `DAWN_FROM_SOURCE=true zig build`. We use Zig's package manager to fetch the few libraries/headers we need to build from source, so you don't need to deal with with any external build systems or dependencies: just zig, git, and curl.
 
 ## Example showcase
 
