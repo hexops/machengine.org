@@ -61,7 +61,7 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
 }
 ```
 
-Run `zig build` in your project, and the compiler instruct you to add a `.hash = "..."` field next to `.url`:
+Run `zig build` in your project, and the compiler will instruct you to add a `.hash = "..."` field next to `.url`:
 
 ```
 note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
