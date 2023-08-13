@@ -260,6 +260,11 @@ unsafe = true
   weight = 600
 
 [[menu.about]]
+  identifier = 'about-keycomp'
+  name = 'Key components'
+  url = '/engine'
+  weight = 700
+[[menu.about]]
   identifier = 'about-keycomp-engine'
   parent = 'about-keycomp'
   name = 'Engine ⮕'
