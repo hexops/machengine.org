@@ -122,91 +122,96 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 3.3rem;
         margin: auto;
         margin-left: 6rem;
         margin-right: 6rem;
-
-        >div {
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
+        width: calc(100% - 6rem - 6rem);
 
         .logo {
             display: inline-block;
             padding-left: 0;
-            padding-right: 1em;
-        }
-
-        .logo>.img {
-          width: 9.5rem;
-          height: 2.25rem;
-          display: flex;
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-image: url("../assets/media/mach/logo_light.svg");
-          @media (prefers-color-scheme: dark) {
-            background-image: url("../assets/media/mach/logo_dark.svg");
-          }
-        }
-      
-        &>div>a:not(.logo) {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            line-height: 3rem;
-            font-weight: 600;
-            height: 100%;
-            padding-right: 1rem;
-            padding-left: 1rem;
-            color: $light_fg;
-            @media (prefers-color-scheme: dark) {
-                color: $dark_fg;
-                text-shadow: 0 0 0.2rem black;
-            }
-        }
-        &>div>a.donate-button {
-            color: black;
-            text-shadow: none;
-            text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.6);
-            border-radius: 0.75rem;
-            border: 2px solid #9be3ff;
-            height: 2.25rem;
-            background-color: #3cc1f5;
-            background-image: linear-gradient(350deg, #33a3ce, #8adbfb);
-            box-shadow: rgba(0,82,255,0.1) 2px 5px 3px 0px,rgba(0,82,255,0.1) 1px 5px 12px 0px,rgba(0,82,255,0.3) 2px 2px 15px 0px;
-            margin-right: 1rem;
-            img {
-                filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
-                height: 1rem;
-                @media (prefers-color-scheme: light) {
-                    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
+            padding-right: 0;
+            flex: 10;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            .img {
+                width: 9.5rem;
+                height: 2.25rem;
+                display: flex;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("../assets/media/mach/logo_light.svg");
+                @media (prefers-color-scheme: dark) {
+                    background-image: url("../assets/media/mach/logo_dark.svg");
                 }
             }
-            @media (prefers-color-scheme: dark) {
-                border: 1px solid #6cb7d4;
-                background-color: #1490c2;
-                background-image: linear-gradient(350deg, #13769d, #4ca1c3);
-            }
-        }
-        &>div>a.donate-button:hover, &>div>a.donate-button:active {
-            filter: brightness(110%);
-            // color: $light_fg;
-        }
-        &>div>a:not(.logo):not(.donate-button):hover, &>div>a:not(.logo):not(.donate-button):active {
-            color: $light_fg1;
-            @media (prefers-color-scheme: dark) {
-                color: $dark_fg1;
-            }
-        }
-        &>div>a:not(.logo):not(.donate-button):hover.svg-item, &>div>a:not(.logo):not(.donate-button):active.svg-item {
-            filter: invert(50%);
         }
 
-        &>div>a:not(.logo):not(.svg-item):not(.donate-button) {
-            padding-top: 0.25rem;
-            height: calc(100% - 0.25rem);
+        .divider {
+            width: 0;
+            height: 3.3rem;
+            border-left: 1px solid;
+        }
+
+        .subsection {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+                line-height: 3rem;
+                font-weight: 600;
+                height: 100%;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                color: $light_fg;
+                @media (prefers-color-scheme: dark) {
+                    color: $dark_fg;
+                    text-shadow: 0 0 0.2rem black;
+                }
+            }
+            a:not(.donate-button):hover, a:not(.donate-button):active {
+                color: $light_fg1;
+                @media (prefers-color-scheme: dark) {
+                    color: $dark_fg1;
+                }
+                &.svg-item {
+                    filter: invert(50%);
+                }
+            }
+            
+            .donate-button {
+                color: black;
+                text-shadow: none;
+                text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.6);
+                border-radius: 0.75rem;
+                border: 2px solid #9be3ff;
+                height: 2.25rem;
+                background-color: #3cc1f5;
+                background-image: linear-gradient(350deg, #33a3ce, #8adbfb);
+                box-shadow: rgba(0,82,255,0.1) 2px 5px 3px 0px,rgba(0,82,255,0.1) 1px 5px 12px 0px,rgba(0,82,255,0.3) 2px 2px 15px 0px;
+                margin-right: 1rem;
+                img {
+                    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
+                    height: 1rem;
+                    @media (prefers-color-scheme: light) {
+                        filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
+                    }
+                }
+                @media (prefers-color-scheme: dark) {
+                    border: 1px solid #6cb7d4;
+                    background-color: #1490c2;
+                    background-image: linear-gradient(350deg, #13769d, #4ca1c3);
+                }
+
+                &:hover, &:active {
+                    filter: brightness(110%);
+                    // color: $light_fg;
+                }
+            }
         }
     }
 }
@@ -216,18 +221,104 @@ p {
     @include glass;
 }
 
-@media (max-width:480px) {
-    .navbar>.content {
-        flex-direction: column;
+@media (min-width:835px) and (max-width:1028px) {
+    .navbar {
+        .content {
+            margin: auto;
+            margin-left: 1rem;
+            width: calc(100% - 1rem);
+            // TODO: media query
+            flex-wrap: wrap;
+            justify-content: center;
+            .divider {
+                display: none;
+            }
+        }
     }
-
-    .navbar>.content>div {
-        z-index: 1;
+    .home {
+        .choose-your-journey {
+            &>div {
+                &>div:last-child {
+                    video {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        .code {
+            white-space: pre-line;
+        }
+        .p-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
+}
 
-    .navbar>.content>div>a {
-        border-top: 1px solid grey;
-        background: #06071B;
+@media (max-width:835px) {
+    .navbar {
+        .content {
+            margin: auto;
+            margin-left: 1rem;
+            width: calc(100% - 1rem);
+            // TODO: media query
+            flex-wrap: wrap;
+            justify-content: center;
+            .divider {
+                display: none;
+            }
+            .logo {
+                display: flex;
+                justify-content: center;
+                flex: auto;
+                padding-top: 0.75rem;
+                padding-bottom: 0;
+                width: 100%;
+            }
+        }
+    }
+    .alert>span {
+        height: 2.5rem !important;
+    }
+    .home {
+        .choose-your-journey {
+            min-height: 60rem;
+            &>div {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                flex-direction: column !important;
+                margin-left: 0rem !important;
+                margin-right: 0rem !important;
+                h1, h2 {
+                    text-align: center;
+                }
+                &>div:last-child {
+                    margin-top: 1rem;
+                    video {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .always-open-source > .card {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        .code {
+            white-space: pre-line;
+        }
+        .p-section {
+            padding: 1rem;
+            h1, h2 {
+                margin-top: 1rem !important;
+                text-align: center !important;
+            }
+        }
+        .p-img-right, .p-img-left {
+            margin: auto !important;
+        }
     }
 }
 

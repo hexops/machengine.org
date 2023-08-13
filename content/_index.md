@@ -307,14 +307,14 @@ a.p-community-icon {
 
 
 <div class="color-fg">
-    <div class="p-section glass" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0; clip-path: inset(0 0 -10rem 0)">
+    <div class="p-section glass" style="min-height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0; clip-path: inset(0 0 -10rem 0)">
         <a href="https://ziglang.org">
-            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-image-left" src="/img/zig-mark.svg">
+            <img style="float: left; height: 5rem; margin-right: 1rem; margin-top: 0.5rem;" class="p-img-left" src="/img/zig-mark.svg">
         </a>
         <h1 style="margin-top: 0;">Built with love, hard-work & Zig</h1>
     </div>
     <div class="p-section color-bg">
-        <p style="width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;"><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
+        <p style="max-width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0;"><a href="https://ziglang.org">Zig</a> is a general-purpose simple programming language featuring compile-time code execution, blazing-fast compilation speeds, and bare-metal performance.</p>
     </div>
     <div class="p-section color-bg">
         <a href="https://media.machengine.org/core/example/textured-cube.mp4" class="p-section-right">
@@ -325,7 +325,7 @@ a.p-community-icon {
         <div class="p-section-right">
             <div style="text-align: left;">
                 <h2>On your machine in just ~60 seconds</h2>
-                <p style="margin-left: 1rem; display: inline-block; width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="about/zig-version">zig</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
+                <p style="margin-left: 1rem; display: inline-block; max-width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="about/zig-version">zig</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
             </div>
             <div>
 <pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach-core
@@ -366,10 +366,10 @@ $ zig build -Dtarget=aarch64-macos
 
 
 <div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
-    <div class="p-section glass bright" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
+    <div class="p-section glass bright" style="min-height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/img/core-dark.svg">
-            <img alt="mach-glfw" src="/img/core-light.svg" style="float: left; height: 5rem; margin-right: 1rem; margin-top: -1rem; margin-bottom: -1rem;" class="p-image-left">
+            <img alt="mach-glfw" src="/img/core-light.svg" style="float: left; height: 5rem; margin-right: 1rem; margin-top: -1rem; margin-bottom: -1rem;" class="p-img-left">
         </picture>
         <h1 style="margin-top: 0; text-align: left;">Mach core: window+input+GPU</h1>
     </div>
@@ -490,7 +490,7 @@ $ zig build -Dtarget=aarch64-macos
 
 
 <div class="color-fg" style="clip-path: inset(0 0 -1rem 0)">
-    <div class="p-section glass bright-2" style="height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
+    <div class="p-section glass bright-2" style="min-height: 6rem; box-shadow: 0 0 3rem black; padding-bottom: 1rem; padding-top: 1rem; margin-top: 0;">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/media/mach/icon_dark.svg">
             <img alt="Mach" style="height: 5rem; margin-right: 1rem; padding-top: 3rem; margin-top: -3.5rem; margin-bottom: -1rem;" src="/assets/media/mach/icon_light.svg">
@@ -498,7 +498,7 @@ $ zig build -Dtarget=aarch64-macos
         <h1 style="margin-top: 0; text-align: left;">Mach engine (coming soon)</h1>
     </div>
     <div class="p-section color-bg">
-        <p style="width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0; background: red; padding: 1rem;"><strong>Mach engine is not ready for use yet and is in very early-stages of development.</strong></p>
+        <p style="max-width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0; background: red; padding: 1rem;"><strong>Mach engine is not ready for use yet and is in very early-stages of development.</strong></p>
     </div>
     <div class="p-section color-bg">
         <div style="text-align: left;">
@@ -546,7 +546,7 @@ $ zig build -Dtarget=aarch64-macos
     </div>
     <div class="p-section" style="margin-top: 1rem;">
         <img class="p-img-right" style="height: 20rem; margin-right: 2rem;" src="/img/wrench_rocket.svg">
-        <div class="card" style="width: 30rem; display: block;">
+        <div class="card" style="max-width: 30rem; display: block;">
             <h1 style="margin-top: 0;">Community</h1>
             <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
                 <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
