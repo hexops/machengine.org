@@ -1,10 +1,42 @@
 <div class="navbar">
     <div class="content">
-        <a href="/" class="logo invert-color"><img src="https://raw.githubusercontent.com/hexops/media/234e15f265b19743c580a078b2d68660c92675d4/mach/logo.svg"></a>
-        <div>
-            <a href="/gpu" class="item">Examples</a>
+        <a href="{{$.Site.BaseURL}}/" class="logo">
+            <div class="img"></div>
+        </a>
+        <div class="subsection">
+            <a href="{{$.Site.BaseURL}}/engine" class="item">Engine</a>
+            <a href="{{$.Site.BaseURL}}/core" class="item">Core</a>
+            <a href="{{$.Site.BaseURL}}/pkg" class="item">Packages</a>
+            <a href="{{$.Site.BaseURL}}/about" class="item">Project</a>
+        </div>
+        <div class="divider color-border">&nbsp;</div>
+        <div class="subsection">
             <a href="https://devlog.hexops.com/categories/mach/" class="item">Devlog</a>
-            <a href="https://github.com/hexops/mach" class="item">GitHub</a>
+            <a href="https://github.com/hexops/mach" class="svg-item">
+                <img alt="GitHub" class="svg-icon" src="{{$.Site.BaseURL}}/img/github.svg">
+            </a>
+            <a href="https://discord.gg/XNG3NZgCqp" class="svg-item">
+                <img alt="Discord" class="svg-icon" src="{{$.Site.BaseURL}}/img/discord.svg">
+            </a>
+            <a href="https://github.com/sponsors/slimsag" class="donate-button">
+                <img alt="Heart" class="svg-icon" src="{{$.Site.BaseURL}}/img/heart.svg">
+                &nbsp;Donate
+            </a>
         </div>
     </div>
 </div>
+{{ if eq $.Site.Params.branch "main" }}
+    {{ with $.Site.Params.alert }}
+        <div class="alert">
+            <span>{{ . | $.RenderString }}</span>
+        </div>
+    {{ end }}
+{{ else if eq $.Site.Params.branch "next" }}
+    <div class="alert warning">
+        <span><strong>HEY YOU!</strong> We're still working on this site, please don't share it in very public places :)</span>
+    </div>
+{{ else }}
+    <div class="alert">
+        <span><strong>You are viewing an old version of Mach (v0.2)</strong> see the <a href="https://machengine.org">latest version here.</a></span>
+    </div>
+{{ end }}

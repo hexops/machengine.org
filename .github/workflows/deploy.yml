@@ -21,19 +21,28 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.85.0'
+          hugo-version: '0.110.0'
           extended: true
 
       - name: Build
         run: |
+          # Build the main branch (latest version)
           git checkout main
           hugo --minify
-          mv public public-main
+          mv public final
 
+          # Build the next branch (secret "next" version of website, only used during major redesign)
           git checkout next
           hugo --minify
-          mv public public-main/next
-          mv public-main public
+          mv public final/next
+
+          # Deploy legacy versions in subfolders
+          git checkout v0.1
+          hugo --minify
+          mv public final/v0.1
+
+          # Finish up
+          mv final public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

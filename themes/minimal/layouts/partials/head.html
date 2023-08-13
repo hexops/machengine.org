@@ -1,15 +1,35 @@
 <head>
-    {{ $style := resources.Get "main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-    <link rel="stylesheet" href="https://devlog.hexops.com/assets/font/stylesheet.css">
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <script async defer data-domain="hexops.com" src="https://machengine.org/opendata.js"></script>
+    {{ with $.Params.override_css }}
+        {{ $style := resources.Get $.Params.override_css | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{else}}
+        {{ $style := resources.Get "layouts/default.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{end}}
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{$.Site.BaseURL}}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{$.Site.BaseURL}}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{$.Site.BaseURL}}/favicon-16x16.png">
+    <link rel="manifest" href="{{$.Site.BaseURL}}/site.webmanifest">
+    <link rel="mask-icon" href="{{$.Site.BaseURL}}/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/stylesheet.css">
+    <link rel="stylesheet" href="{{$.Site.BaseURL}}/assets/font/inter/inter.css">
+    <script async defer data-domain="hexops.com" src="{{$.Site.BaseURL}}/opendata.js"></script>
     <meta charset="utf-8">
     <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <link rel = 'canonical' href = '{{ .Permalink }}'>
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
+    {{ if ne $.Site.Params.branch "main" }}
+        <meta name="robots" content="noindex">
+    {{ else }}
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+    {{ end }}
+    {{ template "partials/opengraph.html" . }}
+    {{ template "partials/twitter_cards.html" . }}
 </head>

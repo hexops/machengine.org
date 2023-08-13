@@ -1,15 +1,279 @@
-baseURL = 'https://machengine.org'
 languageCode = 'en-us'
-title = 'Mach engine - game engine & graphics toolkit for the future'
+title = 'Mach: zig game engine & graphics toolkit'
+description = "The Zig game engine & graphics toolkit for building high-performance, native, truly-cross-platform games, visualizations & desktop/mobile apps."
 theme = "minimal"
+canonifyURLs = true # Required for Hugo to rewrite Markdown links with baseURL in support of our site versioning
+
+# Important: This should be configured according to the branch.
+baseURL = 'https://machengine.org/next'
+[params]
+  branch = 'next'
+
+  # Other branch-agnostic site params below
+  alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2022/perfecting-webgpu-native/)'
+  debug_opengraph_images = false
 
 [markup.goldmark.renderer]
 unsafe = true
 
-[mediaTypes]
-  [mediaTypes.'video/mp4']
-    suffixes = ['mp4']
-  [mediaTypes.'video/ogg']
-    suffixes = ['ogv']
-  [mediaTypes.'video/webm']
-    suffixes = ['webm']
+[menu]
+[[menu.engine]]
+  identifier = 'engine'
+  name = 'Engine overview'
+  url = '/engine'
+  weight = 100
+[[menu.engine]]
+  identifier = 'engine-roadmap'
+  name = 'Roadmap'
+  url = '/engine/roadmap'
+  weight = 101
+[[menu.engine]]
+  identifier = 'engine-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
+  weight = 102
+[[menu.engine]]
+  identifier = 'engine-math'
+  name = 'Math'
+  weight = 200
+[[menu.engine]]
+  parent = 'engine-math'
+  identifier = 'engine-math-Overview'
+  name = 'Overview'
+  url = '/engine/math'
+  weight = 201
+[[menu.engine]]
+  parent = 'engine-math'
+  identifier = 'engine-math-coordinate-system'
+  name = 'Coordinate system'
+  url = '/engine/math/coordinate-system'
+  weight = 202
+[[menu.engine]]
+  parent = 'engine-math'
+  identifier = 'engine-math-matrix-storage'
+  name = 'Matrix storage'
+  url = '/engine/math/matrix-storage'
+  weight = 203
+
+
+[[menu.engine]]
+  identifier = 'engine-gpu'
+  name = 'GPU'
+  weight = 300
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-overview'
+  name = 'Overview'
+  url = '/engine/gpu'
+  weight = 301
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-memory'
+  name = 'Memory management'
+  url = '/engine/gpu/memory'
+  weight = 302
+[[menu.engine]]
+  parent = 'engine-gpu'
+  identifier = 'engine-gpu-errors'
+  name = 'Error handling'
+  url = '/engine/gpu/errors'
+  weight = 303
+
+
+[[menu.core]]
+  identifier = 'core'
+  name = 'Core overview'
+  url = '/core'
+  weight = 100
+[[menu.core]]
+  identifier = 'core-examples'
+  name = 'Examples'
+  url = '/core/examples'
+  weight = 200
+[[menu.core]]
+  identifier = 'core-getting-started'
+  name = 'Getting started'
+  url = '/core/getting-started'
+  weight = 300
+[[menu.core]]
+  identifier = 'core-migrations'
+  name = 'Migrations'
+  url = '/core/migrations'
+  weight = 400
+[[menu.core]]
+  identifier = 'core-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
+  weight = 500
+
+
+
+[[menu.pkg]]
+  identifier = 'pkg'
+  name = 'Packages overview'
+  url = '/pkg'
+  weight = 100
+[[menu.pkg]]
+  identifier = 'pkg-c'
+  name = 'C libraries / headers'
+  url = '/pkg/c'
+  weight = 200
+
+[[menu.pkg]]
+  identifier = 'pkg-pure'
+  name = 'Pure Zig'
+  url = '/pkg'
+  weight = 200
+[[menu.pkg]]
+  identifier = 'pkg-pure-ecs'
+  parent = 'pkg-pure'
+  name = 'ecs'
+  url = '/pkg/mach-ecs'
+  weight = 2000
+[[menu.pkg]]
+  identifier = 'pkg-pure-sysaudio'
+  parent = 'pkg-pure'
+  name = 'sysaudio'
+  url = '/pkg/mach-sysaudio'
+  weight = 2100
+[[menu.pkg]]
+  identifier = 'pkg-pure-sysjs'
+  parent = 'pkg-pure'
+  name = 'sysjs'
+  url = '/pkg/mach-sysjs'
+  weight = 2200
+[[menu.pkg]]
+  identifier = 'pkg-pure-dusk'
+  parent = 'pkg-pure'
+  name = 'dusk'
+  url = '/pkg/mach-dusk'
+  weight = 2300
+[[menu.pkg]]
+  identifier = 'pkg-pure-gamemode'
+  parent = 'pkg-pure'
+  name = 'gamemode'
+  url = '/pkg/mach-gamemode'
+  weight = 2400
+[[menu.pkg]]
+  identifier = 'pkg-pure-earcut'
+  parent = 'pkg-pure'
+  name = 'earcut'
+  url = '/pkg/mach-earcut'
+  weight = 2500
+[[menu.pkg]]
+  identifier = 'pkg-pure-fastfilter'
+  parent = 'pkg-pure'
+  name = 'fastfilter'
+  url = '/pkg/fastfilter'
+  weight = 2600
+
+
+[[menu.pkg]]
+  identifier = 'pkg-bind'
+  name = 'Bindings'
+  url = '/pkg'
+  weight = 300
+[[menu.pkg]]
+  identifier = 'pkg-bind-gpu'
+  parent = 'pkg-bind'
+  name = 'gpu'
+  url = '/pkg/mach-gpu'
+  weight = 3000
+[[menu.pkg]]
+  identifier = 'pkg-bind-gpu-dawn'
+  parent = 'pkg-bind'
+  name = 'gpu-dawn'
+  url = '/pkg/mach-gpu-dawn'
+  weight = 3100
+[[menu.pkg]]
+  identifier = 'pkg-bind-basisu'
+  parent = 'pkg-bind'
+  name = 'basisu'
+  url = '/pkg/mach-basisu'
+  weight = 3200
+[[menu.pkg]]
+  identifier = 'pkg-bind-freetype'
+  parent = 'pkg-bind'
+  name = 'freetype'
+  url = '/pkg/mach-freetype'
+  weight = 3300
+[[menu.pkg]]
+  identifier = 'pkg-bind-glfw'
+  parent = 'pkg-bind'
+  name = 'glfw'
+  url = '/pkg/mach-glfw'
+  weight = 3400
+[[menu.pkg]]
+  identifier = 'pkg-bind-model3d'
+  parent = 'pkg-bind'
+  name = 'model3d'
+  url = '/pkg/mach-model3d'
+  weight = 3500
+[[menu.pkg]]
+  identifier = 'pkg-bind-opus'
+  parent = 'pkg-bind'
+  name = 'opus'
+  url = '/pkg/mach-opus'
+  weight = 3600
+[[menu.pkg]]
+  identifier = 'pkg-bind-flac'
+  parent = 'pkg-bind'
+  name = 'flac'
+  url = '/pkg/mach-flac'
+  weight = 3700
+
+
+[[menu.about]]
+  identifier = 'about'
+  name = 'About the project'
+  url = '/about'
+  weight = 100
+[[menu.about]]
+  identifier = 'about-goals'
+  name = 'Project goals'
+  url = '/about/goals'
+  weight = 200
+[[menu.about]]
+  identifier = 'about-platforms'
+  name = 'Platform support'
+  url = '/about/platforms'
+  weight = 300
+[[menu.about]]
+  identifier = 'about-zig-version'
+  name = 'Zig version'
+  url = '/about/zig-version'
+  weight = 301
+[[menu.about]]
+  identifier = 'about-known-issues'
+  name = 'Known issues'
+  url = '/about/known-issues'
+  weight = 400
+[[menu.about]]
+  identifier = 'about-stability'
+  name = 'Stability'
+  url = '/about/stability'
+  weight = 500
+[[menu.about]]
+  identifier = 'about-keycomp'
+  name = 'Key components'
+  url = '/engine'
+  weight = 600
+
+[[menu.about]]
+  identifier = 'about-keycomp-engine'
+  parent = 'about-keycomp'
+  name = 'Engine ⮕'
+  url = '/engine'
+  weight = 6000
+[[menu.about]]
+  identifier = 'about-keycomp-core'
+  parent = 'about-keycomp'
+  name = 'Core ⮕'
+  url = '/core'
+  weight = 6100
+[[menu.about]]
+  identifier = 'about-keycomp-pkg'
+  parent = 'about-keycomp'
+  name = 'Packages ⮕'
+  url = '/pkg'
+  weight = 6200

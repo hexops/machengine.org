@@ -1,0 +1,74 @@
+{{ define "sidebar" }}
+  <!-- map[menu:map[core:map[title:About]] rss_ignore:true title:Core] -->
+
+  {{ $currentPage := . }}
+
+  {{ $menuKeys := slice }}
+  {{ range $key, $val := $currentPage.Params.menu }}
+    {{ if ne $key $currentPage.Params.docs_type }}
+      {{ $menuKeys = $menuKeys | append $key }}
+    {{ end }}
+  {{ end }}
+  {{ $menuKey := or (index $menuKeys 0) $currentPage.Params.docs_type }}
+
+  {{ with .Site.Menus }}
+    {{ if $menuKey }}
+      {{ range (index . $menuKey) }}
+      {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent $menuKey . }}active{{ end }}">
+          <h3>
+            {{ .Pre }}
+            <span>{{ or .Title .Name }}</span>
+          </h3>
+        </li>
+        <ul class="sub-menu">
+          {{ range .Children }}
+            <li class="{{ if $currentPage.IsMenuCurrent $menuKey . }}active{{ end }}">
+              <a href="{{ .URL }}">{{ or .Title .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ else }}
+        <li>
+          <a href="{{ .URL }}">
+            {{ .Pre }}
+            <span>{{ or .Title .Name }}</span>
+          </a>
+        </li>
+      {{ end }}
+      {{ end }}
+    {{end}}
+  {{end}}
+{{end}}
+
+{{ define "main" }}
+{{- partial "header.html" . -}}
+<div id="content">
+  {{ $style := resources.Get "layouts/docs.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <main aria-role="main" class="main-docs">
+    <aside>
+      <ul>
+        {{ template "sidebar" . }}
+      </ul>
+    </aside>
+    {{ if $.Site.Params.debug_opengraph_images }}
+      <div style="margin-top: 3rem;">
+        {{- $featured := partial "get-opengraph-image.html" . }}
+        Featured: {{$featured}}
+        {{- with $featured -}}
+        <img height="200" style="border: 100px solid gray;" src="{{ $featured.Permalink }}">
+        {{end}}
+      </div>>
+    {{ end }}
+    <div class="docs">{{ .Content }}</div>
+    <div class="toc">
+    {{if ge (strings.Count "<li>" .TableOfContents) 1 }}
+      <h3>Table of contents</h3>
+      {{.TableOfContents}}
+    {{end}}
+    </div>
+  </main>
+  {{- partial "footer.html" . -}}
+</div>
+{{ end }}

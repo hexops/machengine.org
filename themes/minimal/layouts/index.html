@@ -1,13 +1,12 @@
 {{ define "main" }}
-<main aria-role="main" class="main-home">
-  <div class="home">
-    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-    {{.Content}}
+<div id="content">
+    {{- partial "header.html" . -}}
+    <main aria-role="main" class="main-home">
+      <div class="home">
+        {{.Content}}
+      </div>
+    </main>
+    {{- partial "footer.html" . -}}
   </div>
-  <div>
-    {{ range first 10 .Site.RegularPages }}
-        {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</main>
+</div>
 {{ end }}

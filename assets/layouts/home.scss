@@ -1,0 +1,33 @@
+@import "../_theme.scss";
+@import "../_main.scss";
+
+.navbar {
+    @include glass;
+    background: $light_bg;
+    @media (prefers-color-scheme: dark) {
+        background: $dark_bg;
+    }
+}
+.glass, .big-button {
+    color: $dark_fg;
+    text-shadow: 0 0 0.6rem black, 0 0 0.3rem black;
+}
+h2 {
+    text-align: left;
+    margin-top: 0;
+}
+.glass.bright {
+    @media (prefers-color-scheme: light) {
+        backdrop-filter: $glass_blur brightness(1.4);
+        -webkit-backdrop-filter: $glass_blur brightness(1.4);
+    }
+}
+.glass.bright-2 {
+    @media (prefers-color-scheme: light) {
+        backdrop-filter: $glass_blur brightness(3.4);
+        -webkit-backdrop-filter: $glass_blur brightness(3.4);
+    }
+}
+.p-section.final-choose-your-journey {
+    height: calc(100vh - 15rem);
+}

@@ -1,0 +1,133 @@
+@import "../_theme.scss";
+@import "../_main.scss";
+
+.docs {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+.main-docs {
+    align-self: center;
+    justify-content: center;
+    flex-direction: row;
+    .docs {
+        padding: 3rem;
+        max-width: calc(100% - 15rem - 25rem);
+        text-align: left;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+        h1:first-of-type {
+            margin-top: 1rem;
+        }
+        h3, h4, h5, h6 {
+            margin-top: 1rem;
+        }
+    }
+    aside,
+    .toc {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    aside {
+        width: 15rem;
+    }
+    .toc {
+        width: 25rem;
+    }
+    aside {
+        flex: 0 0 auto;
+        &>ul {
+            padding-top: 3rem;
+        }
+    }
+    .toc {
+        padding-top: 4rem;
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+.toc,
+.toc a {
+    font-size: small;
+}
+aside>ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-weight: bold;
+    background: $light_bg2;
+    @media (prefers-color-scheme: dark) {
+        background: $dark_bg2;
+    }
+    li {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    a, h3 {
+        margin: 0;
+        padding: 1rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        width: 100%;
+    }
+    h3 {
+        margin-top: 1rem;
+        border-bottom: 1px solid black;
+    }
+    a {
+        &:hover {
+            @include glass;
+        }
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            text-decoration: none;            
+        }
+    }
+}
+
+@media (min-width:835px) and (max-width:1200px) {
+    .main-docs {
+        .toc {
+            display: none !important;
+        }
+        .docs, aside {
+            max-width: calc(100% - 15rem) !important;
+        }
+    }
+}
+
+@media (max-width:835px) {
+    #content>.main-docs>aside {
+        margin-top: 1rem;
+        max-width: unset !important;
+        width: 100%;
+        ul {
+            min-height: auto;
+        }
+    }
+    .main-docs {
+        flex-direction: column;
+        .toc {
+            display: none !important;
+        }
+        .docs, aside {
+            max-width: calc(100% - 6rem) !important;
+        }
+        .docs {
+            overflow: scroll;
+        }
+    }
+}
