@@ -74,7 +74,7 @@ pub fn build(b: *std.Build) !void {
     // set a preferred release mode, allowing the user to decide how to optimize.
     const optimize = b.standardOptimizeOption(.{});
 
-    mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";
+    mach_core.mach_glfw_import_path = "mach_core.mach_glfw";
     const app = try mach_core.App.init(b, .{
         .name = "myapp",
         .src = "src/main.zig",
@@ -106,8 +106,6 @@ pub fn build(b: *std.Build) !void {
     test_step.dependOn(&run_unit_tests.step);
 }
 ```
-
-Note: the convoluted line `mach_core.mach_glfw_import_path = "mach_core.mach_gpu.mach_gpu_dawn.mach_glfw";` is a workaround for a bug in the Zig package manager [hexops/mach#902](https://github.com/hexops/mach/issues/902)
 
 ### Add example code
 
