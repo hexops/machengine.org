@@ -97,3 +97,37 @@ aside>ul {
         }
     }
 }
+
+@media (min-width:835px) and (max-width:1200px) {
+    .main-docs {
+        .toc {
+            display: none !important;
+        }
+        .docs, aside {
+            max-width: calc(100% - 15rem) !important;
+        }
+    }
+}
+
+@media (max-width:835px) {
+    #content>.main-docs>aside {
+        margin-top: 1rem;
+        max-width: unset !important;
+        width: 100%;
+        ul {
+            min-height: auto;
+        }
+    }
+    .main-docs {
+        flex-direction: column;
+        .toc {
+            display: none !important;
+        }
+        .docs, aside {
+            max-width: calc(100% - 6rem) !important;
+        }
+        .docs {
+            overflow: scroll;
+        }
+    }
+}
