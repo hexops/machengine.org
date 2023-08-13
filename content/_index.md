@@ -278,12 +278,12 @@ a.p-community-icon {
 </style>
 
 <div class="choose-your-journey">
-    <div style="display: flex; flex-direction: row; justify-content: space-around; margin: 6rem; margin-top: 7rem; margin-bottom: 4rem; text-align: left;">
+    <div style="display: flex; flex-direction: row; justify-content: space-around; margin: 6rem; margin-top: 6rem; margin-bottom: 4rem; text-align: left;">
         <div>
             <h1 style="font-size: 600%; padding: 0; margin: 0;">Mach</h1>
             <h2 style="font-size: 150%; padding: 0; margin-top: -1rem;">Zig game engine & graphics toolkit</h2>
             <p style="font-size: 100%; padding: 0; margin: 0; margin-top: 2rem; max-width: 36rem;">For building high-performance, truly cross-platform, robust & modular games, visualizations, and desktop/mobile GUI apps.</p>
-            <p><a href="https://devlog.hexops.com/2023/mach-v0.2-released/">What's new in v0.2?</a></p>
+            <!-- <p><a href="https://devlog.hexops.com/2023/mach-v0.2-released/">What's new in v0.2?</a></p> -->
         </div>
         <div>
             <a href="https://media.machengine.org/core/example/deferred-rendering.mp4">

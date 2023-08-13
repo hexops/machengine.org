@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- partial "header.html" . -}}
 <div id="content">
-  <main aria-role="main" class="main-unlimited">
+  <main aria-role="main" class="main-unlimited{{ with $.Site.Params.alert }} with-alert{{end}}">
     <div class="unlimited">
       {{.Content}}
     </div>

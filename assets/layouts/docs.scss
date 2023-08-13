@@ -13,6 +13,7 @@
     flex-direction: row;
     .docs {
         padding: 3rem;
+        padding-top: 0.5rem;
         max-width: calc(100% - 15rem - 25rem);
         text-align: left;
         overflow: hidden;
@@ -42,7 +43,7 @@
     aside {
         flex: 0 0 auto;
         &>ul {
-            padding-top: 3rem;
+            padding-top: 1rem;
         }
     }
     .toc {

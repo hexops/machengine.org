@@ -28,8 +28,7 @@ img.p-community-icon {
 <div>
     <img style="height: 20rem; float: right; padding-left: 1rem;" src="../img/wrench_rocket.svg"></img>
     <p>
-        <span style="font-family: Orbitron; font-size: 22px;">About the project</span>
-        <br/>
+        <h1 style="margin-bottom: 0;">About the project</h1>
         <br/>
         To learn more about Mach, understand what it is, etc. please see our <a href="../">homepage</a>, and consider joining our community:
     </p>
