@@ -395,7 +395,7 @@ zig build run-triangle
     </a>
     <div class="p-section-right">
         <h2><a href="https://github.com/hexops/mach-core/tree/main/examples/map-async">map-async</a></h2>
-        <p>Some of the best examples have <em>no graphics</em>. This one shows how to transfer data to the GPU, perform computations on that data using the GPU's parallel processing capbilities, and get results back on the CPU. If you're interested in GPU compute, this is the place to start!</p>
+        <p>Some of the best examples have <em>no graphics</em>. This one shows how to transfer data to the GPU, perform computations on that data using the GPU's parallel processing capabilities, and get results back on the CPU. If you're interested in GPU compute, this is the place to start!</p>
         <div>
 <code><pre class="code">
 git clone https://github.com/hexops/mach-core
