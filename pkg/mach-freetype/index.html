@@ -16,32 +16,39 @@
 </span></span><span style=display:flex><span>    },
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>Run <code>zig build</code> in your project, and the compiler will instruct you to add a <code>.hash = "..."</code> field next to <code>.url</code>:</p><pre tabindex=0><code>note: expected .hash = &#34;12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311&#34;,
-</code></pre><p>Then copy+paste the <code>.freetype</code>, <code>.brotli</code> and <code>.harfbuzz</code> dependencies from the <a href=https://github.com/hexops/mach-freetype/blob/main/build.zig.zon>mach-freetype build.zig.zon</a> into your <code>build.zig.zon</code> as well.</p><p>Next, use the dependency in your <code>build.zig</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=display:flex><span><span style=color:#66d9ef>const</span> mach_freetype_dep <span style=color:#f92672>=</span> b.dependency(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>, .{
-</span></span><span style=display:flex><span>    .target <span style=color:#f92672>=</span> target,
-</span></span><span style=display:flex><span>    .optimize <span style=color:#f92672>=</span> optimize,
-</span></span><span style=display:flex><span>});
-</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> freetype_dep <span style=color:#f92672>=</span> b.dependency(<span style=color:#e6db74>&#34;mach_freetype.freetype&#34;</span>, .{
-</span></span><span style=display:flex><span>    .target <span style=color:#f92672>=</span> target,
-</span></span><span style=display:flex><span>    .optimize <span style=color:#f92672>=</span> optimize,
-</span></span><span style=display:flex><span>});
-</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> harfbuzz_dep <span style=color:#f92672>=</span> b.dependency(<span style=color:#e6db74>&#34;mach_freetype.harfbuzz&#34;</span>, .{
-</span></span><span style=display:flex><span>    .target <span style=color:#f92672>=</span> target,
-</span></span><span style=display:flex><span>    .optimize <span style=color:#f92672>=</span> optimize,
-</span></span><span style=display:flex><span>});
-</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> brotli_dep <span style=color:#f92672>=</span> b.dependency(<span style=color:#e6db74>&#34;mach_freetype.freetype.brotli&#34;</span>, .{
-</span></span><span style=display:flex><span>    .target <span style=color:#f92672>=</span> target,
-</span></span><span style=display:flex><span>    .optimize <span style=color:#f92672>=</span> optimize,
-</span></span><span style=display:flex><span>});
+</code></pre><p>Then copy+paste the <code>.freetype</code>, <code>.brotli</code> and <code>.harfbuzz</code> dependencies from the <a href=https://github.com/hexops/mach-freetype/blob/main/build.zig.zon>mach-freetype build.zig.zon</a> into your <code>build.zig.zon</code> as well.</p><p>Next, use the dependency in your <code>build.zig</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=display:flex><span><span style=color:#66d9ef>const</span> std <span style=color:#f92672>=</span> @import(<span style=color:#e6db74>&#34;std&#34;</span>);
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>pub</span> <span style=color:#66d9ef>fn</span> build(b<span style=color:#f92672>:</span> <span style=color:#f92672>*</span>std.Build) <span style=color:#66d9ef>void</span> {
-</span></span><span style=display:flex><span>    ...
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> target <span style=color:#f92672>=</span> b.standardTargetOptions(.{});
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> optimize <span style=color:#f92672>=</span> b.standardOptimizeOption(.{});
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> exe <span style=color:#f92672>=</span> b.addExecutable(.{
+</span></span><span style=display:flex><span>        .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;tmp&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// In this case the main source file is merely a path, however, in more
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// complicated build scripts, this could be a generated file.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        .root_source_file <span style=color:#f92672>=</span> .{ .path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;src/main.zig&#34;</span> },
+</span></span><span style=display:flex><span>        .target <span style=color:#f92672>=</span> target,
+</span></span><span style=display:flex><span>        .optimize <span style=color:#f92672>=</span> optimize,
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>    exe.addModule(<span style=color:#e6db74>&#34;font-assets&#34;</span>, b.dependency(<span style=color:#e6db74>&#34;font_assets&#34;</span>, .{}).module(<span style=color:#e6db74>&#34;font-assets&#34;</span>));
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#75715e>// Use mach-freetype
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    exe.addModule(<span style=color:#e6db74>&#34;mach-freetype&#34;</span>, mach_freetype_dep.module(<span style=color:#e6db74>&#34;mach-freetype&#34;</span>));
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    @import(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>).brotli_import_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;mach_freetype.freetype.brotli&#34;</span>;
+</span></span><span style=display:flex><span>    @import(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>).freetype_import_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;mach_freetype.freetype&#34;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> mach_freetype_dep <span style=color:#f92672>=</span> b.dependency(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>, .{
+</span></span><span style=display:flex><span>        .target <span style=color:#f92672>=</span> target,
+</span></span><span style=display:flex><span>        .optimize <span style=color:#f92672>=</span> optimize,
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>    exe.addModule(<span style=color:#e6db74>&#34;mach-freetype&#34;</span>, mach_freetype_dep.module(<span style=color:#e6db74>&#34;mach-freetype&#34;</span>));
 </span></span><span style=display:flex><span>    exe.addModule(<span style=color:#e6db74>&#34;mach-harfbuzz&#34;</span>, mach_freetype_dep.module(<span style=color:#e6db74>&#34;mach-harfbuzz&#34;</span>));
-</span></span><span style=display:flex><span>    exe.linkLibrary(freetype_dep.artifact(<span style=color:#e6db74>&#34;freetype&#34;</span>));
-</span></span><span style=display:flex><span>    exe.linkLibrary(harfbuzz_dep.artifact(<span style=color:#e6db74>&#34;harfbuzz&#34;</span>));
-</span></span><span style=display:flex><span>    exe.linkLibrary(brotli_dep.artifact(<span style=color:#e6db74>&#34;brotli&#34;</span>));
+</span></span><span style=display:flex><span>    @import(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>).linkFreetype(b, optimize, target, exe);
+</span></span><span style=display:flex><span>    @import(<span style=color:#e6db74>&#34;mach_freetype&#34;</span>).linkHarfbuzz(b, optimize, target, exe);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    b.installArtifact(exe);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> run_cmd <span style=color:#f92672>=</span> b.addRunArtifact(exe);
+</span></span><span style=display:flex><span>    run_cmd.step.dependOn(b.getInstallStep());
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> run_step <span style=color:#f92672>=</span> b.step(<span style=color:#e6db74>&#34;run&#34;</span>, <span style=color:#e6db74>&#34;Run the app&#34;</span>);
+</span></span><span style=display:flex><span>    run_step.dependOn(<span style=color:#f92672>&amp;</span>run_cmd.step);
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>You can now use it in your <code>src/main.zig</code> file:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-zig data-lang=zig><span style=display:flex><span><span style=color:#66d9ef>const</span> freetype <span style=color:#f92672>=</span> @import(<span style=color:#e6db74>&#34;mach-freetype&#34;</span>);
 </span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> harfbuzz <span style=color:#f92672>=</span> @import(<span style=color:#e6db74>&#34;mach-harfbuzz&#34;</span>);
