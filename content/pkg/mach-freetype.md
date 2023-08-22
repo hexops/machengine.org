@@ -49,32 +49,39 @@ Then copy+paste the `.freetype`, `.brotli` and `.harfbuzz` dependencies from the
 Next, use the dependency in your `build.zig`:
 
 ```zig
-const mach_freetype_dep = b.dependency("mach_freetype", .{
-    .target = target,
-    .optimize = optimize,
-});
-const freetype_dep = b.dependency("mach_freetype.freetype", .{
-    .target = target,
-    .optimize = optimize,
-});
-const harfbuzz_dep = b.dependency("mach_freetype.harfbuzz", .{
-    .target = target,
-    .optimize = optimize,
-});
-const brotli_dep = b.dependency("mach_freetype.freetype.brotli", .{
-    .target = target,
-    .optimize = optimize,
-});
+const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    ...
+    const target = b.standardTargetOptions(.{});
+    const optimize = b.standardOptimizeOption(.{});
+
+    const exe = b.addExecutable(.{
+        .name = "tmp",
+        // In this case the main source file is merely a path, however, in more
+        // complicated build scripts, this could be a generated file.
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    exe.addModule("font-assets", b.dependency("font_assets", .{}).module("font-assets"));
 
     // Use mach-freetype
+    @import("mach_freetype").brotli_import_path = "mach_freetype.freetype.brotli";
+    @import("mach_freetype").freetype_import_path = "mach_freetype.freetype";
+    const mach_freetype_dep = b.dependency("mach_freetype", .{
+        .target = target,
+        .optimize = optimize,
+    });
     exe.addModule("mach-freetype", mach_freetype_dep.module("mach-freetype"));
     exe.addModule("mach-harfbuzz", mach_freetype_dep.module("mach-harfbuzz"));
-    exe.linkLibrary(freetype_dep.artifact("freetype"));
-    exe.linkLibrary(harfbuzz_dep.artifact("harfbuzz"));
-    exe.linkLibrary(brotli_dep.artifact("brotli"));
+    @import("mach_freetype").linkFreetype(b, optimize, target, exe);
+    @import("mach_freetype").linkHarfbuzz(b, optimize, target, exe);
+
+    b.installArtifact(exe);
+    const run_cmd = b.addRunArtifact(exe);
+    run_cmd.step.dependOn(b.getInstallStep());
+    const run_step = b.step("run", "Run the app");
+    run_step.dependOn(&run_cmd.step);
 }
 ```
 
