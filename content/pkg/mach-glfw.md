@@ -106,6 +106,7 @@ pub fn main() !void {
 
     // Wait for the user to close the window.
     while (!window.shouldClose()) {
+        window.swapBuffers();
         glfw.pollEvents();
     }
 }
