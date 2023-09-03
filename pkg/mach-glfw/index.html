@@ -42,6 +42,7 @@
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#75715e>// Wait for the user to close the window.
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span> (<span style=color:#f92672>!</span>window.shouldClose()) {
+</span></span><span style=display:flex><span>        window.swapBuffers();
 </span></span><span style=display:flex><span>        glfw.pollEvents();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>}
