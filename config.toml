@@ -252,18 +252,23 @@ unsafe = true
   identifier = 'about-stability'
   name = 'Stability'
   url = '/about/stability'
-  weight = 500
+  weight = 600
+[[menu.about]]
+  identifier = 'about-style'
+  name = 'Style guide'
+  url = '/about/style'
+  weight = 700
 [[menu.about]]
   identifier = 'about-faq'
   name = 'FAQ'
   url = '/about/faq'
-  weight = 600
+  weight = 800
 
 [[menu.about]]
   identifier = 'about-keycomp'
   name = 'Key components'
   url = '/engine'
-  weight = 700
+  weight = 900
 [[menu.about]]
   identifier = 'about-keycomp-engine'
   parent = 'about-keycomp'
