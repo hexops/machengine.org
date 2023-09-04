@@ -13,7 +13,7 @@ There is a _long_ road ahead: it's going to require a lot of work and time to ge
 
 We've been working on Mach for ~2 years now, primarily building out the Zig gamedev ecosystem, building [foundational packages](../../pkg) that we needed for [Mach core](../../core), and as a result we've really _just_ broken ground on the engine side of things.
 
-Development is fairly linear, but developments _that you see_ aren't linear, we were focused on more foundational things before - but _yoday_ we're actively focused on higher-level APIs which will have more profound impacts for end-users.
+Development is fairly linear, but developments _that you see_ aren't linear, we were focused on more foundational things before - but _today_ we're actively focused on higher-level APIs which will have more profound impacts for end-users.
 
 We intend to accelerate our release schedule to about once every 6 months.
 
