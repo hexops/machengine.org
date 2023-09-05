@@ -133,7 +133,7 @@ When you store the OpenGL-style in column-major storage, the `[tx, ty, tz, tw]` 
 
 When you store the DirectX-style in row-major storage, the `[tx, ty, tz, tw]` vector _also_ ends up at memory offsets 12, 13, 14, and 15 in contiguous memory.
 
-What is affected, however, is the multiplication order: with OpenGL-style, you use matrix*vector as is standard in the scientific community; while with DirectX-style you use vector*matrix.
+What is affected, however, is the multiplication order: with OpenGL-style, you use `matrix*vector` as is standard in the scientific community; while with DirectX-style you use `vector*matrix`.
 
 ## Endless confusion
 
