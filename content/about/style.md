@@ -39,3 +39,44 @@ If you find that writing all of the `pub const y = x.y` is too tedious, and you'
 
 **Exception:** Sometimes you really, genuinely do require a way to express a comptime struct mixin. This is only applicable when you are trying to e.g. create structs at comptime, not when trying to structure code. These cases should be extraordinarily rare. For example, mach-core requires [one such usage](https://github.com/hexops/mach-core/blob/50930539c32630b8054ecd48b443c7e336780da4/src/platform/native/main.zig#L6-L7) because of magic `@import("root")` usages to configure e.g. logging in the Zig standard library.
 
+## Test names should be snake_case and descriptive
+
+Do this:
+
+```
+test "vec_dot" { ... }
+test "vec_dot_zero_inputs" { ... }
+```
+
+Not this:
+
+```
+test "vec.dot" { ... }
+test "vec.dot(0)" { ... }
+```
+
+## Tests should be small and contain a single test only
+
+Do this:
+
+```
+test "vec_dot" {
+    // test 1
+}
+test "vec_dot_zero_inputs" {
+    // test 2
+}
+```
+
+Not this:
+
+```
+test "vec.dot" {
+    {
+        // test 1
+    }
+    {
+        // test 2
+    }
+}
+```
