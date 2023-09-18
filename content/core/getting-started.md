@@ -27,9 +27,7 @@ zig init-exe
 
 ### Add dependencies
 
-mach-core uses the Zig package manager. You'll need a `build.zig.zon` file next to your `build.zig` which has all the same dependencies as mach-core.
-
-Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
+mach-core uses the Zig package manager. Create a `build.zig.zon` file [like this](https://github.com/hexops/mach-core-getting-started/blob/main/build.zig.zon) in your project next to your `build.zig` file. Replace `LATEST_COMMIT` with the latest commit hash:
 
 ```zig
 .{
@@ -48,8 +46,6 @@ Run `zig build` in your project, and the compiler will instruct you to add a `.h
 ```
 note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
 ```
-
-Next you will need to copy all of [the mach-core dependencies](https://github.com/hexops/mach-core/blob/main/build.zig.zon) into your `build.zig.zon`. Your final file should look something [like this](https://github.com/hexops/mach-core-getting-started/blob/main/build.zig.zon)
 
 ### Setup build.zig
 
@@ -74,8 +70,11 @@ pub fn build(b: *std.Build) !void {
     // set a preferred release mode, allowing the user to decide how to optimize.
     const optimize = b.standardOptimizeOption(.{});
 
-    mach_core.mach_glfw_import_path = "mach_core.mach_glfw";
-    const app = try mach_core.App.init(b, .{
+    const mach_core_dep = b.dependency("mach_core", .{
+        .target = target,
+        .optimize = optimize,
+    });
+    const app = try mach_core.App.init(b, mach_core_dep.builder, .{
         .name = "myapp",
         .src = "src/main.zig",
         .target = target,
