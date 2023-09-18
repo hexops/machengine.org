@@ -13,9 +13,6 @@
 </span></span><span style=display:flex><span>        .mach_flac <span style=color:#f92672>=</span> .{
 </span></span><span style=display:flex><span>            .url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;https://pkg.machengine.org/mach-flac/LATEST_COMMIT.tar.gz&#34;</span>,
 </span></span><span style=display:flex><span>        },
-</span></span><span style=display:flex><span>        .flac <span style=color:#f92672>=</span> .{
-</span></span><span style=display:flex><span>            .url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;https://pkg.machengine.org/flac/LATEST_COMMIT.tar.gz&#34;</span>,
-</span></span><span style=display:flex><span>        },
 </span></span><span style=display:flex><span>    },
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>Run <code>zig build</code> in your project, and the compiler will instruct you to add a <code>.hash = "..."</code> field next to <code>.url</code>:</p><pre tabindex=0><code>note: expected .hash = &#34;12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311&#34;,
