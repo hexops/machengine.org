@@ -13,7 +13,7 @@ To learn more about Mach's library stability guarantees, check out the [librarie
 
 ## mach-core: build API improvements (2023-09-17)
 
-Your `build.zig.zon` file no longer needs to specify transitive dependencies, and the `build.zig` API has changed slightly:
+Zig `0.12.0-dev.389+61b70778b` is now in use; and your `build.zig.zon` file no longer needs to specify transitive dependencies, and the `build.zig` API has changed slightly:
 
 * [mach-core changes diff](https://github.com/hexops/mach-core-starter-project/commit/1bab9664f78eec5e71005fc0e341625a23995201)
 * [Other packages diff](https://github.com/hexops/machengine.org/commit/0a8723ea2be0f109348713e689467f0bf8786429)
