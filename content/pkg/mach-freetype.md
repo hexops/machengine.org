@@ -44,8 +44,6 @@ Run `zig build` in your project, and the compiler will instruct you to add a `.h
 note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
 ```
 
-Then copy+paste the `.freetype`, `.brotli` and `.harfbuzz` dependencies from the [mach-freetype build.zig.zon](https://github.com/hexops/mach-freetype/blob/main/build.zig.zon) into your `build.zig.zon` as well.
-
 Next, use the dependency in your `build.zig`:
 
 ```zig
@@ -66,16 +64,14 @@ pub fn build(b: *std.Build) void {
     exe.addModule("font-assets", b.dependency("font_assets", .{}).module("font-assets"));
 
     // Use mach-freetype
-    @import("mach_freetype").brotli_import_path = "mach_freetype.freetype.brotli";
-    @import("mach_freetype").freetype_import_path = "mach_freetype.freetype";
     const mach_freetype_dep = b.dependency("mach_freetype", .{
         .target = target,
         .optimize = optimize,
     });
     exe.addModule("mach-freetype", mach_freetype_dep.module("mach-freetype"));
     exe.addModule("mach-harfbuzz", mach_freetype_dep.module("mach-harfbuzz"));
-    @import("mach_freetype").linkFreetype(b, optimize, target, exe);
-    @import("mach_freetype").linkHarfbuzz(b, optimize, target, exe);
+    @import("mach_freetype").linkFreetype(mach_freetype_dep.builder, exe);
+    @import("mach_freetype").linkHarfbuzz(mach_freetype_dep.builder, exe);
 
     b.installArtifact(exe);
     const run_cmd = b.addRunArtifact(exe);

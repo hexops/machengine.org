@@ -42,9 +42,6 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
         .mach_flac = .{
             .url = "https://pkg.machengine.org/mach-flac/LATEST_COMMIT.tar.gz",
         },
-        .flac = .{
-            .url = "https://pkg.machengine.org/flac/LATEST_COMMIT.tar.gz",
-        },
     },
 }
 ```

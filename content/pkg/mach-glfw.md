@@ -45,10 +45,7 @@ First `zig init-exe` to create a Zig project. Then you will need to create a new
 
 ### build.zig.zon
 
-mach-glfw uses the Zig package manager:
-
-1. Save mach-glfw's [build.zig.zon](https://github.com/hexops/mach-glfw/blob/main/build.zig.zon) file in your project, next to your `build.zig.zon`. You can change the `.name` and `.version` to describe your project.
-2. Open the `build.zig.zon` file and add a new `.mach_glfw` entry under `.dependencies`, e.g.:
+mach-glfw uses the Zig package manager. Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
 
 ```zig
 .mach_glfw = .{
@@ -73,7 +70,7 @@ Add the following to your `build.zig` below your `const exe = b.addExecutable(..
         .optimize = exe.optimize,
     });
     exe.addModule("mach-glfw", glfw_dep.module("mach-glfw"));
-    try @import("mach_glfw").link(b, exe);
+    @import("mach_glfw").link(glfw_dep.builder, exe);
 ```
 
 ### src/main.zig

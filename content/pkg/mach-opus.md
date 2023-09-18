@@ -39,9 +39,6 @@ Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the lates
         .mach_opus = .{
             .url = "https://pkg.machengine.org/mach-opus/LATEST_COMMIT.tar.gz",
         },
-        .opusfile = .{
-            .url = "https://pkg.machengine.org/opusfile/LATEST_COMMIT.tar.gz",
-        },
     },
 }
 ```
