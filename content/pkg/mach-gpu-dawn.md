@@ -31,7 +31,7 @@ Google's [Dawn](https://dawn.googlesource.com/dawn/) WebGPU implementation, cros
 This will take ~10 minutes to finish, so by default when using this package a prebuilt binary version of Dawn (see the 'binary releases' section below) but you can always build Dawn from source using:
 
 ```sh
-DAWN_FROM_SOURCE=true zig build
+DAWN_FROM_SOURCE=true zig build dawn
 ```
 
 ## Binary releases
