@@ -11,6 +11,12 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach-core: Zig version update (2023-10-17)
+
+Mach core [967d9b7](https://github.com/hexops/mach-core/tree/331ce61cb8c075be6d7c46e49da8ccbd5967d9b7) and above now uses Zig version [`0.12.0-dev.978+78855bd21`](/about/zig-version/).
+
+To update your mach-core project, [follow this diff](https://github.com/hexops/mach-core-starter-project/commit/b079bfb4e080f4c429f468a0c7f636608737346c).
+
 ## mach-core: build API improvements (2023-09-24)
 
 Imports now have a `mach-` prefix:
