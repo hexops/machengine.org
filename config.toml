@@ -143,10 +143,10 @@ unsafe = true
   url = '/pkg/mach-sysjs'
   weight = 2200
 [[menu.pkg]]
-  identifier = 'pkg-pure-dusk'
+  identifier = 'pkg-pure-sysgpu'
   parent = 'pkg-pure'
-  name = 'dusk'
-  url = '/pkg/mach-dusk'
+  name = 'sysgpu'
+  url = '/pkg/mach-sysgpu'
   weight = 2300
 [[menu.pkg]]
   identifier = 'pkg-pure-gamemode'

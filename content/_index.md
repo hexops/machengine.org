@@ -466,10 +466,10 @@ $ zig build -Dtarget=aarch64-macos
                     <img alt="mach-earcut" src="/assets/mach/earcut-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/pkg/mach-dusk" class="img-link">
+            <a href="/pkg/mach-sysgpu" class="img-link">
                 <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/dusk-dark.svg">
-                    <img alt="mach-dusk" src="/assets/mach/dusk-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
+                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysgpu-dark.svg">
+                    <img alt="mach-sysgpu" src="/assets/mach/sysgpu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
             <a href="/pkg/mach-flac" class="img-link">
