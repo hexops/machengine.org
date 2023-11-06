@@ -5,7 +5,7 @@ theme = "minimal"
 canonifyURLs = true # Required for Hugo to rewrite Markdown links with baseURL in support of our site versioning
 
 # Important: This should be configured according to the branch.
-baseURL = 'https://machengine.org/'
+baseURL = 'https://machengine.org/v0.2'
 [params]
   branch = 'main'
 
