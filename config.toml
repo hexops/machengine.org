@@ -155,12 +155,6 @@ unsafe = true
   url = '/pkg/mach-gamemode'
   weight = 2400
 [[menu.pkg]]
-  identifier = 'pkg-pure-earcut'
-  parent = 'pkg-pure'
-  name = 'earcut'
-  url = '/pkg/mach-earcut'
-  weight = 2500
-[[menu.pkg]]
   identifier = 'pkg-pure-fastfilter'
   parent = 'pkg-pure'
   name = 'fastfilter'

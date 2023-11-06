@@ -55,7 +55,7 @@ pub fn build(b: *std.Build) void {
 You can now use it in your `src/main.zig` file:
 
 ```zig
-const earcut = @import("fastfilter");
+const fastfilter = @import("fastfilter");
 ```
 
 ### Ran into trouble?
