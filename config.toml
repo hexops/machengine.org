@@ -10,7 +10,7 @@ baseURL = 'https://machengine.org/'
   branch = 'main'
 
   # Other branch-agnostic site params below
-  alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2023/mach-v0.2-released/)'
+  alert = '**You are viewing the older Mach v0.2 website!** See [the latest version](https://machengine.org)'
   debug_opengraph_images = false
 
 [markup.goldmark.renderer]
