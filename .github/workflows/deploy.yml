@@ -37,9 +37,14 @@ jobs:
           # mv public final/next
 
           # Deploy legacy versions in subfolders
+          # v0.1
           git checkout v0.1
           hugo --minify
           mv public final/v0.1
+          # v0.2
+          git checkout v0.2
+          hugo --minify
+          mv public final/v0.2
 
           # Finish up
           mv final public
