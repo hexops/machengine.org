@@ -33,6 +33,16 @@ unsafe = true
   url = '/about/known-issues'
   weight = 102
 [[menu.engine]]
+  identifier = 'engine-modularity'
+  name = 'Modularity'
+  url = '/engine/modularity'
+  weight = 103
+[[menu.engine]]
+  identifier = 'engine-stdlib'
+  name = 'Standard library'
+  url = '/engine/stdlib'
+  weight = 103
+[[menu.engine]]
   identifier = 'engine-math'
   name = 'Math'
   weight = 200
