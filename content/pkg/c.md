@@ -22,6 +22,7 @@ Pure forks with build.zig:
 * [basisu](https://github.com/hexops/basisu)
 * [opus](https://github.com/hexops/opus)
 * [opusfile](https://github.com/hexops/opusfile)
+* [opusenc](https://github.com/hexops/opusenc)
 * [flac](https://github.com/hexops/flac)
 * [ogg](https://github.com/hexops/ogg)
 * [spirv-tools](https://github.com/hexops/spirv-tools)
