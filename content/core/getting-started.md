@@ -17,6 +17,11 @@ If you like, you can simply start by copying [this starter project](https://gith
 
 ## Option 2: Create a project from scratch
 
+### Make sure you have the correct Zig version
+
+Mach aims to follow the latest Zig nightly version, but is sometimes a week or so behind.
+You can see the latest supported version [here](../about/zig-version)
+
 ### Create Zig project
 
 ```sh
