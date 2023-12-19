@@ -15,7 +15,7 @@ You don't have to read this whole page, but it might be worth skimming and takin
 
 ## World space
 
-<a href="/img/coordinate-system.png"><img src="/img/coordinate-system.png"></a>
+<a href="/img/coordinate-system.png?v2"><img src="/img/coordinate-system.png?v2"></a>
 
 3D models and 2D sprites are said to exist in **world space**, Mach uses a '**+Y up, left-handed**' coordinate system to represent objects in space. To visualize it, imagine your own eyes are the camera. Hold your left hand out in front of you in a thumbs-up pose, as if you were holding a stick:
 
