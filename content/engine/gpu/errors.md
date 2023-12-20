@@ -15,7 +15,7 @@ GPUs have largely asynchronous APIs: you build up a command buffer which encodes
 
 ## Error scopes
 
-WebGPU has a concept of _error scopes_, you can push an error scope onto the stack and pop an error scope. Commands that produce errors while the error scope was on the stack will result in _that_ error scope's callback being invoked. Let's look at a concrete example:
+A concept of _error scopes_ is used, where you can push an error scope onto the stack and pop an error scope. Commands that produce errors while the error scope was on the stack will result in _that_ error scope's callback being invoked. Let's look at a concrete example:
 
 ### Catching a shader compilation error
 
@@ -47,11 +47,13 @@ if (error_occurred) {
 defer fs_module.release();
 ```
 
+Many GPU operations, like compiling shaders, are asynchronous and are only executed later on - not immediately when the function to perform an operation is invoked. This is why error scopes make sense: it allows you to handle _asynchronous errors_.
+
 ## Debugging
 
 ### Naming objects
 
-At many points, when creating an object there is a `label` parameter or field you can specify to _name an object_. This is very useful in debugging, as WebGPU error messages will include the error when pointing at e.g. pipeline validation errors.
+At many points, when creating an object there is a `label` parameter or field you can specify to _name an object_. This is very useful in debugging, as GPU error messages will include the error when pointing at e.g. pipeline validation errors.
 
 ### RenderDoc & other tools
 

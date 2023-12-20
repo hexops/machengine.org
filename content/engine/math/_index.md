@@ -18,7 +18,7 @@ Math is hard enough as-is, without you having to question ground truths while pr
 
 The benefit of using this "OpenGL-style" matrix is that it matches the conventions accepted by the scientific community, it's what you'll find in linear algebra textbooks. It also matches WebGPU, Vulkan, Unity3D, etc. It does NOT match DirectX-style which e.g. Unreal Engine uses.
 
-Note: many people will say "row major" or "column major" and implicitly mean three or more different concepts; to avoid confusion we'll go over this in more depth below.
+Note: many people will say "row major" or "column major" and implicitly mean three or more different concepts; consider reading the [matrix storage docs](matrix-storage).
 
 ## Coordinate system (+Y up, left-handed)
 

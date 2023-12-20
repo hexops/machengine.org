@@ -13,7 +13,7 @@ rss_ignore: true
 
 GPU objects like `gpu.Texture`, `gpu.Buffer`, or any other object which has a `.reference`, `.release` and `.destroy` method - use reference counting.
 
-Although we love explicit memory management, GPU memory is perhaps _one of the best use-cases for reference counting._ All WebGPU objects are reference counted, and it's not just because it originated as a browser API.
+As Zig developers, we have no qualms with explicit memory management, but GPU memory is perhaps _one of the best use-cases for reference counting._ GPU objects are reference-counted handles CPU-side, much like a file handle, but often hold references to eachother - while the actual memory lives on the GPU.
 
 ### Guidance
 
