@@ -15,7 +15,7 @@ You don't have to read this whole page, but it might be worth skimming and takin
 
 ## World space
 
-<a href="/img/coordinate-system.png?v2"><img src="/img/coordinate-system.png?v2"></a>
+<a class="img-link centered" href="/img/coordinate-system.png?v2"><img src="/img/coordinate-system.png?v2"></a>
 
 3D models and 2D sprites are said to exist in **world space**, Mach uses a '**+Y up, left-handed**' coordinate system to represent objects in space. To visualize it, imagine your own eyes are the camera. Hold your left hand out in front of you in a thumbs-up pose, as if you were holding a stick:
 
@@ -37,14 +37,14 @@ You don't have to read this whole page, but it might be worth skimming and takin
 
 If you are familiar with other software / APIs, the following comparison tables may be helpful:
 
-<a href="/img/coord-comparison.png"><img src="/img/coord-comparison.png"></a>
-<a href="/img/texcoord-comparison.png"><img src="/img/texcoord-comparison.png"></a>
+<a class="img-link centered" href="/img/coord-comparison.png"><img src="/img/coord-comparison.png"></a>
+<a class="img-link centered" href="/img/texcoord-comparison.png"><img src="/img/texcoord-comparison.png"></a>
 
 ## Traversing coordinate systems
 
 Suppose that you have a 3D model placed in a scene, and a virtual camera is viewing it. How do the vertices of that model ultimately end up on the 2D screen? We'll walk through this below, one coordinate system transformation at a time!
 
-<a href="/img/vertex-to-pixel.png"><img src="/img/vertex-to-pixel.png"></a>
+<a class="img-link centered" href="/img/vertex-to-pixel.png"><img src="/img/vertex-to-pixel.png"></a>
 
 ### Cartesian coordinate system transformations
 
@@ -54,7 +54,7 @@ Pick any point on that grid. Then imagine a second grid / coordinate system, ove
 
 The fact that we can take a point anywhere in the first grid, and determine where it would be in the 2nd grid which is moved/rotated/scaled, is a coordinate system transformation and is _what a matrix transformation does_. Keep this in mind as you think about the transformations we describe later.
 
-<a href="/img/coordinate-system-transformation.png"><img src="/img/coordinate-system-transformation.png"></a>
+<a class="img-link centered" href="/img/coordinate-system-transformation.png"><img src="/img/coordinate-system-transformation.png"></a>
 
 ### Model -> World space
 
@@ -64,7 +64,7 @@ This vertex is said to be in the _local space of the model_, or just 'model spac
 
 The **Model matrix** describes how to _transform_ a point _in model space_ into _world_ space, so that we can say 'the monkey's finger tip' is at a specific point in the world, rather than being relative to the monkey's location/rotation/scale/etc.
 
-<a href="/img/model-to-world-space.png"><img src="/img/model-to-world-space.png"></a>
+<a class="img-link centered" href="/img/model-to-world-space.png"><img src="/img/model-to-world-space.png"></a>
 
 ### World -> View space
 
@@ -76,7 +76,7 @@ This is like the opposite of what we just did above: going from Wrench's local m
 
 Now that we know where the point is in view space / relative to the camera, we need to transform the vertex into _clip space_. A _projection matrix_ is used for this, taking 3D points relative to the viewer, and transforming them into a _normalized clip space bounding box_.
 
-<a href="/img/projection-matrix.png"><img src="/img/projection-matrix.png"></a>
+<a class="img-link centered" href="/img/projection-matrix.png"><img src="/img/projection-matrix.png"></a>
 
 Notice how the view frustum above represents a sort of virtual camera lens, with the far plane being much larger than the near plane. The shape of the view frustum is what makes our geometry look like it is in 3D space, objects further away from will appear smaller and objects closer to the camera will appear larger. For 2D games, an [orthographic projection matrix](https://i.stack.imgur.com/4bRUu.png) is used instead of the 'warped' perspective projection matrix shown above.
 
@@ -88,7 +88,7 @@ The clip space volume / bounding box on the right is a concept defined by the un
 
 In all our other 3D coordinate systems so far, we've been thinking in terms of Euclidean geometry with `[x, y, z]` points. But in clip space, we need to think in terms of _Projective geometry_ instead with `[x, y, z, w]`, where 𝑊 acts basically as a _scaling transformation_ for the 3D coordinate - which will be used in our next transformation.
 
-<a href="/img/2d-projective-space.png"><img src="/img/2d-projective-space.png"></a>
+<a class="img-link centered" href="/img/2d-projective-space.png"><img src="/img/2d-projective-space.png"></a>
 
 The above diagram shows _2D projective space_, with `[x, y, 𝑊]` - but clip space on GPUs is in _3D projective space_, with `[x, y, z, 𝑊]` components. It's hard to visualize adding another dimension to the diagram above (a projector which exists in 4D, and projects _onto 3D space_) - so you'll have to use your imagination - but how 𝑊 works remains: as it increases, the coordinate `[x, y, z]` _expands_ (scales up) and when 𝑊 decreases, the coordinate `[x, y, z]` _shrinks_ (scales down). Each vertex can have its own 𝑊 value, and so each vertex effectively lives in its own unique projective clip space. The 𝑊 is basically a _scaling transformation_ for the 3D coordinate.
 
@@ -108,7 +108,7 @@ GPUs use the clip volume to determine what actually needs to be rendered. Fragme
 
 Finally it is time to perform the _perspective divide_, and get our clip-space coordinates into _normalized device coordinates (NDC)_.
 
-<a href="/img/clip-space-to-ndc.png"><img src="/img/clip-space-to-ndc.png"></a>
+<a class="img-link centered" href="/img/clip-space-to-ndc.png"><img src="/img/clip-space-to-ndc.png"></a>
 
 Much like clip space, NDC is a bounding box:
 
@@ -121,7 +121,7 @@ To convert from clip space -> NDC, we perform the perspective divide, take the (
 
 ### Rasterization
 
-Multiple vertices in normalized device coordinates make up primitive shapes (like triangles), which the GPU performs [rasterization](https://www.w3.org/TR/webgpu/#rasterization) on, rendering to fragments in the framebuffer, depth buffer, etc. This involves many other aspects we won't go into here: multisampling, depth testing, front/back-face culling, stenciling, scissor operations, and more! It also involves running your _fragment shader_ for each fragment that would end up in the framebuffer and, ultimately, as a pixel on the screen.
+Multiple vertices in normalized device coordinates make up primitive shapes (like triangles), which the GPU performs [rasterization](https://www.w3.org/TR/webgpu/#rasterization) on, rendering to texels in the framebuffer, depth buffer, etc. This involves many other aspects we won't go into here: multisampling, depth testing, front/back-face culling, stenciling, scissor operations, and more! It also involves running your _fragment shader_ for each fragment that would end up in the framebuffer and, ultimately, as a pixel on the screen.
 
 What we will explain here is how normalized device coordinates end up mapping to framebuffer space, though!
 
@@ -129,21 +129,21 @@ What we will explain here is how normalized device coordinates end up mapping to
 
 Here you can see how normalized device coordinates would map to e.g. a fullscreen window.
 
-<a href="/img/normalized-device-coordinates.png"><img src="/img/normalized-device-coordinates.png"></a>
+<a class="img-link centered" href="/img/normalized-device-coordinates.png"><img src="/img/normalized-device-coordinates.png"></a>
 
 (x=0, y=0) is always the center of the framebuffer, whether it's a window, a fullscreen application, running at any resolution - it's always the center! (-1, -1) is always the bottom-left, and (1, 1) the top-right. The Z axis extends from z=0 (the surface of your screen) *into* it at z=1.
 
 ### Framebuffer coordinates
 
-<a href="/img/framebuffer-coordinates.png"><img src="/img/framebuffer-coordinates.png"></a>
+<a class="img-link centered" href="/img/framebuffer-coordinates.png"><img src="/img/framebuffer-coordinates.png"></a>
 
-It's worth noting that _framebuffer coordinates_ are not always the same thing as _pixels_. Framebuffers hold _fragments_, the smallest possible little dot of light, pixel is also a fine name! But as displays became ever higher and higher in their resolutions, OS developers decided that _physical pixels_ (fragments) and _virtual pixels_ used to position things on screen, would be different concepts. Blegh!
+It's worth noting that _framebuffer coordinates_ are not always the same thing as _pixels_. Framebuffers hold _texels_. As displays became higher and higher in their resolutions, OS developers decided that _physical pixels_ on your screen and _virtual pixels_ used to position/place things on screen, would be different concepts. Blegh!
 
-For example.. you may create a window on your screen which is 720x480px. On a machine with an older display/monitor/OS version, that may mean you get a 720x480px _framebuffer_, everything matches, great! But on a newer system with a HDPI display, you may find that your 720x480px window has a framebuffer resolution of _twice that_, at 1440x960px(!) because one _virtual pixel_ maps to four (2x2) _physical pixels_ on the display!
+For example.. you may create a window on your screen which is 720x480px. On a machine with an older display/monitor/OS version, that may mean you get a 720x480 resolution _framebuffer_, everything matches, great! But on a newer system with a HDPI display, you may find that your 720x480px window has a framebuffer resolution of _twice that_, at 1440x960! In this case, one _virtual pixel_ maps to four (2x2) _physical pixels_ on the display!
 
-macOS, Windows, Linux, and cellphones all have this distinction today between physical and virtual pixels. Some platforms (e.g. Linux) allow for _fractional scaling_, where e.g. a virtual pixel may be made up of say 2.1 physical pixels, so your 720px wide window might end up being 1512px wide, funky!
+macOS, Windows, Linux, and cellphones all have this distinction today between physical and virtual pixels, with various options that affect the mapping of virtual->physical. Some platforms (e.g. Linux) even allow for _fractional scaling_, where e.g. a virtual pixel may be made up of say 2.1 physical pixels, so your 720px wide window might end up being 1512px wide!
 
-The key thing here to keep in mind is just that the _window resolution != framebuffer resolution_, you're always rendering pixels into the framebuffer, and that resolution may not be the same as the window size itself - so you may need to convert between the two.
+The key thing here to keep in mind is just that the _window resolution != framebuffer resolution_, you're always rendering pixels/texels into the framebuffer, but there's no guarantee a pixel/texel in the framebuffer will be displayed as 1 physical pixel on the screen. You may need to convert between the two frequently.
 
 ### You are now a multidimensional wizard!
 

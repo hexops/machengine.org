@@ -7,7 +7,7 @@ docs_type: "pkg"
 rss_ignore: true
 ---
 
-<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+<div class="centered">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/opus-full-dark.svg">
         <img alt="mach-opus" src="/assets/mach/opus-full-light.svg" style="height: 7rem; margin-top: 1rem;">

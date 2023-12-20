@@ -99,6 +99,24 @@ aside>ul {
     }
 }
 
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.img-link {
+    text-decoration: none;
+    outline:none;
+    &.centered {
+        img {
+            max-width: 80% !important;
+        }
+    }
+ }
+
 @media (min-width:835px) and (max-width:1200px) {
     .main-docs {
         .toc {
