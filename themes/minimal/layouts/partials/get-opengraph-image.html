@@ -43,7 +43,7 @@
             "x" 60 "y" 10
             "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
         }}
-    {{end}}
+    {{ end }}
     {{ $featured = $featured | images.Filter (images.Text $text $textOptions) }}
 
     <!-- Draw title in top-right of image -->
@@ -52,13 +52,24 @@
     {{ else }}
         {{ $text = $.LinkTitle }}
     {{ end }}
-    {{ $textOptions = dict 
-        "color" "#000"
-        "size" 120
-        "lineSpacing" 10
-        "x" 360 "y" 40
-        "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
-    }}
+    {{ $text_size := 120 }}
+    {{ if ge (len $text) 20 }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 90
+            "lineSpacing" 10
+            "x" 360 "y" 30
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{ else }}
+        {{ $textOptions = dict 
+            "color" "#000"
+            "size" 120
+            "lineSpacing" 10
+            "x" 360 "y" 40
+            "font" (resources.Get "/opengraph/Orbitron-ExtraBold.ttf")
+        }}
+    {{ end }}
     {{ $featured = $featured | images.Filter (images.Text $text $textOptions) }}
 
     <!-- Draw description in bottom of image -->

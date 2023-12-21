@@ -18,6 +18,10 @@ The benefit of using this "OpenGL-style" matrix is that it matches the conventio
 
 **Note:** many people will say "row major" or "column major" and implicitly mean three or more different concepts; to avoid confusion we'll go over this in more depth below.
 
+## Should you read the rest of this page?
+
+Before we continue, it's worth asking if you want to read the rest of this page. If you're keen to understand how things work behind the scenes, and why they work this way, then read on! If you just want to get started making a game, this is probably _the most_ dense topic in the Mach documentation, so maybe just keep a link to it in your back pocket.
+
 ## Mathematical matrix order: row-major, column-vectors
 
 Mathematically, a matrix is defined as `m x n`, where `m` is the number of rows (horizontals) and `n` is the number of columns (verticals.) For example, this 4x4 matrix where `a10` (zero-indexed) represents the element at the second row and first column of the matrix:
