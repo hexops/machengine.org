@@ -10,7 +10,8 @@ baseURL = 'https://machengine.org/'
   branch = 'main'
 
   # Other branch-agnostic site params below
-  alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2023/mach-v0.2-released/)'
+  #alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2023/mach-v0.2-released/)'
+  alert = '**Mach now _nominates Zig versions for use!_** For details check out [the docs](/about/nominated-zig)'
   debug_opengraph_images = false
 
 [markup.goldmark.renderer]
@@ -21,79 +22,104 @@ unsafe = true
   identifier = 'engine'
   name = 'Engine overview'
   url = '/engine'
-  weight = 100
+  weight = 10000
 [[menu.engine]]
-  identifier = 'engine-roadmap'
-  name = 'Roadmap'
-  url = '/engine/roadmap'
-  weight = 101
-[[menu.engine]]
-  identifier = 'engine-known-issues'
-  name = 'Known issues ⮕'
-  url = '/about/known-issues'
-  weight = 102
-[[menu.engine]]
-  identifier = 'engine-modularity'
-  name = 'Modularity'
-  url = '/engine/modularity'
-  weight = 103
-[[menu.engine]]
-  identifier = 'engine-stdlib'
-  name = 'Standard library'
-  url = '/engine/stdlib'
-  weight = 103
+  identifier = 'engine-getting-started'
+  name = 'Getting started'
+  url = '/engine/getting-started'
+  weight = 10001
+
+#[[menu.engine]]
+#  identifier = 'engine-gfx2d'
+#  name = '2D graphics'
+#  weight = 19000
+#[[menu.engine]]
+#  parent = 'engine-gfx2d'
+#  identifier = 'engine-gfx2d-simple-game'
+#  name = 'Simple 2D game'
+#  url = '/engine/gfx2d/simple-game'
+#  weight = 19002
+
 [[menu.engine]]
   identifier = 'engine-math'
   name = 'Math'
-  weight = 200
+  weight = 20000
 [[menu.engine]]
   parent = 'engine-math'
   identifier = 'engine-math-Overview'
   name = 'Overview'
   url = '/engine/math'
-  weight = 201
+  weight = 20001
 [[menu.engine]]
   parent = 'engine-math'
   identifier = 'engine-math-coordinate-system'
   name = 'Coordinate system'
   url = '/engine/math/coordinate-system'
-  weight = 202
+  weight = 20002
 [[menu.engine]]
   parent = 'engine-math'
   identifier = 'engine-math-traversing-coordinate-systems'
   name = 'Traversing coordinate systems'
   url = '/engine/math/traversing-coordinate-systems'
-  weight = 203
+  weight = 20003
 [[menu.engine]]
   parent = 'engine-math'
   identifier = 'engine-math-matrix-storage'
   name = 'Matrix storage'
   url = '/engine/math/matrix-storage'
-  weight = 204
-
+  weight = 20004
 
 [[menu.engine]]
   identifier = 'engine-gpu'
   name = 'GPU'
-  weight = 300
+  weight = 30000
 [[menu.engine]]
   parent = 'engine-gpu'
   identifier = 'engine-gpu-overview'
   name = 'Overview'
   url = '/engine/gpu'
-  weight = 301
+  weight = 30001
 [[menu.engine]]
   parent = 'engine-gpu'
   identifier = 'engine-gpu-memory'
   name = 'Memory management'
   url = '/engine/gpu/memory'
-  weight = 302
+  weight = 30002
 [[menu.engine]]
   parent = 'engine-gpu'
   identifier = 'engine-gpu-errors'
   name = 'Error handling'
   url = '/engine/gpu/errors'
-  weight = 303
+  weight = 30003
+
+[[menu.engine]]
+  identifier = 'engine-engine'
+  name = 'Engine'
+  weight = 40000
+[[menu.engine]]
+  parent = 'engine-engine'
+  identifier = 'engine-engine-roadmap'
+  name = 'Roadmap'
+  url = '/engine/roadmap'
+  weight = 40001
+[[menu.engine]]
+  parent = 'engine-engine'
+  identifier = 'engine-engine-modularity'
+  name = 'Modularity'
+  url = '/engine/modularity'
+  weight = 40002
+[[menu.engine]]
+  parent = 'engine-engine'
+  identifier = 'engine-engine-stdlib'
+  name = 'Standard library'
+  url = '/engine/stdlib'
+  weight = 40003
+[[menu.engine]]
+  parent = 'engine-engine'
+  identifier = 'engine-known-issues'
+  name = 'Known issues ⮕'
+  url = '/about/known-issues'
+  weight = 40004
 
 
 [[menu.core]]
@@ -264,11 +290,6 @@ unsafe = true
   url = '/about/stability'
   weight = 600
 [[menu.about]]
-  identifier = 'about-style'
-  name = 'Style guide'
-  url = '/about/style'
-  weight = 700
-[[menu.about]]
   identifier = 'about-faq'
   name = 'FAQ'
   url = '/about/faq'
@@ -297,3 +318,20 @@ unsafe = true
   name = 'Packages ⮕'
   url = '/pkg'
   weight = 6200
+
+[[menu.about]]
+  identifier = 'about-dev'
+  name = 'Development'
+  weight = 10000
+[[menu.about]]
+  identifier = 'about-dev-style'
+  parent = 'about-dev'
+  name = 'Style guide'
+  url = '/about/style'
+  weight = 10100
+[[menu.about]]
+  identifier = 'about-dev-nominated-zig'
+  parent = 'about-dev'
+  name = 'Nominated Zig'
+  url = '/about/nominated-zig'
+  weight = 10200
