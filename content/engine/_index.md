@@ -11,7 +11,7 @@ rss_ignore: true
     <p style="max-width: 39rem; border-left: 2px solid black; border-right: 2px solid black; text-align: center; padding: 1rem; padding-top: 0; padding-bottom: 0; margin-top: 0; background: red; padding: 1rem;"><strong>Mach engine is not ready for use yet and is in very early-stages of development.</strong><br><a href="/about/faq/#can-i-use-mach-to-make-a-simple-2d-game">FAQ: "Can I use Mach to make a simple 2D game?"</a></p>
 </div>
 
-# Mach engine: game engine & graphics toolkit
+# Game engine & graphics toolkit
 
 <p>
     <img style="height: 15rem; float: right; padding-left: 1rem;" class="auto-color" src="/img/engine-drawing.png"></img>
