@@ -15,7 +15,7 @@ We've been working on Mach for ~2 years now, primarily building out the Zig game
 
 Development is fairly linear, but developments _that you see_ aren't linear, we were focused on more foundational things before - but _today_ we're actively focused on higher-level APIs which will have more profound impacts for end-users.
 
-We intend to accelerate our release schedule to about once every 6 months.
+Starting with Mach v0.3, we release a new version once every 6 months.
 
 ## v0.2 (finished)
 
