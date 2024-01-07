@@ -1,19 +1,19 @@
 ---
 title: "Math"
-description: "Mach's math library provides a more opinionated API and less options, making it more obvious how to solve problems without having to question ground truths."
+description: "Mach's math library aims to make it more obvious how to solve problems without having to question ground truths."
 draft: false
 layout: "docs"
 docs_type: "engine"
 rss_ignore: true
 ---
 
-# Mach's math library is opinionated
+# A different approach
 
-Other math libraries often provide many options, e.g. providing LH and RH (left-handed and right-handed) variants of functions for working with different coordinate systems. They provide functionality to create projection matrices compatible with many different graphics APIs.
+Other game math libraries often provide numerous options, e.g. providing left-handed and right-handed variants of all functions for working with different coordinate systems. They provide functionality to create projection matrices compatible with many different graphics APIs, where depth values are not the same, etc.
 
-`mach.math` provides a more opinionated API, with less options and more ground-truths. We bless the use of Mach's coordinate system, provide few variants/options, and generally try to steer you in the right direction for problem solving.
+`mach.math` provides a more opinionated API, with less options and more ground-truths: we bless the use of Mach's coordinate system, provide fewer variants/options, and generally try to steer you in the right direction for problem solving.
 
-If you're a seasoned game developer, this probably doesn't matter much to you. But if you're just getting into gamedev and learning, our hope is it's quite helpful in nudging you in the right direction!
+If you're a seasoned game developer, this probably doesn't really matter to you. But if you're just starting out and learning, our hope is this approach is quite helpful in nudging you in the right direction!
 
 ## Matrices
 
