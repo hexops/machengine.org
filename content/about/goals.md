@@ -7,7 +7,7 @@ docs_type: "about"
 rss_ignore: true
 ---
 
-# Mach project goals
+# Project goals
 
 This page covers more broad project goals that apply to all Mach projects, code, standalone libraries, etc.
 

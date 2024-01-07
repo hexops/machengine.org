@@ -7,7 +7,7 @@ docs_type: "about"
 rss_ignore: true
 ---
 
-# Mach code style guide
+# Style guide
 
 ## Use `mach.testing` where applicable
 

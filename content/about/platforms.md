@@ -7,7 +7,7 @@ docs_type: "about"
 rss_ignore: true
 ---
 
-## Platform support
+# Platform support
 
 We aim to support a broad array of operating systems and architectures, as long as they are reasonably used by desktop/mobile consumers, or someone would like to contribute and maintain support for them.
 
@@ -23,8 +23,8 @@ We aim to support a broad array of operating systems and architectures, as long 
 
 ## Console support
 
-Console support is a goal <em>in future years</em>, but we're realistic this will not happen anytime soon.
+Console support is a goal <em>in future years</em>, but we're realistic this will not happen anytime soon. If someone wishes to use Mach for a game on consoles (with official SDK access), we'll do our best to work with you to make it all work.
 
-Zig has a work-in-progress C backend, which enables Zig projects to compile themselves to C code which can then be compiled using a standard C compiler. We will leverage this in order to compile Mach games using console's official SDKs, when the time comes.
+Notably, Zig has a work-in-progress C backend which enables Zig projects to compile themselves to C code which can then be compiled using a standard C compiler. We aim to leverage this in order to compile Mach games using console's official SDKs, as console manufacturers often will only allow/certify specific C/C++ toolchains for use on their platforms.
 
-Our intention is for Hexops (game company) to offer private access to a set of _plugins_ that will enable console support/features, under all neccessary NDAs/legal agreements which console manufacturers require of partners and publishers. We are optimistic about offering this as an at-cost service, with no intention of making profits from it.
+Our intention is for Hexops (game company) to offer private access to a set of _plugins_ which will enable console support/features, under all neccessary NDAs/legal agreements which console manufacturers require of partners/publishers/contractors. We are optimistic about offering this as an at-cost service, with no intention of deriving profits from it.
