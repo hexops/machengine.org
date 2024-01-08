@@ -63,33 +63,42 @@ During months where a Zig version is nominated, we:
 * Once everything looks good, the new Zig version is working with Mach, we declare success - the GitHub issue is closed, and an announcement is made in the #progress channel of Discord.
 * If after we declare success you find a show-stopping bug in your own projects that needs to be fixed upstream in Zig, you'll have to use the older version until the next scheduled nominated version update.
 
+## Machine-readable version history
+
+https://machengine.org/zig/index.json provides a machine-readable version history. It is a strict superset of https://ziglang.org/download/index.json - but updated less frequently, and with Mach versions added. A few types of Mach versions are added:
+
+* `mach-latest` -> always the latest nominated Zig version.
+* `2024.1.0-mach-wip` -> `-wip` signifies that we are in the process of nominating this version, it has not been confirmed working with Mach yet.
+* `2024.1.0-mach` -> specific nominated versions.
+* `0.3.0-mach` -> an alias for the nominated Zig version that was used at the time of Mach v0.3 release.
+
 ## Nominated Zig history
 
-### 2024.01
+### 2024.1.0-mach
 
 **IN-PROGRESS:** This version is currently being nominated, see [the tracking issue](https://github.com/hexops/mach/issues/1135) for details. Once everything looks good, the new Zig version is confirmed to be working with Mach, we will declare success, close the issue, and remove this in-progress warning.
 
-Equal to Zig `0.12.0-dev.2059+42389cb9c`
+Equal to Zig `0.12.0-dev.2063+804cee3b9`
 
 _Note: The first nominated version ever, this was out-of-band with the schedule due to it._
 
 Install it using [zigup](https://github.com/marler8997/zigup):
 
 ```sh
-zigup 0.12.0-dev.2059+42389cb9c
+zigup 0.12.0-dev.2063+804cee3b9
 ```
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
 
 | OS/Arch                           | Kind   | Download mirror                                                                                                                         |
 |-----------------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| **Linux x86_64**                  | Binary | [zig-linux-x86_64-0.12.0-dev.2059+42389cb9c.tar.xz](https://pkg.machengine.org/zig/zig-linux-x86_64-0.12.0-dev.2059+42389cb9c.tar.xz)   |
-| **Linux aarch64** (ARM)           | Binary | [zig-linux-aarch64-0.12.0-dev.2059+42389cb9c.tar.xz](https://pkg.machengine.org/zig/zig-linux-aarch64-0.12.0-dev.2059+42389cb9c.tar.xz) |
-| **Windows x86_64**                | Binary | [zig-windows-x86_64-0.12.0-dev.2059+42389cb9c.zip](https://pkg.machengine.org/zig/zig-windows-x86_64-0.12.0-dev.2059+42389cb9c.zip)     |
-| **Windows aarch64** (ARM)         | Binary | [zig-windows-aarch64-0.12.0-dev.2059+42389cb9c.zip](https://pkg.machengine.org/zig/zig-windows-aarch64-0.12.0-dev.2059+42389cb9c.zip)   |
-| **macOS x86_64** (Intel)          | Binary | [zig-macos-x86_64-0.12.0-dev.2059+42389cb9c.tar.xz](https://pkg.machengine.org/zig/zig-macos-x86_64-0.12.0-dev.2059+42389cb9c.tar.xz)   |
-| **macOS aarch64** (Apple Silicon) | Binary | [zig-macos-aarch64-0.12.0-dev.2059+42389cb9c.tar.xz](https://pkg.machengine.org/zig/zig-macos-aarch64-0.12.0-dev.2059+42389cb9c.tar.xz) |
-| Source code                       | Source | [zig-0.12.0-dev.2059+42389cb9c.tar.xz](https://pkg.machengine.org/zig/zig-0.12.0-dev.2059+42389cb9c.tar.xz)                             |
+| **Linux x86_64**                  | Binary | [zig-linux-x86_64-0.12.0-dev.2063+804cee3b9.tar.xz](https://pkg.machengine.org/zig/zig-linux-x86_64-0.12.0-dev.2063+804cee3b9.tar.xz)   |
+| **Linux aarch64** (ARM)           | Binary | [zig-linux-aarch64-0.12.0-dev.2063+804cee3b9.tar.xz](https://pkg.machengine.org/zig/zig-linux-aarch64-0.12.0-dev.2063+804cee3b9.tar.xz) |
+| **Windows x86_64**                | Binary | [zig-windows-x86_64-0.12.0-dev.2063+804cee3b9.zip](https://pkg.machengine.org/zig/zig-windows-x86_64-0.12.0-dev.2063+804cee3b9.zip)     |
+| **Windows aarch64** (ARM)         | Binary | [zig-windows-aarch64-0.12.0-dev.2063+804cee3b9.zip](https://pkg.machengine.org/zig/zig-windows-aarch64-0.12.0-dev.2063+804cee3b9.zip)   |
+| **macOS x86_64** (Intel)          | Binary | [zig-macos-x86_64-0.12.0-dev.2063+804cee3b9.tar.xz](https://pkg.machengine.org/zig/zig-macos-x86_64-0.12.0-dev.2063+804cee3b9.tar.xz)   |
+| **macOS aarch64** (Apple Silicon) | Binary | [zig-macos-aarch64-0.12.0-dev.2063+804cee3b9.tar.xz](https://pkg.machengine.org/zig/zig-macos-aarch64-0.12.0-dev.2063+804cee3b9.tar.xz) |
+| Source code                       | Source | [zig-0.12.0-dev.2063+804cee3b9.tar.xz](https://pkg.machengine.org/zig/zig-0.12.0-dev.2063+804cee3b9.tar.xz)                             |
 
 _**Installation:** Download, extract, and place on your system `$PATH`. Ensure `zig version` reports the right version._
 
