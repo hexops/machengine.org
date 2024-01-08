@@ -13,11 +13,11 @@ Periodically we nominate a new Zig nightly version which all Mach projects targe
 
 We encourage others to adopt the same Zig version Mach uses, since Zig packages which target latest nightly (or the latest stable release) will very often be incompatible otherwise.
 
-## Why Mach' nominated Zig versions, instead of nightly or stable?
+## Why nominated Zig versions, instead of nightly or stable?
 
 **TL;DR: it's a sweetspot between stable and nightly.**
 
-Stable releases occur just once or twice per year, Mach' nominated Zig versions occur several times per year - but not every day like nightly.
+Stable releases occur just once or twice per year, nominated Zig versions occur several times per year - but not every day like nightly.
 
 Stable releases of Zig are few and far between, perhaps once or twice per year, making it challenging to provide feedback on the latest-and-greatest APIs or benefit from the wins that are being made in `main` because Zig development happens so rapidly.
 
