@@ -11,9 +11,17 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach-core: updated to Zig 2024.1.0-mach (2024-01-14)
+
+Mach core [967d9b7](https://github.com/hexops/mach-core/tree/370bc1504cebaffcda5ed1ae9915fd2ac6778479) and above now uses [Zig 2024.1.0-mach](/about/nominated-zig/#202410-mach). This is the first mach-core version to follow [nominated Zig versions](https://devlog.hexops.com/2024/announcing-nominated-zig/).
+
+To update your mach-core project, [follow this diff](https://github.com/hexops/mach-core-starter-project/commit/73633db522740e68ac4a65841f5e13924ceb0eef).
+
+To update your Zig code in general, see: [_tips on upgrading your Zig code_](https://github.com/hexops/mach/issues/1135#issuecomment-1891175749).
+
 ## mach-core: Zig version update (2023-10-17)
 
-Mach core [967d9b7](https://github.com/hexops/mach-core/tree/331ce61cb8c075be6d7c46e49da8ccbd5967d9b7) and above now uses Zig version [`0.12.0-dev.978+78855bd21`](/about/zig-version/).
+Mach core [331ce61](https://github.com/hexops/mach-core/tree/331ce61cb8c075be6d7c46e49da8ccbd5967d9b7) and above now uses Zig version [`0.12.0-dev.978+78855bd21`](/about/zig-version/).
 
 To update your mach-core project, [follow this diff](https://github.com/hexops/mach-core-starter-project/commit/b079bfb4e080f4c429f468a0c7f636608737346c).
 
