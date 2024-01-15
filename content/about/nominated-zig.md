@@ -103,3 +103,5 @@ Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror
 _**Installation:** Download, extract, and place on your system `$PATH`. Ensure `zig version` reports the right version._
 
 _**Signatures:** `.minisig` Download signatures can be retrieved from [ziglang.org](https://ziglang.org/download/) for all downloads._
+
+_**Tips on upgrading your code:** https://github.com/hexops/mach/issues/1135#issuecomment-1891175749
