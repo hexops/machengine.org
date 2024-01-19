@@ -45,7 +45,7 @@
 </span></span><span style=display:flex><span>        .src <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;src/main.zig&#34;</span>,
 </span></span><span style=display:flex><span>        .target <span style=color:#f92672>=</span> target,
 </span></span><span style=display:flex><span>        .optimize <span style=color:#f92672>=</span> optimize,
-</span></span><span style=display:flex><span>        .deps <span style=color:#f92672>=</span> <span style=color:#f92672>&amp;</span>[_]std.build.ModuleDependency{},
+</span></span><span style=display:flex><span>        .deps <span style=color:#f92672>=</span> <span style=color:#f92672>&amp;</span>[_]std.Build.Module.Import{},
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (b.args) <span style=color:#f92672>|</span>args<span style=color:#f92672>|</span> app.run.addArgs(args);
 </span></span><span style=display:flex><span>
