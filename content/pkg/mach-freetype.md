@@ -70,8 +70,6 @@ pub fn build(b: *std.Build) void {
     });
     exe.root_module.addImport("mach-freetype", mach_freetype_dep.module("mach-freetype"));
     exe.root_module.addImport("mach-harfbuzz", mach_freetype_dep.module("mach-harfbuzz"));
-    @import("mach_freetype").linkFreetype(mach_freetype_dep.builder, exe);
-    @import("mach_freetype").linkHarfbuzz(mach_freetype_dep.builder, exe);
 
     b.installArtifact(exe);
     const run_cmd = b.addRunArtifact(exe);
