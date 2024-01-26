@@ -61,7 +61,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach-ecs", b.dependency("mach_ecs", .{
+    exe.root_module.addImport("mach-ecs", b.dependency("mach_ecs", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-ecs"));

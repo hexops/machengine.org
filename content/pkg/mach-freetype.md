@@ -61,17 +61,15 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.addModule("font-assets", b.dependency("font_assets", .{}).module("font-assets"));
+    exe.root_module.addImport("font-assets", b.dependency("font_assets", .{}).module("font-assets"));
 
     // Use mach-freetype
     const mach_freetype_dep = b.dependency("mach_freetype", .{
         .target = target,
         .optimize = optimize,
     });
-    exe.addModule("mach-freetype", mach_freetype_dep.module("mach-freetype"));
-    exe.addModule("mach-harfbuzz", mach_freetype_dep.module("mach-harfbuzz"));
-    @import("mach_freetype").linkFreetype(mach_freetype_dep.builder, exe);
-    @import("mach_freetype").linkHarfbuzz(mach_freetype_dep.builder, exe);
+    exe.root_module.addImport("mach-freetype", mach_freetype_dep.module("mach-freetype"));
+    exe.root_module.addImport("mach-harfbuzz", mach_freetype_dep.module("mach-harfbuzz"));
 
     b.installArtifact(exe);
     const run_cmd = b.addRunArtifact(exe);

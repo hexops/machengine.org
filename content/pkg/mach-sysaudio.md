@@ -61,8 +61,8 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.addModule("mach-sysaudio", mach_sysaudio_dep.module("mach-sysaudio"));
-    @import("mach_sysaudio").link(mach_sysaudio_dep.builder, exe);
+    exe.root_module.addImport("mach-sysaudio", mach_sysaudio_dep.module("mach-sysaudio"));
+    @import("mach_sysaudio").addPaths(exe);
 }
 ```
 
