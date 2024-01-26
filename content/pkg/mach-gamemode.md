@@ -64,7 +64,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach-gamemode", b.dependency("mach_gamemode", .{
+    exe.root_module.addImport("mach-gamemode", b.dependency("mach_gamemode", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-gamemode"));

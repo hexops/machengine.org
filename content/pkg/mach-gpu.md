@@ -87,7 +87,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach-gpu", b.dependency("mach_gpu", .{
+    exe.root_module.addImport("mach-gpu", b.dependency("mach_gpu", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-gpu"));

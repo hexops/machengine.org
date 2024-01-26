@@ -54,7 +54,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach-opus", b.dependency("mach_opus", .{
+    exe.root_module.addImport("mach-opus", b.dependency("mach_opus", .{
         .target = target,
         .optimize = optimize,
     }).module("mach-opus"));
