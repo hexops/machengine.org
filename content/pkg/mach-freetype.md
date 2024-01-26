@@ -61,7 +61,6 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.root_module.addImport("font-assets", b.dependency("font_assets", .{}).module("font-assets"));
 
     // Use mach-freetype
     const mach_freetype_dep = b.dependency("mach_freetype", .{
