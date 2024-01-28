@@ -66,8 +66,8 @@ Add the following to your `build.zig` below your `const exe = b.addExecutable(..
 ```zig
     // Use mach-glfw
     const glfw_dep = b.dependency("mach_glfw", .{
-        .target = exe.target,
-        .optimize = exe.optimize,
+        .target = target,
+        .optimize = optimize,
     });
     exe.root_module.addImport("mach-glfw", glfw_dep.module("mach-glfw"));
     @import("mach_glfw").addPaths(exe);
