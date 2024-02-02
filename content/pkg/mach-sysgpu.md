@@ -17,7 +17,7 @@ rss_ignore: true
     </span>
 </div>
 
-Highly experimental, blazingly fast, lean & mean descendant of WebGPU written in Zig.
+Highly experimental, blazingly fast, lean & mean descendant/successor of WebGPU native written in Zig.
 
 ## Experimental
 
@@ -29,17 +29,15 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 ## History
 
-We [announced Dusk](https://devlog.hexops.com/2023/mach-v0.2-released/#dusk-experimental-pure-zig-webgpu-implementation), a WebGPU implementation in Zig, as part of the Mach v0.2 release. 
+In [Mach v0.2 we announced an experiment](https://devlog.hexops.com/2023/mach-v0.2-released/#dusk-experimental-pure-zig-webgpu-implementation) to write a WebGPU implementation in Zig.
 
-Since then, the project grew to have the goal of [superseding WebGPU](https://github.com/hexops/mach/issues/1055) for native applications. Although the API is still greatly inspired by (and familiar to developers who use) WebGPU, it now stands on its own as a direct competitor to WebGPU.
+Since then, the project grew to have the goal of [superseding WebGPU](https://github.com/hexops/mach/issues/1055) for native applications. Although the API is still greatly inspired by WebGPU, and cozy to those familiar with it, sysgpu stands on its own with a goal of being a descendant/successor of WebGPU native.
 
 ## Goals
 
 ### Modern graphics API
 
-Competitive with other graphics abstraction APIs like WebGPU, SDL3, sokol_gfx, etc.
-
-Feels very cozy to devs familiar with WebGPU, 'a better WebGPU'.
+Competitive with other modern graphics abstraction APIs like WebGPU, SDL3, sokol_gfx, etc. Feel cozy to devs familiar with WebGPU, 'a better WebGPU [native]' - targeting:
 
 * **Windows:** Direct3D 12
 * **Linux:** Vulkan
@@ -47,6 +45,8 @@ Feels very cozy to devs familiar with WebGPU, 'a better WebGPU'.
 * **iOS:** Metal
 * **Android**: Vulkan
 * **Browser**: WebGPU
+
+With an OpenGL fallback.
 
 ### Alleviate pain points of WebGPU
 
@@ -63,9 +63,9 @@ Feels very cozy to devs familiar with WebGPU, 'a better WebGPU'.
 
 * Compile shaders fully offline for better runtime performance, and also so you do not have to ship large shader compilation stacks with your binaries.
 
-### Not just for games
+### Viable for modern desktop/mobile apps
 
-Viable for plain desktop/mobile apps, too. We will provide e.g. an OpenGL fallback on platforms like Linux where functional drivers may not exist so that it is viable for plain desktop/mobile apps.
+Not just for games. We will provide e.g. an OpenGL fallback on platforms like Linux where functional drivers may not exist so that it is viable for modern desktop/mobile apps.
 
 ### Other goals
 
@@ -74,19 +74,19 @@ Viable for plain desktop/mobile apps, too. We will provide e.g. an OpenGL fallba
 
 ## Non-goals
 
-* Support of hardware released more than 5+ years ago (browsers/WebGPU must support hardware released 8-12 years ago), e.g. we will have no ["WebGPU compatibility mode"](https://github.com/gpuweb/gpuweb/issues/4266) equivalent
-* Patching and/or working around bad/insecure graphics drivers (browsers/WebGPU must do this and maintains e.g. denylists of drivers.)
+* ["WebGPU compatibility mode"](https://github.com/gpuweb/gpuweb/issues/4266) equivalent, i.e. support for very old/outdated/underpowered hardware / embedded devices. We'll support a broad range of laptop, desktop, and mobile hardware.
+* Patching and/or working around bad/insecure graphics drivers (browsers/WebGPU must do this for security and maintain e.g. denylists of drivers.)
+* Browser-level security; our target is native application development, not being the graphics API a browser provides.
 * Pure software rendering, e.g. WebGPU/Dawn falls back to a Vulkan software renderer in some cases.
 * Bringing your own shading language (via SPIRV or otherwise), we'll bless one shading language and it will be integrated nicely.
-* Supporting more than 1 (max 2) backend APIs per platform; in general we will have one backend using the platform's modern-and-widely-supported API, and _sometimes_ one backend as a fallback for systems that have great divergence. We won't support a myriad of backends per platform.
-* Support of extremely underpowered hardware (e.g. embedded devices)
+* Supporting more than 1 (max 2) backend APIs per platform; in general we will have one backend using the platform's modern-and-widely-supported API, and _sometimes_ one backend as a fallback for systems that have great divergence. We won't officially support a myriad of backends per platform.
 
 ## Experimental, not ready for general use
 
-sysgpu is coming along very nicely, with functional backends capable of running most of the mach-core examples already for Direct3D 12, Metal, and Vulkan today. An OpenGL fallback backend is in active development.
+sysgpu is coming along very nicely, with functional backends capable of running all the mach-core examples already via D3D 12, Metal, and Vulkan backends today. An OpenGL fallback backend is also largely functional.
 
-We have a functional WGSL parser/compiler/transpiler which in many cases is more correct than Naga (wgpu-native/wgpu-rs WGSL implementation), but shader compilation is an open area of exploration and we are considering replacing WGSL with a Zig(-like?) shading language instead.
+We have a functional WGSL parser/compiler/transpiler which is quite correct, but shader compilation is an open area of exploration and we are considering replacing WGSL with Zig itself as the shading language instead.
 
 Currently it is a nearly fully-functional implementation of `webgpu.h`, but numerous improvements to the actual API are planned.
 
-Join the [Mach Discord community](../../discord) for discussion, keep tabs on [open issues](https://github.com/hexops/mach/issues?q=is%3Aopen+is%3Aissue+label%3Asysgpu) and wait for an announcement that it is generally ready for use.
+Join the [Mach Discord community](../../discord) for discussion, or keep tabs on [open issues](https://github.com/hexops/mach/issues?q=is%3Aopen+is%3Aissue+label%3Asysgpu) and wait for an announcement that it is generally ready for use.
