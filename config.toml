@@ -10,8 +10,8 @@ baseURL = 'https://machengine.org/'
   branch = 'main'
 
   # Other branch-agnostic site params below
-  #alert = '**Mach v0.2 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2023/mach-v0.2-released/)'
-  alert = '**Mach now _nominates Zig versions for use!_** For details check out [the docs](/about/nominated-zig)'
+  alert = '**Mach v0.3 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2023/mach-v0.2-released/)'
+  #alert = '**Mach now _nominates Zig versions for use!_** For details check out [the docs](/about/nominated-zig)'
   debug_opengraph_images = false
 
 [markup.goldmark.renderer]

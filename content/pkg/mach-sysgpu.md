@@ -31,7 +31,7 @@ This is an **experimental** project according to [our stability guarantees](../.
 
 In [Mach v0.2 we announced an experiment](https://devlog.hexops.com/2023/mach-v0.2-released/#dusk-experimental-pure-zig-webgpu-implementation) to write a WebGPU implementation in Zig.
 
-Since then, the project grew to have the goal of [superseding WebGPU](https://github.com/hexops/mach/issues/1055) for native applications. Although the API is still greatly inspired by WebGPU, and cozy to those familiar with it, sysgpu stands on its own with a goal of being a descendant/successor of WebGPU native.
+In [Mach v0.3 we talked about](https://devlog.hexops.com/2024/mach-v0.3-released/#sysgpu) how the project has since grown to have the goal of [superseding WebGPU](https://github.com/hexops/mach/issues/1055) for native applications. Although the API is still greatly inspired by WebGPU, and cozy to those familiar with it, sysgpu stands on its own today - with a goal of being a descendant/successor of WebGPU native.
 
 ## Goals
 

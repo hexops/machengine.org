@@ -45,6 +45,10 @@ jobs:
           git checkout v0.2
           hugo --minify
           mv public final/v0.2
+          # v0.3
+          git checkout v0.3
+          hugo --minify
+          mv public final/v0.3
 
           # Finish up
           mv final public
