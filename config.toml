@@ -240,6 +240,12 @@ unsafe = true
   url = '/pkg/mach-glfw'
   weight = 3400
 [[menu.pkg]]
+  identifier = 'pkg-bind-dxcompiler'
+  parent = 'pkg-bind'
+  name = 'dxcompiler'
+  url = '/pkg/mach-dxcompiler'
+  weight = 3400
+[[menu.pkg]]
   identifier = 'pkg-bind-model3d'
   parent = 'pkg-bind'
   name = 'model3d'
