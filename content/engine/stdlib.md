@@ -47,7 +47,7 @@ Then use the dependency in your `build.zig`:
 ```zig
 pub fn build(b: *std.Build) void {
     ...
-    exe.addModule("mach", b.dependency("mach", .{
+    exe.root_module.addImport("mach", b.dependency("mach", .{
         .target = target,
         .optimize = optimize,
     }).module("mach"));
