@@ -328,11 +328,11 @@ a.p-community-icon {
                 <p style="margin-left: 1rem; display: inline-block; max-width: 35rem;"><a href="/about/goals#zero-fuss-installation">Zero system dependencies</a> to slow you down; only <a href="about/zig-version">zig</a> is needed, we build and package the few relevant dependencies on our own.<br><br>To run on your machine:</small>
             </div>
             <div>
-<pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach-core
-$ cd mach-core/
-$ zig build run-textured-cube
+<pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach
+$ cd mach/
+$ zig build run-core-textured-cube
 </code></pre>
-                <small>Requires <a href="about/zig-version">this Zig nightly version</a> | <a href="/about/known-issues">known issues</a></small>
+                <small>Requires <a href="about/zig-version">this nominated Zig version</a> | <a href="/about/known-issues">known issues</a></small>
     </small>
             </div>
         </div>

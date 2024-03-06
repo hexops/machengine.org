@@ -33,7 +33,7 @@ mkShell {
 Then running `zig build` as usual:
 
 ```sh
-zig build run-textured-cube
+zig build run-core-textured-cube
 ```
 
 ## Usage via shell
@@ -59,7 +59,7 @@ You can also run Mach examples via `steam-run`, for this you will need to instal
 env NIXPKGS_ALLOW_UNFREE=1 nix-shell -p steam-run
 ```
 
-(then `zig build run-textured-cube` as usual)
+(then `zig build run-core-textured-cube` as usual)
 
 ## Known issues
 ### Incorrect cursor behavior with cursormode set to disabled

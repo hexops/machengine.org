@@ -9,7 +9,11 @@ rss_ignore: true
 
 # Getting Started with _Mach core_
 
-Here you will learn how to use _mach-core_ in your own project/repository. If you haven't already, check out the [examples](../examples) as those describe how to actually use Mach core's APIs, this page just describes project setup.
+Here you will learn how to use _mach core_ in your own project/repository. If you haven't already, check out the [examples](../examples) as those describe how to actually use Mach core's APIs, this page just describes project setup.
+
+## Check you are using a supported Zig version
+
+Make sure you're using a [supported Zig version](/about/zig-version/)
 
 ## Option 1: Copying the starter project
 
@@ -22,38 +26,20 @@ If you like, you can simply start by copying [this starter project](https://gith
 ```sh
 mkdir myproject/
 cd myproject/
-zig init-exe
+zig init
 ```
 
 ### Add dependencies
 
-mach-core uses the Zig package manager. Create a `build.zig.zon` file [like this](https://github.com/hexops/mach-core-getting-started/blob/main/build.zig.zon) in your project next to your `build.zig` file. Replace `LATEST_COMMIT` with the latest commit hash:
-
-```zig
-.{
-    .name = "myproject",
-    .version = "0.1.0",
-    .dependencies = .{
-        .mach_core = .{
-            .url = "https://pkg.machengine.org/mach-core/LATEST_COMMIT.tar.gz",
-        },
-    },
-}
-```
-
-Run `zig build` in your project, and the compiler will instruct you to add a `.hash = "..."` field next to `.url`:
-
-```
-note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
-```
+[Add the Mach standard library](/engine/stdlib) to your project so you can `@import("mach").core`.
 
 ### Setup build.zig
 
-Your `build.zig` file will need to use `mach.App` to declare how your application should be built. Your `build.zig` should look something like this:
+Your `build.zig` file will need to use `mach.CoreApp` to declare how your application should be built. Your `build.zig` should look something like this:
 
 ```zig
 const std = @import("std");
-const mach_core = @import("mach_core");
+const mach = @import("mach");
 
 // Although this function looks imperative, note that its job is to
 // declaratively construct a build graph that will be executed by an external
@@ -70,11 +56,15 @@ pub fn build(b: *std.Build) !void {
     // set a preferred release mode, allowing the user to decide how to optimize.
     const optimize = b.standardOptimizeOption(.{});
 
-    const mach_core_dep = b.dependency("mach_core", .{
+    const mach_dep = b.dependency("mach", .{
         .target = target,
         .optimize = optimize,
+
+        // Since we're only using @import("mach").core, we can specify this to avoid
+        // pulling in unneccessary dependencies.
+        .core = true,
     });
-    const app = try mach_core.App.init(b, mach_core_dep.builder, .{
+    const app = try mach.CoreApp.init(b, mach_dep.builder, .{
         .name = "myapp",
         .src = "src/main.zig",
         .target = target,
@@ -110,8 +100,8 @@ pub fn build(b: *std.Build) !void {
 
 To begin coding your project, we suggesting copying the two files from the `triangle` example into your `src/` folder:
 
-* [`main.zig`](https://raw.githubusercontent.com/hexops/mach-core/main/examples/triangle/main.zig)
-* [`shader.wgsl`](https://raw.githubusercontent.com/hexops/mach-core/main/examples/triangle/shader.wgsl)
+* [`main.zig`](https://raw.githubusercontent.com/hexops/mach/main/src/core/examples/triangle/main.zig)
+* [`shader.wgsl`](https://raw.githubusercontent.com/hexops/mach/main/src/core/examples/triangle/shader.wgsl)
 
 ## Building your project
 
@@ -146,10 +136,6 @@ zig build -Dtarget=x86_64-macos
 zig build -Dtarget=aarch64-macos
 ```
 
-### Run in the browser
-
-Mach doesn't yet support _graphics_ in the browser ([issue #90](https://github.com/hexops/mach/issues/90)), but windowing, input, and audio all work already - as well as a nice dev server CLI we have. We're actively collaborating on building browser support in the `#wasm` channel in [Discord](/discord) and will update this section once it is ready.
-
 ## Questions? Ran into an issue?
 
 Make sure you're using a [supported Zig version](/about/zig-version/)
@@ -157,4 +143,4 @@ Make sure you're using a [supported Zig version](/about/zig-version/)
 There are two ways to get help:
 
 * [File a GitHub issue](https://github.com/hexops/mach/issues)
-* [Join our Discord](/discord) and create a thread in `#help`
+* [Join our Discord](/discord) and create a thread in the `#questions` forum

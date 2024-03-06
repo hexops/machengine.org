@@ -11,11 +11,21 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach.core: package URL change (2024-03-06)
+
+As part of [#1165](https://github.com/hexops/mach/issues/1165) mach-core is now part of the Mach standard library. The code now lives in https://github.com/hexops/mach and can be imported as `@import("mach").core`.
+
+Thanks to lazy code evaluation, and lazy dependencies recently added to Zig, we can have this code live in the same repository which makes testing and contributing easier - while still enabling someone to 'just use mach [core,sysaudio,sysgpu] without the entire engine'.
+
+To update your mach-core project, [make these changes](https://github.com/hexops/mach-core-starter-project/commit/cb319048dc793dff22a2a905af12d0a61c97e0db).
+
+See [the Mach standard library](/engine/stdlib/) for details on how the stdlib works, lazy dependencies, etc.
+
 ## mach-core: updated to Zig 2024.1.0-mach (2024-01-14)
 
 Mach core [967d9b7](https://github.com/hexops/mach-core/tree/370bc1504cebaffcda5ed1ae9915fd2ac6778479) and above now uses [Zig 2024.1.0-mach](/about/nominated-zig/#202410-mach). This is the first mach-core version to follow [nominated Zig versions](https://devlog.hexops.com/2024/announcing-nominated-zig/).
 
-To update your mach-core project, [follow this diff](https://github.com/hexops/mach-core-starter-project/commit/73633db522740e68ac4a65841f5e13924ceb0eef).
+To update your mach-core project, [make these changes](https://github.com/hexops/mach-core-starter-project/commit/73633db522740e68ac4a65841f5e13924ceb0eef).
 
 To update your Zig code in general, see: [_tips on upgrading your Zig code_](https://github.com/hexops/mach/issues/1135#issuecomment-1891175749).
 
