@@ -39,49 +39,15 @@ GameMode packages are available for Ubuntu, Debian, Solus, Arch, Gentoo, Fedora,
 
 ## Getting started
 
-Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
+First [add the Mach standard library](/engine/stdlib) to your project so you can `@import("mach").gamemode`.
 
-```zig
-.{
-    .name = "mypkg",
-    .version = "0.1.0",
-    .dependencies = .{
-        .mach_gamemode = .{
-            .url = "https://pkg.machengine.org/mach-gamemode/LATEST_COMMIT.tar.gz",
-        },
-    },
-}
-```
-
-Run `zig build` in your project, and the compiler will instruct you to add a `.hash = "..."` field next to `.url`:
+Then use it by simply calling start/stop in your program:
 
 ```
-note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
-```
-
-Then use the dependency in your `build.zig`:
-
-```zig
-pub fn build(b: *std.Build) void {
-    ...
-    exe.root_module.addImport("mach-gamemode", b.dependency("mach_gamemode", .{
-        .target = target,
-        .optimize = optimize,
-    }).module("mach-gamemode"));
-}
-```
-
-You can now use it in your `src/main.zig` file and use it:
-
-```zig
 const gamemode = @import("mach-gamemode");
-```
 
-### Usage
+// ...
 
-The API is incredibly simple, when you want to start/stop gamemode simply call the function:
-
-```
 gamemode.start();
 gamemode.stop();
 ```
@@ -91,7 +57,5 @@ No errors are returned; mach-gamemode generally stays silent. If users don't hav
 One can check programatically if gamemode is active using `gamemode.isActive()`.
 
 ### Ran into trouble?
-
-Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 
 Feel free to join the [Mach Discord community](../../discord) for help.

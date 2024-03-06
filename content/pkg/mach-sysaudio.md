@@ -30,51 +30,10 @@ Truly cross-platform, low-level, audio IO in Zig - playback and recording with b
 
 ## Getting started
 
-Create a `build.zig.zon` in your project (replace `LATEST_COMMIT` with the latest commit hash):
+First [add the Mach standard library](/engine/stdlib) to your project so you can `@import("mach").sysaudio`.
 
-```zig
-.{
-    .name = "mypkg",
-    .version = "0.1.0",
-    .dependencies = .{
-        .mach_sysaudio = .{
-            .url = "https://pkg.machengine.org/mach-sysaudio/LATEST_COMMIT.tar.gz",
-        },
-    },
-}
-```
-
-Run `zig build` in your project, and the compiler will instruct you to add a `.hash = "..."` fields next to `.url`:
-
-```
-note: expected .hash = "12209838fcfb7a77d2d6931efdc7448c033a1b7dad11d082c94bbeeba9d1038cd311",
-```
-
-Then use the dependency in your `build.zig`:
-
-```zig
-const mach_sysaudio = @import("mach_sysaudio");
-
-pub fn build(b: *std.Build) void {
-    ...
-    const mach_sysaudio_dep = b.dependency("mach_sysaudio", .{
-        .target = target,
-        .optimize = optimize,
-    });
-    exe.root_module.addImport("mach-sysaudio", mach_sysaudio_dep.module("mach-sysaudio"));
-}
-```
-
-You can now use it in your `src/main.zig` file:
-
-```zig
-const sysaudio = @import("mach-sysaudio");
-```
-
-See [here](https://github.com/hexops/mach-sysaudio/tree/main/examples) for example code.
+Then check out [some example code](https://github.com/hexops/mach-sysaudio/tree/main/examples) for usage.
 
 ### Ran into trouble?
-
-Triple-check you followed the `build.zig.zon` instructions correctly, it's easy to mess that part up.
 
 Feel free to join the [Mach Discord community](../../discord) for help.
