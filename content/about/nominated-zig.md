@@ -78,8 +78,6 @@ https://machengine.org/zig/index.json provides a machine-readable version histor
 
 Zig `2024.3.0-mach` and `0.12.0-dev.3180+83e578a18` are identical.
 
-_Note: The first nominated version ever, this was out-of-band with the schedule due to it._
-
 Install it using [zigup](https://github.com/marler8997/zigup):
 
 ```sh
