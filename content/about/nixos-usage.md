@@ -8,9 +8,13 @@ rss_ignore: true
 
 # Using Mach on nixOS
 
-If you use nixOS and want to use Mach, this document is for you.
+If you use nixOS and want to use Mach, this document is for you!
 
-## usage via nix-ld (preferred, requires unstable)
+## option 1: mach-flake
+
+A generous member of the community maintains [mach-flake](https://github.com/Cloudef/mach-flake), a flake that allows you to get started with Mach quickly.
+
+## option 2: usage via nix-ld
 
 Use [nix-ld](https://github.com/Mic92/nix-ld) following e.g. [this article](https://blog.thalheim.io/2022/12/31/nix-ld-a-clean-solution-for-issues-with-pre-compiled-executables-on-nixos/).
 
@@ -36,7 +40,7 @@ Then running `zig build` as usual:
 zig build run-core-textured-cube
 ```
 
-## Usage via shell
+## option 3: usage via shell
 
 ```nix
 { pkgs ? import <nixpkgs> {} }:
@@ -51,7 +55,7 @@ pkgs.mkShell {
 }
 ```
 
-## Usage via steam-run
+## option 4: usage via steam-run
 
 You can also run Mach examples via `steam-run`, for this you will need to install Steam, then create a shell using steam-run, e.g.:
 
