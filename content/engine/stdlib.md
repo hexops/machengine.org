@@ -36,10 +36,13 @@ Then make it importable by your code in `build.zig`, e.g.:
 ```zig
 pub fn build(b: *std.Build) void {
     // ...
+
+    // Add Mach to our library and executable
     const mach_dep = b.dependency("mach", .{
         .target = target,
         .optimize = optimize,
     });
+    lib.root_module.addImport("mach", mach_dep.module("mach"));
     exe.root_module.addImport("mach", mach_dep.module("mach"));
 }
 ```
