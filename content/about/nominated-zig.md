@@ -74,6 +74,36 @@ https://machengine.org/zig/index.json provides a machine-readable version histor
 
 ## Nominated Zig history
 
+### 2024.5.0-mach
+
+**IN-PROGRESS:** This version is currently being nominated, see [the tracking issue](https://github.com/hexops/mach/issues/1180) for details. Once everything looks good, the new Zig version is confirmed to be working with Mach, we will declare success, close the issue, and remove this in-progress warning.
+
+Zig `2024.5.0-mach` and `0.13.0-dev.351+64ef45eb0` are identical.
+
+Install it using [zigup](https://github.com/marler8997/zigup):
+
+```sh
+zigup 0.13.0-dev.351+64ef45eb0
+```
+
+Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
+
+| OS/Arch                           | Kind   | Download mirror                                                                                                                         |
+|-----------------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| **Linux x86_64**                  | Binary | [zig-linux-x86_64-0.13.0-dev.351+64ef45eb0.tar.xz](https://pkg.machengine.org/zig/zig-linux-x86_64-0.13.0-dev.351+64ef45eb0.tar.xz)   |
+| **Linux aarch64** (ARM)           | Binary | [zig-linux-aarch64-0.13.0-dev.351+64ef45eb0.tar.xz](https://pkg.machengine.org/zig/zig-linux-aarch64-0.13.0-dev.351+64ef45eb0.tar.xz) |
+| **Windows x86_64**                | Binary | [zig-windows-x86_64-0.13.0-dev.351+64ef45eb0.zip](https://pkg.machengine.org/zig/zig-windows-x86_64-0.13.0-dev.351+64ef45eb0.zip)     |
+| **Windows aarch64** (ARM)         | Binary | [zig-windows-aarch64-0.13.0-dev.351+64ef45eb0.zip](https://pkg.machengine.org/zig/zig-windows-aarch64-0.13.0-dev.351+64ef45eb0.zip)   |
+| **macOS x86_64** (Intel)          | Binary | [zig-macos-x86_64-0.13.0-dev.351+64ef45eb0.tar.xz](https://pkg.machengine.org/zig/zig-macos-x86_64-0.13.0-dev.351+64ef45eb0.tar.xz)   |
+| **macOS aarch64** (Apple Silicon) | Binary | [zig-macos-aarch64-0.13.0-dev.351+64ef45eb0.tar.xz](https://pkg.machengine.org/zig/zig-macos-aarch64-0.13.0-dev.351+64ef45eb0.tar.xz) |
+| Source code                       | Source | [zig-0.13.0-dev.351+64ef45eb0.tar.xz](https://pkg.machengine.org/zig/zig-0.13.0-dev.351+64ef45eb0.tar.xz)                             |
+
+_**Installation:** Download, extract, and place on your system `$PATH`. Ensure `zig version` reports the right version._
+
+_**Signatures:** `.minisig` Download signatures can be retrieved from [ziglang.org](https://ziglang.org/download/) for all downloads._
+
+_**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1180)**_
+
 ### 2024.3.0-mach
 
 Zig `2024.3.0-mach` and `0.12.0-dev.3180+83e578a18` are identical.
