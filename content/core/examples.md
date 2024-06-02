@@ -77,46 +77,6 @@ pre {
     All examples require <a href="../../about/zig-version">this nominated Zig version</a> | <a href="/about/known-issues">known issues</a>
 </small>
 
-<div class="p-section">
-    <a class="animated-demo" href="https://media.machengine.org/core/example/deferred-rendering.mp4">
-        <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/deferred-rendering.mp4" type="video/mp4">
-        </video>
-    </a>
-    <div class="p-section-right">
-        <h2><a href="https://github.com/hexops/mach/tree/main/src/core/examples/deferred-rendering">deferred-rendering</a></h2>
-        <p>Dynamic lighting using deferred rendering techniques.</p>
-        <div>
-<code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-core-deferred-rendering
-</pre></code>
-        </div>
-        <small>~1300 lines of code</small>
-    </div>
-</div>
-
-<div class="p-section" id="pbr-basic">
-    <div class="p-section-left">
-        <h2><a href="https://github.com/hexops/mach/tree/main/src/core/examples/pbr-basic">pbr-basic</a></h2>
-        <p>Physically based rendering (PBR) materials</p>
-        <div>
-<code><pre class="code">
-git clone https://github.com/hexops/mach
-cd mach/
-zig build run-core-pbr-basic
-</pre></code>
-        </div>
-        <small>~1000 lines of code</small>
-    </div>
-    <a class="animated-demo" href="https://media.machengine.org/core/example/pbr-basic.mp4">
-        <video autoplay loop muted>
-        <source src="https://media.machengine.org/core/example/pbr-basic.mp4" type="video/mp4">
-        </video>
-    </a>
-</div>
-
 <div class="p-section" id="gen-texture-light">
     <a class="animated-demo" href="https://media.machengine.org/core/example/gen-texture-light.mp4">
         <video autoplay loop muted>
@@ -447,8 +407,6 @@ You can start with the simplest examples first. There's also <a href="../../engi
 | 547           | pixel-post-process    |
 | 588           | procedural-primitives |
 | 780           | gen-texture-light     |
-| 1040          | pbr-basic             |
-| 1342          | deferred-rendering    |
 
 <div class="p-section">
     <img class="p-img-left" src="/img/wrench.svg"></img>

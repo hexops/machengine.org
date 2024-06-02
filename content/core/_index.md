@@ -63,7 +63,7 @@ By default, we use prebuilt binaries of Dawn (the WebGPU implementation) so that
 We have an [example showcase](examples) with 15+ Zig examples, including:
 
 * texturing, basic 2D and 3D examples
-* PBR, post-processing & deferred rendering
+* Post-processing
 * 3D model loading
 * instancing
 * cube mapping

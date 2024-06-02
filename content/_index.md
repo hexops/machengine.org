@@ -286,9 +286,9 @@ a.p-community-icon {
             <p><a href="https://devlog.hexops.com/2024/mach-v0.3-released/">What's new in v0.3?</a></p>
         </div>
         <div>
-            <a href="https://media.machengine.org/core/example/deferred-rendering.mp4">
+            <a href="https://media.machengine.org/core/example/textured-cube.mp4">
                 <video height="300px" autoplay loop muted>
-                <source src="https://media.machengine.org/core/example/deferred-rendering.mp4" type="video/mp4">
+                <source src="https://media.machengine.org/core/example/textured-cube.mp4" type="video/mp4">
                 </video>
             </a>
         </div>
