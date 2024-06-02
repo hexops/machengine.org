@@ -13,7 +13,7 @@ rss_ignore: true
         <img alt="mach-sysjs" src="/assets/mach/sysjs-full-light.svg" style="height: 7rem; margin-top: 1rem;">
     </picture>
     <span>
-        <a href="https://github.com/hexops/mach-sysjs">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Asysjs">Issue tracker</a>
+        <a href="https://github.com/hexops/mach/tree/main/src/sysjs">GitHub repository</a> | <a href="https://github.com/hexops/mach/issues?q=is%3Aissue+is%3Aopen+label%3Asysjs">Issue tracker</a>
     </span>
 </div>
 
