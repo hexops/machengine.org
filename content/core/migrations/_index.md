@@ -11,6 +11,12 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
+## mach.core: migration to new 'Mach Module' system
+
+`mach.core` is migrating to a new Mach' module system API design. To upgrade, you can follow the [getting started](../getting-started) guide to see how a basic project looks and upgrade your code accordingly.
+
+Because the build API is much simpler (no more `CoreApp`), `mach-core-starter-project` is officially deprecated in favor of that getting started guide,
+
 ## mach.core: package URL change (2024-03-06)
 
 As part of [#1165](https://github.com/hexops/mach/issues/1165) mach-core is now part of the Mach standard library. The code now lives in https://github.com/hexops/mach and can be imported as `@import("mach").core`.
