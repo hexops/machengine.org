@@ -24,7 +24,7 @@ The Mach project provides some Libraries, but mostly aims to sit between Framewo
 'Mach engine' is the _combined overall experience_ of two things:
 
 1. The [Mach standard library](../stdlib) - the engine APIs and 'blessed' paths for doing things, but still modular.
-2. The [Mach editor and CLI tooling](https://github.com/hexops/mach-editor) - which provide standard tools and high-level experiences you'd expect from a game engine
+2. The Mach editor and CLI tooling - which provide standard tools and high-level experiences you'd expect from a game engine
 
 Whether you use both, or how much of either you decide to use, is up to you!
 
