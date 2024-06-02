@@ -11,7 +11,7 @@ rss_ignore: true
 
 To learn more about Mach's library stability guarantees, check out the [libraries overview](../../pkg) page. This page provides migration guides for Mach libraries-walking you through how to update your code to the latest version.
 
-## mach.core: migration to new 'Mach Module' system
+## mach.core: migration to new 'Mach Module' system (2024-06-02)
 
 `mach.core` is migrating to a new Mach' module system API design. To upgrade, you can follow the [getting started](../getting-started) guide to see how a basic project looks and upgrade your code accordingly.
 
