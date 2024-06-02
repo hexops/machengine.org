@@ -454,12 +454,6 @@ $ zig build -Dtarget=aarch64-macos
                     <img alt="mach-basisu" src="/assets/mach/basisu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/pkg/mach-model3d" class="img-link">
-                <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/model3d-dark.svg">
-                    <img alt="mach-model3d" src="/assets/mach/model3d-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
-                </picture>
-            </a>
             <a href="/pkg/mach-sysgpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysgpu-dark.svg">

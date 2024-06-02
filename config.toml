@@ -246,12 +246,6 @@ unsafe = true
   url = '/pkg/mach-dxcompiler'
   weight = 3400
 [[menu.pkg]]
-  identifier = 'pkg-bind-model3d'
-  parent = 'pkg-bind'
-  name = 'model3d'
-  url = '/pkg/mach-model3d'
-  weight = 3500
-[[menu.pkg]]
   identifier = 'pkg-bind-opus'
   parent = 'pkg-bind'
   name = 'opus'
