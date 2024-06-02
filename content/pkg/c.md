@@ -19,7 +19,6 @@ Pure forks with build.zig:
 * [harfbuzz](https://github.com/hexops/harfbuzz)
 * [freetype](https://github.com/hexops/freetype)
 * [glfw](https://github.com/hexops/glfw)
-* [basisu](https://github.com/hexops/basisu)
 * [opus](https://github.com/hexops/opus)
 * [opusfile](https://github.com/hexops/opusfile)
 * [opusenc](https://github.com/hexops/opusenc)

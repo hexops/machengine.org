@@ -222,12 +222,6 @@ unsafe = true
   url = '/pkg/mach-gpu-dawn'
   weight = 3100
 [[menu.pkg]]
-  identifier = 'pkg-bind-basisu'
-  parent = 'pkg-bind'
-  name = 'basisu'
-  url = '/pkg/mach-basisu'
-  weight = 3200
-[[menu.pkg]]
   identifier = 'pkg-bind-freetype'
   parent = 'pkg-bind'
   name = 'freetype'

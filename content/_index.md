@@ -448,12 +448,6 @@ $ zig build -Dtarget=aarch64-macos
                     <img alt="mach-gamemode" src="/assets/mach/gamemode-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
                 </picture>
             </a>
-            <a href="/pkg/mach-basisu" class="img-link">
-                <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/basisu-dark.svg">
-                    <img alt="mach-basisu" src="/assets/mach/basisu-light.svg" style="height: 3rem; margin-right: 1rem; margin-top: 0.5rem;">
-                </picture>
-            </a>
             <a href="/pkg/mach-sysgpu" class="img-link">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="/assets/mach/sysgpu-dark.svg">
