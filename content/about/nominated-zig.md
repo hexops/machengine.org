@@ -76,8 +76,6 @@ https://machengine.org/zig/index.json provides a machine-readable version histor
 
 ### 2024.5.0-mach
 
-**IN-PROGRESS:** This version is currently being nominated, see [the tracking issue](https://github.com/hexops/mach/issues/1180) for details. Once everything looks good, the new Zig version is confirmed to be working with Mach, we will declare success, close the issue, and remove this in-progress warning.
-
 Zig `2024.5.0-mach` and `0.13.0-dev.351+64ef45eb0` are identical.
 
 Install it using [zigup](https://github.com/marler8997/zigup):
@@ -102,7 +100,7 @@ _**Installation:** Download, extract, and place on your system `$PATH`. Ensure `
 
 _**Signatures:** `.minisig` Download signatures can be retrieved from [ziglang.org](https://ziglang.org/download/) for all downloads._
 
-_**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1180)**_
+_**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1180#issuecomment-2143915477)**_
 
 ### 2024.3.0-mach
 
