@@ -37,7 +37,7 @@ You'll need to bring your own library, e.g.:
 
 - WebGPU: [mach-gpu](../mach-gpu) ([example](https://github.com/hexops/mach-gpu))
 - Vulkan: [Snektron/vulkan-zig](https://github.com/Snektron/vulkan-zig) or [hexops/vulkan-zig-generated](https://github.com/hexops/vulkan-zig-generated) ([example](https://github.com/hexops/mach-glfw-vulkan-example))
-- OpenGL: [ziglibs/zgl](https://github.com/ziglibs/zgl) ([example](https://github.com/hexops/mach-glfw-opengl-example))
+- OpenGL: [castholm/zigglgen](https://github.com/castholm/zigglgen) ([example](https://github.com/hexops/mach-glfw-opengl-example))
 
 ## Getting started
 
