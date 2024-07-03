@@ -65,7 +65,7 @@ Add the following to your `build.zig` below your `const exe = b.addExecutable(..
 
 ```zig
     // Use mach-glfw
-    const glfw_dep = b.dependency("mach_glfw", .{
+    const glfw_dep = b.dependency("mach-glfw", .{
         .target = target,
         .optimize = optimize,
     });
