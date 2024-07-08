@@ -7,7 +7,7 @@ canonifyURLs = true # Required for Hugo to rewrite Markdown links with baseURL i
 # Important: This should be configured according to the branch.
 baseURL = 'https://machengine.org/'
 [params]
-  branch = 'main'
+  branch = 'v0.4'
 
   # Other branch-agnostic site params below
   alert = '**Mach v0.3 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2024/mach-v0.3-released/)'
