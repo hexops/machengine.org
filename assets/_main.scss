@@ -436,10 +436,10 @@ main {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    line-height: 3rem;
-    padding: 2rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    line-height: 1rem;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     filter: brightness(100%);
     font-size: 200%;
     height: 3rem;
@@ -472,7 +472,6 @@ main {
     @include glass;
     position: absolute;
     z-index: -1;
-    width: 35rem;
     margin-left: -3rem;
     height: 7rem;
 

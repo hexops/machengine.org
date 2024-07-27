@@ -13,10 +13,10 @@ We aim to support a broad array of operating systems and architectures, as long 
 
 | OS             | x86_64 | aarch64 | WebAssembly | notes                                                                                                                                                        |
 | -------------- | ------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| macOS          | ✅      | ✅       |             | last 3 major versions supported;                                                                                                                             |
-| Windows        | ✅      | 🏃       |             | windows 7+ supported; ARM support is WIP                                                                                                                     |
-| Linux          | ✅      | ✅       |             |                                                                                                                                                              |
-| SteamOS (deck) | ✅      |         |             | truly native (Vulkan); no controller/OS integration yet; [demo video](https://devlog.hexops.com/2022/perfecting-webgpu-native/#dawnwebgpu-on-the-steam-deck) |
+| macOS          | 🏃      | 🏃       |             | last 3 major versions supported;                                                                                                                             |
+| Windows        | 🏃      | 🏃       |             | windows 7+ supported; ARM support is WIP                                                                                                                     |
+| Linux          | 🏃      | 🏃       |             |                                                                                                                                                              |
+| SteamOS (deck) | 🏃      |         |             | truly native (Vulkan); no controller/OS integration yet; [demo video](https://devlog.hexops.com/2022/perfecting-webgpu-native/#dawnwebgpu-on-the-steam-deck) |
 | Browser        |        |         | 🏃           | WebGPU not working; audio, input, recompile-on-reload, etc. is working                                                                                       |
 | iOS            |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |
 | Android        |        | 💭       |             | contributions welcome; planned in future                                                                                                                     |

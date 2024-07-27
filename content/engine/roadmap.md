@@ -7,8 +7,6 @@ docs_type: "engine"
 rss_ignore: true
 ---
 
-# Engine roadmap
+# Moved
 
-There is a _long_ road ahead: it's going to require a lot of work and time to get to where we are going.
-
-You can find the roadmap [here](https://github.com/orgs/hexops/projects/7)
+This page was removed and/or deleted. See the latest [documentation](/docs) or view [an older version of this website](/v0.4)

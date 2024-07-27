@@ -30,14 +30,14 @@ img.p-community-icon {
     <p>
         <h1 style="margin-bottom: 0;">About the project</h1>
         <br/>
-        To learn more about Mach, understand what it is, etc. please see our <a href="../">homepage</a>, and consider joining our community:
+        To learn more about Mach, understand what it is, etc. please see our <a href="../">homepage</a>, and consider joining our communities:
     </p>
     <div style="display: flex; flex-direction: row; margin-top: 2rem;">
-        <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon glass-link">
-            <img alt="Discord" class="p-community-icon" src="/img/discord.svg">
-        </a>
         <a href="https://github.com/hexops/mach" class="p-community-icon glass-link">
             <img alt="GitHub" class="p-community-icon" src="/img/github.svg">
+        </a>
+        <a href="https://discord.gg/XNG3NZgCqp" class="p-community-icon glass-link">
+            <img alt="Discord" class="p-community-icon" src="/img/discord.svg">
         </a>
     </div>
 </div>
@@ -48,14 +48,12 @@ Mach is still in its infancy - things are improving rapidly, not all APIs are st
 
 ## Contributing
 
-We'd love your help building Mach! There's lots to do, and little time - so whether you're an experienced gamedev, or just someone interested in learning Zig, there are likely ways you could help us towards our dreams. There are both small bugs and docs to improve, as well as large architecture challenges to sort out.
+We'd love your help building Mach! There's lots to do, and little time - so whether you're an experienced gamedev, or just someone interested in learning Zig, there are likely ways you could help us. There are both small bugs and docs to improve, as well as large architecture challenges to sort out.
 
 The best way to contribute is to familiarize yourself with what's missing today: there's no better way to do this than to think about what you would need to build your own game/app using it, see what you would need first hand, and then help us by proposing/discussing those changes.
-
-Be sure to join our Discord as that lets us help you faster so we can reach the finish line sooner. :)
 
 ## Improve this site
 
 We're very appreciative of typo fixes, documentation improvements, etc. - simply [file an issue](https://github.com/hexops/mach/issues) or [send us a pull-request](https://github.com/hexops/machengine.org/tree/main/content)!
 
-Large design/opinionated changes can be a time sink for us and you, and can often devolve into rocket-shedding, so please don't send PRs for such - instead we prefer you simply file issues with constructive feedback (what you dislike, why, and what you would prefer) in such cases so we can take your perspective into account.
+Large changes to the docs site can be a time sink for us and you, and can often devolve into rocket-shedding, so please don't send huge PRs without some discussion before hand. Prefer filing issues with constructive feedback first.

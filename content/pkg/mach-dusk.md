@@ -7,8 +7,6 @@ docs_type: "pkg"
 rss_ignore: true
 ---
 
-This page has moved: [Mach sysgpu](../mach-sysgpu)
+# Moved
 
-<script>
-location.href = '../mach-sysgpu';
-</script>
+This page was removed and/or deleted. See the latest [documentation](/docs) or view [an older version of this website](/v0.4)

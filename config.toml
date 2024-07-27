@@ -18,239 +18,96 @@ baseURL = 'https://machengine.org/'
 unsafe = true
 
 [menu]
-[[menu.engine]]
-  identifier = 'engine'
-  name = 'Engine overview'
-  url = '/engine'
+[[menu.docs]]
+  identifier = 'docs'
+  name = 'Overview'
+  url = '/docs'
   weight = 10000
-[[menu.engine]]
-  identifier = 'engine-getting-started'
+[[menu.docs]]
+  identifier = 'docs-getting-started'
   name = 'Getting started'
-  url = '/engine/getting-started'
+  url = '/docs/getting-started'
   weight = 10001
-
-#[[menu.engine]]
-#  identifier = 'engine-gfx2d'
-#  name = '2D graphics'
-#  weight = 19000
-#[[menu.engine]]
-#  parent = 'engine-gfx2d'
-#  identifier = 'engine-gfx2d-simple-game'
-#  name = 'Simple 2D game'
-#  url = '/engine/gfx2d/simple-game'
-#  weight = 19002
-
-[[menu.engine]]
-  identifier = 'engine-math'
+[[menu.docs]]
+  identifier = 'docs-math'
   name = 'Math'
   weight = 20000
-[[menu.engine]]
-  parent = 'engine-math'
-  identifier = 'engine-math-Overview'
+[[menu.docs]]
+  parent = 'docs-math'
+  identifier = 'docs-math-Overview'
   name = 'Overview'
-  url = '/engine/math'
+  url = '/docs/math'
   weight = 20001
-[[menu.engine]]
-  parent = 'engine-math'
-  identifier = 'engine-math-coordinate-system'
+[[menu.docs]]
+  parent = 'docs-math'
+  identifier = 'docs-math-coordinate-system'
   name = 'Coordinate system'
-  url = '/engine/math/coordinate-system'
+  url = '/docs/math/coordinate-system'
   weight = 20002
-[[menu.engine]]
-  parent = 'engine-math'
-  identifier = 'engine-math-traversing-coordinate-systems'
+[[menu.docs]]
+  parent = 'docs-math'
+  identifier = 'docs-math-traversing-coordinate-systems'
   name = 'Traversing coordinate systems'
-  url = '/engine/math/traversing-coordinate-systems'
+  url = '/docs/math/traversing-coordinate-systems'
   weight = 20003
-[[menu.engine]]
-  parent = 'engine-math'
-  identifier = 'engine-math-matrix-storage'
+[[menu.docs]]
+  parent = 'docs-math'
+  identifier = 'docs-math-matrix-storage'
   name = 'Matrix storage'
-  url = '/engine/math/matrix-storage'
+  url = '/docs/math/matrix-storage'
   weight = 20004
 
-[[menu.engine]]
-  identifier = 'engine-gpu'
+[[menu.docs]]
+  identifier = 'docs-gpu'
   name = 'GPU'
   weight = 30000
-[[menu.engine]]
-  parent = 'engine-gpu'
-  identifier = 'engine-gpu-overview'
+[[menu.docs]]
+  parent = 'docs-gpu'
+  identifier = 'docs-gpu-overview'
   name = 'Overview'
-  url = '/engine/gpu'
+  url = '/docs/gpu'
   weight = 30001
-[[menu.engine]]
-  parent = 'engine-gpu'
-  identifier = 'engine-gpu-memory'
+[[menu.docs]]
+  parent = 'docs-gpu'
+  identifier = 'docs-gpu-memory'
   name = 'Memory management'
-  url = '/engine/gpu/memory'
+  url = '/docs/gpu/memory'
   weight = 30002
-[[menu.engine]]
-  parent = 'engine-gpu'
-  identifier = 'engine-gpu-errors'
+[[menu.docs]]
+  parent = 'docs-gpu'
+  identifier = 'docs-gpu-errors'
   name = 'Error handling'
-  url = '/engine/gpu/errors'
+  url = '/docs/gpu/errors'
   weight = 30003
 
-[[menu.engine]]
-  identifier = 'engine-engine'
-  name = 'Engine'
+[[menu.docs]]
+  identifier = 'docs-general'
+  name = 'General'
   weight = 40000
-[[menu.engine]]
-  parent = 'engine-engine'
-  identifier = 'engine-engine-roadmap'
+[[menu.docs]]
+  parent = 'docs-general'
+  identifier = 'docs-general-roadmap'
   name = 'Roadmap'
-  url = '/engine/roadmap'
+  url = '/docs/roadmap'
   weight = 40001
-[[menu.engine]]
-  parent = 'engine-engine'
-  identifier = 'engine-engine-modularity'
+[[menu.docs]]
+  parent = 'docs-general'
+  identifier = 'docs-general-modularity'
   name = 'Modularity'
-  url = '/engine/modularity'
+  url = '/docs/modularity'
   weight = 40002
-[[menu.engine]]
-  parent = 'engine-engine'
-  identifier = 'engine-engine-stdlib'
+[[menu.docs]]
+  parent = 'docs-general'
+  identifier = 'docs-general-stdlib'
   name = 'Standard library'
-  url = '/engine/stdlib'
+  url = '/docs/stdlib'
   weight = 40003
-[[menu.engine]]
-  parent = 'engine-engine'
-  identifier = 'engine-known-issues'
-  name = 'Known issues ⮕'
-  url = '/about/known-issues'
+[[menu.docs]]
+  parent = 'docs-general'
+  identifier = 'docs-general-zig-version'
+  name = 'Zig version'
+  url = '/docs/zig-version'
   weight = 40004
-
-
-[[menu.core]]
-  identifier = 'core'
-  name = 'Core overview'
-  url = '/core'
-  weight = 100
-[[menu.core]]
-  identifier = 'core-examples'
-  name = 'Examples'
-  url = '/core/examples'
-  weight = 200
-[[menu.core]]
-  identifier = 'core-getting-started'
-  name = 'Getting started'
-  url = '/core/getting-started'
-  weight = 300
-[[menu.core]]
-  identifier = 'core-migrations'
-  name = 'Migrations'
-  url = '/core/migrations'
-  weight = 400
-[[menu.core]]
-  identifier = 'core-known-issues'
-  name = 'Known issues ⮕'
-  url = '/about/known-issues'
-  weight = 500
-
-
-
-[[menu.pkg]]
-  identifier = 'pkg'
-  name = 'Packages overview'
-  url = '/pkg'
-  weight = 100
-[[menu.pkg]]
-  identifier = 'pkg-c'
-  name = 'C libraries / headers'
-  url = '/pkg/c'
-  weight = 200
-
-[[menu.pkg]]
-  identifier = 'pkg-pure'
-  name = 'Pure Zig'
-  url = '/pkg'
-  weight = 200
-[[menu.pkg]]
-  identifier = 'pkg-pure-ecs'
-  parent = 'pkg-pure'
-  name = 'ecs'
-  url = '/pkg/mach-ecs'
-  weight = 2000
-[[menu.pkg]]
-  identifier = 'pkg-pure-sysaudio'
-  parent = 'pkg-pure'
-  name = 'sysaudio'
-  url = '/pkg/mach-sysaudio'
-  weight = 2100
-[[menu.pkg]]
-  identifier = 'pkg-pure-sysjs'
-  parent = 'pkg-pure'
-  name = 'sysjs'
-  url = '/pkg/mach-sysjs'
-  weight = 2200
-[[menu.pkg]]
-  identifier = 'pkg-pure-sysgpu'
-  parent = 'pkg-pure'
-  name = 'sysgpu'
-  url = '/pkg/mach-sysgpu'
-  weight = 2300
-[[menu.pkg]]
-  identifier = 'pkg-pure-gamemode'
-  parent = 'pkg-pure'
-  name = 'gamemode'
-  url = '/pkg/mach-gamemode'
-  weight = 2400
-[[menu.pkg]]
-  identifier = 'pkg-pure-fastfilter'
-  parent = 'pkg-pure'
-  name = 'fastfilter'
-  url = '/pkg/fastfilter'
-  weight = 2600
-
-
-[[menu.pkg]]
-  identifier = 'pkg-bind'
-  name = 'Bindings'
-  url = '/pkg'
-  weight = 300
-[[menu.pkg]]
-  identifier = 'pkg-bind-gpu'
-  parent = 'pkg-bind'
-  name = 'gpu'
-  url = '/pkg/mach-gpu'
-  weight = 3000
-[[menu.pkg]]
-  identifier = 'pkg-bind-gpu-dawn'
-  parent = 'pkg-bind'
-  name = 'gpu-dawn'
-  url = '/pkg/mach-gpu-dawn'
-  weight = 3100
-[[menu.pkg]]
-  identifier = 'pkg-bind-freetype'
-  parent = 'pkg-bind'
-  name = 'freetype'
-  url = '/pkg/mach-freetype'
-  weight = 3300
-[[menu.pkg]]
-  identifier = 'pkg-bind-glfw'
-  parent = 'pkg-bind'
-  name = 'glfw'
-  url = '/pkg/mach-glfw'
-  weight = 3400
-[[menu.pkg]]
-  identifier = 'pkg-bind-dxcompiler'
-  parent = 'pkg-bind'
-  name = 'dxcompiler'
-  url = '/pkg/mach-dxcompiler'
-  weight = 3400
-[[menu.pkg]]
-  identifier = 'pkg-bind-opus'
-  parent = 'pkg-bind'
-  name = 'opus'
-  url = '/pkg/mach-opus'
-  weight = 3600
-[[menu.pkg]]
-  identifier = 'pkg-bind-flac'
-  parent = 'pkg-bind'
-  name = 'flac'
-  url = '/pkg/mach-flac'
-  weight = 3700
 
 
 [[menu.about]]
@@ -269,49 +126,10 @@ unsafe = true
   url = '/about/platforms'
   weight = 300
 [[menu.about]]
-  identifier = 'about-zig-version'
-  name = 'Zig version'
-  url = '/about/zig-version'
-  weight = 301
-[[menu.about]]
-  identifier = 'about-known-issues'
-  name = 'Known issues'
-  url = '/about/known-issues'
-  weight = 400
-[[menu.about]]
-  identifier = 'about-stability'
-  name = 'Stability'
-  url = '/about/stability'
-  weight = 600
-[[menu.about]]
   identifier = 'about-faq'
   name = 'FAQ'
   url = '/about/faq'
   weight = 800
-
-[[menu.about]]
-  identifier = 'about-keycomp'
-  name = 'Key components'
-  url = '/engine'
-  weight = 900
-[[menu.about]]
-  identifier = 'about-keycomp-engine'
-  parent = 'about-keycomp'
-  name = 'Engine ⮕'
-  url = '/engine'
-  weight = 6000
-[[menu.about]]
-  identifier = 'about-keycomp-core'
-  parent = 'about-keycomp'
-  name = 'Core ⮕'
-  url = '/core'
-  weight = 6100
-[[menu.about]]
-  identifier = 'about-keycomp-pkg'
-  parent = 'about-keycomp'
-  name = 'Packages ⮕'
-  url = '/pkg'
-  weight = 6200
 
 [[menu.about]]
   identifier = 'about-dev'
