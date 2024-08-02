@@ -3,7 +3,7 @@ title: "Nominated Zig versions"
 description: "Periodically we nominate a new nightly Zig version for use, providing a better balance of recent Zig improvements and stability."
 draft: false
 layout: "docs"
-docs_type: "about"
+docs_type: "docs"
 rss_ignore: true
 ---
 
