@@ -33,3 +33,13 @@ It will be a while before we have good high-level 3D graphics support; a lot of 
 ## Can I make my own game engine using Mach?
 
 Yes! For example instead of using GLFW/SDL+OpenGL+glm as the base for your own engine, you might choose to use `mach.core` and `mach.math` from our [standard library](../stdlib).
+
+## How to enable Direct3D debug layers?
+
+Mach programs build in Debug mode have Direct3D debug layers enabled by default, which help to catch graphics pipeline mistakes. They are disabled in release builds.
+
+Microsoft requires enabling graphics debugging in your system settings independently if you want to use them. If you don't have this enabled, Mach will log a warning `note: D3D12 debug layers disabled`.
+
+If you want to fix this, you can enable them in your system settings following [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/win32/direct3d12/directx-12-programming-environment-set-up#debug-layer):
+
+> For Windows 10, to create a device that supports the debug layer, enable the "Graphics Tools" optional feature. On Windows 10 22H2, go to the Settings panel, under System. On older versions of Windows 10, go to the Settings panel, under Apps > Apps & features. Go to Optional Features > Add a feature, and then look for "Graphics Tools".
