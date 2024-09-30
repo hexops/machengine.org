@@ -20,7 +20,7 @@ Add the Mach dependency to your `build.zig.zon` file:
 <pre><code id="zig-fetch">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
 </code></pre>
 <script>
-fetch('https://api.github.com/repos/hexops/mach/branches/main', {
+fetch('https://api.github.com/repos/hexops/mach/branches/0.4', {
   method: 'GET',
   headers: {'Accept': 'application/json'}},
 )
