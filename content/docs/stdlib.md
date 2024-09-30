@@ -19,21 +19,7 @@ Thanks to Zig's lazy code evaluation and lazy dependency fetching, you really on
 
 The 0.4 branch is what applications like [Pixi](https://github.com/foxnne/pixi) and games like `#lordofzero` (in the Discord) are using. It uses GLFW, WebGPU, and optionally the ECS. It is [no longer in development](https://discord.com/channels/996677443681267802/996688886216523907/1259736837648416829) however.
 
-To use this version, add the Mach dependency to your `build.zig.zon` file:
-
-<pre><code id="zig-fetch-04">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
-</code></pre>
-<script>
-fetch('https://api.github.com/repos/hexops/mach/branches/0.4', {
-  method: 'GET',
-  headers: {'Accept': 'application/json'}},
-)
-  .then(resp => resp.json())
-  .then(resp => {
-    let elem = document.querySelector('#zig-fetch-04');
-    elem.innerHTML = elem.innerHTML.replace('$LATEST_COMMIT', resp.commit.sha);
-  });
-</script>
+To use this version, see the [/v0.4 website mach core getting started guide](/v0.4/core/getting-started).
 
 ### main branch (actively developed, experimental/unstable)
 
