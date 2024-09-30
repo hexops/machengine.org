@@ -301,7 +301,7 @@ a.p-community-icon {
             </div>
             <div>
 <pre class="code" tabindex=0 style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh">$ git clone https://github.com/hexops/mach
-$ cd mach/
+$ cd mach/ && git checkout 0.4
 $ zig build run-core-textured-cube
 </code></pre>
                 <small>Requires <a href="about/zig-version">this nominated Zig version</a> | <a href="/about/known-issues">known issues</a></small>
