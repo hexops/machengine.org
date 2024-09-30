@@ -20,6 +20,7 @@ node_modules
 dist
 tmp
 /resources/_gen/
+public
 
 hugo.exe
 hugo.linux

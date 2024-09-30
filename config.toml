@@ -10,8 +10,8 @@ baseURL = 'https://machengine.org/'
   branch = 'main'
 
   # Other branch-agnostic site params below
-  alert = '**Mach v0.3 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2024/mach-v0.3-released/)'
-  #alert = '**Mach now _nominates Zig versions for use!_** For details check out [the docs](/about/nominated-zig)'
+  #alert = '**Mach v0.3 has been released!** For all the details check out [the announcement](https://devlog.hexops.com/2024/mach-v0.3-released/)'
+  #alert = '**Mach now _nominates Zig versions for use!_** For details check out [the docs](/docs/nominated-zig)'
   debug_opengraph_images = false
 
 [markup.goldmark.renderer]
@@ -108,6 +108,12 @@ unsafe = true
   name = 'Zig version'
   url = '/docs/zig-version'
   weight = 40004
+[[menu.docs]]
+  identifier = 'docs-dev-nominated-zig'
+  parent = 'docs-general'
+  name = 'Nominated Zig'
+  url = '/docs/nominated-zig'
+  weight = 40005
 
 
 [[menu.about]]
@@ -141,9 +147,3 @@ unsafe = true
   name = 'Style guide'
   url = '/about/style'
   weight = 10100
-[[menu.about]]
-  identifier = 'about-dev-nominated-zig'
-  parent = 'about-dev'
-  name = 'Nominated Zig'
-  url = '/about/nominated-zig'
-  weight = 10200

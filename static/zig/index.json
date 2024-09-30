@@ -4,7 +4,7 @@
     "date": "2024-06-01",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-06-01",
     "src": {
       "shasum": "6db25e78eca948664d4b1b1eb6b5ca6c471e0bf32b8fd19cc7c925b4d957f097",
@@ -90,7 +90,7 @@
     "date": "2024-06-01",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-06-01",
     "src": {
       "shasum": "6db25e78eca948664d4b1b1eb6b5ca6c471e0bf32b8fd19cc7c925b4d957f097",
@@ -176,7 +176,7 @@
     "date": "2024-06-01",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-06-01",
     "src": {
       "shasum": "6db25e78eca948664d4b1b1eb6b5ca6c471e0bf32b8fd19cc7c925b4d957f097",
@@ -262,7 +262,7 @@
     "date": "2024-03-08",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-03-08",
     "src": {
       "shasum": "f484f26899b872782f37603b633236abaca4005e26d544fcbdfa1eb0f2503217",
@@ -348,7 +348,7 @@
     "date": "2024-01-07",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-01-07",
     "src": {
       "shasum": "9838d42d47b7b8a0a38e87049830e528f5a6eaf5f2ccda40177dd8e2c293af78",
@@ -440,7 +440,7 @@
     "date": "2024-01-07",
     "docs": "https://ziglang.org/documentation/master/",
     "stdDocs": "https://ziglang.org/documentation/master/std/",
-    "machDocs": "https://machengine.org/about/nominated-zig",
+    "machDocs": "https://machengine.org/docs/nominated-zig",
     "machNominated": "2024-01-07",
     "src": {
       "shasum": "9838d42d47b7b8a0a38e87049830e528f5a6eaf5f2ccda40177dd8e2c293af78",
