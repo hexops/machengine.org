@@ -21,7 +21,7 @@ The 0.4 branch is what applications like [Pixi](https://github.com/foxnne/pixi) 
 
 To use this version, add the Mach dependency to your `build.zig.zon` file:
 
-<pre><code id="zig-fetch">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
+<pre><code id="zig-fetch-04">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
 </code></pre>
 <script>
 fetch('https://api.github.com/repos/hexops/mach/branches/0.4', {
@@ -30,7 +30,7 @@ fetch('https://api.github.com/repos/hexops/mach/branches/0.4', {
 )
   .then(resp => resp.json())
   .then(resp => {
-    let elem = document.querySelector('#zig-fetch');
+    let elem = document.querySelector('#zig-fetch-04');
     elem.innerHTML = elem.innerHTML.replace('$LATEST_COMMIT', resp.commit.sha);
   });
 </script>
@@ -41,7 +41,7 @@ This branch is where active development is happening, we are removing GLFW and W
 
 To use this version, add the Mach dependency to your `build.zig.zon` file:
 
-<pre><code id="zig-fetch">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
+<pre><code id="zig-fetch-main">zig fetch --save https://pkg.machengine.org/mach/$LATEST_COMMIT.tar.gz
 </code></pre>
 <script>
 fetch('https://api.github.com/repos/hexops/mach/branches/main', {
@@ -50,7 +50,7 @@ fetch('https://api.github.com/repos/hexops/mach/branches/main', {
 )
   .then(resp => resp.json())
   .then(resp => {
-    let elem = document.querySelector('#zig-fetch');
+    let elem = document.querySelector('#zig-fetch-main');
     elem.innerHTML = elem.innerHTML.replace('$LATEST_COMMIT', resp.commit.sha);
   });
 </script>
