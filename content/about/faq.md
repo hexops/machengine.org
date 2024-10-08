@@ -32,7 +32,7 @@ It will be a while before we have good high-level 3D graphics support; a lot of 
 
 ## Can I make my own game engine using Mach?
 
-Yes! For example instead of using GLFW/SDL+OpenGL+glm as the base for your own engine, you might choose to use `mach.core` and `mach.math` from our [standard library](../stdlib).
+Yes! For example instead of using GLFW/SDL+OpenGL+glm as the base for your own engine, you might choose to use `mach.core` and `mach.math` from our [standard library](/docs/stdlib/).
 
 ## How to enable Direct3D debug layers?
 
