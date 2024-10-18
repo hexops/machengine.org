@@ -72,6 +72,19 @@ https://machengine.org/zig/index.json provides a machine-readable version histor
 * `2024.1.0-mach` -> specific nominated versions.
 * `0.3.0-mach` -> an alias for the nominated Zig version that was used at the time of Mach v0.3 release.
 
+## What if we had used stable zig in the past?
+
+Periodically, the question comes up: why *not* just use stable Zig versions? The best way to answer this, and our own gauge for answering this, is to look at how this would've affected us in the past.
+
+* Between Zig 0.13 and 0.14 (not yet released):
+  * We were able to identify [a linker regression](https://github.com/ziglang/zig/issues/21598) which prevented Mach from building/linking at all on macOS. This regression likely only affected Mach, as most projects do not use Zig ObjC bindings. If we hadn't been able to identify this regression and give feedback to the Zig core team (who thankfully was able to fix it quickly!) then we may not have been able to upgrade to Zig 0.14 while keeping macOS support.
+* Between Zig 0.12 and 0.13 (1.5 months):
+  * We were able to identify [a linker regression](https://github.com/ziglang/zig/issues/19718) which prevented using prebuilt WebGPU binaries on macOS, exactly one day after the 0.12 release. Again, this regression likely primarily affected Mach - so if we had been using stable Zig, we'd need to hope it got fixed in 0.13 which was a short development cycle - or wait ~10 months for 0.14 / regress our macOS support.
+* Between Zig 0.11 and 0.12 (8.5 months)
+  * We were able to provide early feedback on the package manager and get various bugs/issues with it fixed for our use cases, being probably the earliest / most serious adopter of it. If we had not done this, we would've _had no choice but to_ maintain our pre-package-manager dependency management system until Zig 0.13 was released ~10 months later.
+* Between Zig 0.10 and 0.11 (9 months)
+  * Early package manager feedback.
+
 ## Nominated Zig history
 
 ### 2024.10.0-mach
