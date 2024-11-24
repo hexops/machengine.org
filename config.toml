@@ -28,6 +28,43 @@ unsafe = true
   name = 'Getting started'
   url = '/docs/getting-started'
   weight = 10001
+
+[[menu.docs]]
+  identifier = 'docs-object'
+  name = 'Object system'
+  weight = 15000
+[[menu.docs]]
+  parent = 'docs-object'
+  identifier = 'docs-object-overview'
+  name = 'Overview'
+  url = '/docs/object'
+  weight = 15001
+[[menu.docs]]
+  parent = 'docs-object'
+  identifier = 'docs-object-modules'
+  name = 'Modules'
+  url = '/docs/object/modules'
+  weight = 15002
+[[menu.docs]]
+  parent = 'docs-object'
+  identifier = 'docs-object-systems'
+  name = 'Systems'
+  url = '/docs/object/systems'
+  weight = 15003
+[[menu.docs]]
+  parent = 'docs-object'
+  identifier = 'docs-object-objects'
+  name = 'Objects'
+  url = '/docs/object/objects'
+  weight = 15004
+[[menu.docs]]
+  parent = 'docs-object'
+  identifier = 'docs-object-relations'
+  name = 'Relations'
+  url = '/docs/object/relations'
+  weight = 15005
+
+
 [[menu.docs]]
   identifier = 'docs-math'
   name = 'Math'
