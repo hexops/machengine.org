@@ -46,7 +46,7 @@ pub fn init(app: *App) void {
     });
 
     // Print the monsters' health
-    const new_monster_id = app.monsters.get(new_monster_id);
+    const new_monster = app.monsters.get(new_monster_id);
     std.debug.print("monster health: {}\n", .{new_monster.health});
 
     // Give the monster 2x damage!
@@ -70,7 +70,10 @@ A core design decision of Mach's object system is to encourage you to _write cod
 The first thing you might notice about the code snippet above is that when you create a new object, you get an _object ID_ back:
 
 ```zig
-const new_monster_id = app.monsters.get(new_monster_id);
+    const new_monster_id: mach.ObjectID = app.monsters.new(.{
+        .health = 100,
+        .damage = 10,
+    });
 ```
 
 Object IDs are just stable integer identifiers, containing _a ton of information_ in them:
