@@ -29,13 +29,13 @@ Mach uses a much more clever solution (thanks to some fantastic advice from kpro
 
 ## How Mach's object system stores relations
 
-Mach maintains a single global graph, where objects owned by any threads' can have parents/children which are objects owned by other threads'.
+Mach maintains a single global object graph, where objects owned by any threads' can have parents/children which are themselves objects owned by other threads'.
 
-The trick is that instead of maintaining a global mutex (or using _any locks at all_), we enable reads/writes/mutations to the graph in parallel from any thread by representing all interactions with the graph as /operations/ enqueued to a lock-free Multi Producer, Single Consumer (MPSC) FIFO queue, with each thread becoming the single consumer /temporarily/ only if there are operations to process.
+The trick is that instead of maintaining a global mutex (or using _any locks at all_), we enable reads/writes/mutations to the graph in parallel from any thread by representing all interactions with the graph as /operations/ enqueued to a lock-free Multi Producer, Single Consumer (MPSC) queue, and a background thread processes operations submitted to the queue.
 
-When an operation is desired (adding a parent to a child, querying the children or parent of a node, etc.) it is enqueued. Then, if the queue contains entries, that thread steals the entire queue - becoming the single consumer of the MPSC queue temporarily - generally only blocking _reads_ by other threads - and only as long as is needed to process the few pending operations that were enqueued.
+When an operation is desired (adding a parent to a child, querying the children or parent of a node, etc.) it is enqueued. Write operations (like adding a parent to a child) require only a lock-free submission to the queue, making writes super efficient even when there would otherwise be contention - and read operations are similarly handled (just with an atomic 'done' signal and a memory pool for getting results out.)
 
-Lastly, we use lock-free pools of nodes and queue entries to allow for pre-allocating nodes in the graph, and queue entries - potentially based on the applications' actual measured usage to eliminate runtime allocations in future builds of the program.
+Lastly, we use lock-free pools of nodes and queue entries to allow for pre-allocating things like nodes in the graph and queue entries - potentially based on the applications' actual measured usage to eliminate runtime allocations in future builds of the program.
 
 ## API usage
 
