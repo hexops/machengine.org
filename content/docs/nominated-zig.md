@@ -89,8 +89,6 @@ Periodically, the question comes up: why *not* just use stable Zig versions? The
 
 ### 2024.11.0-mach
 
-**IN-PROGRESS:** This version is currently being nominated, see [the tracking issue](https://github.com/hexops/mach/issues/1287) for details. Once everything looks good, the new Zig version is confirmed to be working with Mach, we will declare success, close the issue, and remove this in-progress warning.
-
 Zig `2024.11.0-mach` and `0.14.0-dev.2577+271452d22` are identical.
 
 Install it using [zigup](https://github.com/marler8997/zigup):

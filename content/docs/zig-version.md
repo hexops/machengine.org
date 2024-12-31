@@ -17,7 +17,7 @@ _We encourage using Mach nightly (`main`, rather than a tagged release) for now.
 
 | Mach version | Zig version                                             |
 |--------------|---------------------------------------------------------|
-| latest main  | [Zig 2024.10.0-mach](/docs/nominated-zig/#2024100-mach) |
+| latest main  | [Zig 2024.11.0-mach](/docs/nominated-zig/#2024110-mach) |
 | v0.4         | [Zig 2024.5.0-mach](/docs/nominated-zig/#202450-mach)   |
 | v0.3         | [Zig 2024.1.0-mach](/docs/nominated-zig/#202410-mach)   |
 | v0.2         | v0.11.0                                                 |
