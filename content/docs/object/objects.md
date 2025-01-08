@@ -46,7 +46,7 @@ pub fn init(app: *App) void {
     });
 
     // Print the monsters' health
-    const new_monster = app.monsters.get(new_monster_id);
+    const new_monster = app.monsters.getValue(new_monster_id);
     std.debug.print("monster health: {}\n", .{new_monster.health});
 
     // Give the monster 2x damage!
@@ -118,7 +118,7 @@ pub fn tick(app: *App) void {
     // Iterate over each monster and do something with them
     var slice = app.monsters.slice();
     while (slice.next()) |monster_id| {
-        const monster = slice.get(monster_id);
+        const monster = slice.getValue(monster_id);
         monster.health = 100; // they can never die!
         slice.set(monster_id, monster);
 
