@@ -94,10 +94,10 @@ There is only ever one _instance_ of a module in a program, so these are _effect
 Similar to how we declared `pub const mach_module = .foo_name;`, a module can declare that it has _systems_ with specific names:
 
 ```zig
-pub const mach_systems = .{ .init, .tick, .deinit };
+pub const mach_systems = .{ .main, .init, .tick, .deinit };
 ```
 
-In this case, our module declared that it has systems called `.init`, `.tick`, and `.deinit` - these are just made up names (we're _declaring them_) - we can name them whatever we like.
+In this case, our module declared that it has systems called `.main`, `.init`, `.tick`, and `.deinit` - these are just made up names (we're _declaring them_) - we can name them whatever we like.
 
 Systems are ultimately just functions (or lists of functions) that _could_ be run if someone wants them to. They don't do anything by default.
 
