@@ -50,7 +50,7 @@ Systems are ultimately just functions (or lists of functions) that _could_ be ru
 
 Above, we wrote a `tick` system function which had no arguments - system functions actually have _injected_ arguments which means we can accept _any Mach module that exists in the whole program_ as an argument, and when Mach calls the function it will just provide it for you!
 
-```
+```zig
 pub fn tick(app: *App, other_mod: mach.Mod(Other), other: *Other) void {
     // Access App modules' global state
     app.counter += 1;
@@ -73,7 +73,7 @@ Note: you can always write functions that take arbitrary arguments in your Mach 
 
 By default, systems don't run ever. They only run if someone tells Mach to run them. One way to do this is via the `mach.Mod(T).run()` function, like what we saw in the `main.zig` example in the [modules section](../modules):
 
-```
+```zig
 pub fn main() !void {
     // ...
 
