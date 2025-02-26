@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate Sponsors Tier 1
-        uses: slimsag/github-sponsors-readme-action@dev
+        uses: emidoots/github-sponsors-readme-action@dev
         with:
           token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
           file: 'content/_index.md'
@@ -19,7 +19,7 @@ jobs:
           marker: 'tier1'
 
       - name: Generate Sponsors Tier 2
-        uses: slimsag/github-sponsors-readme-action@dev
+        uses: emidoots/github-sponsors-readme-action@dev
         with:
           token: ${{ secrets.SLIMSAG_SPONSORS_PAT }}
           file: 'content/_index.md'
