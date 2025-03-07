@@ -13,7 +13,7 @@ Mach aims to be opinionated enough to provide a cohesive high-level experience, 
 
 ## 'standard library' of Zig gamedev modules
 
-Mach is a ['standard library' of Zig gamedev modules](stdlib). For example, you can import and use just specific parts of Mach like the `mach.math` library and use these to build your own engine.
+Mach is a ['standard library' of Zig gamedev modules](../stdlib). For example, you can import and use just specific parts of Mach like the `mach.math` library and use these to build your own engine.
 
 ## Alternative to GLFW/SDL + OpenGL/Vulkan, Raylib, etc
 
