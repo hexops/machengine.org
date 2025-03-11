@@ -138,7 +138,7 @@ One key difference is that with an ECS, you have objects with _arbitrary compone
 
 Mach's object system instead has rigid data types, literally a struct with fields:
 
-```
+```zig
 monsters: mach.Objects(struct {
     health: f32,
     damage: f32,
