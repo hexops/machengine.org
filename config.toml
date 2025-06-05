@@ -123,34 +123,28 @@ unsafe = true
   weight = 40000
 [[menu.docs]]
   parent = 'docs-general'
-  identifier = 'docs-general-roadmap'
-  name = 'Roadmap'
-  url = '/docs/roadmap'
-  weight = 40001
-[[menu.docs]]
-  parent = 'docs-general'
   identifier = 'docs-general-modularity'
   name = 'Modularity'
   url = '/docs/modularity'
-  weight = 40002
+  weight = 40001
 [[menu.docs]]
   parent = 'docs-general'
   identifier = 'docs-general-stdlib'
   name = 'Standard library'
   url = '/docs/stdlib'
-  weight = 40003
+  weight = 40002
 [[menu.docs]]
   parent = 'docs-general'
   identifier = 'docs-general-zig-version'
   name = 'Zig version'
   url = '/docs/zig-version'
-  weight = 40004
+  weight = 40003
 [[menu.docs]]
   identifier = 'docs-dev-nominated-zig'
   parent = 'docs-general'
   name = 'Nominated Zig'
   url = '/docs/nominated-zig'
-  weight = 40005
+  weight = 40004
 
 
 [[menu.about]]
