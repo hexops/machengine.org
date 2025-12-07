@@ -19,7 +19,7 @@ rss_ignore: true
 zig init
 ```
 
-Delete the `build.zig` file and `src/` files it created, we won't need them.
+Delete the `src/` files it created, we won't need them.
 
 ## Add Mach dependency to `build.zig.zon`
 
@@ -288,3 +288,4 @@ zig build -Dtarget=x86_64-windows-gnu
 ## Continue learning
 
 From here, you can [explore more examples](https://github.com/hexops/mach/tree/main/examples) or read about [the object systems](/docs/object/) which is the foundation of every Mach API.
+
