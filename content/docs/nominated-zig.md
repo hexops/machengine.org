@@ -94,7 +94,7 @@ Zig `2024.11.0-mach` and `0.14.0-dev.2577+271452d22` are identical.
 Use it with [anyzig](https://github.com/marler8997/anyzig) in your `build.zig.zon`:
 ```
 .{
-    .mach_zig_version = "2024.11.0-mach" // Or specify 0.14.0-dev.2577+271452d22 using .minimum_zig_version 
+    .mach_zig_version = "2024.11.0-mach",
 }
 ```
 
@@ -123,9 +123,7 @@ Zig `2024.10.0-mach` and `0.14.0-dev.1911+3bf89f55c` are identical.
 Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
 ```
 .{
-    [...]
-    .mach_zig_version = "2024.10.0-mach" // Or specify 0.14.0-dev.1911+3bf89f55c using .minimum_zig_version
-    [...]
+    .mach_zig_version = "2024.10.0-mach",
 }
 ```
 
@@ -154,7 +152,7 @@ Zig `2024.5.0-mach` and `0.13.0-dev.351+64ef45eb0` are identical.
 Use it with [anyzig](https://marler8997.github.io/anyzig/) in your build.zig.zon:
 ```
 .{
-    .mach_zig_version = "2024.5.0-mach" // Or specify 0.13.0-dev.351+64ef45eb0 using .minimum_zig_version
+    .mach_zig_version = "2024.5.0-mach",
 }
 ```
 
@@ -184,7 +182,7 @@ Zig `2024.3.0-mach` and `0.12.0-dev.3180+83e578a18` are identical.
 Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
 ```
 .{
-    .mach_zig_version = "2024.3.0-mach" // Or specify 0.12.0-dev.3180+83e578a18 using .minimum_zig_version
+    .mach_zig_version = "2024.3.0-mach",
 }
 ```
 
@@ -215,7 +213,7 @@ _Note: The first nominated version ever, this was out-of-band with the schedule 
 Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
 ```
 .{
-    .mach_zig_version = "2024.1.0-mach" // Or specify 0.12.0-dev.2063+804cee3b9 using .minimum_zig_version
+    .mach_zig_version = "2024.1.0-mach",
 }
 ```
 
