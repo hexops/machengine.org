@@ -91,10 +91,11 @@ Periodically, the question comes up: why *not* just use stable Zig versions? The
 
 Zig `2024.11.0-mach` and `0.14.0-dev.2577+271452d22` are identical.
 
-Install it using [zigup](https://github.com/marler8997/zigup):
-
-```sh
-zigup 0.14.0-dev.2577+271452d22
+Use it with [anyzig](https://github.com/marler8997/anyzig) in your `build.zig.zon`:
+```
+.{
+    .mach_zig_version = "2024.11.0-mach",
+}
 ```
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
@@ -119,10 +120,11 @@ _**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1287#issu
 
 Zig `2024.10.0-mach` and `0.14.0-dev.1911+3bf89f55c` are identical.
 
-Install it using [zigup](https://github.com/marler8997/zigup):
-
-```sh
-zigup 0.14.0-dev.1911+3bf89f55c
+Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
+```
+.{
+    .mach_zig_version = "2024.10.0-mach",
+}
 ```
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
@@ -147,11 +149,13 @@ _**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1276#issu
 
 Zig `2024.5.0-mach` and `0.13.0-dev.351+64ef45eb0` are identical.
 
-Install it using [zigup](https://github.com/marler8997/zigup):
-
-```sh
-zigup 0.13.0-dev.351+64ef45eb0
+Use it with [anyzig](https://marler8997.github.io/anyzig/) in your build.zig.zon:
 ```
+.{
+    .mach_zig_version = "2024.5.0-mach",
+}
+```
+
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
 
@@ -175,10 +179,11 @@ _**[Tips on upgrading your code](https://github.com/hexops/mach/issues/1180#issu
 
 Zig `2024.3.0-mach` and `0.12.0-dev.3180+83e578a18` are identical.
 
-Install it using [zigup](https://github.com/marler8997/zigup):
-
-```sh
-zigup 0.12.0-dev.3180+83e578a18
+Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
+```
+.{
+    .mach_zig_version = "2024.3.0-mach",
+}
 ```
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
@@ -205,10 +210,11 @@ Zig `2024.1.0-mach` and `0.12.0-dev.2063+804cee3b9` are identical.
 
 _Note: The first nominated version ever, this was out-of-band with the schedule due to it._
 
-Install it using [zigup](https://github.com/marler8997/zigup):
-
-```sh
-zigup 0.12.0-dev.2063+804cee3b9
+Use it with [anyzig](https://github.com/marler8997/anyzig) in your build.zig.zon:
+```
+.{
+    .mach_zig_version = "2024.1.0-mach",
+}
 ```
 
 Or download it using our [pkg.machengine.org](https://pkg.machengine.org) mirror:
